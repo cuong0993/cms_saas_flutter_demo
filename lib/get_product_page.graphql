@@ -1,0 +1,14 @@
+query getProductPages($name: String!) {
+    ProductPage(where: { Name: { contains: $name } }) {
+        items {
+            MetaDescription
+            MetaKeywords
+            Name
+            MetaTitle
+            TeaserText
+            PageImage {
+                Url
+            }
+        }
+    }
+}

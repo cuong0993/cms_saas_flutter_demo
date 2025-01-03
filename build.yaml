@@ -1,0 +1,18 @@
+targets:
+  $default:
+    builders:
+      json_serializable:
+        options:
+          create_field_map: true
+          create_per_field_to_json: true
+      graphql_codegen:
+        options:
+          scalars:
+            Date:
+              type: DateTime
+#              fromJsonFunctionName: dateTimeFromJson
+#              toJsonFunctionName: dateTimeToJson
+#              import: package:graphql_codegen_example/scalars.dart
+          clients:
+            - graphql
+#            - graphql_flutter
