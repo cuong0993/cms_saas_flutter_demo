@@ -26,6 +26,7 @@ class Input$ArticlePageOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -66,6 +67,7 @@ class Input$ArticlePageOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -247,6 +249,12 @@ class Input$ArticlePageOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -382,6 +390,8 @@ class Input$ArticlePageOrderByInput {
   Enum$OrderBy? get Saved => (_$data['Saved'] as Enum$OrderBy?);
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
 
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
@@ -533,6 +543,11 @@ class Input$ArticlePageOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -840,6 +855,15 @@ class Input$ArticlePageOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -976,6 +1000,7 @@ class Input$ArticlePageOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -1015,6 +1040,7 @@ class Input$ArticlePageOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -1067,6 +1093,7 @@ abstract class CopyWith$Input$ArticlePageOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -1132,6 +1159,7 @@ class _CopyWithImpl$Input$ArticlePageOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -1197,6 +1225,8 @@ class _CopyWithImpl$Input$ArticlePageOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -1331,6 +1361,7 @@ class _CopyWithStubImpl$Input$ArticlePageOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -1403,6 +1434,7 @@ class Input$ArticlePageWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -1444,6 +1476,7 @@ class Input$ArticlePageWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -1642,6 +1675,13 @@ class Input$ArticlePageWhereInput {
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] = l$SiteId == null
@@ -1822,6 +1862,9 @@ class Input$ArticlePageWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -1966,6 +2009,10 @@ class Input$ArticlePageWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -2267,6 +2314,15 @@ class Input$ArticlePageWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -2442,6 +2498,7 @@ class Input$ArticlePageWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -2482,6 +2539,7 @@ class Input$ArticlePageWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -2547,6 +2605,7 @@ abstract class CopyWith$Input$ArticlePageWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -2587,6 +2646,7 @@ abstract class CopyWith$Input$ArticlePageWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -2657,6 +2717,7 @@ class _CopyWithImpl$Input$ArticlePageWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -2730,6 +2791,8 @@ class _CopyWithImpl$Input$ArticlePageWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -2967,6 +3030,14 @@ class _CopyWithImpl$Input$ArticlePageWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -3122,6 +3193,7 @@ class _CopyWithStubImpl$Input$ArticlePageWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -3215,6 +3287,9 @@ class _CopyWithStubImpl$Input$ArticlePageWhereInput<TRes>
       CopyWith$Input$DateFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
@@ -3757,6 +3832,2599 @@ class _CopyWithStubImpl$Input$BoolFilterInput<TRes>
       _res;
 }
 
+class Input$BreadcrumbBlockOrderByInput {
+  factory Input$BreadcrumbBlockOrderByInput({
+    Enum$OrderBy? Ancestors,
+    Input$CategoryModelOrderByInput? Category,
+    Enum$OrderBy? Changed,
+    Input$ContentModelReferenceOrderByInput? ContentLink,
+    Enum$OrderBy? ContentType,
+    Enum$OrderBy? Created,
+    Input$ContentLanguageModelOrderByInput? ExistingLanguages,
+    Enum$OrderBy? IsCommonDraft,
+    Enum$OrderBy? IsVisible,
+    Input$ContentLanguageModelOrderByInput? Language,
+    Input$ContentLanguageModelOrderByInput? MasterLanguage,
+    Enum$OrderBy? Name,
+    Input$ContentModelReferenceOrderByInput? ParentLink,
+    Enum$OrderBy? RelativePath,
+    Enum$OrderBy? RouteSegment,
+    Enum$OrderBy? Saved,
+    Enum$OrderBy? Shortcut,
+    Enum$OrderBy? ShowSelf,
+    Enum$OrderBy? SimpleAddress,
+    Enum$OrderBy? SiteId,
+    Enum$OrderBy? StartPublish,
+    Enum$OrderBy? Status,
+    Enum$OrderBy? StopPublish,
+    Enum$OrderBy? Url,
+    Enum$OrderBy? $_concreteType,
+    double? $_minimumScore,
+    Enum$OrderBy? $_modified,
+    Enum$Ranking? $_ranking,
+    double? $_semanticWeight,
+    Enum$OrderBy? $_sortOrder,
+  }) =>
+      Input$BreadcrumbBlockOrderByInput._({
+        if (Ancestors != null) r'Ancestors': Ancestors,
+        if (Category != null) r'Category': Category,
+        if (Changed != null) r'Changed': Changed,
+        if (ContentLink != null) r'ContentLink': ContentLink,
+        if (ContentType != null) r'ContentType': ContentType,
+        if (Created != null) r'Created': Created,
+        if (ExistingLanguages != null) r'ExistingLanguages': ExistingLanguages,
+        if (IsCommonDraft != null) r'IsCommonDraft': IsCommonDraft,
+        if (IsVisible != null) r'IsVisible': IsVisible,
+        if (Language != null) r'Language': Language,
+        if (MasterLanguage != null) r'MasterLanguage': MasterLanguage,
+        if (Name != null) r'Name': Name,
+        if (ParentLink != null) r'ParentLink': ParentLink,
+        if (RelativePath != null) r'RelativePath': RelativePath,
+        if (RouteSegment != null) r'RouteSegment': RouteSegment,
+        if (Saved != null) r'Saved': Saved,
+        if (Shortcut != null) r'Shortcut': Shortcut,
+        if (ShowSelf != null) r'ShowSelf': ShowSelf,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
+        if (SiteId != null) r'SiteId': SiteId,
+        if (StartPublish != null) r'StartPublish': StartPublish,
+        if (Status != null) r'Status': Status,
+        if (StopPublish != null) r'StopPublish': StopPublish,
+        if (Url != null) r'Url': Url,
+        if ($_concreteType != null) r'_concreteType': $_concreteType,
+        if ($_minimumScore != null) r'_minimumScore': $_minimumScore,
+        if ($_modified != null) r'_modified': $_modified,
+        if ($_ranking != null) r'_ranking': $_ranking,
+        if ($_semanticWeight != null) r'_semanticWeight': $_semanticWeight,
+        if ($_sortOrder != null) r'_sortOrder': $_sortOrder,
+      });
+
+  Input$BreadcrumbBlockOrderByInput._(this._$data);
+
+  factory Input$BreadcrumbBlockOrderByInput.fromJson(
+      Map<String, dynamic> data) {
+    final result$data = <String, dynamic>{};
+    if (data.containsKey('Ancestors')) {
+      final l$Ancestors = data['Ancestors'];
+      result$data['Ancestors'] = l$Ancestors == null
+          ? null
+          : fromJson$Enum$OrderBy((l$Ancestors as String));
+    }
+    if (data.containsKey('Category')) {
+      final l$Category = data['Category'];
+      result$data['Category'] = l$Category == null
+          ? null
+          : Input$CategoryModelOrderByInput.fromJson(
+              (l$Category as Map<String, dynamic>));
+    }
+    if (data.containsKey('Changed')) {
+      final l$Changed = data['Changed'];
+      result$data['Changed'] = l$Changed == null
+          ? null
+          : fromJson$Enum$OrderBy((l$Changed as String));
+    }
+    if (data.containsKey('ContentLink')) {
+      final l$ContentLink = data['ContentLink'];
+      result$data['ContentLink'] = l$ContentLink == null
+          ? null
+          : Input$ContentModelReferenceOrderByInput.fromJson(
+              (l$ContentLink as Map<String, dynamic>));
+    }
+    if (data.containsKey('ContentType')) {
+      final l$ContentType = data['ContentType'];
+      result$data['ContentType'] = l$ContentType == null
+          ? null
+          : fromJson$Enum$OrderBy((l$ContentType as String));
+    }
+    if (data.containsKey('Created')) {
+      final l$Created = data['Created'];
+      result$data['Created'] = l$Created == null
+          ? null
+          : fromJson$Enum$OrderBy((l$Created as String));
+    }
+    if (data.containsKey('ExistingLanguages')) {
+      final l$ExistingLanguages = data['ExistingLanguages'];
+      result$data['ExistingLanguages'] = l$ExistingLanguages == null
+          ? null
+          : Input$ContentLanguageModelOrderByInput.fromJson(
+              (l$ExistingLanguages as Map<String, dynamic>));
+    }
+    if (data.containsKey('IsCommonDraft')) {
+      final l$IsCommonDraft = data['IsCommonDraft'];
+      result$data['IsCommonDraft'] = l$IsCommonDraft == null
+          ? null
+          : fromJson$Enum$OrderBy((l$IsCommonDraft as String));
+    }
+    if (data.containsKey('IsVisible')) {
+      final l$IsVisible = data['IsVisible'];
+      result$data['IsVisible'] = l$IsVisible == null
+          ? null
+          : fromJson$Enum$OrderBy((l$IsVisible as String));
+    }
+    if (data.containsKey('Language')) {
+      final l$Language = data['Language'];
+      result$data['Language'] = l$Language == null
+          ? null
+          : Input$ContentLanguageModelOrderByInput.fromJson(
+              (l$Language as Map<String, dynamic>));
+    }
+    if (data.containsKey('MasterLanguage')) {
+      final l$MasterLanguage = data['MasterLanguage'];
+      result$data['MasterLanguage'] = l$MasterLanguage == null
+          ? null
+          : Input$ContentLanguageModelOrderByInput.fromJson(
+              (l$MasterLanguage as Map<String, dynamic>));
+    }
+    if (data.containsKey('Name')) {
+      final l$Name = data['Name'];
+      result$data['Name'] =
+          l$Name == null ? null : fromJson$Enum$OrderBy((l$Name as String));
+    }
+    if (data.containsKey('ParentLink')) {
+      final l$ParentLink = data['ParentLink'];
+      result$data['ParentLink'] = l$ParentLink == null
+          ? null
+          : Input$ContentModelReferenceOrderByInput.fromJson(
+              (l$ParentLink as Map<String, dynamic>));
+    }
+    if (data.containsKey('RelativePath')) {
+      final l$RelativePath = data['RelativePath'];
+      result$data['RelativePath'] = l$RelativePath == null
+          ? null
+          : fromJson$Enum$OrderBy((l$RelativePath as String));
+    }
+    if (data.containsKey('RouteSegment')) {
+      final l$RouteSegment = data['RouteSegment'];
+      result$data['RouteSegment'] = l$RouteSegment == null
+          ? null
+          : fromJson$Enum$OrderBy((l$RouteSegment as String));
+    }
+    if (data.containsKey('Saved')) {
+      final l$Saved = data['Saved'];
+      result$data['Saved'] =
+          l$Saved == null ? null : fromJson$Enum$OrderBy((l$Saved as String));
+    }
+    if (data.containsKey('Shortcut')) {
+      final l$Shortcut = data['Shortcut'];
+      result$data['Shortcut'] = l$Shortcut == null
+          ? null
+          : fromJson$Enum$OrderBy((l$Shortcut as String));
+    }
+    if (data.containsKey('ShowSelf')) {
+      final l$ShowSelf = data['ShowSelf'];
+      result$data['ShowSelf'] = l$ShowSelf == null
+          ? null
+          : fromJson$Enum$OrderBy((l$ShowSelf as String));
+    }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
+    if (data.containsKey('SiteId')) {
+      final l$SiteId = data['SiteId'];
+      result$data['SiteId'] =
+          l$SiteId == null ? null : fromJson$Enum$OrderBy((l$SiteId as String));
+    }
+    if (data.containsKey('StartPublish')) {
+      final l$StartPublish = data['StartPublish'];
+      result$data['StartPublish'] = l$StartPublish == null
+          ? null
+          : fromJson$Enum$OrderBy((l$StartPublish as String));
+    }
+    if (data.containsKey('Status')) {
+      final l$Status = data['Status'];
+      result$data['Status'] =
+          l$Status == null ? null : fromJson$Enum$OrderBy((l$Status as String));
+    }
+    if (data.containsKey('StopPublish')) {
+      final l$StopPublish = data['StopPublish'];
+      result$data['StopPublish'] = l$StopPublish == null
+          ? null
+          : fromJson$Enum$OrderBy((l$StopPublish as String));
+    }
+    if (data.containsKey('Url')) {
+      final l$Url = data['Url'];
+      result$data['Url'] =
+          l$Url == null ? null : fromJson$Enum$OrderBy((l$Url as String));
+    }
+    if (data.containsKey('_concreteType')) {
+      final l$$_concreteType = data['_concreteType'];
+      result$data['_concreteType'] = l$$_concreteType == null
+          ? null
+          : fromJson$Enum$OrderBy((l$$_concreteType as String));
+    }
+    if (data.containsKey('_minimumScore')) {
+      final l$$_minimumScore = data['_minimumScore'];
+      result$data['_minimumScore'] = (l$$_minimumScore as num?)?.toDouble();
+    }
+    if (data.containsKey('_modified')) {
+      final l$$_modified = data['_modified'];
+      result$data['_modified'] = l$$_modified == null
+          ? null
+          : fromJson$Enum$OrderBy((l$$_modified as String));
+    }
+    if (data.containsKey('_ranking')) {
+      final l$$_ranking = data['_ranking'];
+      result$data['_ranking'] = l$$_ranking == null
+          ? null
+          : fromJson$Enum$Ranking((l$$_ranking as String));
+    }
+    if (data.containsKey('_semanticWeight')) {
+      final l$$_semanticWeight = data['_semanticWeight'];
+      result$data['_semanticWeight'] = (l$$_semanticWeight as num?)?.toDouble();
+    }
+    if (data.containsKey('_sortOrder')) {
+      final l$$_sortOrder = data['_sortOrder'];
+      result$data['_sortOrder'] = l$$_sortOrder == null
+          ? null
+          : fromJson$Enum$OrderBy((l$$_sortOrder as String));
+    }
+    return Input$BreadcrumbBlockOrderByInput._(result$data);
+  }
+
+  Map<String, dynamic> _$data;
+
+  Enum$OrderBy? get Ancestors => (_$data['Ancestors'] as Enum$OrderBy?);
+
+  Input$CategoryModelOrderByInput? get Category =>
+      (_$data['Category'] as Input$CategoryModelOrderByInput?);
+
+  Enum$OrderBy? get Changed => (_$data['Changed'] as Enum$OrderBy?);
+
+  Input$ContentModelReferenceOrderByInput? get ContentLink =>
+      (_$data['ContentLink'] as Input$ContentModelReferenceOrderByInput?);
+
+  Enum$OrderBy? get ContentType => (_$data['ContentType'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get Created => (_$data['Created'] as Enum$OrderBy?);
+
+  Input$ContentLanguageModelOrderByInput? get ExistingLanguages =>
+      (_$data['ExistingLanguages'] as Input$ContentLanguageModelOrderByInput?);
+
+  Enum$OrderBy? get IsCommonDraft => (_$data['IsCommonDraft'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get IsVisible => (_$data['IsVisible'] as Enum$OrderBy?);
+
+  Input$ContentLanguageModelOrderByInput? get Language =>
+      (_$data['Language'] as Input$ContentLanguageModelOrderByInput?);
+
+  Input$ContentLanguageModelOrderByInput? get MasterLanguage =>
+      (_$data['MasterLanguage'] as Input$ContentLanguageModelOrderByInput?);
+
+  Enum$OrderBy? get Name => (_$data['Name'] as Enum$OrderBy?);
+
+  Input$ContentModelReferenceOrderByInput? get ParentLink =>
+      (_$data['ParentLink'] as Input$ContentModelReferenceOrderByInput?);
+
+  Enum$OrderBy? get RelativePath => (_$data['RelativePath'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get RouteSegment => (_$data['RouteSegment'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get Saved => (_$data['Saved'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get ShowSelf => (_$data['ShowSelf'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get StartPublish => (_$data['StartPublish'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get Status => (_$data['Status'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get StopPublish => (_$data['StopPublish'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get Url => (_$data['Url'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get $_concreteType =>
+      (_$data['_concreteType'] as Enum$OrderBy?);
+
+  double? get $_minimumScore => (_$data['_minimumScore'] as double?);
+
+  Enum$OrderBy? get $_modified => (_$data['_modified'] as Enum$OrderBy?);
+
+  Enum$Ranking? get $_ranking => (_$data['_ranking'] as Enum$Ranking?);
+
+  double? get $_semanticWeight => (_$data['_semanticWeight'] as double?);
+
+  Enum$OrderBy? get $_sortOrder => (_$data['_sortOrder'] as Enum$OrderBy?);
+
+  Map<String, dynamic> toJson() {
+    final result$data = <String, dynamic>{};
+    if (_$data.containsKey('Ancestors')) {
+      final l$Ancestors = Ancestors;
+      result$data['Ancestors'] =
+          l$Ancestors == null ? null : toJson$Enum$OrderBy(l$Ancestors);
+    }
+    if (_$data.containsKey('Category')) {
+      final l$Category = Category;
+      result$data['Category'] = l$Category?.toJson();
+    }
+    if (_$data.containsKey('Changed')) {
+      final l$Changed = Changed;
+      result$data['Changed'] =
+          l$Changed == null ? null : toJson$Enum$OrderBy(l$Changed);
+    }
+    if (_$data.containsKey('ContentLink')) {
+      final l$ContentLink = ContentLink;
+      result$data['ContentLink'] = l$ContentLink?.toJson();
+    }
+    if (_$data.containsKey('ContentType')) {
+      final l$ContentType = ContentType;
+      result$data['ContentType'] =
+          l$ContentType == null ? null : toJson$Enum$OrderBy(l$ContentType);
+    }
+    if (_$data.containsKey('Created')) {
+      final l$Created = Created;
+      result$data['Created'] =
+          l$Created == null ? null : toJson$Enum$OrderBy(l$Created);
+    }
+    if (_$data.containsKey('ExistingLanguages')) {
+      final l$ExistingLanguages = ExistingLanguages;
+      result$data['ExistingLanguages'] = l$ExistingLanguages?.toJson();
+    }
+    if (_$data.containsKey('IsCommonDraft')) {
+      final l$IsCommonDraft = IsCommonDraft;
+      result$data['IsCommonDraft'] =
+          l$IsCommonDraft == null ? null : toJson$Enum$OrderBy(l$IsCommonDraft);
+    }
+    if (_$data.containsKey('IsVisible')) {
+      final l$IsVisible = IsVisible;
+      result$data['IsVisible'] =
+          l$IsVisible == null ? null : toJson$Enum$OrderBy(l$IsVisible);
+    }
+    if (_$data.containsKey('Language')) {
+      final l$Language = Language;
+      result$data['Language'] = l$Language?.toJson();
+    }
+    if (_$data.containsKey('MasterLanguage')) {
+      final l$MasterLanguage = MasterLanguage;
+      result$data['MasterLanguage'] = l$MasterLanguage?.toJson();
+    }
+    if (_$data.containsKey('Name')) {
+      final l$Name = Name;
+      result$data['Name'] = l$Name == null ? null : toJson$Enum$OrderBy(l$Name);
+    }
+    if (_$data.containsKey('ParentLink')) {
+      final l$ParentLink = ParentLink;
+      result$data['ParentLink'] = l$ParentLink?.toJson();
+    }
+    if (_$data.containsKey('RelativePath')) {
+      final l$RelativePath = RelativePath;
+      result$data['RelativePath'] =
+          l$RelativePath == null ? null : toJson$Enum$OrderBy(l$RelativePath);
+    }
+    if (_$data.containsKey('RouteSegment')) {
+      final l$RouteSegment = RouteSegment;
+      result$data['RouteSegment'] =
+          l$RouteSegment == null ? null : toJson$Enum$OrderBy(l$RouteSegment);
+    }
+    if (_$data.containsKey('Saved')) {
+      final l$Saved = Saved;
+      result$data['Saved'] =
+          l$Saved == null ? null : toJson$Enum$OrderBy(l$Saved);
+    }
+    if (_$data.containsKey('Shortcut')) {
+      final l$Shortcut = Shortcut;
+      result$data['Shortcut'] =
+          l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('ShowSelf')) {
+      final l$ShowSelf = ShowSelf;
+      result$data['ShowSelf'] =
+          l$ShowSelf == null ? null : toJson$Enum$OrderBy(l$ShowSelf);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
+    }
+    if (_$data.containsKey('SiteId')) {
+      final l$SiteId = SiteId;
+      result$data['SiteId'] =
+          l$SiteId == null ? null : toJson$Enum$OrderBy(l$SiteId);
+    }
+    if (_$data.containsKey('StartPublish')) {
+      final l$StartPublish = StartPublish;
+      result$data['StartPublish'] =
+          l$StartPublish == null ? null : toJson$Enum$OrderBy(l$StartPublish);
+    }
+    if (_$data.containsKey('Status')) {
+      final l$Status = Status;
+      result$data['Status'] =
+          l$Status == null ? null : toJson$Enum$OrderBy(l$Status);
+    }
+    if (_$data.containsKey('StopPublish')) {
+      final l$StopPublish = StopPublish;
+      result$data['StopPublish'] =
+          l$StopPublish == null ? null : toJson$Enum$OrderBy(l$StopPublish);
+    }
+    if (_$data.containsKey('Url')) {
+      final l$Url = Url;
+      result$data['Url'] = l$Url == null ? null : toJson$Enum$OrderBy(l$Url);
+    }
+    if (_$data.containsKey('_concreteType')) {
+      final l$$_concreteType = $_concreteType;
+      result$data['_concreteType'] = l$$_concreteType == null
+          ? null
+          : toJson$Enum$OrderBy(l$$_concreteType);
+    }
+    if (_$data.containsKey('_minimumScore')) {
+      final l$$_minimumScore = $_minimumScore;
+      result$data['_minimumScore'] = l$$_minimumScore;
+    }
+    if (_$data.containsKey('_modified')) {
+      final l$$_modified = $_modified;
+      result$data['_modified'] =
+          l$$_modified == null ? null : toJson$Enum$OrderBy(l$$_modified);
+    }
+    if (_$data.containsKey('_ranking')) {
+      final l$$_ranking = $_ranking;
+      result$data['_ranking'] =
+          l$$_ranking == null ? null : toJson$Enum$Ranking(l$$_ranking);
+    }
+    if (_$data.containsKey('_semanticWeight')) {
+      final l$$_semanticWeight = $_semanticWeight;
+      result$data['_semanticWeight'] = l$$_semanticWeight;
+    }
+    if (_$data.containsKey('_sortOrder')) {
+      final l$$_sortOrder = $_sortOrder;
+      result$data['_sortOrder'] =
+          l$$_sortOrder == null ? null : toJson$Enum$OrderBy(l$$_sortOrder);
+    }
+    return result$data;
+  }
+
+  CopyWith$Input$BreadcrumbBlockOrderByInput<Input$BreadcrumbBlockOrderByInput>
+      get copyWith => CopyWith$Input$BreadcrumbBlockOrderByInput(
+            this,
+            (i) => i,
+          );
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (other is! Input$BreadcrumbBlockOrderByInput ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$Ancestors = Ancestors;
+    final lOther$Ancestors = other.Ancestors;
+    if (_$data.containsKey('Ancestors') !=
+        other._$data.containsKey('Ancestors')) {
+      return false;
+    }
+    if (l$Ancestors != lOther$Ancestors) {
+      return false;
+    }
+    final l$Category = Category;
+    final lOther$Category = other.Category;
+    if (_$data.containsKey('Category') !=
+        other._$data.containsKey('Category')) {
+      return false;
+    }
+    if (l$Category != lOther$Category) {
+      return false;
+    }
+    final l$Changed = Changed;
+    final lOther$Changed = other.Changed;
+    if (_$data.containsKey('Changed') != other._$data.containsKey('Changed')) {
+      return false;
+    }
+    if (l$Changed != lOther$Changed) {
+      return false;
+    }
+    final l$ContentLink = ContentLink;
+    final lOther$ContentLink = other.ContentLink;
+    if (_$data.containsKey('ContentLink') !=
+        other._$data.containsKey('ContentLink')) {
+      return false;
+    }
+    if (l$ContentLink != lOther$ContentLink) {
+      return false;
+    }
+    final l$ContentType = ContentType;
+    final lOther$ContentType = other.ContentType;
+    if (_$data.containsKey('ContentType') !=
+        other._$data.containsKey('ContentType')) {
+      return false;
+    }
+    if (l$ContentType != lOther$ContentType) {
+      return false;
+    }
+    final l$Created = Created;
+    final lOther$Created = other.Created;
+    if (_$data.containsKey('Created') != other._$data.containsKey('Created')) {
+      return false;
+    }
+    if (l$Created != lOther$Created) {
+      return false;
+    }
+    final l$ExistingLanguages = ExistingLanguages;
+    final lOther$ExistingLanguages = other.ExistingLanguages;
+    if (_$data.containsKey('ExistingLanguages') !=
+        other._$data.containsKey('ExistingLanguages')) {
+      return false;
+    }
+    if (l$ExistingLanguages != lOther$ExistingLanguages) {
+      return false;
+    }
+    final l$IsCommonDraft = IsCommonDraft;
+    final lOther$IsCommonDraft = other.IsCommonDraft;
+    if (_$data.containsKey('IsCommonDraft') !=
+        other._$data.containsKey('IsCommonDraft')) {
+      return false;
+    }
+    if (l$IsCommonDraft != lOther$IsCommonDraft) {
+      return false;
+    }
+    final l$IsVisible = IsVisible;
+    final lOther$IsVisible = other.IsVisible;
+    if (_$data.containsKey('IsVisible') !=
+        other._$data.containsKey('IsVisible')) {
+      return false;
+    }
+    if (l$IsVisible != lOther$IsVisible) {
+      return false;
+    }
+    final l$Language = Language;
+    final lOther$Language = other.Language;
+    if (_$data.containsKey('Language') !=
+        other._$data.containsKey('Language')) {
+      return false;
+    }
+    if (l$Language != lOther$Language) {
+      return false;
+    }
+    final l$MasterLanguage = MasterLanguage;
+    final lOther$MasterLanguage = other.MasterLanguage;
+    if (_$data.containsKey('MasterLanguage') !=
+        other._$data.containsKey('MasterLanguage')) {
+      return false;
+    }
+    if (l$MasterLanguage != lOther$MasterLanguage) {
+      return false;
+    }
+    final l$Name = Name;
+    final lOther$Name = other.Name;
+    if (_$data.containsKey('Name') != other._$data.containsKey('Name')) {
+      return false;
+    }
+    if (l$Name != lOther$Name) {
+      return false;
+    }
+    final l$ParentLink = ParentLink;
+    final lOther$ParentLink = other.ParentLink;
+    if (_$data.containsKey('ParentLink') !=
+        other._$data.containsKey('ParentLink')) {
+      return false;
+    }
+    if (l$ParentLink != lOther$ParentLink) {
+      return false;
+    }
+    final l$RelativePath = RelativePath;
+    final lOther$RelativePath = other.RelativePath;
+    if (_$data.containsKey('RelativePath') !=
+        other._$data.containsKey('RelativePath')) {
+      return false;
+    }
+    if (l$RelativePath != lOther$RelativePath) {
+      return false;
+    }
+    final l$RouteSegment = RouteSegment;
+    final lOther$RouteSegment = other.RouteSegment;
+    if (_$data.containsKey('RouteSegment') !=
+        other._$data.containsKey('RouteSegment')) {
+      return false;
+    }
+    if (l$RouteSegment != lOther$RouteSegment) {
+      return false;
+    }
+    final l$Saved = Saved;
+    final lOther$Saved = other.Saved;
+    if (_$data.containsKey('Saved') != other._$data.containsKey('Saved')) {
+      return false;
+    }
+    if (l$Saved != lOther$Saved) {
+      return false;
+    }
+    final l$Shortcut = Shortcut;
+    final lOther$Shortcut = other.Shortcut;
+    if (_$data.containsKey('Shortcut') !=
+        other._$data.containsKey('Shortcut')) {
+      return false;
+    }
+    if (l$Shortcut != lOther$Shortcut) {
+      return false;
+    }
+    final l$ShowSelf = ShowSelf;
+    final lOther$ShowSelf = other.ShowSelf;
+    if (_$data.containsKey('ShowSelf') !=
+        other._$data.containsKey('ShowSelf')) {
+      return false;
+    }
+    if (l$ShowSelf != lOther$ShowSelf) {
+      return false;
+    }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
+    final l$SiteId = SiteId;
+    final lOther$SiteId = other.SiteId;
+    if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
+      return false;
+    }
+    if (l$SiteId != lOther$SiteId) {
+      return false;
+    }
+    final l$StartPublish = StartPublish;
+    final lOther$StartPublish = other.StartPublish;
+    if (_$data.containsKey('StartPublish') !=
+        other._$data.containsKey('StartPublish')) {
+      return false;
+    }
+    if (l$StartPublish != lOther$StartPublish) {
+      return false;
+    }
+    final l$Status = Status;
+    final lOther$Status = other.Status;
+    if (_$data.containsKey('Status') != other._$data.containsKey('Status')) {
+      return false;
+    }
+    if (l$Status != lOther$Status) {
+      return false;
+    }
+    final l$StopPublish = StopPublish;
+    final lOther$StopPublish = other.StopPublish;
+    if (_$data.containsKey('StopPublish') !=
+        other._$data.containsKey('StopPublish')) {
+      return false;
+    }
+    if (l$StopPublish != lOther$StopPublish) {
+      return false;
+    }
+    final l$Url = Url;
+    final lOther$Url = other.Url;
+    if (_$data.containsKey('Url') != other._$data.containsKey('Url')) {
+      return false;
+    }
+    if (l$Url != lOther$Url) {
+      return false;
+    }
+    final l$$_concreteType = $_concreteType;
+    final lOther$$_concreteType = other.$_concreteType;
+    if (_$data.containsKey('_concreteType') !=
+        other._$data.containsKey('_concreteType')) {
+      return false;
+    }
+    if (l$$_concreteType != lOther$$_concreteType) {
+      return false;
+    }
+    final l$$_minimumScore = $_minimumScore;
+    final lOther$$_minimumScore = other.$_minimumScore;
+    if (_$data.containsKey('_minimumScore') !=
+        other._$data.containsKey('_minimumScore')) {
+      return false;
+    }
+    if (l$$_minimumScore != lOther$$_minimumScore) {
+      return false;
+    }
+    final l$$_modified = $_modified;
+    final lOther$$_modified = other.$_modified;
+    if (_$data.containsKey('_modified') !=
+        other._$data.containsKey('_modified')) {
+      return false;
+    }
+    if (l$$_modified != lOther$$_modified) {
+      return false;
+    }
+    final l$$_ranking = $_ranking;
+    final lOther$$_ranking = other.$_ranking;
+    if (_$data.containsKey('_ranking') !=
+        other._$data.containsKey('_ranking')) {
+      return false;
+    }
+    if (l$$_ranking != lOther$$_ranking) {
+      return false;
+    }
+    final l$$_semanticWeight = $_semanticWeight;
+    final lOther$$_semanticWeight = other.$_semanticWeight;
+    if (_$data.containsKey('_semanticWeight') !=
+        other._$data.containsKey('_semanticWeight')) {
+      return false;
+    }
+    if (l$$_semanticWeight != lOther$$_semanticWeight) {
+      return false;
+    }
+    final l$$_sortOrder = $_sortOrder;
+    final lOther$$_sortOrder = other.$_sortOrder;
+    if (_$data.containsKey('_sortOrder') !=
+        other._$data.containsKey('_sortOrder')) {
+      return false;
+    }
+    if (l$$_sortOrder != lOther$$_sortOrder) {
+      return false;
+    }
+    return true;
+  }
+
+  @override
+  int get hashCode {
+    final l$Ancestors = Ancestors;
+    final l$Category = Category;
+    final l$Changed = Changed;
+    final l$ContentLink = ContentLink;
+    final l$ContentType = ContentType;
+    final l$Created = Created;
+    final l$ExistingLanguages = ExistingLanguages;
+    final l$IsCommonDraft = IsCommonDraft;
+    final l$IsVisible = IsVisible;
+    final l$Language = Language;
+    final l$MasterLanguage = MasterLanguage;
+    final l$Name = Name;
+    final l$ParentLink = ParentLink;
+    final l$RelativePath = RelativePath;
+    final l$RouteSegment = RouteSegment;
+    final l$Saved = Saved;
+    final l$Shortcut = Shortcut;
+    final l$ShowSelf = ShowSelf;
+    final l$SimpleAddress = SimpleAddress;
+    final l$SiteId = SiteId;
+    final l$StartPublish = StartPublish;
+    final l$Status = Status;
+    final l$StopPublish = StopPublish;
+    final l$Url = Url;
+    final l$$_concreteType = $_concreteType;
+    final l$$_minimumScore = $_minimumScore;
+    final l$$_modified = $_modified;
+    final l$$_ranking = $_ranking;
+    final l$$_semanticWeight = $_semanticWeight;
+    final l$$_sortOrder = $_sortOrder;
+    return Object.hashAll([
+      _$data.containsKey('Ancestors') ? l$Ancestors : const {},
+      _$data.containsKey('Category') ? l$Category : const {},
+      _$data.containsKey('Changed') ? l$Changed : const {},
+      _$data.containsKey('ContentLink') ? l$ContentLink : const {},
+      _$data.containsKey('ContentType') ? l$ContentType : const {},
+      _$data.containsKey('Created') ? l$Created : const {},
+      _$data.containsKey('ExistingLanguages') ? l$ExistingLanguages : const {},
+      _$data.containsKey('IsCommonDraft') ? l$IsCommonDraft : const {},
+      _$data.containsKey('IsVisible') ? l$IsVisible : const {},
+      _$data.containsKey('Language') ? l$Language : const {},
+      _$data.containsKey('MasterLanguage') ? l$MasterLanguage : const {},
+      _$data.containsKey('Name') ? l$Name : const {},
+      _$data.containsKey('ParentLink') ? l$ParentLink : const {},
+      _$data.containsKey('RelativePath') ? l$RelativePath : const {},
+      _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
+      _$data.containsKey('Saved') ? l$Saved : const {},
+      _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('ShowSelf') ? l$ShowSelf : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
+      _$data.containsKey('SiteId') ? l$SiteId : const {},
+      _$data.containsKey('StartPublish') ? l$StartPublish : const {},
+      _$data.containsKey('Status') ? l$Status : const {},
+      _$data.containsKey('StopPublish') ? l$StopPublish : const {},
+      _$data.containsKey('Url') ? l$Url : const {},
+      _$data.containsKey('_concreteType') ? l$$_concreteType : const {},
+      _$data.containsKey('_minimumScore') ? l$$_minimumScore : const {},
+      _$data.containsKey('_modified') ? l$$_modified : const {},
+      _$data.containsKey('_ranking') ? l$$_ranking : const {},
+      _$data.containsKey('_semanticWeight') ? l$$_semanticWeight : const {},
+      _$data.containsKey('_sortOrder') ? l$$_sortOrder : const {},
+    ]);
+  }
+}
+
+abstract class CopyWith$Input$BreadcrumbBlockOrderByInput<TRes> {
+  factory CopyWith$Input$BreadcrumbBlockOrderByInput(
+    Input$BreadcrumbBlockOrderByInput instance,
+    TRes Function(Input$BreadcrumbBlockOrderByInput) then,
+  ) = _CopyWithImpl$Input$BreadcrumbBlockOrderByInput;
+
+  factory CopyWith$Input$BreadcrumbBlockOrderByInput.stub(TRes res) =
+      _CopyWithStubImpl$Input$BreadcrumbBlockOrderByInput;
+
+  TRes call({
+    Enum$OrderBy? Ancestors,
+    Input$CategoryModelOrderByInput? Category,
+    Enum$OrderBy? Changed,
+    Input$ContentModelReferenceOrderByInput? ContentLink,
+    Enum$OrderBy? ContentType,
+    Enum$OrderBy? Created,
+    Input$ContentLanguageModelOrderByInput? ExistingLanguages,
+    Enum$OrderBy? IsCommonDraft,
+    Enum$OrderBy? IsVisible,
+    Input$ContentLanguageModelOrderByInput? Language,
+    Input$ContentLanguageModelOrderByInput? MasterLanguage,
+    Enum$OrderBy? Name,
+    Input$ContentModelReferenceOrderByInput? ParentLink,
+    Enum$OrderBy? RelativePath,
+    Enum$OrderBy? RouteSegment,
+    Enum$OrderBy? Saved,
+    Enum$OrderBy? Shortcut,
+    Enum$OrderBy? ShowSelf,
+    Enum$OrderBy? SimpleAddress,
+    Enum$OrderBy? SiteId,
+    Enum$OrderBy? StartPublish,
+    Enum$OrderBy? Status,
+    Enum$OrderBy? StopPublish,
+    Enum$OrderBy? Url,
+    Enum$OrderBy? $_concreteType,
+    double? $_minimumScore,
+    Enum$OrderBy? $_modified,
+    Enum$Ranking? $_ranking,
+    double? $_semanticWeight,
+    Enum$OrderBy? $_sortOrder,
+  });
+  CopyWith$Input$CategoryModelOrderByInput<TRes> get Category;
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get ContentLink;
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get ExistingLanguages;
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get Language;
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get MasterLanguage;
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get ParentLink;
+}
+
+class _CopyWithImpl$Input$BreadcrumbBlockOrderByInput<TRes>
+    implements CopyWith$Input$BreadcrumbBlockOrderByInput<TRes> {
+  _CopyWithImpl$Input$BreadcrumbBlockOrderByInput(
+    this._instance,
+    this._then,
+  );
+
+  final Input$BreadcrumbBlockOrderByInput _instance;
+
+  final TRes Function(Input$BreadcrumbBlockOrderByInput) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? Ancestors = _undefined,
+    Object? Category = _undefined,
+    Object? Changed = _undefined,
+    Object? ContentLink = _undefined,
+    Object? ContentType = _undefined,
+    Object? Created = _undefined,
+    Object? ExistingLanguages = _undefined,
+    Object? IsCommonDraft = _undefined,
+    Object? IsVisible = _undefined,
+    Object? Language = _undefined,
+    Object? MasterLanguage = _undefined,
+    Object? Name = _undefined,
+    Object? ParentLink = _undefined,
+    Object? RelativePath = _undefined,
+    Object? RouteSegment = _undefined,
+    Object? Saved = _undefined,
+    Object? Shortcut = _undefined,
+    Object? ShowSelf = _undefined,
+    Object? SimpleAddress = _undefined,
+    Object? SiteId = _undefined,
+    Object? StartPublish = _undefined,
+    Object? Status = _undefined,
+    Object? StopPublish = _undefined,
+    Object? Url = _undefined,
+    Object? $_concreteType = _undefined,
+    Object? $_minimumScore = _undefined,
+    Object? $_modified = _undefined,
+    Object? $_ranking = _undefined,
+    Object? $_semanticWeight = _undefined,
+    Object? $_sortOrder = _undefined,
+  }) =>
+      _then(Input$BreadcrumbBlockOrderByInput._({
+        ..._instance._$data,
+        if (Ancestors != _undefined) 'Ancestors': (Ancestors as Enum$OrderBy?),
+        if (Category != _undefined)
+          'Category': (Category as Input$CategoryModelOrderByInput?),
+        if (Changed != _undefined) 'Changed': (Changed as Enum$OrderBy?),
+        if (ContentLink != _undefined)
+          'ContentLink':
+              (ContentLink as Input$ContentModelReferenceOrderByInput?),
+        if (ContentType != _undefined)
+          'ContentType': (ContentType as Enum$OrderBy?),
+        if (Created != _undefined) 'Created': (Created as Enum$OrderBy?),
+        if (ExistingLanguages != _undefined)
+          'ExistingLanguages':
+              (ExistingLanguages as Input$ContentLanguageModelOrderByInput?),
+        if (IsCommonDraft != _undefined)
+          'IsCommonDraft': (IsCommonDraft as Enum$OrderBy?),
+        if (IsVisible != _undefined) 'IsVisible': (IsVisible as Enum$OrderBy?),
+        if (Language != _undefined)
+          'Language': (Language as Input$ContentLanguageModelOrderByInput?),
+        if (MasterLanguage != _undefined)
+          'MasterLanguage':
+              (MasterLanguage as Input$ContentLanguageModelOrderByInput?),
+        if (Name != _undefined) 'Name': (Name as Enum$OrderBy?),
+        if (ParentLink != _undefined)
+          'ParentLink':
+              (ParentLink as Input$ContentModelReferenceOrderByInput?),
+        if (RelativePath != _undefined)
+          'RelativePath': (RelativePath as Enum$OrderBy?),
+        if (RouteSegment != _undefined)
+          'RouteSegment': (RouteSegment as Enum$OrderBy?),
+        if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
+        if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (ShowSelf != _undefined) 'ShowSelf': (ShowSelf as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
+        if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
+        if (StartPublish != _undefined)
+          'StartPublish': (StartPublish as Enum$OrderBy?),
+        if (Status != _undefined) 'Status': (Status as Enum$OrderBy?),
+        if (StopPublish != _undefined)
+          'StopPublish': (StopPublish as Enum$OrderBy?),
+        if (Url != _undefined) 'Url': (Url as Enum$OrderBy?),
+        if ($_concreteType != _undefined)
+          '_concreteType': ($_concreteType as Enum$OrderBy?),
+        if ($_minimumScore != _undefined)
+          '_minimumScore': ($_minimumScore as double?),
+        if ($_modified != _undefined)
+          '_modified': ($_modified as Enum$OrderBy?),
+        if ($_ranking != _undefined) '_ranking': ($_ranking as Enum$Ranking?),
+        if ($_semanticWeight != _undefined)
+          '_semanticWeight': ($_semanticWeight as double?),
+        if ($_sortOrder != _undefined)
+          '_sortOrder': ($_sortOrder as Enum$OrderBy?),
+      }));
+
+  CopyWith$Input$CategoryModelOrderByInput<TRes> get Category {
+    final local$Category = _instance.Category;
+    return local$Category == null
+        ? CopyWith$Input$CategoryModelOrderByInput.stub(_then(_instance))
+        : CopyWith$Input$CategoryModelOrderByInput(
+            local$Category, (e) => call(Category: e));
+  }
+
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get ContentLink {
+    final local$ContentLink = _instance.ContentLink;
+    return local$ContentLink == null
+        ? CopyWith$Input$ContentModelReferenceOrderByInput.stub(
+            _then(_instance))
+        : CopyWith$Input$ContentModelReferenceOrderByInput(
+            local$ContentLink, (e) => call(ContentLink: e));
+  }
+
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get ExistingLanguages {
+    final local$ExistingLanguages = _instance.ExistingLanguages;
+    return local$ExistingLanguages == null
+        ? CopyWith$Input$ContentLanguageModelOrderByInput.stub(_then(_instance))
+        : CopyWith$Input$ContentLanguageModelOrderByInput(
+            local$ExistingLanguages, (e) => call(ExistingLanguages: e));
+  }
+
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get Language {
+    final local$Language = _instance.Language;
+    return local$Language == null
+        ? CopyWith$Input$ContentLanguageModelOrderByInput.stub(_then(_instance))
+        : CopyWith$Input$ContentLanguageModelOrderByInput(
+            local$Language, (e) => call(Language: e));
+  }
+
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get MasterLanguage {
+    final local$MasterLanguage = _instance.MasterLanguage;
+    return local$MasterLanguage == null
+        ? CopyWith$Input$ContentLanguageModelOrderByInput.stub(_then(_instance))
+        : CopyWith$Input$ContentLanguageModelOrderByInput(
+            local$MasterLanguage, (e) => call(MasterLanguage: e));
+  }
+
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get ParentLink {
+    final local$ParentLink = _instance.ParentLink;
+    return local$ParentLink == null
+        ? CopyWith$Input$ContentModelReferenceOrderByInput.stub(
+            _then(_instance))
+        : CopyWith$Input$ContentModelReferenceOrderByInput(
+            local$ParentLink, (e) => call(ParentLink: e));
+  }
+}
+
+class _CopyWithStubImpl$Input$BreadcrumbBlockOrderByInput<TRes>
+    implements CopyWith$Input$BreadcrumbBlockOrderByInput<TRes> {
+  _CopyWithStubImpl$Input$BreadcrumbBlockOrderByInput(this._res);
+
+  TRes _res;
+
+  call({
+    Enum$OrderBy? Ancestors,
+    Input$CategoryModelOrderByInput? Category,
+    Enum$OrderBy? Changed,
+    Input$ContentModelReferenceOrderByInput? ContentLink,
+    Enum$OrderBy? ContentType,
+    Enum$OrderBy? Created,
+    Input$ContentLanguageModelOrderByInput? ExistingLanguages,
+    Enum$OrderBy? IsCommonDraft,
+    Enum$OrderBy? IsVisible,
+    Input$ContentLanguageModelOrderByInput? Language,
+    Input$ContentLanguageModelOrderByInput? MasterLanguage,
+    Enum$OrderBy? Name,
+    Input$ContentModelReferenceOrderByInput? ParentLink,
+    Enum$OrderBy? RelativePath,
+    Enum$OrderBy? RouteSegment,
+    Enum$OrderBy? Saved,
+    Enum$OrderBy? Shortcut,
+    Enum$OrderBy? ShowSelf,
+    Enum$OrderBy? SimpleAddress,
+    Enum$OrderBy? SiteId,
+    Enum$OrderBy? StartPublish,
+    Enum$OrderBy? Status,
+    Enum$OrderBy? StopPublish,
+    Enum$OrderBy? Url,
+    Enum$OrderBy? $_concreteType,
+    double? $_minimumScore,
+    Enum$OrderBy? $_modified,
+    Enum$Ranking? $_ranking,
+    double? $_semanticWeight,
+    Enum$OrderBy? $_sortOrder,
+  }) =>
+      _res;
+
+  CopyWith$Input$CategoryModelOrderByInput<TRes> get Category =>
+      CopyWith$Input$CategoryModelOrderByInput.stub(_res);
+
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get ContentLink =>
+      CopyWith$Input$ContentModelReferenceOrderByInput.stub(_res);
+
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get ExistingLanguages =>
+      CopyWith$Input$ContentLanguageModelOrderByInput.stub(_res);
+
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get Language =>
+      CopyWith$Input$ContentLanguageModelOrderByInput.stub(_res);
+
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get MasterLanguage =>
+      CopyWith$Input$ContentLanguageModelOrderByInput.stub(_res);
+
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get ParentLink =>
+      CopyWith$Input$ContentModelReferenceOrderByInput.stub(_res);
+}
+
+class Input$BreadcrumbBlockWhereInput {
+  factory Input$BreadcrumbBlockWhereInput({
+    Input$StringFilterInput? Ancestors,
+    Input$CategoryModelWhereInput? Category,
+    Input$DateFilterInput? Changed,
+    Input$ContentModelReferenceWhereInput? ContentLink,
+    Input$StringFilterInput? ContentType,
+    Input$DateFilterInput? Created,
+    Input$ContentLanguageModelWhereInput? ExistingLanguages,
+    Input$BoolFilterInput? IsCommonDraft,
+    Input$BoolFilterInput? IsVisible,
+    Input$ContentLanguageModelWhereInput? Language,
+    Input$ContentLanguageModelWhereInput? MasterLanguage,
+    Input$SearchableStringFilterInput? Name,
+    Input$ContentModelReferenceWhereInput? ParentLink,
+    Input$StringFilterInput? RelativePath,
+    Input$StringFilterInput? RouteSegment,
+    Input$DateFilterInput? Saved,
+    Input$StringFilterInput? Shortcut,
+    Input$BoolFilterInput? ShowSelf,
+    Input$StringFilterInput? SimpleAddress,
+    Input$StringFilterInput? SiteId,
+    Input$DateFilterInput? StartPublish,
+    Input$StringFilterInput? Status,
+    Input$DateFilterInput? StopPublish,
+    Input$StringFilterInput? Url,
+    List<Input$BreadcrumbBlockWhereInput?>? $_and,
+    Input$StringFilterInput? $_concreteType,
+    Input$SearchableStringFilterInput? $_fulltext,
+    Input$DateFilterInput? $_modified,
+    List<Input$BreadcrumbBlockWhereInput?>? $_not,
+    List<Input$BreadcrumbBlockWhereInput?>? $_or,
+    Input$IntFilterInput? $_sortOrder,
+  }) =>
+      Input$BreadcrumbBlockWhereInput._({
+        if (Ancestors != null) r'Ancestors': Ancestors,
+        if (Category != null) r'Category': Category,
+        if (Changed != null) r'Changed': Changed,
+        if (ContentLink != null) r'ContentLink': ContentLink,
+        if (ContentType != null) r'ContentType': ContentType,
+        if (Created != null) r'Created': Created,
+        if (ExistingLanguages != null) r'ExistingLanguages': ExistingLanguages,
+        if (IsCommonDraft != null) r'IsCommonDraft': IsCommonDraft,
+        if (IsVisible != null) r'IsVisible': IsVisible,
+        if (Language != null) r'Language': Language,
+        if (MasterLanguage != null) r'MasterLanguage': MasterLanguage,
+        if (Name != null) r'Name': Name,
+        if (ParentLink != null) r'ParentLink': ParentLink,
+        if (RelativePath != null) r'RelativePath': RelativePath,
+        if (RouteSegment != null) r'RouteSegment': RouteSegment,
+        if (Saved != null) r'Saved': Saved,
+        if (Shortcut != null) r'Shortcut': Shortcut,
+        if (ShowSelf != null) r'ShowSelf': ShowSelf,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
+        if (SiteId != null) r'SiteId': SiteId,
+        if (StartPublish != null) r'StartPublish': StartPublish,
+        if (Status != null) r'Status': Status,
+        if (StopPublish != null) r'StopPublish': StopPublish,
+        if (Url != null) r'Url': Url,
+        if ($_and != null) r'_and': $_and,
+        if ($_concreteType != null) r'_concreteType': $_concreteType,
+        if ($_fulltext != null) r'_fulltext': $_fulltext,
+        if ($_modified != null) r'_modified': $_modified,
+        if ($_not != null) r'_not': $_not,
+        if ($_or != null) r'_or': $_or,
+        if ($_sortOrder != null) r'_sortOrder': $_sortOrder,
+      });
+
+  Input$BreadcrumbBlockWhereInput._(this._$data);
+
+  factory Input$BreadcrumbBlockWhereInput.fromJson(Map<String, dynamic> data) {
+    final result$data = <String, dynamic>{};
+    if (data.containsKey('Ancestors')) {
+      final l$Ancestors = data['Ancestors'];
+      result$data['Ancestors'] = l$Ancestors == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$Ancestors as Map<String, dynamic>));
+    }
+    if (data.containsKey('Category')) {
+      final l$Category = data['Category'];
+      result$data['Category'] = l$Category == null
+          ? null
+          : Input$CategoryModelWhereInput.fromJson(
+              (l$Category as Map<String, dynamic>));
+    }
+    if (data.containsKey('Changed')) {
+      final l$Changed = data['Changed'];
+      result$data['Changed'] = l$Changed == null
+          ? null
+          : Input$DateFilterInput.fromJson((l$Changed as Map<String, dynamic>));
+    }
+    if (data.containsKey('ContentLink')) {
+      final l$ContentLink = data['ContentLink'];
+      result$data['ContentLink'] = l$ContentLink == null
+          ? null
+          : Input$ContentModelReferenceWhereInput.fromJson(
+              (l$ContentLink as Map<String, dynamic>));
+    }
+    if (data.containsKey('ContentType')) {
+      final l$ContentType = data['ContentType'];
+      result$data['ContentType'] = l$ContentType == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$ContentType as Map<String, dynamic>));
+    }
+    if (data.containsKey('Created')) {
+      final l$Created = data['Created'];
+      result$data['Created'] = l$Created == null
+          ? null
+          : Input$DateFilterInput.fromJson((l$Created as Map<String, dynamic>));
+    }
+    if (data.containsKey('ExistingLanguages')) {
+      final l$ExistingLanguages = data['ExistingLanguages'];
+      result$data['ExistingLanguages'] = l$ExistingLanguages == null
+          ? null
+          : Input$ContentLanguageModelWhereInput.fromJson(
+              (l$ExistingLanguages as Map<String, dynamic>));
+    }
+    if (data.containsKey('IsCommonDraft')) {
+      final l$IsCommonDraft = data['IsCommonDraft'];
+      result$data['IsCommonDraft'] = l$IsCommonDraft == null
+          ? null
+          : Input$BoolFilterInput.fromJson(
+              (l$IsCommonDraft as Map<String, dynamic>));
+    }
+    if (data.containsKey('IsVisible')) {
+      final l$IsVisible = data['IsVisible'];
+      result$data['IsVisible'] = l$IsVisible == null
+          ? null
+          : Input$BoolFilterInput.fromJson(
+              (l$IsVisible as Map<String, dynamic>));
+    }
+    if (data.containsKey('Language')) {
+      final l$Language = data['Language'];
+      result$data['Language'] = l$Language == null
+          ? null
+          : Input$ContentLanguageModelWhereInput.fromJson(
+              (l$Language as Map<String, dynamic>));
+    }
+    if (data.containsKey('MasterLanguage')) {
+      final l$MasterLanguage = data['MasterLanguage'];
+      result$data['MasterLanguage'] = l$MasterLanguage == null
+          ? null
+          : Input$ContentLanguageModelWhereInput.fromJson(
+              (l$MasterLanguage as Map<String, dynamic>));
+    }
+    if (data.containsKey('Name')) {
+      final l$Name = data['Name'];
+      result$data['Name'] = l$Name == null
+          ? null
+          : Input$SearchableStringFilterInput.fromJson(
+              (l$Name as Map<String, dynamic>));
+    }
+    if (data.containsKey('ParentLink')) {
+      final l$ParentLink = data['ParentLink'];
+      result$data['ParentLink'] = l$ParentLink == null
+          ? null
+          : Input$ContentModelReferenceWhereInput.fromJson(
+              (l$ParentLink as Map<String, dynamic>));
+    }
+    if (data.containsKey('RelativePath')) {
+      final l$RelativePath = data['RelativePath'];
+      result$data['RelativePath'] = l$RelativePath == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$RelativePath as Map<String, dynamic>));
+    }
+    if (data.containsKey('RouteSegment')) {
+      final l$RouteSegment = data['RouteSegment'];
+      result$data['RouteSegment'] = l$RouteSegment == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$RouteSegment as Map<String, dynamic>));
+    }
+    if (data.containsKey('Saved')) {
+      final l$Saved = data['Saved'];
+      result$data['Saved'] = l$Saved == null
+          ? null
+          : Input$DateFilterInput.fromJson((l$Saved as Map<String, dynamic>));
+    }
+    if (data.containsKey('Shortcut')) {
+      final l$Shortcut = data['Shortcut'];
+      result$data['Shortcut'] = l$Shortcut == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$Shortcut as Map<String, dynamic>));
+    }
+    if (data.containsKey('ShowSelf')) {
+      final l$ShowSelf = data['ShowSelf'];
+      result$data['ShowSelf'] = l$ShowSelf == null
+          ? null
+          : Input$BoolFilterInput.fromJson(
+              (l$ShowSelf as Map<String, dynamic>));
+    }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
+    }
+    if (data.containsKey('SiteId')) {
+      final l$SiteId = data['SiteId'];
+      result$data['SiteId'] = l$SiteId == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SiteId as Map<String, dynamic>));
+    }
+    if (data.containsKey('StartPublish')) {
+      final l$StartPublish = data['StartPublish'];
+      result$data['StartPublish'] = l$StartPublish == null
+          ? null
+          : Input$DateFilterInput.fromJson(
+              (l$StartPublish as Map<String, dynamic>));
+    }
+    if (data.containsKey('Status')) {
+      final l$Status = data['Status'];
+      result$data['Status'] = l$Status == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$Status as Map<String, dynamic>));
+    }
+    if (data.containsKey('StopPublish')) {
+      final l$StopPublish = data['StopPublish'];
+      result$data['StopPublish'] = l$StopPublish == null
+          ? null
+          : Input$DateFilterInput.fromJson(
+              (l$StopPublish as Map<String, dynamic>));
+    }
+    if (data.containsKey('Url')) {
+      final l$Url = data['Url'];
+      result$data['Url'] = l$Url == null
+          ? null
+          : Input$StringFilterInput.fromJson((l$Url as Map<String, dynamic>));
+    }
+    if (data.containsKey('_and')) {
+      final l$$_and = data['_and'];
+      result$data['_and'] = (l$$_and as List<dynamic>?)
+          ?.map((e) => e == null
+              ? null
+              : Input$BreadcrumbBlockWhereInput.fromJson(
+                  (e as Map<String, dynamic>)))
+          .toList();
+    }
+    if (data.containsKey('_concreteType')) {
+      final l$$_concreteType = data['_concreteType'];
+      result$data['_concreteType'] = l$$_concreteType == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$$_concreteType as Map<String, dynamic>));
+    }
+    if (data.containsKey('_fulltext')) {
+      final l$$_fulltext = data['_fulltext'];
+      result$data['_fulltext'] = l$$_fulltext == null
+          ? null
+          : Input$SearchableStringFilterInput.fromJson(
+              (l$$_fulltext as Map<String, dynamic>));
+    }
+    if (data.containsKey('_modified')) {
+      final l$$_modified = data['_modified'];
+      result$data['_modified'] = l$$_modified == null
+          ? null
+          : Input$DateFilterInput.fromJson(
+              (l$$_modified as Map<String, dynamic>));
+    }
+    if (data.containsKey('_not')) {
+      final l$$_not = data['_not'];
+      result$data['_not'] = (l$$_not as List<dynamic>?)
+          ?.map((e) => e == null
+              ? null
+              : Input$BreadcrumbBlockWhereInput.fromJson(
+                  (e as Map<String, dynamic>)))
+          .toList();
+    }
+    if (data.containsKey('_or')) {
+      final l$$_or = data['_or'];
+      result$data['_or'] = (l$$_or as List<dynamic>?)
+          ?.map((e) => e == null
+              ? null
+              : Input$BreadcrumbBlockWhereInput.fromJson(
+                  (e as Map<String, dynamic>)))
+          .toList();
+    }
+    if (data.containsKey('_sortOrder')) {
+      final l$$_sortOrder = data['_sortOrder'];
+      result$data['_sortOrder'] = l$$_sortOrder == null
+          ? null
+          : Input$IntFilterInput.fromJson(
+              (l$$_sortOrder as Map<String, dynamic>));
+    }
+    return Input$BreadcrumbBlockWhereInput._(result$data);
+  }
+
+  Map<String, dynamic> _$data;
+
+  Input$StringFilterInput? get Ancestors =>
+      (_$data['Ancestors'] as Input$StringFilterInput?);
+
+  Input$CategoryModelWhereInput? get Category =>
+      (_$data['Category'] as Input$CategoryModelWhereInput?);
+
+  Input$DateFilterInput? get Changed =>
+      (_$data['Changed'] as Input$DateFilterInput?);
+
+  Input$ContentModelReferenceWhereInput? get ContentLink =>
+      (_$data['ContentLink'] as Input$ContentModelReferenceWhereInput?);
+
+  Input$StringFilterInput? get ContentType =>
+      (_$data['ContentType'] as Input$StringFilterInput?);
+
+  Input$DateFilterInput? get Created =>
+      (_$data['Created'] as Input$DateFilterInput?);
+
+  Input$ContentLanguageModelWhereInput? get ExistingLanguages =>
+      (_$data['ExistingLanguages'] as Input$ContentLanguageModelWhereInput?);
+
+  Input$BoolFilterInput? get IsCommonDraft =>
+      (_$data['IsCommonDraft'] as Input$BoolFilterInput?);
+
+  Input$BoolFilterInput? get IsVisible =>
+      (_$data['IsVisible'] as Input$BoolFilterInput?);
+
+  Input$ContentLanguageModelWhereInput? get Language =>
+      (_$data['Language'] as Input$ContentLanguageModelWhereInput?);
+
+  Input$ContentLanguageModelWhereInput? get MasterLanguage =>
+      (_$data['MasterLanguage'] as Input$ContentLanguageModelWhereInput?);
+
+  Input$SearchableStringFilterInput? get Name =>
+      (_$data['Name'] as Input$SearchableStringFilterInput?);
+
+  Input$ContentModelReferenceWhereInput? get ParentLink =>
+      (_$data['ParentLink'] as Input$ContentModelReferenceWhereInput?);
+
+  Input$StringFilterInput? get RelativePath =>
+      (_$data['RelativePath'] as Input$StringFilterInput?);
+
+  Input$StringFilterInput? get RouteSegment =>
+      (_$data['RouteSegment'] as Input$StringFilterInput?);
+
+  Input$DateFilterInput? get Saved =>
+      (_$data['Saved'] as Input$DateFilterInput?);
+
+  Input$StringFilterInput? get Shortcut =>
+      (_$data['Shortcut'] as Input$StringFilterInput?);
+
+  Input$BoolFilterInput? get ShowSelf =>
+      (_$data['ShowSelf'] as Input$BoolFilterInput?);
+
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
+  Input$StringFilterInput? get SiteId =>
+      (_$data['SiteId'] as Input$StringFilterInput?);
+
+  Input$DateFilterInput? get StartPublish =>
+      (_$data['StartPublish'] as Input$DateFilterInput?);
+
+  Input$StringFilterInput? get Status =>
+      (_$data['Status'] as Input$StringFilterInput?);
+
+  Input$DateFilterInput? get StopPublish =>
+      (_$data['StopPublish'] as Input$DateFilterInput?);
+
+  Input$StringFilterInput? get Url =>
+      (_$data['Url'] as Input$StringFilterInput?);
+
+  List<Input$BreadcrumbBlockWhereInput?>? get $_and =>
+      (_$data['_and'] as List<Input$BreadcrumbBlockWhereInput?>?);
+
+  Input$StringFilterInput? get $_concreteType =>
+      (_$data['_concreteType'] as Input$StringFilterInput?);
+
+  Input$SearchableStringFilterInput? get $_fulltext =>
+      (_$data['_fulltext'] as Input$SearchableStringFilterInput?);
+
+  Input$DateFilterInput? get $_modified =>
+      (_$data['_modified'] as Input$DateFilterInput?);
+
+  List<Input$BreadcrumbBlockWhereInput?>? get $_not =>
+      (_$data['_not'] as List<Input$BreadcrumbBlockWhereInput?>?);
+
+  List<Input$BreadcrumbBlockWhereInput?>? get $_or =>
+      (_$data['_or'] as List<Input$BreadcrumbBlockWhereInput?>?);
+
+  Input$IntFilterInput? get $_sortOrder =>
+      (_$data['_sortOrder'] as Input$IntFilterInput?);
+
+  Map<String, dynamic> toJson() {
+    final result$data = <String, dynamic>{};
+    if (_$data.containsKey('Ancestors')) {
+      final l$Ancestors = Ancestors;
+      result$data['Ancestors'] = l$Ancestors?.toJson();
+    }
+    if (_$data.containsKey('Category')) {
+      final l$Category = Category;
+      result$data['Category'] = l$Category?.toJson();
+    }
+    if (_$data.containsKey('Changed')) {
+      final l$Changed = Changed;
+      result$data['Changed'] = l$Changed?.toJson();
+    }
+    if (_$data.containsKey('ContentLink')) {
+      final l$ContentLink = ContentLink;
+      result$data['ContentLink'] = l$ContentLink?.toJson();
+    }
+    if (_$data.containsKey('ContentType')) {
+      final l$ContentType = ContentType;
+      result$data['ContentType'] = l$ContentType?.toJson();
+    }
+    if (_$data.containsKey('Created')) {
+      final l$Created = Created;
+      result$data['Created'] = l$Created?.toJson();
+    }
+    if (_$data.containsKey('ExistingLanguages')) {
+      final l$ExistingLanguages = ExistingLanguages;
+      result$data['ExistingLanguages'] = l$ExistingLanguages?.toJson();
+    }
+    if (_$data.containsKey('IsCommonDraft')) {
+      final l$IsCommonDraft = IsCommonDraft;
+      result$data['IsCommonDraft'] = l$IsCommonDraft?.toJson();
+    }
+    if (_$data.containsKey('IsVisible')) {
+      final l$IsVisible = IsVisible;
+      result$data['IsVisible'] = l$IsVisible?.toJson();
+    }
+    if (_$data.containsKey('Language')) {
+      final l$Language = Language;
+      result$data['Language'] = l$Language?.toJson();
+    }
+    if (_$data.containsKey('MasterLanguage')) {
+      final l$MasterLanguage = MasterLanguage;
+      result$data['MasterLanguage'] = l$MasterLanguage?.toJson();
+    }
+    if (_$data.containsKey('Name')) {
+      final l$Name = Name;
+      result$data['Name'] = l$Name?.toJson();
+    }
+    if (_$data.containsKey('ParentLink')) {
+      final l$ParentLink = ParentLink;
+      result$data['ParentLink'] = l$ParentLink?.toJson();
+    }
+    if (_$data.containsKey('RelativePath')) {
+      final l$RelativePath = RelativePath;
+      result$data['RelativePath'] = l$RelativePath?.toJson();
+    }
+    if (_$data.containsKey('RouteSegment')) {
+      final l$RouteSegment = RouteSegment;
+      result$data['RouteSegment'] = l$RouteSegment?.toJson();
+    }
+    if (_$data.containsKey('Saved')) {
+      final l$Saved = Saved;
+      result$data['Saved'] = l$Saved?.toJson();
+    }
+    if (_$data.containsKey('Shortcut')) {
+      final l$Shortcut = Shortcut;
+      result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('ShowSelf')) {
+      final l$ShowSelf = ShowSelf;
+      result$data['ShowSelf'] = l$ShowSelf?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
+    }
+    if (_$data.containsKey('SiteId')) {
+      final l$SiteId = SiteId;
+      result$data['SiteId'] = l$SiteId?.toJson();
+    }
+    if (_$data.containsKey('StartPublish')) {
+      final l$StartPublish = StartPublish;
+      result$data['StartPublish'] = l$StartPublish?.toJson();
+    }
+    if (_$data.containsKey('Status')) {
+      final l$Status = Status;
+      result$data['Status'] = l$Status?.toJson();
+    }
+    if (_$data.containsKey('StopPublish')) {
+      final l$StopPublish = StopPublish;
+      result$data['StopPublish'] = l$StopPublish?.toJson();
+    }
+    if (_$data.containsKey('Url')) {
+      final l$Url = Url;
+      result$data['Url'] = l$Url?.toJson();
+    }
+    if (_$data.containsKey('_and')) {
+      final l$$_and = $_and;
+      result$data['_and'] = l$$_and?.map((e) => e?.toJson()).toList();
+    }
+    if (_$data.containsKey('_concreteType')) {
+      final l$$_concreteType = $_concreteType;
+      result$data['_concreteType'] = l$$_concreteType?.toJson();
+    }
+    if (_$data.containsKey('_fulltext')) {
+      final l$$_fulltext = $_fulltext;
+      result$data['_fulltext'] = l$$_fulltext?.toJson();
+    }
+    if (_$data.containsKey('_modified')) {
+      final l$$_modified = $_modified;
+      result$data['_modified'] = l$$_modified?.toJson();
+    }
+    if (_$data.containsKey('_not')) {
+      final l$$_not = $_not;
+      result$data['_not'] = l$$_not?.map((e) => e?.toJson()).toList();
+    }
+    if (_$data.containsKey('_or')) {
+      final l$$_or = $_or;
+      result$data['_or'] = l$$_or?.map((e) => e?.toJson()).toList();
+    }
+    if (_$data.containsKey('_sortOrder')) {
+      final l$$_sortOrder = $_sortOrder;
+      result$data['_sortOrder'] = l$$_sortOrder?.toJson();
+    }
+    return result$data;
+  }
+
+  CopyWith$Input$BreadcrumbBlockWhereInput<Input$BreadcrumbBlockWhereInput>
+      get copyWith => CopyWith$Input$BreadcrumbBlockWhereInput(
+            this,
+            (i) => i,
+          );
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (other is! Input$BreadcrumbBlockWhereInput ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$Ancestors = Ancestors;
+    final lOther$Ancestors = other.Ancestors;
+    if (_$data.containsKey('Ancestors') !=
+        other._$data.containsKey('Ancestors')) {
+      return false;
+    }
+    if (l$Ancestors != lOther$Ancestors) {
+      return false;
+    }
+    final l$Category = Category;
+    final lOther$Category = other.Category;
+    if (_$data.containsKey('Category') !=
+        other._$data.containsKey('Category')) {
+      return false;
+    }
+    if (l$Category != lOther$Category) {
+      return false;
+    }
+    final l$Changed = Changed;
+    final lOther$Changed = other.Changed;
+    if (_$data.containsKey('Changed') != other._$data.containsKey('Changed')) {
+      return false;
+    }
+    if (l$Changed != lOther$Changed) {
+      return false;
+    }
+    final l$ContentLink = ContentLink;
+    final lOther$ContentLink = other.ContentLink;
+    if (_$data.containsKey('ContentLink') !=
+        other._$data.containsKey('ContentLink')) {
+      return false;
+    }
+    if (l$ContentLink != lOther$ContentLink) {
+      return false;
+    }
+    final l$ContentType = ContentType;
+    final lOther$ContentType = other.ContentType;
+    if (_$data.containsKey('ContentType') !=
+        other._$data.containsKey('ContentType')) {
+      return false;
+    }
+    if (l$ContentType != lOther$ContentType) {
+      return false;
+    }
+    final l$Created = Created;
+    final lOther$Created = other.Created;
+    if (_$data.containsKey('Created') != other._$data.containsKey('Created')) {
+      return false;
+    }
+    if (l$Created != lOther$Created) {
+      return false;
+    }
+    final l$ExistingLanguages = ExistingLanguages;
+    final lOther$ExistingLanguages = other.ExistingLanguages;
+    if (_$data.containsKey('ExistingLanguages') !=
+        other._$data.containsKey('ExistingLanguages')) {
+      return false;
+    }
+    if (l$ExistingLanguages != lOther$ExistingLanguages) {
+      return false;
+    }
+    final l$IsCommonDraft = IsCommonDraft;
+    final lOther$IsCommonDraft = other.IsCommonDraft;
+    if (_$data.containsKey('IsCommonDraft') !=
+        other._$data.containsKey('IsCommonDraft')) {
+      return false;
+    }
+    if (l$IsCommonDraft != lOther$IsCommonDraft) {
+      return false;
+    }
+    final l$IsVisible = IsVisible;
+    final lOther$IsVisible = other.IsVisible;
+    if (_$data.containsKey('IsVisible') !=
+        other._$data.containsKey('IsVisible')) {
+      return false;
+    }
+    if (l$IsVisible != lOther$IsVisible) {
+      return false;
+    }
+    final l$Language = Language;
+    final lOther$Language = other.Language;
+    if (_$data.containsKey('Language') !=
+        other._$data.containsKey('Language')) {
+      return false;
+    }
+    if (l$Language != lOther$Language) {
+      return false;
+    }
+    final l$MasterLanguage = MasterLanguage;
+    final lOther$MasterLanguage = other.MasterLanguage;
+    if (_$data.containsKey('MasterLanguage') !=
+        other._$data.containsKey('MasterLanguage')) {
+      return false;
+    }
+    if (l$MasterLanguage != lOther$MasterLanguage) {
+      return false;
+    }
+    final l$Name = Name;
+    final lOther$Name = other.Name;
+    if (_$data.containsKey('Name') != other._$data.containsKey('Name')) {
+      return false;
+    }
+    if (l$Name != lOther$Name) {
+      return false;
+    }
+    final l$ParentLink = ParentLink;
+    final lOther$ParentLink = other.ParentLink;
+    if (_$data.containsKey('ParentLink') !=
+        other._$data.containsKey('ParentLink')) {
+      return false;
+    }
+    if (l$ParentLink != lOther$ParentLink) {
+      return false;
+    }
+    final l$RelativePath = RelativePath;
+    final lOther$RelativePath = other.RelativePath;
+    if (_$data.containsKey('RelativePath') !=
+        other._$data.containsKey('RelativePath')) {
+      return false;
+    }
+    if (l$RelativePath != lOther$RelativePath) {
+      return false;
+    }
+    final l$RouteSegment = RouteSegment;
+    final lOther$RouteSegment = other.RouteSegment;
+    if (_$data.containsKey('RouteSegment') !=
+        other._$data.containsKey('RouteSegment')) {
+      return false;
+    }
+    if (l$RouteSegment != lOther$RouteSegment) {
+      return false;
+    }
+    final l$Saved = Saved;
+    final lOther$Saved = other.Saved;
+    if (_$data.containsKey('Saved') != other._$data.containsKey('Saved')) {
+      return false;
+    }
+    if (l$Saved != lOther$Saved) {
+      return false;
+    }
+    final l$Shortcut = Shortcut;
+    final lOther$Shortcut = other.Shortcut;
+    if (_$data.containsKey('Shortcut') !=
+        other._$data.containsKey('Shortcut')) {
+      return false;
+    }
+    if (l$Shortcut != lOther$Shortcut) {
+      return false;
+    }
+    final l$ShowSelf = ShowSelf;
+    final lOther$ShowSelf = other.ShowSelf;
+    if (_$data.containsKey('ShowSelf') !=
+        other._$data.containsKey('ShowSelf')) {
+      return false;
+    }
+    if (l$ShowSelf != lOther$ShowSelf) {
+      return false;
+    }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
+    final l$SiteId = SiteId;
+    final lOther$SiteId = other.SiteId;
+    if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
+      return false;
+    }
+    if (l$SiteId != lOther$SiteId) {
+      return false;
+    }
+    final l$StartPublish = StartPublish;
+    final lOther$StartPublish = other.StartPublish;
+    if (_$data.containsKey('StartPublish') !=
+        other._$data.containsKey('StartPublish')) {
+      return false;
+    }
+    if (l$StartPublish != lOther$StartPublish) {
+      return false;
+    }
+    final l$Status = Status;
+    final lOther$Status = other.Status;
+    if (_$data.containsKey('Status') != other._$data.containsKey('Status')) {
+      return false;
+    }
+    if (l$Status != lOther$Status) {
+      return false;
+    }
+    final l$StopPublish = StopPublish;
+    final lOther$StopPublish = other.StopPublish;
+    if (_$data.containsKey('StopPublish') !=
+        other._$data.containsKey('StopPublish')) {
+      return false;
+    }
+    if (l$StopPublish != lOther$StopPublish) {
+      return false;
+    }
+    final l$Url = Url;
+    final lOther$Url = other.Url;
+    if (_$data.containsKey('Url') != other._$data.containsKey('Url')) {
+      return false;
+    }
+    if (l$Url != lOther$Url) {
+      return false;
+    }
+    final l$$_and = $_and;
+    final lOther$$_and = other.$_and;
+    if (_$data.containsKey('_and') != other._$data.containsKey('_and')) {
+      return false;
+    }
+    if (l$$_and != null && lOther$$_and != null) {
+      if (l$$_and.length != lOther$$_and.length) {
+        return false;
+      }
+      for (int i = 0; i < l$$_and.length; i++) {
+        final l$$_and$entry = l$$_and[i];
+        final lOther$$_and$entry = lOther$$_and[i];
+        if (l$$_and$entry != lOther$$_and$entry) {
+          return false;
+        }
+      }
+    } else if (l$$_and != lOther$$_and) {
+      return false;
+    }
+    final l$$_concreteType = $_concreteType;
+    final lOther$$_concreteType = other.$_concreteType;
+    if (_$data.containsKey('_concreteType') !=
+        other._$data.containsKey('_concreteType')) {
+      return false;
+    }
+    if (l$$_concreteType != lOther$$_concreteType) {
+      return false;
+    }
+    final l$$_fulltext = $_fulltext;
+    final lOther$$_fulltext = other.$_fulltext;
+    if (_$data.containsKey('_fulltext') !=
+        other._$data.containsKey('_fulltext')) {
+      return false;
+    }
+    if (l$$_fulltext != lOther$$_fulltext) {
+      return false;
+    }
+    final l$$_modified = $_modified;
+    final lOther$$_modified = other.$_modified;
+    if (_$data.containsKey('_modified') !=
+        other._$data.containsKey('_modified')) {
+      return false;
+    }
+    if (l$$_modified != lOther$$_modified) {
+      return false;
+    }
+    final l$$_not = $_not;
+    final lOther$$_not = other.$_not;
+    if (_$data.containsKey('_not') != other._$data.containsKey('_not')) {
+      return false;
+    }
+    if (l$$_not != null && lOther$$_not != null) {
+      if (l$$_not.length != lOther$$_not.length) {
+        return false;
+      }
+      for (int i = 0; i < l$$_not.length; i++) {
+        final l$$_not$entry = l$$_not[i];
+        final lOther$$_not$entry = lOther$$_not[i];
+        if (l$$_not$entry != lOther$$_not$entry) {
+          return false;
+        }
+      }
+    } else if (l$$_not != lOther$$_not) {
+      return false;
+    }
+    final l$$_or = $_or;
+    final lOther$$_or = other.$_or;
+    if (_$data.containsKey('_or') != other._$data.containsKey('_or')) {
+      return false;
+    }
+    if (l$$_or != null && lOther$$_or != null) {
+      if (l$$_or.length != lOther$$_or.length) {
+        return false;
+      }
+      for (int i = 0; i < l$$_or.length; i++) {
+        final l$$_or$entry = l$$_or[i];
+        final lOther$$_or$entry = lOther$$_or[i];
+        if (l$$_or$entry != lOther$$_or$entry) {
+          return false;
+        }
+      }
+    } else if (l$$_or != lOther$$_or) {
+      return false;
+    }
+    final l$$_sortOrder = $_sortOrder;
+    final lOther$$_sortOrder = other.$_sortOrder;
+    if (_$data.containsKey('_sortOrder') !=
+        other._$data.containsKey('_sortOrder')) {
+      return false;
+    }
+    if (l$$_sortOrder != lOther$$_sortOrder) {
+      return false;
+    }
+    return true;
+  }
+
+  @override
+  int get hashCode {
+    final l$Ancestors = Ancestors;
+    final l$Category = Category;
+    final l$Changed = Changed;
+    final l$ContentLink = ContentLink;
+    final l$ContentType = ContentType;
+    final l$Created = Created;
+    final l$ExistingLanguages = ExistingLanguages;
+    final l$IsCommonDraft = IsCommonDraft;
+    final l$IsVisible = IsVisible;
+    final l$Language = Language;
+    final l$MasterLanguage = MasterLanguage;
+    final l$Name = Name;
+    final l$ParentLink = ParentLink;
+    final l$RelativePath = RelativePath;
+    final l$RouteSegment = RouteSegment;
+    final l$Saved = Saved;
+    final l$Shortcut = Shortcut;
+    final l$ShowSelf = ShowSelf;
+    final l$SimpleAddress = SimpleAddress;
+    final l$SiteId = SiteId;
+    final l$StartPublish = StartPublish;
+    final l$Status = Status;
+    final l$StopPublish = StopPublish;
+    final l$Url = Url;
+    final l$$_and = $_and;
+    final l$$_concreteType = $_concreteType;
+    final l$$_fulltext = $_fulltext;
+    final l$$_modified = $_modified;
+    final l$$_not = $_not;
+    final l$$_or = $_or;
+    final l$$_sortOrder = $_sortOrder;
+    return Object.hashAll([
+      _$data.containsKey('Ancestors') ? l$Ancestors : const {},
+      _$data.containsKey('Category') ? l$Category : const {},
+      _$data.containsKey('Changed') ? l$Changed : const {},
+      _$data.containsKey('ContentLink') ? l$ContentLink : const {},
+      _$data.containsKey('ContentType') ? l$ContentType : const {},
+      _$data.containsKey('Created') ? l$Created : const {},
+      _$data.containsKey('ExistingLanguages') ? l$ExistingLanguages : const {},
+      _$data.containsKey('IsCommonDraft') ? l$IsCommonDraft : const {},
+      _$data.containsKey('IsVisible') ? l$IsVisible : const {},
+      _$data.containsKey('Language') ? l$Language : const {},
+      _$data.containsKey('MasterLanguage') ? l$MasterLanguage : const {},
+      _$data.containsKey('Name') ? l$Name : const {},
+      _$data.containsKey('ParentLink') ? l$ParentLink : const {},
+      _$data.containsKey('RelativePath') ? l$RelativePath : const {},
+      _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
+      _$data.containsKey('Saved') ? l$Saved : const {},
+      _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('ShowSelf') ? l$ShowSelf : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
+      _$data.containsKey('SiteId') ? l$SiteId : const {},
+      _$data.containsKey('StartPublish') ? l$StartPublish : const {},
+      _$data.containsKey('Status') ? l$Status : const {},
+      _$data.containsKey('StopPublish') ? l$StopPublish : const {},
+      _$data.containsKey('Url') ? l$Url : const {},
+      _$data.containsKey('_and')
+          ? l$$_and == null
+              ? null
+              : Object.hashAll(l$$_and.map((v) => v))
+          : const {},
+      _$data.containsKey('_concreteType') ? l$$_concreteType : const {},
+      _$data.containsKey('_fulltext') ? l$$_fulltext : const {},
+      _$data.containsKey('_modified') ? l$$_modified : const {},
+      _$data.containsKey('_not')
+          ? l$$_not == null
+              ? null
+              : Object.hashAll(l$$_not.map((v) => v))
+          : const {},
+      _$data.containsKey('_or')
+          ? l$$_or == null
+              ? null
+              : Object.hashAll(l$$_or.map((v) => v))
+          : const {},
+      _$data.containsKey('_sortOrder') ? l$$_sortOrder : const {},
+    ]);
+  }
+}
+
+abstract class CopyWith$Input$BreadcrumbBlockWhereInput<TRes> {
+  factory CopyWith$Input$BreadcrumbBlockWhereInput(
+    Input$BreadcrumbBlockWhereInput instance,
+    TRes Function(Input$BreadcrumbBlockWhereInput) then,
+  ) = _CopyWithImpl$Input$BreadcrumbBlockWhereInput;
+
+  factory CopyWith$Input$BreadcrumbBlockWhereInput.stub(TRes res) =
+      _CopyWithStubImpl$Input$BreadcrumbBlockWhereInput;
+
+  TRes call({
+    Input$StringFilterInput? Ancestors,
+    Input$CategoryModelWhereInput? Category,
+    Input$DateFilterInput? Changed,
+    Input$ContentModelReferenceWhereInput? ContentLink,
+    Input$StringFilterInput? ContentType,
+    Input$DateFilterInput? Created,
+    Input$ContentLanguageModelWhereInput? ExistingLanguages,
+    Input$BoolFilterInput? IsCommonDraft,
+    Input$BoolFilterInput? IsVisible,
+    Input$ContentLanguageModelWhereInput? Language,
+    Input$ContentLanguageModelWhereInput? MasterLanguage,
+    Input$SearchableStringFilterInput? Name,
+    Input$ContentModelReferenceWhereInput? ParentLink,
+    Input$StringFilterInput? RelativePath,
+    Input$StringFilterInput? RouteSegment,
+    Input$DateFilterInput? Saved,
+    Input$StringFilterInput? Shortcut,
+    Input$BoolFilterInput? ShowSelf,
+    Input$StringFilterInput? SimpleAddress,
+    Input$StringFilterInput? SiteId,
+    Input$DateFilterInput? StartPublish,
+    Input$StringFilterInput? Status,
+    Input$DateFilterInput? StopPublish,
+    Input$StringFilterInput? Url,
+    List<Input$BreadcrumbBlockWhereInput?>? $_and,
+    Input$StringFilterInput? $_concreteType,
+    Input$SearchableStringFilterInput? $_fulltext,
+    Input$DateFilterInput? $_modified,
+    List<Input$BreadcrumbBlockWhereInput?>? $_not,
+    List<Input$BreadcrumbBlockWhereInput?>? $_or,
+    Input$IntFilterInput? $_sortOrder,
+  });
+  CopyWith$Input$StringFilterInput<TRes> get Ancestors;
+  CopyWith$Input$CategoryModelWhereInput<TRes> get Category;
+  CopyWith$Input$DateFilterInput<TRes> get Changed;
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get ContentLink;
+  CopyWith$Input$StringFilterInput<TRes> get ContentType;
+  CopyWith$Input$DateFilterInput<TRes> get Created;
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get ExistingLanguages;
+  CopyWith$Input$BoolFilterInput<TRes> get IsCommonDraft;
+  CopyWith$Input$BoolFilterInput<TRes> get IsVisible;
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get Language;
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get MasterLanguage;
+  CopyWith$Input$SearchableStringFilterInput<TRes> get Name;
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get ParentLink;
+  CopyWith$Input$StringFilterInput<TRes> get RelativePath;
+  CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
+  CopyWith$Input$DateFilterInput<TRes> get Saved;
+  CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$BoolFilterInput<TRes> get ShowSelf;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
+  CopyWith$Input$StringFilterInput<TRes> get SiteId;
+  CopyWith$Input$DateFilterInput<TRes> get StartPublish;
+  CopyWith$Input$StringFilterInput<TRes> get Status;
+  CopyWith$Input$DateFilterInput<TRes> get StopPublish;
+  CopyWith$Input$StringFilterInput<TRes> get Url;
+  TRes $_and(
+      Iterable<Input$BreadcrumbBlockWhereInput?>? Function(
+              Iterable<
+                  CopyWith$Input$BreadcrumbBlockWhereInput<
+                      Input$BreadcrumbBlockWhereInput>?>?)
+          _fn);
+  CopyWith$Input$StringFilterInput<TRes> get $_concreteType;
+  CopyWith$Input$SearchableStringFilterInput<TRes> get $_fulltext;
+  CopyWith$Input$DateFilterInput<TRes> get $_modified;
+  TRes $_not(
+      Iterable<Input$BreadcrumbBlockWhereInput?>? Function(
+              Iterable<
+                  CopyWith$Input$BreadcrumbBlockWhereInput<
+                      Input$BreadcrumbBlockWhereInput>?>?)
+          _fn);
+  TRes $_or(
+      Iterable<Input$BreadcrumbBlockWhereInput?>? Function(
+              Iterable<
+                  CopyWith$Input$BreadcrumbBlockWhereInput<
+                      Input$BreadcrumbBlockWhereInput>?>?)
+          _fn);
+  CopyWith$Input$IntFilterInput<TRes> get $_sortOrder;
+}
+
+class _CopyWithImpl$Input$BreadcrumbBlockWhereInput<TRes>
+    implements CopyWith$Input$BreadcrumbBlockWhereInput<TRes> {
+  _CopyWithImpl$Input$BreadcrumbBlockWhereInput(
+    this._instance,
+    this._then,
+  );
+
+  final Input$BreadcrumbBlockWhereInput _instance;
+
+  final TRes Function(Input$BreadcrumbBlockWhereInput) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? Ancestors = _undefined,
+    Object? Category = _undefined,
+    Object? Changed = _undefined,
+    Object? ContentLink = _undefined,
+    Object? ContentType = _undefined,
+    Object? Created = _undefined,
+    Object? ExistingLanguages = _undefined,
+    Object? IsCommonDraft = _undefined,
+    Object? IsVisible = _undefined,
+    Object? Language = _undefined,
+    Object? MasterLanguage = _undefined,
+    Object? Name = _undefined,
+    Object? ParentLink = _undefined,
+    Object? RelativePath = _undefined,
+    Object? RouteSegment = _undefined,
+    Object? Saved = _undefined,
+    Object? Shortcut = _undefined,
+    Object? ShowSelf = _undefined,
+    Object? SimpleAddress = _undefined,
+    Object? SiteId = _undefined,
+    Object? StartPublish = _undefined,
+    Object? Status = _undefined,
+    Object? StopPublish = _undefined,
+    Object? Url = _undefined,
+    Object? $_and = _undefined,
+    Object? $_concreteType = _undefined,
+    Object? $_fulltext = _undefined,
+    Object? $_modified = _undefined,
+    Object? $_not = _undefined,
+    Object? $_or = _undefined,
+    Object? $_sortOrder = _undefined,
+  }) =>
+      _then(Input$BreadcrumbBlockWhereInput._({
+        ..._instance._$data,
+        if (Ancestors != _undefined)
+          'Ancestors': (Ancestors as Input$StringFilterInput?),
+        if (Category != _undefined)
+          'Category': (Category as Input$CategoryModelWhereInput?),
+        if (Changed != _undefined)
+          'Changed': (Changed as Input$DateFilterInput?),
+        if (ContentLink != _undefined)
+          'ContentLink':
+              (ContentLink as Input$ContentModelReferenceWhereInput?),
+        if (ContentType != _undefined)
+          'ContentType': (ContentType as Input$StringFilterInput?),
+        if (Created != _undefined)
+          'Created': (Created as Input$DateFilterInput?),
+        if (ExistingLanguages != _undefined)
+          'ExistingLanguages':
+              (ExistingLanguages as Input$ContentLanguageModelWhereInput?),
+        if (IsCommonDraft != _undefined)
+          'IsCommonDraft': (IsCommonDraft as Input$BoolFilterInput?),
+        if (IsVisible != _undefined)
+          'IsVisible': (IsVisible as Input$BoolFilterInput?),
+        if (Language != _undefined)
+          'Language': (Language as Input$ContentLanguageModelWhereInput?),
+        if (MasterLanguage != _undefined)
+          'MasterLanguage':
+              (MasterLanguage as Input$ContentLanguageModelWhereInput?),
+        if (Name != _undefined)
+          'Name': (Name as Input$SearchableStringFilterInput?),
+        if (ParentLink != _undefined)
+          'ParentLink': (ParentLink as Input$ContentModelReferenceWhereInput?),
+        if (RelativePath != _undefined)
+          'RelativePath': (RelativePath as Input$StringFilterInput?),
+        if (RouteSegment != _undefined)
+          'RouteSegment': (RouteSegment as Input$StringFilterInput?),
+        if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
+        if (Shortcut != _undefined)
+          'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (ShowSelf != _undefined)
+          'ShowSelf': (ShowSelf as Input$BoolFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
+        if (SiteId != _undefined)
+          'SiteId': (SiteId as Input$StringFilterInput?),
+        if (StartPublish != _undefined)
+          'StartPublish': (StartPublish as Input$DateFilterInput?),
+        if (Status != _undefined)
+          'Status': (Status as Input$StringFilterInput?),
+        if (StopPublish != _undefined)
+          'StopPublish': (StopPublish as Input$DateFilterInput?),
+        if (Url != _undefined) 'Url': (Url as Input$StringFilterInput?),
+        if ($_and != _undefined)
+          '_and': ($_and as List<Input$BreadcrumbBlockWhereInput?>?),
+        if ($_concreteType != _undefined)
+          '_concreteType': ($_concreteType as Input$StringFilterInput?),
+        if ($_fulltext != _undefined)
+          '_fulltext': ($_fulltext as Input$SearchableStringFilterInput?),
+        if ($_modified != _undefined)
+          '_modified': ($_modified as Input$DateFilterInput?),
+        if ($_not != _undefined)
+          '_not': ($_not as List<Input$BreadcrumbBlockWhereInput?>?),
+        if ($_or != _undefined)
+          '_or': ($_or as List<Input$BreadcrumbBlockWhereInput?>?),
+        if ($_sortOrder != _undefined)
+          '_sortOrder': ($_sortOrder as Input$IntFilterInput?),
+      }));
+
+  CopyWith$Input$StringFilterInput<TRes> get Ancestors {
+    final local$Ancestors = _instance.Ancestors;
+    return local$Ancestors == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$Ancestors, (e) => call(Ancestors: e));
+  }
+
+  CopyWith$Input$CategoryModelWhereInput<TRes> get Category {
+    final local$Category = _instance.Category;
+    return local$Category == null
+        ? CopyWith$Input$CategoryModelWhereInput.stub(_then(_instance))
+        : CopyWith$Input$CategoryModelWhereInput(
+            local$Category, (e) => call(Category: e));
+  }
+
+  CopyWith$Input$DateFilterInput<TRes> get Changed {
+    final local$Changed = _instance.Changed;
+    return local$Changed == null
+        ? CopyWith$Input$DateFilterInput.stub(_then(_instance))
+        : CopyWith$Input$DateFilterInput(
+            local$Changed, (e) => call(Changed: e));
+  }
+
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get ContentLink {
+    final local$ContentLink = _instance.ContentLink;
+    return local$ContentLink == null
+        ? CopyWith$Input$ContentModelReferenceWhereInput.stub(_then(_instance))
+        : CopyWith$Input$ContentModelReferenceWhereInput(
+            local$ContentLink, (e) => call(ContentLink: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get ContentType {
+    final local$ContentType = _instance.ContentType;
+    return local$ContentType == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$ContentType, (e) => call(ContentType: e));
+  }
+
+  CopyWith$Input$DateFilterInput<TRes> get Created {
+    final local$Created = _instance.Created;
+    return local$Created == null
+        ? CopyWith$Input$DateFilterInput.stub(_then(_instance))
+        : CopyWith$Input$DateFilterInput(
+            local$Created, (e) => call(Created: e));
+  }
+
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get ExistingLanguages {
+    final local$ExistingLanguages = _instance.ExistingLanguages;
+    return local$ExistingLanguages == null
+        ? CopyWith$Input$ContentLanguageModelWhereInput.stub(_then(_instance))
+        : CopyWith$Input$ContentLanguageModelWhereInput(
+            local$ExistingLanguages, (e) => call(ExistingLanguages: e));
+  }
+
+  CopyWith$Input$BoolFilterInput<TRes> get IsCommonDraft {
+    final local$IsCommonDraft = _instance.IsCommonDraft;
+    return local$IsCommonDraft == null
+        ? CopyWith$Input$BoolFilterInput.stub(_then(_instance))
+        : CopyWith$Input$BoolFilterInput(
+            local$IsCommonDraft, (e) => call(IsCommonDraft: e));
+  }
+
+  CopyWith$Input$BoolFilterInput<TRes> get IsVisible {
+    final local$IsVisible = _instance.IsVisible;
+    return local$IsVisible == null
+        ? CopyWith$Input$BoolFilterInput.stub(_then(_instance))
+        : CopyWith$Input$BoolFilterInput(
+            local$IsVisible, (e) => call(IsVisible: e));
+  }
+
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get Language {
+    final local$Language = _instance.Language;
+    return local$Language == null
+        ? CopyWith$Input$ContentLanguageModelWhereInput.stub(_then(_instance))
+        : CopyWith$Input$ContentLanguageModelWhereInput(
+            local$Language, (e) => call(Language: e));
+  }
+
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get MasterLanguage {
+    final local$MasterLanguage = _instance.MasterLanguage;
+    return local$MasterLanguage == null
+        ? CopyWith$Input$ContentLanguageModelWhereInput.stub(_then(_instance))
+        : CopyWith$Input$ContentLanguageModelWhereInput(
+            local$MasterLanguage, (e) => call(MasterLanguage: e));
+  }
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get Name {
+    final local$Name = _instance.Name;
+    return local$Name == null
+        ? CopyWith$Input$SearchableStringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$SearchableStringFilterInput(
+            local$Name, (e) => call(Name: e));
+  }
+
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get ParentLink {
+    final local$ParentLink = _instance.ParentLink;
+    return local$ParentLink == null
+        ? CopyWith$Input$ContentModelReferenceWhereInput.stub(_then(_instance))
+        : CopyWith$Input$ContentModelReferenceWhereInput(
+            local$ParentLink, (e) => call(ParentLink: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get RelativePath {
+    final local$RelativePath = _instance.RelativePath;
+    return local$RelativePath == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$RelativePath, (e) => call(RelativePath: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get RouteSegment {
+    final local$RouteSegment = _instance.RouteSegment;
+    return local$RouteSegment == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$RouteSegment, (e) => call(RouteSegment: e));
+  }
+
+  CopyWith$Input$DateFilterInput<TRes> get Saved {
+    final local$Saved = _instance.Saved;
+    return local$Saved == null
+        ? CopyWith$Input$DateFilterInput.stub(_then(_instance))
+        : CopyWith$Input$DateFilterInput(local$Saved, (e) => call(Saved: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get Shortcut {
+    final local$Shortcut = _instance.Shortcut;
+    return local$Shortcut == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$Shortcut, (e) => call(Shortcut: e));
+  }
+
+  CopyWith$Input$BoolFilterInput<TRes> get ShowSelf {
+    final local$ShowSelf = _instance.ShowSelf;
+    return local$ShowSelf == null
+        ? CopyWith$Input$BoolFilterInput.stub(_then(_instance))
+        : CopyWith$Input$BoolFilterInput(
+            local$ShowSelf, (e) => call(ShowSelf: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get SiteId {
+    final local$SiteId = _instance.SiteId;
+    return local$SiteId == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SiteId, (e) => call(SiteId: e));
+  }
+
+  CopyWith$Input$DateFilterInput<TRes> get StartPublish {
+    final local$StartPublish = _instance.StartPublish;
+    return local$StartPublish == null
+        ? CopyWith$Input$DateFilterInput.stub(_then(_instance))
+        : CopyWith$Input$DateFilterInput(
+            local$StartPublish, (e) => call(StartPublish: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get Status {
+    final local$Status = _instance.Status;
+    return local$Status == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$Status, (e) => call(Status: e));
+  }
+
+  CopyWith$Input$DateFilterInput<TRes> get StopPublish {
+    final local$StopPublish = _instance.StopPublish;
+    return local$StopPublish == null
+        ? CopyWith$Input$DateFilterInput.stub(_then(_instance))
+        : CopyWith$Input$DateFilterInput(
+            local$StopPublish, (e) => call(StopPublish: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get Url {
+    final local$Url = _instance.Url;
+    return local$Url == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(local$Url, (e) => call(Url: e));
+  }
+
+  TRes $_and(
+          Iterable<Input$BreadcrumbBlockWhereInput?>? Function(
+                  Iterable<
+                      CopyWith$Input$BreadcrumbBlockWhereInput<
+                          Input$BreadcrumbBlockWhereInput>?>?)
+              _fn) =>
+      call(
+          $_and: _fn(_instance.$_and?.map((e) => e == null
+              ? null
+              : CopyWith$Input$BreadcrumbBlockWhereInput(
+                  e,
+                  (i) => i,
+                )))?.toList());
+
+  CopyWith$Input$StringFilterInput<TRes> get $_concreteType {
+    final local$$_concreteType = _instance.$_concreteType;
+    return local$$_concreteType == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$$_concreteType, (e) => call($_concreteType: e));
+  }
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get $_fulltext {
+    final local$$_fulltext = _instance.$_fulltext;
+    return local$$_fulltext == null
+        ? CopyWith$Input$SearchableStringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$SearchableStringFilterInput(
+            local$$_fulltext, (e) => call($_fulltext: e));
+  }
+
+  CopyWith$Input$DateFilterInput<TRes> get $_modified {
+    final local$$_modified = _instance.$_modified;
+    return local$$_modified == null
+        ? CopyWith$Input$DateFilterInput.stub(_then(_instance))
+        : CopyWith$Input$DateFilterInput(
+            local$$_modified, (e) => call($_modified: e));
+  }
+
+  TRes $_not(
+          Iterable<Input$BreadcrumbBlockWhereInput?>? Function(
+                  Iterable<
+                      CopyWith$Input$BreadcrumbBlockWhereInput<
+                          Input$BreadcrumbBlockWhereInput>?>?)
+              _fn) =>
+      call(
+          $_not: _fn(_instance.$_not?.map((e) => e == null
+              ? null
+              : CopyWith$Input$BreadcrumbBlockWhereInput(
+                  e,
+                  (i) => i,
+                )))?.toList());
+
+  TRes $_or(
+          Iterable<Input$BreadcrumbBlockWhereInput?>? Function(
+                  Iterable<
+                      CopyWith$Input$BreadcrumbBlockWhereInput<
+                          Input$BreadcrumbBlockWhereInput>?>?)
+              _fn) =>
+      call(
+          $_or: _fn(_instance.$_or?.map((e) => e == null
+              ? null
+              : CopyWith$Input$BreadcrumbBlockWhereInput(
+                  e,
+                  (i) => i,
+                )))?.toList());
+
+  CopyWith$Input$IntFilterInput<TRes> get $_sortOrder {
+    final local$$_sortOrder = _instance.$_sortOrder;
+    return local$$_sortOrder == null
+        ? CopyWith$Input$IntFilterInput.stub(_then(_instance))
+        : CopyWith$Input$IntFilterInput(
+            local$$_sortOrder, (e) => call($_sortOrder: e));
+  }
+}
+
+class _CopyWithStubImpl$Input$BreadcrumbBlockWhereInput<TRes>
+    implements CopyWith$Input$BreadcrumbBlockWhereInput<TRes> {
+  _CopyWithStubImpl$Input$BreadcrumbBlockWhereInput(this._res);
+
+  TRes _res;
+
+  call({
+    Input$StringFilterInput? Ancestors,
+    Input$CategoryModelWhereInput? Category,
+    Input$DateFilterInput? Changed,
+    Input$ContentModelReferenceWhereInput? ContentLink,
+    Input$StringFilterInput? ContentType,
+    Input$DateFilterInput? Created,
+    Input$ContentLanguageModelWhereInput? ExistingLanguages,
+    Input$BoolFilterInput? IsCommonDraft,
+    Input$BoolFilterInput? IsVisible,
+    Input$ContentLanguageModelWhereInput? Language,
+    Input$ContentLanguageModelWhereInput? MasterLanguage,
+    Input$SearchableStringFilterInput? Name,
+    Input$ContentModelReferenceWhereInput? ParentLink,
+    Input$StringFilterInput? RelativePath,
+    Input$StringFilterInput? RouteSegment,
+    Input$DateFilterInput? Saved,
+    Input$StringFilterInput? Shortcut,
+    Input$BoolFilterInput? ShowSelf,
+    Input$StringFilterInput? SimpleAddress,
+    Input$StringFilterInput? SiteId,
+    Input$DateFilterInput? StartPublish,
+    Input$StringFilterInput? Status,
+    Input$DateFilterInput? StopPublish,
+    Input$StringFilterInput? Url,
+    List<Input$BreadcrumbBlockWhereInput?>? $_and,
+    Input$StringFilterInput? $_concreteType,
+    Input$SearchableStringFilterInput? $_fulltext,
+    Input$DateFilterInput? $_modified,
+    List<Input$BreadcrumbBlockWhereInput?>? $_not,
+    List<Input$BreadcrumbBlockWhereInput?>? $_or,
+    Input$IntFilterInput? $_sortOrder,
+  }) =>
+      _res;
+
+  CopyWith$Input$StringFilterInput<TRes> get Ancestors =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$CategoryModelWhereInput<TRes> get Category =>
+      CopyWith$Input$CategoryModelWhereInput.stub(_res);
+
+  CopyWith$Input$DateFilterInput<TRes> get Changed =>
+      CopyWith$Input$DateFilterInput.stub(_res);
+
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get ContentLink =>
+      CopyWith$Input$ContentModelReferenceWhereInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get ContentType =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$DateFilterInput<TRes> get Created =>
+      CopyWith$Input$DateFilterInput.stub(_res);
+
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get ExistingLanguages =>
+      CopyWith$Input$ContentLanguageModelWhereInput.stub(_res);
+
+  CopyWith$Input$BoolFilterInput<TRes> get IsCommonDraft =>
+      CopyWith$Input$BoolFilterInput.stub(_res);
+
+  CopyWith$Input$BoolFilterInput<TRes> get IsVisible =>
+      CopyWith$Input$BoolFilterInput.stub(_res);
+
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get Language =>
+      CopyWith$Input$ContentLanguageModelWhereInput.stub(_res);
+
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get MasterLanguage =>
+      CopyWith$Input$ContentLanguageModelWhereInput.stub(_res);
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get Name =>
+      CopyWith$Input$SearchableStringFilterInput.stub(_res);
+
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get ParentLink =>
+      CopyWith$Input$ContentModelReferenceWhereInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get RelativePath =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get RouteSegment =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$DateFilterInput<TRes> get Saved =>
+      CopyWith$Input$DateFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$BoolFilterInput<TRes> get ShowSelf =>
+      CopyWith$Input$BoolFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get SiteId =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$DateFilterInput<TRes> get StartPublish =>
+      CopyWith$Input$DateFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get Status =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$DateFilterInput<TRes> get StopPublish =>
+      CopyWith$Input$DateFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get Url =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  $_and(_fn) => _res;
+
+  CopyWith$Input$StringFilterInput<TRes> get $_concreteType =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get $_fulltext =>
+      CopyWith$Input$SearchableStringFilterInput.stub(_res);
+
+  CopyWith$Input$DateFilterInput<TRes> get $_modified =>
+      CopyWith$Input$DateFilterInput.stub(_res);
+
+  $_not(_fn) => _res;
+
+  $_or(_fn) => _res;
+
+  CopyWith$Input$IntFilterInput<TRes> get $_sortOrder =>
+      CopyWith$Input$IntFilterInput.stub(_res);
+}
+
 class Input$ButtonBlockOrderByInput {
   factory Input$ButtonBlockOrderByInput({
     Enum$OrderBy? Ancestors,
@@ -3777,6 +6445,7 @@ class Input$ButtonBlockOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -3808,6 +6477,7 @@ class Input$ButtonBlockOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -3937,6 +6607,12 @@ class Input$ButtonBlockOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -4042,6 +6718,8 @@ class Input$ButtonBlockOrderByInput {
   Enum$OrderBy? get Saved => (_$data['Saved'] as Enum$OrderBy?);
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
 
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
@@ -4150,6 +6828,11 @@ class Input$ButtonBlockOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -4380,6 +7063,15 @@ class Input$ButtonBlockOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -4499,6 +7191,7 @@ class Input$ButtonBlockOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -4529,6 +7222,7 @@ class Input$ButtonBlockOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -4572,6 +7266,7 @@ abstract class CopyWith$Input$ButtonBlockOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -4624,6 +7319,7 @@ class _CopyWithImpl$Input$ButtonBlockOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -4672,6 +7368,8 @@ class _CopyWithImpl$Input$ButtonBlockOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -4768,6 +7466,7 @@ class _CopyWithStubImpl$Input$ButtonBlockOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -4821,6 +7520,7 @@ class Input$ButtonBlockWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -4853,6 +7553,7 @@ class Input$ButtonBlockWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -4993,6 +7694,13 @@ class Input$ButtonBlockWhereInput {
           ? null
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
+    }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
     }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
@@ -5142,6 +7850,9 @@ class Input$ButtonBlockWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -5251,6 +7962,10 @@ class Input$ButtonBlockWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -5476,6 +8191,15 @@ class Input$ButtonBlockWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -5634,6 +8358,7 @@ class Input$ButtonBlockWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -5665,6 +8390,7 @@ class Input$ButtonBlockWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -5721,6 +8447,7 @@ abstract class CopyWith$Input$ButtonBlockWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -5752,6 +8479,7 @@ abstract class CopyWith$Input$ButtonBlockWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -5813,6 +8541,7 @@ class _CopyWithImpl$Input$ButtonBlockWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -5866,6 +8595,8 @@ class _CopyWithImpl$Input$ButtonBlockWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -6034,6 +8765,14 @@ class _CopyWithImpl$Input$ButtonBlockWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -6173,6 +8912,7 @@ class _CopyWithStubImpl$Input$ButtonBlockWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -6240,6 +8980,9 @@ class _CopyWithStubImpl$Input$ButtonBlockWhereInput<TRes>
       CopyWith$Input$DateFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
@@ -7487,6 +10230,7 @@ class Input$ContactBlockOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -7521,6 +10265,7 @@ class Input$ContactBlockOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -7670,6 +10415,12 @@ class Input$ContactBlockOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -7783,6 +10534,8 @@ class Input$ContactBlockOrderByInput {
   Enum$OrderBy? get Saved => (_$data['Saved'] as Enum$OrderBy?);
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
 
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
@@ -7904,6 +10657,11 @@ class Input$ContactBlockOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -8158,6 +10916,15 @@ class Input$ContactBlockOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -8280,6 +11047,7 @@ class Input$ContactBlockOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -8313,6 +11081,7 @@ class Input$ContactBlockOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -8359,6 +11128,7 @@ abstract class CopyWith$Input$ContactBlockOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -8416,6 +11186,7 @@ class _CopyWithImpl$Input$ContactBlockOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -8468,6 +11239,8 @@ class _CopyWithImpl$Input$ContactBlockOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -8585,6 +11358,7 @@ class _CopyWithStubImpl$Input$ContactBlockOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -8647,6 +11421,7 @@ class Input$ContactBlockWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -8682,6 +11457,7 @@ class Input$ContactBlockWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -8844,6 +11620,13 @@ class Input$ContactBlockWhereInput {
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] = l$SiteId == null
@@ -9001,6 +11784,9 @@ class Input$ContactBlockWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -9122,6 +11908,10 @@ class Input$ContactBlockWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -9371,6 +12161,15 @@ class Input$ContactBlockWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -9532,6 +12331,7 @@ class Input$ContactBlockWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -9566,6 +12366,7 @@ class Input$ContactBlockWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -9625,6 +12426,7 @@ abstract class CopyWith$Input$ContactBlockWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -9659,6 +12461,7 @@ abstract class CopyWith$Input$ContactBlockWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -9723,6 +12526,7 @@ class _CopyWithImpl$Input$ContactBlockWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -9783,6 +12587,8 @@ class _CopyWithImpl$Input$ContactBlockWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -9975,6 +12781,14 @@ class _CopyWithImpl$Input$ContactBlockWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -10117,6 +12931,7 @@ class _CopyWithStubImpl$Input$ContactBlockWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -10195,6 +13010,9 @@ class _CopyWithStubImpl$Input$ContactBlockWhereInput<TRes>
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
@@ -10258,6 +13076,7 @@ class Input$ContactPageOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -10299,6 +13118,7 @@ class Input$ContactPageOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -10484,6 +13304,12 @@ class Input$ContactPageOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -10620,6 +13446,8 @@ class Input$ContactPageOrderByInput {
   Enum$OrderBy? get Saved => (_$data['Saved'] as Enum$OrderBy?);
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
 
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
@@ -10776,6 +13604,11 @@ class Input$ContactPageOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -11089,6 +13922,15 @@ class Input$ContactPageOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -11226,6 +14068,7 @@ class Input$ContactPageOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -11266,6 +14109,7 @@ class Input$ContactPageOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -11319,6 +14163,7 @@ abstract class CopyWith$Input$ContactPageOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -11384,6 +14229,7 @@ class _CopyWithImpl$Input$ContactPageOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -11449,6 +14295,8 @@ class _CopyWithImpl$Input$ContactPageOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -11583,6 +14431,7 @@ class _CopyWithStubImpl$Input$ContactPageOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -11655,6 +14504,7 @@ class Input$ContactPageWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -11697,6 +14547,7 @@ class Input$ContactPageWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -11902,6 +14753,13 @@ class Input$ContactPageWhereInput {
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] = l$SiteId == null
@@ -12084,6 +14942,9 @@ class Input$ContactPageWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -12232,6 +15093,10 @@ class Input$ContactPageWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -12539,6 +15404,15 @@ class Input$ContactPageWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -12715,6 +15589,7 @@ class Input$ContactPageWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -12756,6 +15631,7 @@ class Input$ContactPageWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -12822,6 +15698,7 @@ abstract class CopyWith$Input$ContactPageWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -12863,6 +15740,7 @@ abstract class CopyWith$Input$ContactPageWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -12934,6 +15812,7 @@ class _CopyWithImpl$Input$ContactPageWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -13008,6 +15887,8 @@ class _CopyWithImpl$Input$ContactPageWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -13251,6 +16132,14 @@ class _CopyWithImpl$Input$ContactPageWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -13407,6 +16296,7 @@ class _CopyWithStubImpl$Input$ContactPageWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -13504,6 +16394,9 @@ class _CopyWithStubImpl$Input$ContactPageWhereInput<TRes>
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
@@ -13567,6 +16460,7 @@ class Input$ContainerPageOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -13605,6 +16499,7 @@ class Input$ContainerPageOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -13773,6 +16668,12 @@ class Input$ContainerPageOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -13902,6 +16803,8 @@ class Input$ContainerPageOrderByInput {
   Enum$OrderBy? get Saved => (_$data['Saved'] as Enum$OrderBy?);
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
 
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
@@ -14044,6 +16947,11 @@ class Input$ContainerPageOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -14333,6 +17241,15 @@ class Input$ContainerPageOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -14467,6 +17384,7 @@ class Input$ContainerPageOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -14504,6 +17422,7 @@ class Input$ContainerPageOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -14554,6 +17473,7 @@ abstract class CopyWith$Input$ContainerPageOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -14615,6 +17535,7 @@ class _CopyWithImpl$Input$ContainerPageOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -14676,6 +17597,8 @@ class _CopyWithImpl$Input$ContainerPageOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -14798,6 +17721,7 @@ class _CopyWithStubImpl$Input$ContainerPageOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -14864,6 +17788,7 @@ class Input$ContainerPageWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -14903,6 +17828,7 @@ class Input$ContainerPageWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -15087,6 +18013,13 @@ class Input$ContainerPageWhereInput {
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] = l$SiteId == null
@@ -15260,6 +18193,9 @@ class Input$ContainerPageWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -15396,6 +18332,10 @@ class Input$ContainerPageWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -15679,6 +18619,15 @@ class Input$ContainerPageWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -15852,6 +18801,7 @@ class Input$ContainerPageWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -15890,6 +18840,7 @@ class Input$ContainerPageWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -15953,6 +18904,7 @@ abstract class CopyWith$Input$ContainerPageWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -15991,6 +18943,7 @@ abstract class CopyWith$Input$ContainerPageWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -16059,6 +19012,7 @@ class _CopyWithImpl$Input$ContainerPageWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -16127,6 +19081,8 @@ class _CopyWithImpl$Input$ContainerPageWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -16346,6 +19302,14 @@ class _CopyWithImpl$Input$ContainerPageWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -16499,6 +19463,7 @@ class _CopyWithStubImpl$Input$ContainerPageWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -16585,6 +19550,9 @@ class _CopyWithStubImpl$Input$ContainerPageWhereInput<TRes>
       CopyWith$Input$DateFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
@@ -19196,6 +22164,7 @@ class Input$ContentOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -19224,6 +22193,7 @@ class Input$ContentOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -19334,6 +22304,12 @@ class Input$ContentOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -19433,6 +22409,8 @@ class Input$ContentOrderByInput {
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
 
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
+
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
   Enum$OrderBy? get StartPublish => (_$data['StartPublish'] as Enum$OrderBy?);
@@ -19526,6 +22504,11 @@ class Input$ContentOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -19729,6 +22712,15 @@ class Input$ContentOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -19845,6 +22837,7 @@ class Input$ContentOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -19872,6 +22865,7 @@ class Input$ContentOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -19912,6 +22906,7 @@ abstract class CopyWith$Input$ContentOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -19960,6 +22955,7 @@ class _CopyWithImpl$Input$ContentOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -20002,6 +22998,8 @@ class _CopyWithImpl$Input$ContentOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -20087,6 +23085,7 @@ class _CopyWithStubImpl$Input$ContentOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -20858,6 +23857,7 @@ class Input$ContentWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -20887,6 +23887,7 @@ class Input$ContentWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -21006,6 +24007,13 @@ class Input$ContentWhereInput {
           ? null
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
+    }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
     }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
@@ -21143,6 +24151,9 @@ class Input$ContentWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -21240,6 +24251,10 @@ class Input$ContentWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -21437,6 +24452,15 @@ class Input$ContentWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -21592,6 +24616,7 @@ class Input$ContentWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -21620,6 +24645,7 @@ class Input$ContentWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -21673,6 +24699,7 @@ abstract class CopyWith$Input$ContentWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -21701,6 +24728,7 @@ abstract class CopyWith$Input$ContentWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -21756,6 +24784,7 @@ class _CopyWithImpl$Input$ContentWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -21803,6 +24832,8 @@ class _CopyWithImpl$Input$ContentWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -21947,6 +24978,14 @@ class _CopyWithImpl$Input$ContentWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -22083,6 +25122,7 @@ class _CopyWithStubImpl$Input$ContentWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -22141,6 +25181,9 @@ class _CopyWithStubImpl$Input$ContentWhereInput<TRes>
       CopyWith$Input$DateFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
@@ -23278,6 +26321,7 @@ class Input$EditorialBlockOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -23308,6 +26352,7 @@ class Input$EditorialBlockOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -23431,6 +26476,12 @@ class Input$EditorialBlockOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -23535,6 +26586,8 @@ class Input$EditorialBlockOrderByInput {
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
 
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
+
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
   Enum$OrderBy? get StartPublish => (_$data['StartPublish'] as Enum$OrderBy?);
@@ -23637,6 +26690,11 @@ class Input$EditorialBlockOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -23858,6 +26916,15 @@ class Input$EditorialBlockOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -23976,6 +27043,7 @@ class Input$EditorialBlockOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -24005,6 +27073,7 @@ class Input$EditorialBlockOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -24047,6 +27116,7 @@ abstract class CopyWith$Input$EditorialBlockOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -24098,6 +27168,7 @@ class _CopyWithImpl$Input$EditorialBlockOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -24143,6 +27214,8 @@ class _CopyWithImpl$Input$EditorialBlockOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -24238,6 +27311,7 @@ class _CopyWithStubImpl$Input$EditorialBlockOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -24290,6 +27364,7 @@ class Input$EditorialBlockWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -24321,6 +27396,7 @@ class Input$EditorialBlockWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -24454,6 +27530,13 @@ class Input$EditorialBlockWhereInput {
           ? null
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
+    }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
     }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
@@ -24600,6 +27683,9 @@ class Input$EditorialBlockWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -24705,6 +27791,10 @@ class Input$EditorialBlockWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -24921,6 +28011,15 @@ class Input$EditorialBlockWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -25078,6 +28177,7 @@ class Input$EditorialBlockWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -25108,6 +28208,7 @@ class Input$EditorialBlockWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -25163,6 +28264,7 @@ abstract class CopyWith$Input$EditorialBlockWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -25193,6 +28295,7 @@ abstract class CopyWith$Input$EditorialBlockWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -25253,6 +28356,7 @@ class _CopyWithImpl$Input$EditorialBlockWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -25304,6 +28408,8 @@ class _CopyWithImpl$Input$EditorialBlockWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -25464,6 +28570,14 @@ class _CopyWithImpl$Input$EditorialBlockWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -25602,6 +28716,7 @@ class _CopyWithStubImpl$Input$EditorialBlockWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -25668,6 +28783,9 @@ class _CopyWithStubImpl$Input$EditorialBlockWhereInput<TRes>
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
@@ -25723,6 +28841,7 @@ class Input$GenericMediaOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -25756,6 +28875,7 @@ class Input$GenericMediaOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -25892,6 +29012,12 @@ class Input$GenericMediaOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -26006,6 +29132,8 @@ class Input$GenericMediaOrderByInput {
   Enum$OrderBy? get Saved => (_$data['Saved'] as Enum$OrderBy?);
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
 
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
@@ -26122,6 +29250,11 @@ class Input$GenericMediaOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -26364,6 +29497,15 @@ class Input$GenericMediaOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -26493,6 +29635,7 @@ class Input$GenericMediaOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -26525,6 +29668,7 @@ class Input$GenericMediaOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -26570,6 +29714,7 @@ abstract class CopyWith$Input$GenericMediaOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -26625,6 +29770,7 @@ class _CopyWithImpl$Input$GenericMediaOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -26674,6 +29820,8 @@ class _CopyWithImpl$Input$GenericMediaOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -26781,6 +29929,7 @@ class _CopyWithStubImpl$Input$GenericMediaOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -26839,6 +29988,7 @@ class Input$GenericMediaWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -26873,6 +30023,7 @@ class Input$GenericMediaWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -27021,6 +30172,13 @@ class Input$GenericMediaWhereInput {
           ? null
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
+    }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
     }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
@@ -27180,6 +30338,9 @@ class Input$GenericMediaWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -27296,6 +30457,10 @@ class Input$GenericMediaWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -27533,6 +30698,15 @@ class Input$GenericMediaWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -27701,6 +30875,7 @@ class Input$GenericMediaWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -27734,6 +30909,7 @@ class Input$GenericMediaWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -27792,6 +30968,7 @@ abstract class CopyWith$Input$GenericMediaWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -27825,6 +31002,7 @@ abstract class CopyWith$Input$GenericMediaWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -27888,6 +31066,7 @@ class _CopyWithImpl$Input$GenericMediaWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -27944,6 +31123,8 @@ class _CopyWithImpl$Input$GenericMediaWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -28122,6 +31303,14 @@ class _CopyWithImpl$Input$GenericMediaWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -28270,6 +31459,7 @@ class _CopyWithStubImpl$Input$GenericMediaWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -28341,6 +31531,9 @@ class _CopyWithStubImpl$Input$GenericMediaWhereInput<TRes>
       CopyWith$Input$DateFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
@@ -28952,6 +32145,2366 @@ class _CopyWithStubImpl$Input$HostDefinitionModelWhereInput<TRes>
       CopyWith$Input$StringFilterInput.stub(_res);
 }
 
+class Input$ISemanticSearchableOrderByInput {
+  factory Input$ISemanticSearchableOrderByInput({
+    Enum$OrderBy? Ancestors,
+    Enum$OrderBy? Changed,
+    Input$ContentModelReferenceOrderByInput? ContentLink,
+    Enum$OrderBy? ContentType,
+    Enum$OrderBy? Created,
+    Input$ContentLanguageModelOrderByInput? ExistingLanguages,
+    Enum$OrderBy? IsCommonDraft,
+    Input$ContentLanguageModelOrderByInput? Language,
+    Input$ContentLanguageModelOrderByInput? MasterLanguage,
+    Enum$OrderBy? Name,
+    Input$ContentModelReferenceOrderByInput? ParentLink,
+    Enum$OrderBy? RelativePath,
+    Enum$OrderBy? RouteSegment,
+    Enum$OrderBy? Saved,
+    Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
+    Enum$OrderBy? SiteId,
+    Enum$OrderBy? StartPublish,
+    Enum$OrderBy? Status,
+    Enum$OrderBy? StopPublish,
+    Enum$OrderBy? Url,
+    Enum$OrderBy? $_concreteType,
+    double? $_minimumScore,
+    Enum$OrderBy? $_modified,
+    Enum$Ranking? $_ranking,
+    double? $_semanticWeight,
+    Enum$OrderBy? $_sortOrder,
+  }) =>
+      Input$ISemanticSearchableOrderByInput._({
+        if (Ancestors != null) r'Ancestors': Ancestors,
+        if (Changed != null) r'Changed': Changed,
+        if (ContentLink != null) r'ContentLink': ContentLink,
+        if (ContentType != null) r'ContentType': ContentType,
+        if (Created != null) r'Created': Created,
+        if (ExistingLanguages != null) r'ExistingLanguages': ExistingLanguages,
+        if (IsCommonDraft != null) r'IsCommonDraft': IsCommonDraft,
+        if (Language != null) r'Language': Language,
+        if (MasterLanguage != null) r'MasterLanguage': MasterLanguage,
+        if (Name != null) r'Name': Name,
+        if (ParentLink != null) r'ParentLink': ParentLink,
+        if (RelativePath != null) r'RelativePath': RelativePath,
+        if (RouteSegment != null) r'RouteSegment': RouteSegment,
+        if (Saved != null) r'Saved': Saved,
+        if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
+        if (SiteId != null) r'SiteId': SiteId,
+        if (StartPublish != null) r'StartPublish': StartPublish,
+        if (Status != null) r'Status': Status,
+        if (StopPublish != null) r'StopPublish': StopPublish,
+        if (Url != null) r'Url': Url,
+        if ($_concreteType != null) r'_concreteType': $_concreteType,
+        if ($_minimumScore != null) r'_minimumScore': $_minimumScore,
+        if ($_modified != null) r'_modified': $_modified,
+        if ($_ranking != null) r'_ranking': $_ranking,
+        if ($_semanticWeight != null) r'_semanticWeight': $_semanticWeight,
+        if ($_sortOrder != null) r'_sortOrder': $_sortOrder,
+      });
+
+  Input$ISemanticSearchableOrderByInput._(this._$data);
+
+  factory Input$ISemanticSearchableOrderByInput.fromJson(
+      Map<String, dynamic> data) {
+    final result$data = <String, dynamic>{};
+    if (data.containsKey('Ancestors')) {
+      final l$Ancestors = data['Ancestors'];
+      result$data['Ancestors'] = l$Ancestors == null
+          ? null
+          : fromJson$Enum$OrderBy((l$Ancestors as String));
+    }
+    if (data.containsKey('Changed')) {
+      final l$Changed = data['Changed'];
+      result$data['Changed'] = l$Changed == null
+          ? null
+          : fromJson$Enum$OrderBy((l$Changed as String));
+    }
+    if (data.containsKey('ContentLink')) {
+      final l$ContentLink = data['ContentLink'];
+      result$data['ContentLink'] = l$ContentLink == null
+          ? null
+          : Input$ContentModelReferenceOrderByInput.fromJson(
+              (l$ContentLink as Map<String, dynamic>));
+    }
+    if (data.containsKey('ContentType')) {
+      final l$ContentType = data['ContentType'];
+      result$data['ContentType'] = l$ContentType == null
+          ? null
+          : fromJson$Enum$OrderBy((l$ContentType as String));
+    }
+    if (data.containsKey('Created')) {
+      final l$Created = data['Created'];
+      result$data['Created'] = l$Created == null
+          ? null
+          : fromJson$Enum$OrderBy((l$Created as String));
+    }
+    if (data.containsKey('ExistingLanguages')) {
+      final l$ExistingLanguages = data['ExistingLanguages'];
+      result$data['ExistingLanguages'] = l$ExistingLanguages == null
+          ? null
+          : Input$ContentLanguageModelOrderByInput.fromJson(
+              (l$ExistingLanguages as Map<String, dynamic>));
+    }
+    if (data.containsKey('IsCommonDraft')) {
+      final l$IsCommonDraft = data['IsCommonDraft'];
+      result$data['IsCommonDraft'] = l$IsCommonDraft == null
+          ? null
+          : fromJson$Enum$OrderBy((l$IsCommonDraft as String));
+    }
+    if (data.containsKey('Language')) {
+      final l$Language = data['Language'];
+      result$data['Language'] = l$Language == null
+          ? null
+          : Input$ContentLanguageModelOrderByInput.fromJson(
+              (l$Language as Map<String, dynamic>));
+    }
+    if (data.containsKey('MasterLanguage')) {
+      final l$MasterLanguage = data['MasterLanguage'];
+      result$data['MasterLanguage'] = l$MasterLanguage == null
+          ? null
+          : Input$ContentLanguageModelOrderByInput.fromJson(
+              (l$MasterLanguage as Map<String, dynamic>));
+    }
+    if (data.containsKey('Name')) {
+      final l$Name = data['Name'];
+      result$data['Name'] =
+          l$Name == null ? null : fromJson$Enum$OrderBy((l$Name as String));
+    }
+    if (data.containsKey('ParentLink')) {
+      final l$ParentLink = data['ParentLink'];
+      result$data['ParentLink'] = l$ParentLink == null
+          ? null
+          : Input$ContentModelReferenceOrderByInput.fromJson(
+              (l$ParentLink as Map<String, dynamic>));
+    }
+    if (data.containsKey('RelativePath')) {
+      final l$RelativePath = data['RelativePath'];
+      result$data['RelativePath'] = l$RelativePath == null
+          ? null
+          : fromJson$Enum$OrderBy((l$RelativePath as String));
+    }
+    if (data.containsKey('RouteSegment')) {
+      final l$RouteSegment = data['RouteSegment'];
+      result$data['RouteSegment'] = l$RouteSegment == null
+          ? null
+          : fromJson$Enum$OrderBy((l$RouteSegment as String));
+    }
+    if (data.containsKey('Saved')) {
+      final l$Saved = data['Saved'];
+      result$data['Saved'] =
+          l$Saved == null ? null : fromJson$Enum$OrderBy((l$Saved as String));
+    }
+    if (data.containsKey('Shortcut')) {
+      final l$Shortcut = data['Shortcut'];
+      result$data['Shortcut'] = l$Shortcut == null
+          ? null
+          : fromJson$Enum$OrderBy((l$Shortcut as String));
+    }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
+    if (data.containsKey('SiteId')) {
+      final l$SiteId = data['SiteId'];
+      result$data['SiteId'] =
+          l$SiteId == null ? null : fromJson$Enum$OrderBy((l$SiteId as String));
+    }
+    if (data.containsKey('StartPublish')) {
+      final l$StartPublish = data['StartPublish'];
+      result$data['StartPublish'] = l$StartPublish == null
+          ? null
+          : fromJson$Enum$OrderBy((l$StartPublish as String));
+    }
+    if (data.containsKey('Status')) {
+      final l$Status = data['Status'];
+      result$data['Status'] =
+          l$Status == null ? null : fromJson$Enum$OrderBy((l$Status as String));
+    }
+    if (data.containsKey('StopPublish')) {
+      final l$StopPublish = data['StopPublish'];
+      result$data['StopPublish'] = l$StopPublish == null
+          ? null
+          : fromJson$Enum$OrderBy((l$StopPublish as String));
+    }
+    if (data.containsKey('Url')) {
+      final l$Url = data['Url'];
+      result$data['Url'] =
+          l$Url == null ? null : fromJson$Enum$OrderBy((l$Url as String));
+    }
+    if (data.containsKey('_concreteType')) {
+      final l$$_concreteType = data['_concreteType'];
+      result$data['_concreteType'] = l$$_concreteType == null
+          ? null
+          : fromJson$Enum$OrderBy((l$$_concreteType as String));
+    }
+    if (data.containsKey('_minimumScore')) {
+      final l$$_minimumScore = data['_minimumScore'];
+      result$data['_minimumScore'] = (l$$_minimumScore as num?)?.toDouble();
+    }
+    if (data.containsKey('_modified')) {
+      final l$$_modified = data['_modified'];
+      result$data['_modified'] = l$$_modified == null
+          ? null
+          : fromJson$Enum$OrderBy((l$$_modified as String));
+    }
+    if (data.containsKey('_ranking')) {
+      final l$$_ranking = data['_ranking'];
+      result$data['_ranking'] = l$$_ranking == null
+          ? null
+          : fromJson$Enum$Ranking((l$$_ranking as String));
+    }
+    if (data.containsKey('_semanticWeight')) {
+      final l$$_semanticWeight = data['_semanticWeight'];
+      result$data['_semanticWeight'] = (l$$_semanticWeight as num?)?.toDouble();
+    }
+    if (data.containsKey('_sortOrder')) {
+      final l$$_sortOrder = data['_sortOrder'];
+      result$data['_sortOrder'] = l$$_sortOrder == null
+          ? null
+          : fromJson$Enum$OrderBy((l$$_sortOrder as String));
+    }
+    return Input$ISemanticSearchableOrderByInput._(result$data);
+  }
+
+  Map<String, dynamic> _$data;
+
+  Enum$OrderBy? get Ancestors => (_$data['Ancestors'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get Changed => (_$data['Changed'] as Enum$OrderBy?);
+
+  Input$ContentModelReferenceOrderByInput? get ContentLink =>
+      (_$data['ContentLink'] as Input$ContentModelReferenceOrderByInput?);
+
+  Enum$OrderBy? get ContentType => (_$data['ContentType'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get Created => (_$data['Created'] as Enum$OrderBy?);
+
+  Input$ContentLanguageModelOrderByInput? get ExistingLanguages =>
+      (_$data['ExistingLanguages'] as Input$ContentLanguageModelOrderByInput?);
+
+  Enum$OrderBy? get IsCommonDraft => (_$data['IsCommonDraft'] as Enum$OrderBy?);
+
+  Input$ContentLanguageModelOrderByInput? get Language =>
+      (_$data['Language'] as Input$ContentLanguageModelOrderByInput?);
+
+  Input$ContentLanguageModelOrderByInput? get MasterLanguage =>
+      (_$data['MasterLanguage'] as Input$ContentLanguageModelOrderByInput?);
+
+  Enum$OrderBy? get Name => (_$data['Name'] as Enum$OrderBy?);
+
+  Input$ContentModelReferenceOrderByInput? get ParentLink =>
+      (_$data['ParentLink'] as Input$ContentModelReferenceOrderByInput?);
+
+  Enum$OrderBy? get RelativePath => (_$data['RelativePath'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get RouteSegment => (_$data['RouteSegment'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get Saved => (_$data['Saved'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get StartPublish => (_$data['StartPublish'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get Status => (_$data['Status'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get StopPublish => (_$data['StopPublish'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get Url => (_$data['Url'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get $_concreteType =>
+      (_$data['_concreteType'] as Enum$OrderBy?);
+
+  double? get $_minimumScore => (_$data['_minimumScore'] as double?);
+
+  Enum$OrderBy? get $_modified => (_$data['_modified'] as Enum$OrderBy?);
+
+  Enum$Ranking? get $_ranking => (_$data['_ranking'] as Enum$Ranking?);
+
+  double? get $_semanticWeight => (_$data['_semanticWeight'] as double?);
+
+  Enum$OrderBy? get $_sortOrder => (_$data['_sortOrder'] as Enum$OrderBy?);
+
+  Map<String, dynamic> toJson() {
+    final result$data = <String, dynamic>{};
+    if (_$data.containsKey('Ancestors')) {
+      final l$Ancestors = Ancestors;
+      result$data['Ancestors'] =
+          l$Ancestors == null ? null : toJson$Enum$OrderBy(l$Ancestors);
+    }
+    if (_$data.containsKey('Changed')) {
+      final l$Changed = Changed;
+      result$data['Changed'] =
+          l$Changed == null ? null : toJson$Enum$OrderBy(l$Changed);
+    }
+    if (_$data.containsKey('ContentLink')) {
+      final l$ContentLink = ContentLink;
+      result$data['ContentLink'] = l$ContentLink?.toJson();
+    }
+    if (_$data.containsKey('ContentType')) {
+      final l$ContentType = ContentType;
+      result$data['ContentType'] =
+          l$ContentType == null ? null : toJson$Enum$OrderBy(l$ContentType);
+    }
+    if (_$data.containsKey('Created')) {
+      final l$Created = Created;
+      result$data['Created'] =
+          l$Created == null ? null : toJson$Enum$OrderBy(l$Created);
+    }
+    if (_$data.containsKey('ExistingLanguages')) {
+      final l$ExistingLanguages = ExistingLanguages;
+      result$data['ExistingLanguages'] = l$ExistingLanguages?.toJson();
+    }
+    if (_$data.containsKey('IsCommonDraft')) {
+      final l$IsCommonDraft = IsCommonDraft;
+      result$data['IsCommonDraft'] =
+          l$IsCommonDraft == null ? null : toJson$Enum$OrderBy(l$IsCommonDraft);
+    }
+    if (_$data.containsKey('Language')) {
+      final l$Language = Language;
+      result$data['Language'] = l$Language?.toJson();
+    }
+    if (_$data.containsKey('MasterLanguage')) {
+      final l$MasterLanguage = MasterLanguage;
+      result$data['MasterLanguage'] = l$MasterLanguage?.toJson();
+    }
+    if (_$data.containsKey('Name')) {
+      final l$Name = Name;
+      result$data['Name'] = l$Name == null ? null : toJson$Enum$OrderBy(l$Name);
+    }
+    if (_$data.containsKey('ParentLink')) {
+      final l$ParentLink = ParentLink;
+      result$data['ParentLink'] = l$ParentLink?.toJson();
+    }
+    if (_$data.containsKey('RelativePath')) {
+      final l$RelativePath = RelativePath;
+      result$data['RelativePath'] =
+          l$RelativePath == null ? null : toJson$Enum$OrderBy(l$RelativePath);
+    }
+    if (_$data.containsKey('RouteSegment')) {
+      final l$RouteSegment = RouteSegment;
+      result$data['RouteSegment'] =
+          l$RouteSegment == null ? null : toJson$Enum$OrderBy(l$RouteSegment);
+    }
+    if (_$data.containsKey('Saved')) {
+      final l$Saved = Saved;
+      result$data['Saved'] =
+          l$Saved == null ? null : toJson$Enum$OrderBy(l$Saved);
+    }
+    if (_$data.containsKey('Shortcut')) {
+      final l$Shortcut = Shortcut;
+      result$data['Shortcut'] =
+          l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
+    }
+    if (_$data.containsKey('SiteId')) {
+      final l$SiteId = SiteId;
+      result$data['SiteId'] =
+          l$SiteId == null ? null : toJson$Enum$OrderBy(l$SiteId);
+    }
+    if (_$data.containsKey('StartPublish')) {
+      final l$StartPublish = StartPublish;
+      result$data['StartPublish'] =
+          l$StartPublish == null ? null : toJson$Enum$OrderBy(l$StartPublish);
+    }
+    if (_$data.containsKey('Status')) {
+      final l$Status = Status;
+      result$data['Status'] =
+          l$Status == null ? null : toJson$Enum$OrderBy(l$Status);
+    }
+    if (_$data.containsKey('StopPublish')) {
+      final l$StopPublish = StopPublish;
+      result$data['StopPublish'] =
+          l$StopPublish == null ? null : toJson$Enum$OrderBy(l$StopPublish);
+    }
+    if (_$data.containsKey('Url')) {
+      final l$Url = Url;
+      result$data['Url'] = l$Url == null ? null : toJson$Enum$OrderBy(l$Url);
+    }
+    if (_$data.containsKey('_concreteType')) {
+      final l$$_concreteType = $_concreteType;
+      result$data['_concreteType'] = l$$_concreteType == null
+          ? null
+          : toJson$Enum$OrderBy(l$$_concreteType);
+    }
+    if (_$data.containsKey('_minimumScore')) {
+      final l$$_minimumScore = $_minimumScore;
+      result$data['_minimumScore'] = l$$_minimumScore;
+    }
+    if (_$data.containsKey('_modified')) {
+      final l$$_modified = $_modified;
+      result$data['_modified'] =
+          l$$_modified == null ? null : toJson$Enum$OrderBy(l$$_modified);
+    }
+    if (_$data.containsKey('_ranking')) {
+      final l$$_ranking = $_ranking;
+      result$data['_ranking'] =
+          l$$_ranking == null ? null : toJson$Enum$Ranking(l$$_ranking);
+    }
+    if (_$data.containsKey('_semanticWeight')) {
+      final l$$_semanticWeight = $_semanticWeight;
+      result$data['_semanticWeight'] = l$$_semanticWeight;
+    }
+    if (_$data.containsKey('_sortOrder')) {
+      final l$$_sortOrder = $_sortOrder;
+      result$data['_sortOrder'] =
+          l$$_sortOrder == null ? null : toJson$Enum$OrderBy(l$$_sortOrder);
+    }
+    return result$data;
+  }
+
+  CopyWith$Input$ISemanticSearchableOrderByInput<
+          Input$ISemanticSearchableOrderByInput>
+      get copyWith => CopyWith$Input$ISemanticSearchableOrderByInput(
+            this,
+            (i) => i,
+          );
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (other is! Input$ISemanticSearchableOrderByInput ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$Ancestors = Ancestors;
+    final lOther$Ancestors = other.Ancestors;
+    if (_$data.containsKey('Ancestors') !=
+        other._$data.containsKey('Ancestors')) {
+      return false;
+    }
+    if (l$Ancestors != lOther$Ancestors) {
+      return false;
+    }
+    final l$Changed = Changed;
+    final lOther$Changed = other.Changed;
+    if (_$data.containsKey('Changed') != other._$data.containsKey('Changed')) {
+      return false;
+    }
+    if (l$Changed != lOther$Changed) {
+      return false;
+    }
+    final l$ContentLink = ContentLink;
+    final lOther$ContentLink = other.ContentLink;
+    if (_$data.containsKey('ContentLink') !=
+        other._$data.containsKey('ContentLink')) {
+      return false;
+    }
+    if (l$ContentLink != lOther$ContentLink) {
+      return false;
+    }
+    final l$ContentType = ContentType;
+    final lOther$ContentType = other.ContentType;
+    if (_$data.containsKey('ContentType') !=
+        other._$data.containsKey('ContentType')) {
+      return false;
+    }
+    if (l$ContentType != lOther$ContentType) {
+      return false;
+    }
+    final l$Created = Created;
+    final lOther$Created = other.Created;
+    if (_$data.containsKey('Created') != other._$data.containsKey('Created')) {
+      return false;
+    }
+    if (l$Created != lOther$Created) {
+      return false;
+    }
+    final l$ExistingLanguages = ExistingLanguages;
+    final lOther$ExistingLanguages = other.ExistingLanguages;
+    if (_$data.containsKey('ExistingLanguages') !=
+        other._$data.containsKey('ExistingLanguages')) {
+      return false;
+    }
+    if (l$ExistingLanguages != lOther$ExistingLanguages) {
+      return false;
+    }
+    final l$IsCommonDraft = IsCommonDraft;
+    final lOther$IsCommonDraft = other.IsCommonDraft;
+    if (_$data.containsKey('IsCommonDraft') !=
+        other._$data.containsKey('IsCommonDraft')) {
+      return false;
+    }
+    if (l$IsCommonDraft != lOther$IsCommonDraft) {
+      return false;
+    }
+    final l$Language = Language;
+    final lOther$Language = other.Language;
+    if (_$data.containsKey('Language') !=
+        other._$data.containsKey('Language')) {
+      return false;
+    }
+    if (l$Language != lOther$Language) {
+      return false;
+    }
+    final l$MasterLanguage = MasterLanguage;
+    final lOther$MasterLanguage = other.MasterLanguage;
+    if (_$data.containsKey('MasterLanguage') !=
+        other._$data.containsKey('MasterLanguage')) {
+      return false;
+    }
+    if (l$MasterLanguage != lOther$MasterLanguage) {
+      return false;
+    }
+    final l$Name = Name;
+    final lOther$Name = other.Name;
+    if (_$data.containsKey('Name') != other._$data.containsKey('Name')) {
+      return false;
+    }
+    if (l$Name != lOther$Name) {
+      return false;
+    }
+    final l$ParentLink = ParentLink;
+    final lOther$ParentLink = other.ParentLink;
+    if (_$data.containsKey('ParentLink') !=
+        other._$data.containsKey('ParentLink')) {
+      return false;
+    }
+    if (l$ParentLink != lOther$ParentLink) {
+      return false;
+    }
+    final l$RelativePath = RelativePath;
+    final lOther$RelativePath = other.RelativePath;
+    if (_$data.containsKey('RelativePath') !=
+        other._$data.containsKey('RelativePath')) {
+      return false;
+    }
+    if (l$RelativePath != lOther$RelativePath) {
+      return false;
+    }
+    final l$RouteSegment = RouteSegment;
+    final lOther$RouteSegment = other.RouteSegment;
+    if (_$data.containsKey('RouteSegment') !=
+        other._$data.containsKey('RouteSegment')) {
+      return false;
+    }
+    if (l$RouteSegment != lOther$RouteSegment) {
+      return false;
+    }
+    final l$Saved = Saved;
+    final lOther$Saved = other.Saved;
+    if (_$data.containsKey('Saved') != other._$data.containsKey('Saved')) {
+      return false;
+    }
+    if (l$Saved != lOther$Saved) {
+      return false;
+    }
+    final l$Shortcut = Shortcut;
+    final lOther$Shortcut = other.Shortcut;
+    if (_$data.containsKey('Shortcut') !=
+        other._$data.containsKey('Shortcut')) {
+      return false;
+    }
+    if (l$Shortcut != lOther$Shortcut) {
+      return false;
+    }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
+    final l$SiteId = SiteId;
+    final lOther$SiteId = other.SiteId;
+    if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
+      return false;
+    }
+    if (l$SiteId != lOther$SiteId) {
+      return false;
+    }
+    final l$StartPublish = StartPublish;
+    final lOther$StartPublish = other.StartPublish;
+    if (_$data.containsKey('StartPublish') !=
+        other._$data.containsKey('StartPublish')) {
+      return false;
+    }
+    if (l$StartPublish != lOther$StartPublish) {
+      return false;
+    }
+    final l$Status = Status;
+    final lOther$Status = other.Status;
+    if (_$data.containsKey('Status') != other._$data.containsKey('Status')) {
+      return false;
+    }
+    if (l$Status != lOther$Status) {
+      return false;
+    }
+    final l$StopPublish = StopPublish;
+    final lOther$StopPublish = other.StopPublish;
+    if (_$data.containsKey('StopPublish') !=
+        other._$data.containsKey('StopPublish')) {
+      return false;
+    }
+    if (l$StopPublish != lOther$StopPublish) {
+      return false;
+    }
+    final l$Url = Url;
+    final lOther$Url = other.Url;
+    if (_$data.containsKey('Url') != other._$data.containsKey('Url')) {
+      return false;
+    }
+    if (l$Url != lOther$Url) {
+      return false;
+    }
+    final l$$_concreteType = $_concreteType;
+    final lOther$$_concreteType = other.$_concreteType;
+    if (_$data.containsKey('_concreteType') !=
+        other._$data.containsKey('_concreteType')) {
+      return false;
+    }
+    if (l$$_concreteType != lOther$$_concreteType) {
+      return false;
+    }
+    final l$$_minimumScore = $_minimumScore;
+    final lOther$$_minimumScore = other.$_minimumScore;
+    if (_$data.containsKey('_minimumScore') !=
+        other._$data.containsKey('_minimumScore')) {
+      return false;
+    }
+    if (l$$_minimumScore != lOther$$_minimumScore) {
+      return false;
+    }
+    final l$$_modified = $_modified;
+    final lOther$$_modified = other.$_modified;
+    if (_$data.containsKey('_modified') !=
+        other._$data.containsKey('_modified')) {
+      return false;
+    }
+    if (l$$_modified != lOther$$_modified) {
+      return false;
+    }
+    final l$$_ranking = $_ranking;
+    final lOther$$_ranking = other.$_ranking;
+    if (_$data.containsKey('_ranking') !=
+        other._$data.containsKey('_ranking')) {
+      return false;
+    }
+    if (l$$_ranking != lOther$$_ranking) {
+      return false;
+    }
+    final l$$_semanticWeight = $_semanticWeight;
+    final lOther$$_semanticWeight = other.$_semanticWeight;
+    if (_$data.containsKey('_semanticWeight') !=
+        other._$data.containsKey('_semanticWeight')) {
+      return false;
+    }
+    if (l$$_semanticWeight != lOther$$_semanticWeight) {
+      return false;
+    }
+    final l$$_sortOrder = $_sortOrder;
+    final lOther$$_sortOrder = other.$_sortOrder;
+    if (_$data.containsKey('_sortOrder') !=
+        other._$data.containsKey('_sortOrder')) {
+      return false;
+    }
+    if (l$$_sortOrder != lOther$$_sortOrder) {
+      return false;
+    }
+    return true;
+  }
+
+  @override
+  int get hashCode {
+    final l$Ancestors = Ancestors;
+    final l$Changed = Changed;
+    final l$ContentLink = ContentLink;
+    final l$ContentType = ContentType;
+    final l$Created = Created;
+    final l$ExistingLanguages = ExistingLanguages;
+    final l$IsCommonDraft = IsCommonDraft;
+    final l$Language = Language;
+    final l$MasterLanguage = MasterLanguage;
+    final l$Name = Name;
+    final l$ParentLink = ParentLink;
+    final l$RelativePath = RelativePath;
+    final l$RouteSegment = RouteSegment;
+    final l$Saved = Saved;
+    final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
+    final l$SiteId = SiteId;
+    final l$StartPublish = StartPublish;
+    final l$Status = Status;
+    final l$StopPublish = StopPublish;
+    final l$Url = Url;
+    final l$$_concreteType = $_concreteType;
+    final l$$_minimumScore = $_minimumScore;
+    final l$$_modified = $_modified;
+    final l$$_ranking = $_ranking;
+    final l$$_semanticWeight = $_semanticWeight;
+    final l$$_sortOrder = $_sortOrder;
+    return Object.hashAll([
+      _$data.containsKey('Ancestors') ? l$Ancestors : const {},
+      _$data.containsKey('Changed') ? l$Changed : const {},
+      _$data.containsKey('ContentLink') ? l$ContentLink : const {},
+      _$data.containsKey('ContentType') ? l$ContentType : const {},
+      _$data.containsKey('Created') ? l$Created : const {},
+      _$data.containsKey('ExistingLanguages') ? l$ExistingLanguages : const {},
+      _$data.containsKey('IsCommonDraft') ? l$IsCommonDraft : const {},
+      _$data.containsKey('Language') ? l$Language : const {},
+      _$data.containsKey('MasterLanguage') ? l$MasterLanguage : const {},
+      _$data.containsKey('Name') ? l$Name : const {},
+      _$data.containsKey('ParentLink') ? l$ParentLink : const {},
+      _$data.containsKey('RelativePath') ? l$RelativePath : const {},
+      _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
+      _$data.containsKey('Saved') ? l$Saved : const {},
+      _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
+      _$data.containsKey('SiteId') ? l$SiteId : const {},
+      _$data.containsKey('StartPublish') ? l$StartPublish : const {},
+      _$data.containsKey('Status') ? l$Status : const {},
+      _$data.containsKey('StopPublish') ? l$StopPublish : const {},
+      _$data.containsKey('Url') ? l$Url : const {},
+      _$data.containsKey('_concreteType') ? l$$_concreteType : const {},
+      _$data.containsKey('_minimumScore') ? l$$_minimumScore : const {},
+      _$data.containsKey('_modified') ? l$$_modified : const {},
+      _$data.containsKey('_ranking') ? l$$_ranking : const {},
+      _$data.containsKey('_semanticWeight') ? l$$_semanticWeight : const {},
+      _$data.containsKey('_sortOrder') ? l$$_sortOrder : const {},
+    ]);
+  }
+}
+
+abstract class CopyWith$Input$ISemanticSearchableOrderByInput<TRes> {
+  factory CopyWith$Input$ISemanticSearchableOrderByInput(
+    Input$ISemanticSearchableOrderByInput instance,
+    TRes Function(Input$ISemanticSearchableOrderByInput) then,
+  ) = _CopyWithImpl$Input$ISemanticSearchableOrderByInput;
+
+  factory CopyWith$Input$ISemanticSearchableOrderByInput.stub(TRes res) =
+      _CopyWithStubImpl$Input$ISemanticSearchableOrderByInput;
+
+  TRes call({
+    Enum$OrderBy? Ancestors,
+    Enum$OrderBy? Changed,
+    Input$ContentModelReferenceOrderByInput? ContentLink,
+    Enum$OrderBy? ContentType,
+    Enum$OrderBy? Created,
+    Input$ContentLanguageModelOrderByInput? ExistingLanguages,
+    Enum$OrderBy? IsCommonDraft,
+    Input$ContentLanguageModelOrderByInput? Language,
+    Input$ContentLanguageModelOrderByInput? MasterLanguage,
+    Enum$OrderBy? Name,
+    Input$ContentModelReferenceOrderByInput? ParentLink,
+    Enum$OrderBy? RelativePath,
+    Enum$OrderBy? RouteSegment,
+    Enum$OrderBy? Saved,
+    Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
+    Enum$OrderBy? SiteId,
+    Enum$OrderBy? StartPublish,
+    Enum$OrderBy? Status,
+    Enum$OrderBy? StopPublish,
+    Enum$OrderBy? Url,
+    Enum$OrderBy? $_concreteType,
+    double? $_minimumScore,
+    Enum$OrderBy? $_modified,
+    Enum$Ranking? $_ranking,
+    double? $_semanticWeight,
+    Enum$OrderBy? $_sortOrder,
+  });
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get ContentLink;
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get ExistingLanguages;
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get Language;
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get MasterLanguage;
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get ParentLink;
+}
+
+class _CopyWithImpl$Input$ISemanticSearchableOrderByInput<TRes>
+    implements CopyWith$Input$ISemanticSearchableOrderByInput<TRes> {
+  _CopyWithImpl$Input$ISemanticSearchableOrderByInput(
+    this._instance,
+    this._then,
+  );
+
+  final Input$ISemanticSearchableOrderByInput _instance;
+
+  final TRes Function(Input$ISemanticSearchableOrderByInput) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? Ancestors = _undefined,
+    Object? Changed = _undefined,
+    Object? ContentLink = _undefined,
+    Object? ContentType = _undefined,
+    Object? Created = _undefined,
+    Object? ExistingLanguages = _undefined,
+    Object? IsCommonDraft = _undefined,
+    Object? Language = _undefined,
+    Object? MasterLanguage = _undefined,
+    Object? Name = _undefined,
+    Object? ParentLink = _undefined,
+    Object? RelativePath = _undefined,
+    Object? RouteSegment = _undefined,
+    Object? Saved = _undefined,
+    Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
+    Object? SiteId = _undefined,
+    Object? StartPublish = _undefined,
+    Object? Status = _undefined,
+    Object? StopPublish = _undefined,
+    Object? Url = _undefined,
+    Object? $_concreteType = _undefined,
+    Object? $_minimumScore = _undefined,
+    Object? $_modified = _undefined,
+    Object? $_ranking = _undefined,
+    Object? $_semanticWeight = _undefined,
+    Object? $_sortOrder = _undefined,
+  }) =>
+      _then(Input$ISemanticSearchableOrderByInput._({
+        ..._instance._$data,
+        if (Ancestors != _undefined) 'Ancestors': (Ancestors as Enum$OrderBy?),
+        if (Changed != _undefined) 'Changed': (Changed as Enum$OrderBy?),
+        if (ContentLink != _undefined)
+          'ContentLink':
+              (ContentLink as Input$ContentModelReferenceOrderByInput?),
+        if (ContentType != _undefined)
+          'ContentType': (ContentType as Enum$OrderBy?),
+        if (Created != _undefined) 'Created': (Created as Enum$OrderBy?),
+        if (ExistingLanguages != _undefined)
+          'ExistingLanguages':
+              (ExistingLanguages as Input$ContentLanguageModelOrderByInput?),
+        if (IsCommonDraft != _undefined)
+          'IsCommonDraft': (IsCommonDraft as Enum$OrderBy?),
+        if (Language != _undefined)
+          'Language': (Language as Input$ContentLanguageModelOrderByInput?),
+        if (MasterLanguage != _undefined)
+          'MasterLanguage':
+              (MasterLanguage as Input$ContentLanguageModelOrderByInput?),
+        if (Name != _undefined) 'Name': (Name as Enum$OrderBy?),
+        if (ParentLink != _undefined)
+          'ParentLink':
+              (ParentLink as Input$ContentModelReferenceOrderByInput?),
+        if (RelativePath != _undefined)
+          'RelativePath': (RelativePath as Enum$OrderBy?),
+        if (RouteSegment != _undefined)
+          'RouteSegment': (RouteSegment as Enum$OrderBy?),
+        if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
+        if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
+        if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
+        if (StartPublish != _undefined)
+          'StartPublish': (StartPublish as Enum$OrderBy?),
+        if (Status != _undefined) 'Status': (Status as Enum$OrderBy?),
+        if (StopPublish != _undefined)
+          'StopPublish': (StopPublish as Enum$OrderBy?),
+        if (Url != _undefined) 'Url': (Url as Enum$OrderBy?),
+        if ($_concreteType != _undefined)
+          '_concreteType': ($_concreteType as Enum$OrderBy?),
+        if ($_minimumScore != _undefined)
+          '_minimumScore': ($_minimumScore as double?),
+        if ($_modified != _undefined)
+          '_modified': ($_modified as Enum$OrderBy?),
+        if ($_ranking != _undefined) '_ranking': ($_ranking as Enum$Ranking?),
+        if ($_semanticWeight != _undefined)
+          '_semanticWeight': ($_semanticWeight as double?),
+        if ($_sortOrder != _undefined)
+          '_sortOrder': ($_sortOrder as Enum$OrderBy?),
+      }));
+
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get ContentLink {
+    final local$ContentLink = _instance.ContentLink;
+    return local$ContentLink == null
+        ? CopyWith$Input$ContentModelReferenceOrderByInput.stub(
+            _then(_instance))
+        : CopyWith$Input$ContentModelReferenceOrderByInput(
+            local$ContentLink, (e) => call(ContentLink: e));
+  }
+
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get ExistingLanguages {
+    final local$ExistingLanguages = _instance.ExistingLanguages;
+    return local$ExistingLanguages == null
+        ? CopyWith$Input$ContentLanguageModelOrderByInput.stub(_then(_instance))
+        : CopyWith$Input$ContentLanguageModelOrderByInput(
+            local$ExistingLanguages, (e) => call(ExistingLanguages: e));
+  }
+
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get Language {
+    final local$Language = _instance.Language;
+    return local$Language == null
+        ? CopyWith$Input$ContentLanguageModelOrderByInput.stub(_then(_instance))
+        : CopyWith$Input$ContentLanguageModelOrderByInput(
+            local$Language, (e) => call(Language: e));
+  }
+
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get MasterLanguage {
+    final local$MasterLanguage = _instance.MasterLanguage;
+    return local$MasterLanguage == null
+        ? CopyWith$Input$ContentLanguageModelOrderByInput.stub(_then(_instance))
+        : CopyWith$Input$ContentLanguageModelOrderByInput(
+            local$MasterLanguage, (e) => call(MasterLanguage: e));
+  }
+
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get ParentLink {
+    final local$ParentLink = _instance.ParentLink;
+    return local$ParentLink == null
+        ? CopyWith$Input$ContentModelReferenceOrderByInput.stub(
+            _then(_instance))
+        : CopyWith$Input$ContentModelReferenceOrderByInput(
+            local$ParentLink, (e) => call(ParentLink: e));
+  }
+}
+
+class _CopyWithStubImpl$Input$ISemanticSearchableOrderByInput<TRes>
+    implements CopyWith$Input$ISemanticSearchableOrderByInput<TRes> {
+  _CopyWithStubImpl$Input$ISemanticSearchableOrderByInput(this._res);
+
+  TRes _res;
+
+  call({
+    Enum$OrderBy? Ancestors,
+    Enum$OrderBy? Changed,
+    Input$ContentModelReferenceOrderByInput? ContentLink,
+    Enum$OrderBy? ContentType,
+    Enum$OrderBy? Created,
+    Input$ContentLanguageModelOrderByInput? ExistingLanguages,
+    Enum$OrderBy? IsCommonDraft,
+    Input$ContentLanguageModelOrderByInput? Language,
+    Input$ContentLanguageModelOrderByInput? MasterLanguage,
+    Enum$OrderBy? Name,
+    Input$ContentModelReferenceOrderByInput? ParentLink,
+    Enum$OrderBy? RelativePath,
+    Enum$OrderBy? RouteSegment,
+    Enum$OrderBy? Saved,
+    Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
+    Enum$OrderBy? SiteId,
+    Enum$OrderBy? StartPublish,
+    Enum$OrderBy? Status,
+    Enum$OrderBy? StopPublish,
+    Enum$OrderBy? Url,
+    Enum$OrderBy? $_concreteType,
+    double? $_minimumScore,
+    Enum$OrderBy? $_modified,
+    Enum$Ranking? $_ranking,
+    double? $_semanticWeight,
+    Enum$OrderBy? $_sortOrder,
+  }) =>
+      _res;
+
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get ContentLink =>
+      CopyWith$Input$ContentModelReferenceOrderByInput.stub(_res);
+
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get ExistingLanguages =>
+      CopyWith$Input$ContentLanguageModelOrderByInput.stub(_res);
+
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get Language =>
+      CopyWith$Input$ContentLanguageModelOrderByInput.stub(_res);
+
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get MasterLanguage =>
+      CopyWith$Input$ContentLanguageModelOrderByInput.stub(_res);
+
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get ParentLink =>
+      CopyWith$Input$ContentModelReferenceOrderByInput.stub(_res);
+}
+
+class Input$ISemanticSearchableWhereInput {
+  factory Input$ISemanticSearchableWhereInput({
+    Input$StringFilterInput? Ancestors,
+    Input$DateFilterInput? Changed,
+    Input$ContentModelReferenceWhereInput? ContentLink,
+    Input$StringFilterInput? ContentType,
+    Input$DateFilterInput? Created,
+    Input$ContentLanguageModelWhereInput? ExistingLanguages,
+    Input$BoolFilterInput? IsCommonDraft,
+    Input$ContentLanguageModelWhereInput? Language,
+    Input$ContentLanguageModelWhereInput? MasterLanguage,
+    Input$SearchableStringFilterInput? Name,
+    Input$ContentModelReferenceWhereInput? ParentLink,
+    Input$StringFilterInput? RelativePath,
+    Input$StringFilterInput? RouteSegment,
+    Input$DateFilterInput? Saved,
+    Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
+    Input$StringFilterInput? SiteId,
+    Input$DateFilterInput? StartPublish,
+    Input$StringFilterInput? Status,
+    Input$DateFilterInput? StopPublish,
+    Input$StringFilterInput? Url,
+    List<Input$ISemanticSearchableWhereInput?>? $_and,
+    Input$StringFilterInput? $_concreteType,
+    Input$SearchableStringFilterInput? $_fulltext,
+    Input$DateFilterInput? $_modified,
+    List<Input$ISemanticSearchableWhereInput?>? $_not,
+    List<Input$ISemanticSearchableWhereInput?>? $_or,
+    Input$IntFilterInput? $_sortOrder,
+  }) =>
+      Input$ISemanticSearchableWhereInput._({
+        if (Ancestors != null) r'Ancestors': Ancestors,
+        if (Changed != null) r'Changed': Changed,
+        if (ContentLink != null) r'ContentLink': ContentLink,
+        if (ContentType != null) r'ContentType': ContentType,
+        if (Created != null) r'Created': Created,
+        if (ExistingLanguages != null) r'ExistingLanguages': ExistingLanguages,
+        if (IsCommonDraft != null) r'IsCommonDraft': IsCommonDraft,
+        if (Language != null) r'Language': Language,
+        if (MasterLanguage != null) r'MasterLanguage': MasterLanguage,
+        if (Name != null) r'Name': Name,
+        if (ParentLink != null) r'ParentLink': ParentLink,
+        if (RelativePath != null) r'RelativePath': RelativePath,
+        if (RouteSegment != null) r'RouteSegment': RouteSegment,
+        if (Saved != null) r'Saved': Saved,
+        if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
+        if (SiteId != null) r'SiteId': SiteId,
+        if (StartPublish != null) r'StartPublish': StartPublish,
+        if (Status != null) r'Status': Status,
+        if (StopPublish != null) r'StopPublish': StopPublish,
+        if (Url != null) r'Url': Url,
+        if ($_and != null) r'_and': $_and,
+        if ($_concreteType != null) r'_concreteType': $_concreteType,
+        if ($_fulltext != null) r'_fulltext': $_fulltext,
+        if ($_modified != null) r'_modified': $_modified,
+        if ($_not != null) r'_not': $_not,
+        if ($_or != null) r'_or': $_or,
+        if ($_sortOrder != null) r'_sortOrder': $_sortOrder,
+      });
+
+  Input$ISemanticSearchableWhereInput._(this._$data);
+
+  factory Input$ISemanticSearchableWhereInput.fromJson(
+      Map<String, dynamic> data) {
+    final result$data = <String, dynamic>{};
+    if (data.containsKey('Ancestors')) {
+      final l$Ancestors = data['Ancestors'];
+      result$data['Ancestors'] = l$Ancestors == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$Ancestors as Map<String, dynamic>));
+    }
+    if (data.containsKey('Changed')) {
+      final l$Changed = data['Changed'];
+      result$data['Changed'] = l$Changed == null
+          ? null
+          : Input$DateFilterInput.fromJson((l$Changed as Map<String, dynamic>));
+    }
+    if (data.containsKey('ContentLink')) {
+      final l$ContentLink = data['ContentLink'];
+      result$data['ContentLink'] = l$ContentLink == null
+          ? null
+          : Input$ContentModelReferenceWhereInput.fromJson(
+              (l$ContentLink as Map<String, dynamic>));
+    }
+    if (data.containsKey('ContentType')) {
+      final l$ContentType = data['ContentType'];
+      result$data['ContentType'] = l$ContentType == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$ContentType as Map<String, dynamic>));
+    }
+    if (data.containsKey('Created')) {
+      final l$Created = data['Created'];
+      result$data['Created'] = l$Created == null
+          ? null
+          : Input$DateFilterInput.fromJson((l$Created as Map<String, dynamic>));
+    }
+    if (data.containsKey('ExistingLanguages')) {
+      final l$ExistingLanguages = data['ExistingLanguages'];
+      result$data['ExistingLanguages'] = l$ExistingLanguages == null
+          ? null
+          : Input$ContentLanguageModelWhereInput.fromJson(
+              (l$ExistingLanguages as Map<String, dynamic>));
+    }
+    if (data.containsKey('IsCommonDraft')) {
+      final l$IsCommonDraft = data['IsCommonDraft'];
+      result$data['IsCommonDraft'] = l$IsCommonDraft == null
+          ? null
+          : Input$BoolFilterInput.fromJson(
+              (l$IsCommonDraft as Map<String, dynamic>));
+    }
+    if (data.containsKey('Language')) {
+      final l$Language = data['Language'];
+      result$data['Language'] = l$Language == null
+          ? null
+          : Input$ContentLanguageModelWhereInput.fromJson(
+              (l$Language as Map<String, dynamic>));
+    }
+    if (data.containsKey('MasterLanguage')) {
+      final l$MasterLanguage = data['MasterLanguage'];
+      result$data['MasterLanguage'] = l$MasterLanguage == null
+          ? null
+          : Input$ContentLanguageModelWhereInput.fromJson(
+              (l$MasterLanguage as Map<String, dynamic>));
+    }
+    if (data.containsKey('Name')) {
+      final l$Name = data['Name'];
+      result$data['Name'] = l$Name == null
+          ? null
+          : Input$SearchableStringFilterInput.fromJson(
+              (l$Name as Map<String, dynamic>));
+    }
+    if (data.containsKey('ParentLink')) {
+      final l$ParentLink = data['ParentLink'];
+      result$data['ParentLink'] = l$ParentLink == null
+          ? null
+          : Input$ContentModelReferenceWhereInput.fromJson(
+              (l$ParentLink as Map<String, dynamic>));
+    }
+    if (data.containsKey('RelativePath')) {
+      final l$RelativePath = data['RelativePath'];
+      result$data['RelativePath'] = l$RelativePath == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$RelativePath as Map<String, dynamic>));
+    }
+    if (data.containsKey('RouteSegment')) {
+      final l$RouteSegment = data['RouteSegment'];
+      result$data['RouteSegment'] = l$RouteSegment == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$RouteSegment as Map<String, dynamic>));
+    }
+    if (data.containsKey('Saved')) {
+      final l$Saved = data['Saved'];
+      result$data['Saved'] = l$Saved == null
+          ? null
+          : Input$DateFilterInput.fromJson((l$Saved as Map<String, dynamic>));
+    }
+    if (data.containsKey('Shortcut')) {
+      final l$Shortcut = data['Shortcut'];
+      result$data['Shortcut'] = l$Shortcut == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$Shortcut as Map<String, dynamic>));
+    }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
+    }
+    if (data.containsKey('SiteId')) {
+      final l$SiteId = data['SiteId'];
+      result$data['SiteId'] = l$SiteId == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SiteId as Map<String, dynamic>));
+    }
+    if (data.containsKey('StartPublish')) {
+      final l$StartPublish = data['StartPublish'];
+      result$data['StartPublish'] = l$StartPublish == null
+          ? null
+          : Input$DateFilterInput.fromJson(
+              (l$StartPublish as Map<String, dynamic>));
+    }
+    if (data.containsKey('Status')) {
+      final l$Status = data['Status'];
+      result$data['Status'] = l$Status == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$Status as Map<String, dynamic>));
+    }
+    if (data.containsKey('StopPublish')) {
+      final l$StopPublish = data['StopPublish'];
+      result$data['StopPublish'] = l$StopPublish == null
+          ? null
+          : Input$DateFilterInput.fromJson(
+              (l$StopPublish as Map<String, dynamic>));
+    }
+    if (data.containsKey('Url')) {
+      final l$Url = data['Url'];
+      result$data['Url'] = l$Url == null
+          ? null
+          : Input$StringFilterInput.fromJson((l$Url as Map<String, dynamic>));
+    }
+    if (data.containsKey('_and')) {
+      final l$$_and = data['_and'];
+      result$data['_and'] = (l$$_and as List<dynamic>?)
+          ?.map((e) => e == null
+              ? null
+              : Input$ISemanticSearchableWhereInput.fromJson(
+                  (e as Map<String, dynamic>)))
+          .toList();
+    }
+    if (data.containsKey('_concreteType')) {
+      final l$$_concreteType = data['_concreteType'];
+      result$data['_concreteType'] = l$$_concreteType == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$$_concreteType as Map<String, dynamic>));
+    }
+    if (data.containsKey('_fulltext')) {
+      final l$$_fulltext = data['_fulltext'];
+      result$data['_fulltext'] = l$$_fulltext == null
+          ? null
+          : Input$SearchableStringFilterInput.fromJson(
+              (l$$_fulltext as Map<String, dynamic>));
+    }
+    if (data.containsKey('_modified')) {
+      final l$$_modified = data['_modified'];
+      result$data['_modified'] = l$$_modified == null
+          ? null
+          : Input$DateFilterInput.fromJson(
+              (l$$_modified as Map<String, dynamic>));
+    }
+    if (data.containsKey('_not')) {
+      final l$$_not = data['_not'];
+      result$data['_not'] = (l$$_not as List<dynamic>?)
+          ?.map((e) => e == null
+              ? null
+              : Input$ISemanticSearchableWhereInput.fromJson(
+                  (e as Map<String, dynamic>)))
+          .toList();
+    }
+    if (data.containsKey('_or')) {
+      final l$$_or = data['_or'];
+      result$data['_or'] = (l$$_or as List<dynamic>?)
+          ?.map((e) => e == null
+              ? null
+              : Input$ISemanticSearchableWhereInput.fromJson(
+                  (e as Map<String, dynamic>)))
+          .toList();
+    }
+    if (data.containsKey('_sortOrder')) {
+      final l$$_sortOrder = data['_sortOrder'];
+      result$data['_sortOrder'] = l$$_sortOrder == null
+          ? null
+          : Input$IntFilterInput.fromJson(
+              (l$$_sortOrder as Map<String, dynamic>));
+    }
+    return Input$ISemanticSearchableWhereInput._(result$data);
+  }
+
+  Map<String, dynamic> _$data;
+
+  Input$StringFilterInput? get Ancestors =>
+      (_$data['Ancestors'] as Input$StringFilterInput?);
+
+  Input$DateFilterInput? get Changed =>
+      (_$data['Changed'] as Input$DateFilterInput?);
+
+  Input$ContentModelReferenceWhereInput? get ContentLink =>
+      (_$data['ContentLink'] as Input$ContentModelReferenceWhereInput?);
+
+  Input$StringFilterInput? get ContentType =>
+      (_$data['ContentType'] as Input$StringFilterInput?);
+
+  Input$DateFilterInput? get Created =>
+      (_$data['Created'] as Input$DateFilterInput?);
+
+  Input$ContentLanguageModelWhereInput? get ExistingLanguages =>
+      (_$data['ExistingLanguages'] as Input$ContentLanguageModelWhereInput?);
+
+  Input$BoolFilterInput? get IsCommonDraft =>
+      (_$data['IsCommonDraft'] as Input$BoolFilterInput?);
+
+  Input$ContentLanguageModelWhereInput? get Language =>
+      (_$data['Language'] as Input$ContentLanguageModelWhereInput?);
+
+  Input$ContentLanguageModelWhereInput? get MasterLanguage =>
+      (_$data['MasterLanguage'] as Input$ContentLanguageModelWhereInput?);
+
+  Input$SearchableStringFilterInput? get Name =>
+      (_$data['Name'] as Input$SearchableStringFilterInput?);
+
+  Input$ContentModelReferenceWhereInput? get ParentLink =>
+      (_$data['ParentLink'] as Input$ContentModelReferenceWhereInput?);
+
+  Input$StringFilterInput? get RelativePath =>
+      (_$data['RelativePath'] as Input$StringFilterInput?);
+
+  Input$StringFilterInput? get RouteSegment =>
+      (_$data['RouteSegment'] as Input$StringFilterInput?);
+
+  Input$DateFilterInput? get Saved =>
+      (_$data['Saved'] as Input$DateFilterInput?);
+
+  Input$StringFilterInput? get Shortcut =>
+      (_$data['Shortcut'] as Input$StringFilterInput?);
+
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
+  Input$StringFilterInput? get SiteId =>
+      (_$data['SiteId'] as Input$StringFilterInput?);
+
+  Input$DateFilterInput? get StartPublish =>
+      (_$data['StartPublish'] as Input$DateFilterInput?);
+
+  Input$StringFilterInput? get Status =>
+      (_$data['Status'] as Input$StringFilterInput?);
+
+  Input$DateFilterInput? get StopPublish =>
+      (_$data['StopPublish'] as Input$DateFilterInput?);
+
+  Input$StringFilterInput? get Url =>
+      (_$data['Url'] as Input$StringFilterInput?);
+
+  List<Input$ISemanticSearchableWhereInput?>? get $_and =>
+      (_$data['_and'] as List<Input$ISemanticSearchableWhereInput?>?);
+
+  Input$StringFilterInput? get $_concreteType =>
+      (_$data['_concreteType'] as Input$StringFilterInput?);
+
+  Input$SearchableStringFilterInput? get $_fulltext =>
+      (_$data['_fulltext'] as Input$SearchableStringFilterInput?);
+
+  Input$DateFilterInput? get $_modified =>
+      (_$data['_modified'] as Input$DateFilterInput?);
+
+  List<Input$ISemanticSearchableWhereInput?>? get $_not =>
+      (_$data['_not'] as List<Input$ISemanticSearchableWhereInput?>?);
+
+  List<Input$ISemanticSearchableWhereInput?>? get $_or =>
+      (_$data['_or'] as List<Input$ISemanticSearchableWhereInput?>?);
+
+  Input$IntFilterInput? get $_sortOrder =>
+      (_$data['_sortOrder'] as Input$IntFilterInput?);
+
+  Map<String, dynamic> toJson() {
+    final result$data = <String, dynamic>{};
+    if (_$data.containsKey('Ancestors')) {
+      final l$Ancestors = Ancestors;
+      result$data['Ancestors'] = l$Ancestors?.toJson();
+    }
+    if (_$data.containsKey('Changed')) {
+      final l$Changed = Changed;
+      result$data['Changed'] = l$Changed?.toJson();
+    }
+    if (_$data.containsKey('ContentLink')) {
+      final l$ContentLink = ContentLink;
+      result$data['ContentLink'] = l$ContentLink?.toJson();
+    }
+    if (_$data.containsKey('ContentType')) {
+      final l$ContentType = ContentType;
+      result$data['ContentType'] = l$ContentType?.toJson();
+    }
+    if (_$data.containsKey('Created')) {
+      final l$Created = Created;
+      result$data['Created'] = l$Created?.toJson();
+    }
+    if (_$data.containsKey('ExistingLanguages')) {
+      final l$ExistingLanguages = ExistingLanguages;
+      result$data['ExistingLanguages'] = l$ExistingLanguages?.toJson();
+    }
+    if (_$data.containsKey('IsCommonDraft')) {
+      final l$IsCommonDraft = IsCommonDraft;
+      result$data['IsCommonDraft'] = l$IsCommonDraft?.toJson();
+    }
+    if (_$data.containsKey('Language')) {
+      final l$Language = Language;
+      result$data['Language'] = l$Language?.toJson();
+    }
+    if (_$data.containsKey('MasterLanguage')) {
+      final l$MasterLanguage = MasterLanguage;
+      result$data['MasterLanguage'] = l$MasterLanguage?.toJson();
+    }
+    if (_$data.containsKey('Name')) {
+      final l$Name = Name;
+      result$data['Name'] = l$Name?.toJson();
+    }
+    if (_$data.containsKey('ParentLink')) {
+      final l$ParentLink = ParentLink;
+      result$data['ParentLink'] = l$ParentLink?.toJson();
+    }
+    if (_$data.containsKey('RelativePath')) {
+      final l$RelativePath = RelativePath;
+      result$data['RelativePath'] = l$RelativePath?.toJson();
+    }
+    if (_$data.containsKey('RouteSegment')) {
+      final l$RouteSegment = RouteSegment;
+      result$data['RouteSegment'] = l$RouteSegment?.toJson();
+    }
+    if (_$data.containsKey('Saved')) {
+      final l$Saved = Saved;
+      result$data['Saved'] = l$Saved?.toJson();
+    }
+    if (_$data.containsKey('Shortcut')) {
+      final l$Shortcut = Shortcut;
+      result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
+    }
+    if (_$data.containsKey('SiteId')) {
+      final l$SiteId = SiteId;
+      result$data['SiteId'] = l$SiteId?.toJson();
+    }
+    if (_$data.containsKey('StartPublish')) {
+      final l$StartPublish = StartPublish;
+      result$data['StartPublish'] = l$StartPublish?.toJson();
+    }
+    if (_$data.containsKey('Status')) {
+      final l$Status = Status;
+      result$data['Status'] = l$Status?.toJson();
+    }
+    if (_$data.containsKey('StopPublish')) {
+      final l$StopPublish = StopPublish;
+      result$data['StopPublish'] = l$StopPublish?.toJson();
+    }
+    if (_$data.containsKey('Url')) {
+      final l$Url = Url;
+      result$data['Url'] = l$Url?.toJson();
+    }
+    if (_$data.containsKey('_and')) {
+      final l$$_and = $_and;
+      result$data['_and'] = l$$_and?.map((e) => e?.toJson()).toList();
+    }
+    if (_$data.containsKey('_concreteType')) {
+      final l$$_concreteType = $_concreteType;
+      result$data['_concreteType'] = l$$_concreteType?.toJson();
+    }
+    if (_$data.containsKey('_fulltext')) {
+      final l$$_fulltext = $_fulltext;
+      result$data['_fulltext'] = l$$_fulltext?.toJson();
+    }
+    if (_$data.containsKey('_modified')) {
+      final l$$_modified = $_modified;
+      result$data['_modified'] = l$$_modified?.toJson();
+    }
+    if (_$data.containsKey('_not')) {
+      final l$$_not = $_not;
+      result$data['_not'] = l$$_not?.map((e) => e?.toJson()).toList();
+    }
+    if (_$data.containsKey('_or')) {
+      final l$$_or = $_or;
+      result$data['_or'] = l$$_or?.map((e) => e?.toJson()).toList();
+    }
+    if (_$data.containsKey('_sortOrder')) {
+      final l$$_sortOrder = $_sortOrder;
+      result$data['_sortOrder'] = l$$_sortOrder?.toJson();
+    }
+    return result$data;
+  }
+
+  CopyWith$Input$ISemanticSearchableWhereInput<
+          Input$ISemanticSearchableWhereInput>
+      get copyWith => CopyWith$Input$ISemanticSearchableWhereInput(
+            this,
+            (i) => i,
+          );
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (other is! Input$ISemanticSearchableWhereInput ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$Ancestors = Ancestors;
+    final lOther$Ancestors = other.Ancestors;
+    if (_$data.containsKey('Ancestors') !=
+        other._$data.containsKey('Ancestors')) {
+      return false;
+    }
+    if (l$Ancestors != lOther$Ancestors) {
+      return false;
+    }
+    final l$Changed = Changed;
+    final lOther$Changed = other.Changed;
+    if (_$data.containsKey('Changed') != other._$data.containsKey('Changed')) {
+      return false;
+    }
+    if (l$Changed != lOther$Changed) {
+      return false;
+    }
+    final l$ContentLink = ContentLink;
+    final lOther$ContentLink = other.ContentLink;
+    if (_$data.containsKey('ContentLink') !=
+        other._$data.containsKey('ContentLink')) {
+      return false;
+    }
+    if (l$ContentLink != lOther$ContentLink) {
+      return false;
+    }
+    final l$ContentType = ContentType;
+    final lOther$ContentType = other.ContentType;
+    if (_$data.containsKey('ContentType') !=
+        other._$data.containsKey('ContentType')) {
+      return false;
+    }
+    if (l$ContentType != lOther$ContentType) {
+      return false;
+    }
+    final l$Created = Created;
+    final lOther$Created = other.Created;
+    if (_$data.containsKey('Created') != other._$data.containsKey('Created')) {
+      return false;
+    }
+    if (l$Created != lOther$Created) {
+      return false;
+    }
+    final l$ExistingLanguages = ExistingLanguages;
+    final lOther$ExistingLanguages = other.ExistingLanguages;
+    if (_$data.containsKey('ExistingLanguages') !=
+        other._$data.containsKey('ExistingLanguages')) {
+      return false;
+    }
+    if (l$ExistingLanguages != lOther$ExistingLanguages) {
+      return false;
+    }
+    final l$IsCommonDraft = IsCommonDraft;
+    final lOther$IsCommonDraft = other.IsCommonDraft;
+    if (_$data.containsKey('IsCommonDraft') !=
+        other._$data.containsKey('IsCommonDraft')) {
+      return false;
+    }
+    if (l$IsCommonDraft != lOther$IsCommonDraft) {
+      return false;
+    }
+    final l$Language = Language;
+    final lOther$Language = other.Language;
+    if (_$data.containsKey('Language') !=
+        other._$data.containsKey('Language')) {
+      return false;
+    }
+    if (l$Language != lOther$Language) {
+      return false;
+    }
+    final l$MasterLanguage = MasterLanguage;
+    final lOther$MasterLanguage = other.MasterLanguage;
+    if (_$data.containsKey('MasterLanguage') !=
+        other._$data.containsKey('MasterLanguage')) {
+      return false;
+    }
+    if (l$MasterLanguage != lOther$MasterLanguage) {
+      return false;
+    }
+    final l$Name = Name;
+    final lOther$Name = other.Name;
+    if (_$data.containsKey('Name') != other._$data.containsKey('Name')) {
+      return false;
+    }
+    if (l$Name != lOther$Name) {
+      return false;
+    }
+    final l$ParentLink = ParentLink;
+    final lOther$ParentLink = other.ParentLink;
+    if (_$data.containsKey('ParentLink') !=
+        other._$data.containsKey('ParentLink')) {
+      return false;
+    }
+    if (l$ParentLink != lOther$ParentLink) {
+      return false;
+    }
+    final l$RelativePath = RelativePath;
+    final lOther$RelativePath = other.RelativePath;
+    if (_$data.containsKey('RelativePath') !=
+        other._$data.containsKey('RelativePath')) {
+      return false;
+    }
+    if (l$RelativePath != lOther$RelativePath) {
+      return false;
+    }
+    final l$RouteSegment = RouteSegment;
+    final lOther$RouteSegment = other.RouteSegment;
+    if (_$data.containsKey('RouteSegment') !=
+        other._$data.containsKey('RouteSegment')) {
+      return false;
+    }
+    if (l$RouteSegment != lOther$RouteSegment) {
+      return false;
+    }
+    final l$Saved = Saved;
+    final lOther$Saved = other.Saved;
+    if (_$data.containsKey('Saved') != other._$data.containsKey('Saved')) {
+      return false;
+    }
+    if (l$Saved != lOther$Saved) {
+      return false;
+    }
+    final l$Shortcut = Shortcut;
+    final lOther$Shortcut = other.Shortcut;
+    if (_$data.containsKey('Shortcut') !=
+        other._$data.containsKey('Shortcut')) {
+      return false;
+    }
+    if (l$Shortcut != lOther$Shortcut) {
+      return false;
+    }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
+    final l$SiteId = SiteId;
+    final lOther$SiteId = other.SiteId;
+    if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
+      return false;
+    }
+    if (l$SiteId != lOther$SiteId) {
+      return false;
+    }
+    final l$StartPublish = StartPublish;
+    final lOther$StartPublish = other.StartPublish;
+    if (_$data.containsKey('StartPublish') !=
+        other._$data.containsKey('StartPublish')) {
+      return false;
+    }
+    if (l$StartPublish != lOther$StartPublish) {
+      return false;
+    }
+    final l$Status = Status;
+    final lOther$Status = other.Status;
+    if (_$data.containsKey('Status') != other._$data.containsKey('Status')) {
+      return false;
+    }
+    if (l$Status != lOther$Status) {
+      return false;
+    }
+    final l$StopPublish = StopPublish;
+    final lOther$StopPublish = other.StopPublish;
+    if (_$data.containsKey('StopPublish') !=
+        other._$data.containsKey('StopPublish')) {
+      return false;
+    }
+    if (l$StopPublish != lOther$StopPublish) {
+      return false;
+    }
+    final l$Url = Url;
+    final lOther$Url = other.Url;
+    if (_$data.containsKey('Url') != other._$data.containsKey('Url')) {
+      return false;
+    }
+    if (l$Url != lOther$Url) {
+      return false;
+    }
+    final l$$_and = $_and;
+    final lOther$$_and = other.$_and;
+    if (_$data.containsKey('_and') != other._$data.containsKey('_and')) {
+      return false;
+    }
+    if (l$$_and != null && lOther$$_and != null) {
+      if (l$$_and.length != lOther$$_and.length) {
+        return false;
+      }
+      for (int i = 0; i < l$$_and.length; i++) {
+        final l$$_and$entry = l$$_and[i];
+        final lOther$$_and$entry = lOther$$_and[i];
+        if (l$$_and$entry != lOther$$_and$entry) {
+          return false;
+        }
+      }
+    } else if (l$$_and != lOther$$_and) {
+      return false;
+    }
+    final l$$_concreteType = $_concreteType;
+    final lOther$$_concreteType = other.$_concreteType;
+    if (_$data.containsKey('_concreteType') !=
+        other._$data.containsKey('_concreteType')) {
+      return false;
+    }
+    if (l$$_concreteType != lOther$$_concreteType) {
+      return false;
+    }
+    final l$$_fulltext = $_fulltext;
+    final lOther$$_fulltext = other.$_fulltext;
+    if (_$data.containsKey('_fulltext') !=
+        other._$data.containsKey('_fulltext')) {
+      return false;
+    }
+    if (l$$_fulltext != lOther$$_fulltext) {
+      return false;
+    }
+    final l$$_modified = $_modified;
+    final lOther$$_modified = other.$_modified;
+    if (_$data.containsKey('_modified') !=
+        other._$data.containsKey('_modified')) {
+      return false;
+    }
+    if (l$$_modified != lOther$$_modified) {
+      return false;
+    }
+    final l$$_not = $_not;
+    final lOther$$_not = other.$_not;
+    if (_$data.containsKey('_not') != other._$data.containsKey('_not')) {
+      return false;
+    }
+    if (l$$_not != null && lOther$$_not != null) {
+      if (l$$_not.length != lOther$$_not.length) {
+        return false;
+      }
+      for (int i = 0; i < l$$_not.length; i++) {
+        final l$$_not$entry = l$$_not[i];
+        final lOther$$_not$entry = lOther$$_not[i];
+        if (l$$_not$entry != lOther$$_not$entry) {
+          return false;
+        }
+      }
+    } else if (l$$_not != lOther$$_not) {
+      return false;
+    }
+    final l$$_or = $_or;
+    final lOther$$_or = other.$_or;
+    if (_$data.containsKey('_or') != other._$data.containsKey('_or')) {
+      return false;
+    }
+    if (l$$_or != null && lOther$$_or != null) {
+      if (l$$_or.length != lOther$$_or.length) {
+        return false;
+      }
+      for (int i = 0; i < l$$_or.length; i++) {
+        final l$$_or$entry = l$$_or[i];
+        final lOther$$_or$entry = lOther$$_or[i];
+        if (l$$_or$entry != lOther$$_or$entry) {
+          return false;
+        }
+      }
+    } else if (l$$_or != lOther$$_or) {
+      return false;
+    }
+    final l$$_sortOrder = $_sortOrder;
+    final lOther$$_sortOrder = other.$_sortOrder;
+    if (_$data.containsKey('_sortOrder') !=
+        other._$data.containsKey('_sortOrder')) {
+      return false;
+    }
+    if (l$$_sortOrder != lOther$$_sortOrder) {
+      return false;
+    }
+    return true;
+  }
+
+  @override
+  int get hashCode {
+    final l$Ancestors = Ancestors;
+    final l$Changed = Changed;
+    final l$ContentLink = ContentLink;
+    final l$ContentType = ContentType;
+    final l$Created = Created;
+    final l$ExistingLanguages = ExistingLanguages;
+    final l$IsCommonDraft = IsCommonDraft;
+    final l$Language = Language;
+    final l$MasterLanguage = MasterLanguage;
+    final l$Name = Name;
+    final l$ParentLink = ParentLink;
+    final l$RelativePath = RelativePath;
+    final l$RouteSegment = RouteSegment;
+    final l$Saved = Saved;
+    final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
+    final l$SiteId = SiteId;
+    final l$StartPublish = StartPublish;
+    final l$Status = Status;
+    final l$StopPublish = StopPublish;
+    final l$Url = Url;
+    final l$$_and = $_and;
+    final l$$_concreteType = $_concreteType;
+    final l$$_fulltext = $_fulltext;
+    final l$$_modified = $_modified;
+    final l$$_not = $_not;
+    final l$$_or = $_or;
+    final l$$_sortOrder = $_sortOrder;
+    return Object.hashAll([
+      _$data.containsKey('Ancestors') ? l$Ancestors : const {},
+      _$data.containsKey('Changed') ? l$Changed : const {},
+      _$data.containsKey('ContentLink') ? l$ContentLink : const {},
+      _$data.containsKey('ContentType') ? l$ContentType : const {},
+      _$data.containsKey('Created') ? l$Created : const {},
+      _$data.containsKey('ExistingLanguages') ? l$ExistingLanguages : const {},
+      _$data.containsKey('IsCommonDraft') ? l$IsCommonDraft : const {},
+      _$data.containsKey('Language') ? l$Language : const {},
+      _$data.containsKey('MasterLanguage') ? l$MasterLanguage : const {},
+      _$data.containsKey('Name') ? l$Name : const {},
+      _$data.containsKey('ParentLink') ? l$ParentLink : const {},
+      _$data.containsKey('RelativePath') ? l$RelativePath : const {},
+      _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
+      _$data.containsKey('Saved') ? l$Saved : const {},
+      _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
+      _$data.containsKey('SiteId') ? l$SiteId : const {},
+      _$data.containsKey('StartPublish') ? l$StartPublish : const {},
+      _$data.containsKey('Status') ? l$Status : const {},
+      _$data.containsKey('StopPublish') ? l$StopPublish : const {},
+      _$data.containsKey('Url') ? l$Url : const {},
+      _$data.containsKey('_and')
+          ? l$$_and == null
+              ? null
+              : Object.hashAll(l$$_and.map((v) => v))
+          : const {},
+      _$data.containsKey('_concreteType') ? l$$_concreteType : const {},
+      _$data.containsKey('_fulltext') ? l$$_fulltext : const {},
+      _$data.containsKey('_modified') ? l$$_modified : const {},
+      _$data.containsKey('_not')
+          ? l$$_not == null
+              ? null
+              : Object.hashAll(l$$_not.map((v) => v))
+          : const {},
+      _$data.containsKey('_or')
+          ? l$$_or == null
+              ? null
+              : Object.hashAll(l$$_or.map((v) => v))
+          : const {},
+      _$data.containsKey('_sortOrder') ? l$$_sortOrder : const {},
+    ]);
+  }
+}
+
+abstract class CopyWith$Input$ISemanticSearchableWhereInput<TRes> {
+  factory CopyWith$Input$ISemanticSearchableWhereInput(
+    Input$ISemanticSearchableWhereInput instance,
+    TRes Function(Input$ISemanticSearchableWhereInput) then,
+  ) = _CopyWithImpl$Input$ISemanticSearchableWhereInput;
+
+  factory CopyWith$Input$ISemanticSearchableWhereInput.stub(TRes res) =
+      _CopyWithStubImpl$Input$ISemanticSearchableWhereInput;
+
+  TRes call({
+    Input$StringFilterInput? Ancestors,
+    Input$DateFilterInput? Changed,
+    Input$ContentModelReferenceWhereInput? ContentLink,
+    Input$StringFilterInput? ContentType,
+    Input$DateFilterInput? Created,
+    Input$ContentLanguageModelWhereInput? ExistingLanguages,
+    Input$BoolFilterInput? IsCommonDraft,
+    Input$ContentLanguageModelWhereInput? Language,
+    Input$ContentLanguageModelWhereInput? MasterLanguage,
+    Input$SearchableStringFilterInput? Name,
+    Input$ContentModelReferenceWhereInput? ParentLink,
+    Input$StringFilterInput? RelativePath,
+    Input$StringFilterInput? RouteSegment,
+    Input$DateFilterInput? Saved,
+    Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
+    Input$StringFilterInput? SiteId,
+    Input$DateFilterInput? StartPublish,
+    Input$StringFilterInput? Status,
+    Input$DateFilterInput? StopPublish,
+    Input$StringFilterInput? Url,
+    List<Input$ISemanticSearchableWhereInput?>? $_and,
+    Input$StringFilterInput? $_concreteType,
+    Input$SearchableStringFilterInput? $_fulltext,
+    Input$DateFilterInput? $_modified,
+    List<Input$ISemanticSearchableWhereInput?>? $_not,
+    List<Input$ISemanticSearchableWhereInput?>? $_or,
+    Input$IntFilterInput? $_sortOrder,
+  });
+  CopyWith$Input$StringFilterInput<TRes> get Ancestors;
+  CopyWith$Input$DateFilterInput<TRes> get Changed;
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get ContentLink;
+  CopyWith$Input$StringFilterInput<TRes> get ContentType;
+  CopyWith$Input$DateFilterInput<TRes> get Created;
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get ExistingLanguages;
+  CopyWith$Input$BoolFilterInput<TRes> get IsCommonDraft;
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get Language;
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get MasterLanguage;
+  CopyWith$Input$SearchableStringFilterInput<TRes> get Name;
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get ParentLink;
+  CopyWith$Input$StringFilterInput<TRes> get RelativePath;
+  CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
+  CopyWith$Input$DateFilterInput<TRes> get Saved;
+  CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
+  CopyWith$Input$StringFilterInput<TRes> get SiteId;
+  CopyWith$Input$DateFilterInput<TRes> get StartPublish;
+  CopyWith$Input$StringFilterInput<TRes> get Status;
+  CopyWith$Input$DateFilterInput<TRes> get StopPublish;
+  CopyWith$Input$StringFilterInput<TRes> get Url;
+  TRes $_and(
+      Iterable<Input$ISemanticSearchableWhereInput?>? Function(
+              Iterable<
+                  CopyWith$Input$ISemanticSearchableWhereInput<
+                      Input$ISemanticSearchableWhereInput>?>?)
+          _fn);
+  CopyWith$Input$StringFilterInput<TRes> get $_concreteType;
+  CopyWith$Input$SearchableStringFilterInput<TRes> get $_fulltext;
+  CopyWith$Input$DateFilterInput<TRes> get $_modified;
+  TRes $_not(
+      Iterable<Input$ISemanticSearchableWhereInput?>? Function(
+              Iterable<
+                  CopyWith$Input$ISemanticSearchableWhereInput<
+                      Input$ISemanticSearchableWhereInput>?>?)
+          _fn);
+  TRes $_or(
+      Iterable<Input$ISemanticSearchableWhereInput?>? Function(
+              Iterable<
+                  CopyWith$Input$ISemanticSearchableWhereInput<
+                      Input$ISemanticSearchableWhereInput>?>?)
+          _fn);
+  CopyWith$Input$IntFilterInput<TRes> get $_sortOrder;
+}
+
+class _CopyWithImpl$Input$ISemanticSearchableWhereInput<TRes>
+    implements CopyWith$Input$ISemanticSearchableWhereInput<TRes> {
+  _CopyWithImpl$Input$ISemanticSearchableWhereInput(
+    this._instance,
+    this._then,
+  );
+
+  final Input$ISemanticSearchableWhereInput _instance;
+
+  final TRes Function(Input$ISemanticSearchableWhereInput) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? Ancestors = _undefined,
+    Object? Changed = _undefined,
+    Object? ContentLink = _undefined,
+    Object? ContentType = _undefined,
+    Object? Created = _undefined,
+    Object? ExistingLanguages = _undefined,
+    Object? IsCommonDraft = _undefined,
+    Object? Language = _undefined,
+    Object? MasterLanguage = _undefined,
+    Object? Name = _undefined,
+    Object? ParentLink = _undefined,
+    Object? RelativePath = _undefined,
+    Object? RouteSegment = _undefined,
+    Object? Saved = _undefined,
+    Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
+    Object? SiteId = _undefined,
+    Object? StartPublish = _undefined,
+    Object? Status = _undefined,
+    Object? StopPublish = _undefined,
+    Object? Url = _undefined,
+    Object? $_and = _undefined,
+    Object? $_concreteType = _undefined,
+    Object? $_fulltext = _undefined,
+    Object? $_modified = _undefined,
+    Object? $_not = _undefined,
+    Object? $_or = _undefined,
+    Object? $_sortOrder = _undefined,
+  }) =>
+      _then(Input$ISemanticSearchableWhereInput._({
+        ..._instance._$data,
+        if (Ancestors != _undefined)
+          'Ancestors': (Ancestors as Input$StringFilterInput?),
+        if (Changed != _undefined)
+          'Changed': (Changed as Input$DateFilterInput?),
+        if (ContentLink != _undefined)
+          'ContentLink':
+              (ContentLink as Input$ContentModelReferenceWhereInput?),
+        if (ContentType != _undefined)
+          'ContentType': (ContentType as Input$StringFilterInput?),
+        if (Created != _undefined)
+          'Created': (Created as Input$DateFilterInput?),
+        if (ExistingLanguages != _undefined)
+          'ExistingLanguages':
+              (ExistingLanguages as Input$ContentLanguageModelWhereInput?),
+        if (IsCommonDraft != _undefined)
+          'IsCommonDraft': (IsCommonDraft as Input$BoolFilterInput?),
+        if (Language != _undefined)
+          'Language': (Language as Input$ContentLanguageModelWhereInput?),
+        if (MasterLanguage != _undefined)
+          'MasterLanguage':
+              (MasterLanguage as Input$ContentLanguageModelWhereInput?),
+        if (Name != _undefined)
+          'Name': (Name as Input$SearchableStringFilterInput?),
+        if (ParentLink != _undefined)
+          'ParentLink': (ParentLink as Input$ContentModelReferenceWhereInput?),
+        if (RelativePath != _undefined)
+          'RelativePath': (RelativePath as Input$StringFilterInput?),
+        if (RouteSegment != _undefined)
+          'RouteSegment': (RouteSegment as Input$StringFilterInput?),
+        if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
+        if (Shortcut != _undefined)
+          'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
+        if (SiteId != _undefined)
+          'SiteId': (SiteId as Input$StringFilterInput?),
+        if (StartPublish != _undefined)
+          'StartPublish': (StartPublish as Input$DateFilterInput?),
+        if (Status != _undefined)
+          'Status': (Status as Input$StringFilterInput?),
+        if (StopPublish != _undefined)
+          'StopPublish': (StopPublish as Input$DateFilterInput?),
+        if (Url != _undefined) 'Url': (Url as Input$StringFilterInput?),
+        if ($_and != _undefined)
+          '_and': ($_and as List<Input$ISemanticSearchableWhereInput?>?),
+        if ($_concreteType != _undefined)
+          '_concreteType': ($_concreteType as Input$StringFilterInput?),
+        if ($_fulltext != _undefined)
+          '_fulltext': ($_fulltext as Input$SearchableStringFilterInput?),
+        if ($_modified != _undefined)
+          '_modified': ($_modified as Input$DateFilterInput?),
+        if ($_not != _undefined)
+          '_not': ($_not as List<Input$ISemanticSearchableWhereInput?>?),
+        if ($_or != _undefined)
+          '_or': ($_or as List<Input$ISemanticSearchableWhereInput?>?),
+        if ($_sortOrder != _undefined)
+          '_sortOrder': ($_sortOrder as Input$IntFilterInput?),
+      }));
+
+  CopyWith$Input$StringFilterInput<TRes> get Ancestors {
+    final local$Ancestors = _instance.Ancestors;
+    return local$Ancestors == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$Ancestors, (e) => call(Ancestors: e));
+  }
+
+  CopyWith$Input$DateFilterInput<TRes> get Changed {
+    final local$Changed = _instance.Changed;
+    return local$Changed == null
+        ? CopyWith$Input$DateFilterInput.stub(_then(_instance))
+        : CopyWith$Input$DateFilterInput(
+            local$Changed, (e) => call(Changed: e));
+  }
+
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get ContentLink {
+    final local$ContentLink = _instance.ContentLink;
+    return local$ContentLink == null
+        ? CopyWith$Input$ContentModelReferenceWhereInput.stub(_then(_instance))
+        : CopyWith$Input$ContentModelReferenceWhereInput(
+            local$ContentLink, (e) => call(ContentLink: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get ContentType {
+    final local$ContentType = _instance.ContentType;
+    return local$ContentType == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$ContentType, (e) => call(ContentType: e));
+  }
+
+  CopyWith$Input$DateFilterInput<TRes> get Created {
+    final local$Created = _instance.Created;
+    return local$Created == null
+        ? CopyWith$Input$DateFilterInput.stub(_then(_instance))
+        : CopyWith$Input$DateFilterInput(
+            local$Created, (e) => call(Created: e));
+  }
+
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get ExistingLanguages {
+    final local$ExistingLanguages = _instance.ExistingLanguages;
+    return local$ExistingLanguages == null
+        ? CopyWith$Input$ContentLanguageModelWhereInput.stub(_then(_instance))
+        : CopyWith$Input$ContentLanguageModelWhereInput(
+            local$ExistingLanguages, (e) => call(ExistingLanguages: e));
+  }
+
+  CopyWith$Input$BoolFilterInput<TRes> get IsCommonDraft {
+    final local$IsCommonDraft = _instance.IsCommonDraft;
+    return local$IsCommonDraft == null
+        ? CopyWith$Input$BoolFilterInput.stub(_then(_instance))
+        : CopyWith$Input$BoolFilterInput(
+            local$IsCommonDraft, (e) => call(IsCommonDraft: e));
+  }
+
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get Language {
+    final local$Language = _instance.Language;
+    return local$Language == null
+        ? CopyWith$Input$ContentLanguageModelWhereInput.stub(_then(_instance))
+        : CopyWith$Input$ContentLanguageModelWhereInput(
+            local$Language, (e) => call(Language: e));
+  }
+
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get MasterLanguage {
+    final local$MasterLanguage = _instance.MasterLanguage;
+    return local$MasterLanguage == null
+        ? CopyWith$Input$ContentLanguageModelWhereInput.stub(_then(_instance))
+        : CopyWith$Input$ContentLanguageModelWhereInput(
+            local$MasterLanguage, (e) => call(MasterLanguage: e));
+  }
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get Name {
+    final local$Name = _instance.Name;
+    return local$Name == null
+        ? CopyWith$Input$SearchableStringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$SearchableStringFilterInput(
+            local$Name, (e) => call(Name: e));
+  }
+
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get ParentLink {
+    final local$ParentLink = _instance.ParentLink;
+    return local$ParentLink == null
+        ? CopyWith$Input$ContentModelReferenceWhereInput.stub(_then(_instance))
+        : CopyWith$Input$ContentModelReferenceWhereInput(
+            local$ParentLink, (e) => call(ParentLink: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get RelativePath {
+    final local$RelativePath = _instance.RelativePath;
+    return local$RelativePath == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$RelativePath, (e) => call(RelativePath: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get RouteSegment {
+    final local$RouteSegment = _instance.RouteSegment;
+    return local$RouteSegment == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$RouteSegment, (e) => call(RouteSegment: e));
+  }
+
+  CopyWith$Input$DateFilterInput<TRes> get Saved {
+    final local$Saved = _instance.Saved;
+    return local$Saved == null
+        ? CopyWith$Input$DateFilterInput.stub(_then(_instance))
+        : CopyWith$Input$DateFilterInput(local$Saved, (e) => call(Saved: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get Shortcut {
+    final local$Shortcut = _instance.Shortcut;
+    return local$Shortcut == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$Shortcut, (e) => call(Shortcut: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get SiteId {
+    final local$SiteId = _instance.SiteId;
+    return local$SiteId == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SiteId, (e) => call(SiteId: e));
+  }
+
+  CopyWith$Input$DateFilterInput<TRes> get StartPublish {
+    final local$StartPublish = _instance.StartPublish;
+    return local$StartPublish == null
+        ? CopyWith$Input$DateFilterInput.stub(_then(_instance))
+        : CopyWith$Input$DateFilterInput(
+            local$StartPublish, (e) => call(StartPublish: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get Status {
+    final local$Status = _instance.Status;
+    return local$Status == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$Status, (e) => call(Status: e));
+  }
+
+  CopyWith$Input$DateFilterInput<TRes> get StopPublish {
+    final local$StopPublish = _instance.StopPublish;
+    return local$StopPublish == null
+        ? CopyWith$Input$DateFilterInput.stub(_then(_instance))
+        : CopyWith$Input$DateFilterInput(
+            local$StopPublish, (e) => call(StopPublish: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get Url {
+    final local$Url = _instance.Url;
+    return local$Url == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(local$Url, (e) => call(Url: e));
+  }
+
+  TRes $_and(
+          Iterable<Input$ISemanticSearchableWhereInput?>? Function(
+                  Iterable<
+                      CopyWith$Input$ISemanticSearchableWhereInput<
+                          Input$ISemanticSearchableWhereInput>?>?)
+              _fn) =>
+      call(
+          $_and: _fn(_instance.$_and?.map((e) => e == null
+              ? null
+              : CopyWith$Input$ISemanticSearchableWhereInput(
+                  e,
+                  (i) => i,
+                )))?.toList());
+
+  CopyWith$Input$StringFilterInput<TRes> get $_concreteType {
+    final local$$_concreteType = _instance.$_concreteType;
+    return local$$_concreteType == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$$_concreteType, (e) => call($_concreteType: e));
+  }
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get $_fulltext {
+    final local$$_fulltext = _instance.$_fulltext;
+    return local$$_fulltext == null
+        ? CopyWith$Input$SearchableStringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$SearchableStringFilterInput(
+            local$$_fulltext, (e) => call($_fulltext: e));
+  }
+
+  CopyWith$Input$DateFilterInput<TRes> get $_modified {
+    final local$$_modified = _instance.$_modified;
+    return local$$_modified == null
+        ? CopyWith$Input$DateFilterInput.stub(_then(_instance))
+        : CopyWith$Input$DateFilterInput(
+            local$$_modified, (e) => call($_modified: e));
+  }
+
+  TRes $_not(
+          Iterable<Input$ISemanticSearchableWhereInput?>? Function(
+                  Iterable<
+                      CopyWith$Input$ISemanticSearchableWhereInput<
+                          Input$ISemanticSearchableWhereInput>?>?)
+              _fn) =>
+      call(
+          $_not: _fn(_instance.$_not?.map((e) => e == null
+              ? null
+              : CopyWith$Input$ISemanticSearchableWhereInput(
+                  e,
+                  (i) => i,
+                )))?.toList());
+
+  TRes $_or(
+          Iterable<Input$ISemanticSearchableWhereInput?>? Function(
+                  Iterable<
+                      CopyWith$Input$ISemanticSearchableWhereInput<
+                          Input$ISemanticSearchableWhereInput>?>?)
+              _fn) =>
+      call(
+          $_or: _fn(_instance.$_or?.map((e) => e == null
+              ? null
+              : CopyWith$Input$ISemanticSearchableWhereInput(
+                  e,
+                  (i) => i,
+                )))?.toList());
+
+  CopyWith$Input$IntFilterInput<TRes> get $_sortOrder {
+    final local$$_sortOrder = _instance.$_sortOrder;
+    return local$$_sortOrder == null
+        ? CopyWith$Input$IntFilterInput.stub(_then(_instance))
+        : CopyWith$Input$IntFilterInput(
+            local$$_sortOrder, (e) => call($_sortOrder: e));
+  }
+}
+
+class _CopyWithStubImpl$Input$ISemanticSearchableWhereInput<TRes>
+    implements CopyWith$Input$ISemanticSearchableWhereInput<TRes> {
+  _CopyWithStubImpl$Input$ISemanticSearchableWhereInput(this._res);
+
+  TRes _res;
+
+  call({
+    Input$StringFilterInput? Ancestors,
+    Input$DateFilterInput? Changed,
+    Input$ContentModelReferenceWhereInput? ContentLink,
+    Input$StringFilterInput? ContentType,
+    Input$DateFilterInput? Created,
+    Input$ContentLanguageModelWhereInput? ExistingLanguages,
+    Input$BoolFilterInput? IsCommonDraft,
+    Input$ContentLanguageModelWhereInput? Language,
+    Input$ContentLanguageModelWhereInput? MasterLanguage,
+    Input$SearchableStringFilterInput? Name,
+    Input$ContentModelReferenceWhereInput? ParentLink,
+    Input$StringFilterInput? RelativePath,
+    Input$StringFilterInput? RouteSegment,
+    Input$DateFilterInput? Saved,
+    Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
+    Input$StringFilterInput? SiteId,
+    Input$DateFilterInput? StartPublish,
+    Input$StringFilterInput? Status,
+    Input$DateFilterInput? StopPublish,
+    Input$StringFilterInput? Url,
+    List<Input$ISemanticSearchableWhereInput?>? $_and,
+    Input$StringFilterInput? $_concreteType,
+    Input$SearchableStringFilterInput? $_fulltext,
+    Input$DateFilterInput? $_modified,
+    List<Input$ISemanticSearchableWhereInput?>? $_not,
+    List<Input$ISemanticSearchableWhereInput?>? $_or,
+    Input$IntFilterInput? $_sortOrder,
+  }) =>
+      _res;
+
+  CopyWith$Input$StringFilterInput<TRes> get Ancestors =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$DateFilterInput<TRes> get Changed =>
+      CopyWith$Input$DateFilterInput.stub(_res);
+
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get ContentLink =>
+      CopyWith$Input$ContentModelReferenceWhereInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get ContentType =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$DateFilterInput<TRes> get Created =>
+      CopyWith$Input$DateFilterInput.stub(_res);
+
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get ExistingLanguages =>
+      CopyWith$Input$ContentLanguageModelWhereInput.stub(_res);
+
+  CopyWith$Input$BoolFilterInput<TRes> get IsCommonDraft =>
+      CopyWith$Input$BoolFilterInput.stub(_res);
+
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get Language =>
+      CopyWith$Input$ContentLanguageModelWhereInput.stub(_res);
+
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get MasterLanguage =>
+      CopyWith$Input$ContentLanguageModelWhereInput.stub(_res);
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get Name =>
+      CopyWith$Input$SearchableStringFilterInput.stub(_res);
+
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get ParentLink =>
+      CopyWith$Input$ContentModelReferenceWhereInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get RelativePath =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get RouteSegment =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$DateFilterInput<TRes> get Saved =>
+      CopyWith$Input$DateFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get SiteId =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$DateFilterInput<TRes> get StartPublish =>
+      CopyWith$Input$DateFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get Status =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$DateFilterInput<TRes> get StopPublish =>
+      CopyWith$Input$DateFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get Url =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  $_and(_fn) => _res;
+
+  CopyWith$Input$StringFilterInput<TRes> get $_concreteType =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get $_fulltext =>
+      CopyWith$Input$SearchableStringFilterInput.stub(_res);
+
+  CopyWith$Input$DateFilterInput<TRes> get $_modified =>
+      CopyWith$Input$DateFilterInput.stub(_res);
+
+  $_not(_fn) => _res;
+
+  $_or(_fn) => _res;
+
+  CopyWith$Input$IntFilterInput<TRes> get $_sortOrder =>
+      CopyWith$Input$IntFilterInput.stub(_res);
+}
+
 class Input$ImageFileOrderByInput {
   factory Input$ImageFileOrderByInput({
     Enum$OrderBy? Ancestors,
@@ -28973,6 +34526,7 @@ class Input$ImageFileOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -29006,6 +34560,7 @@ class Input$ImageFileOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -29142,6 +34697,12 @@ class Input$ImageFileOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -29256,6 +34817,8 @@ class Input$ImageFileOrderByInput {
   Enum$OrderBy? get Saved => (_$data['Saved'] as Enum$OrderBy?);
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
 
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
@@ -29372,6 +34935,11 @@ class Input$ImageFileOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -29614,6 +35182,15 @@ class Input$ImageFileOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -29743,6 +35320,7 @@ class Input$ImageFileOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -29775,6 +35353,7 @@ class Input$ImageFileOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -29820,6 +35399,7 @@ abstract class CopyWith$Input$ImageFileOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -29875,6 +35455,7 @@ class _CopyWithImpl$Input$ImageFileOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -29923,6 +35504,8 @@ class _CopyWithImpl$Input$ImageFileOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -30030,6 +35613,7 @@ class _CopyWithStubImpl$Input$ImageFileOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -30088,6 +35672,7 @@ class Input$ImageFileWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -30122,6 +35707,7 @@ class Input$ImageFileWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -30270,6 +35856,13 @@ class Input$ImageFileWhereInput {
           ? null
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
+    }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
     }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
@@ -30426,6 +36019,9 @@ class Input$ImageFileWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -30542,6 +36138,10 @@ class Input$ImageFileWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -30779,6 +36379,15 @@ class Input$ImageFileWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -30947,6 +36556,7 @@ class Input$ImageFileWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -30980,6 +36590,7 @@ class Input$ImageFileWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -31038,6 +36649,7 @@ abstract class CopyWith$Input$ImageFileWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -31071,6 +36683,7 @@ abstract class CopyWith$Input$ImageFileWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -31134,6 +36747,7 @@ class _CopyWithImpl$Input$ImageFileWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -31190,6 +36804,8 @@ class _CopyWithImpl$Input$ImageFileWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -31368,6 +36984,14 @@ class _CopyWithImpl$Input$ImageFileWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -31516,6 +37140,7 @@ class _CopyWithStubImpl$Input$ImageFileWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -31587,6 +37212,9 @@ class _CopyWithStubImpl$Input$ImageFileWhereInput<TRes>
       CopyWith$Input$DateFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
@@ -32309,6 +37937,7 @@ class Input$JumbotronBlockOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -32344,6 +37973,7 @@ class Input$JumbotronBlockOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -32493,6 +38123,12 @@ class Input$JumbotronBlockOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -32612,6 +38248,8 @@ class Input$JumbotronBlockOrderByInput {
   Enum$OrderBy? get Saved => (_$data['Saved'] as Enum$OrderBy?);
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
 
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
@@ -32737,6 +38375,11 @@ class Input$JumbotronBlockOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -32997,6 +38640,15 @@ class Input$JumbotronBlockOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -33128,6 +38780,7 @@ class Input$JumbotronBlockOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -33162,6 +38815,7 @@ class Input$JumbotronBlockOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -33209,6 +38863,7 @@ abstract class CopyWith$Input$JumbotronBlockOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -33266,6 +38921,7 @@ class _CopyWithImpl$Input$JumbotronBlockOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -33320,6 +38976,8 @@ class _CopyWithImpl$Input$JumbotronBlockOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -33430,6 +39088,7 @@ class _CopyWithStubImpl$Input$JumbotronBlockOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -33490,6 +39149,7 @@ class Input$JumbotronBlockWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -33526,6 +39186,7 @@ class Input$JumbotronBlockWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -33688,6 +39349,13 @@ class Input$JumbotronBlockWhereInput {
           ? null
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
+    }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
     }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
@@ -33853,6 +39521,9 @@ class Input$JumbotronBlockWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -33977,6 +39648,10 @@ class Input$JumbotronBlockWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -34231,6 +39906,15 @@ class Input$JumbotronBlockWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -34401,6 +40085,7 @@ class Input$JumbotronBlockWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -34436,6 +40121,7 @@ class Input$JumbotronBlockWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -34496,6 +40182,7 @@ abstract class CopyWith$Input$JumbotronBlockWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -34531,6 +40218,7 @@ abstract class CopyWith$Input$JumbotronBlockWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -34596,6 +40284,7 @@ class _CopyWithImpl$Input$JumbotronBlockWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -34657,6 +40346,8 @@ class _CopyWithImpl$Input$JumbotronBlockWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -34851,6 +40542,14 @@ class _CopyWithImpl$Input$JumbotronBlockWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -35001,6 +40700,7 @@ class _CopyWithStubImpl$Input$JumbotronBlockWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -35080,6 +40780,9 @@ class _CopyWithStubImpl$Input$JumbotronBlockWhereInput<TRes>
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
@@ -35144,6 +40847,7 @@ class Input$LandingPageOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -35183,6 +40887,7 @@ class Input$LandingPageOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -35358,6 +41063,12 @@ class Input$LandingPageOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -35491,6 +41202,8 @@ class Input$LandingPageOrderByInput {
   Enum$OrderBy? get Saved => (_$data['Saved'] as Enum$OrderBy?);
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
 
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
@@ -35637,6 +41350,11 @@ class Input$LandingPageOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -35935,6 +41653,15 @@ class Input$LandingPageOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -36070,6 +41797,7 @@ class Input$LandingPageOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -36108,6 +41836,7 @@ class Input$LandingPageOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -36159,6 +41888,7 @@ abstract class CopyWith$Input$LandingPageOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -36223,6 +41953,7 @@ class _CopyWithImpl$Input$LandingPageOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -36287,6 +42018,8 @@ class _CopyWithImpl$Input$LandingPageOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -36420,6 +42153,7 @@ class _CopyWithStubImpl$Input$LandingPageOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -36491,6 +42225,7 @@ class Input$LandingPageWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -36531,6 +42266,7 @@ class Input$LandingPageWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -36722,6 +42458,13 @@ class Input$LandingPageWhereInput {
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] = l$SiteId == null
@@ -36899,6 +42642,9 @@ class Input$LandingPageWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -37039,6 +42785,10 @@ class Input$LandingPageWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -37331,6 +43081,15 @@ class Input$LandingPageWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -37505,6 +43264,7 @@ class Input$LandingPageWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -37544,6 +43304,7 @@ class Input$LandingPageWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -37608,6 +43369,7 @@ abstract class CopyWith$Input$LandingPageWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -37647,6 +43409,7 @@ abstract class CopyWith$Input$LandingPageWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -37716,6 +43479,7 @@ class _CopyWithImpl$Input$LandingPageWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -37787,6 +43551,8 @@ class _CopyWithImpl$Input$LandingPageWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -38016,6 +43782,14 @@ class _CopyWithImpl$Input$LandingPageWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -38170,6 +43944,7 @@ class _CopyWithStubImpl$Input$LandingPageWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -38260,6 +44035,9 @@ class _CopyWithStubImpl$Input$LandingPageWhereInput<TRes>
       CopyWith$Input$DateFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
@@ -39010,6 +44788,7 @@ class Input$NewsPageOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -39051,6 +44830,7 @@ class Input$NewsPageOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -39239,6 +45019,12 @@ class Input$NewsPageOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -39377,6 +45163,8 @@ class Input$NewsPageOrderByInput {
   Enum$OrderBy? get Saved => (_$data['Saved'] as Enum$OrderBy?);
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
 
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
@@ -39532,6 +45320,11 @@ class Input$NewsPageOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -39848,6 +45641,15 @@ class Input$NewsPageOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -39985,6 +45787,7 @@ class Input$NewsPageOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -40025,6 +45828,7 @@ class Input$NewsPageOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -40078,6 +45882,7 @@ abstract class CopyWith$Input$NewsPageOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -40145,6 +45950,7 @@ class _CopyWithImpl$Input$NewsPageOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -40212,6 +46018,8 @@ class _CopyWithImpl$Input$NewsPageOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -40356,6 +46164,7 @@ class _CopyWithStubImpl$Input$NewsPageOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -41321,6 +47130,7 @@ class Input$NewsPageWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -41363,6 +47173,7 @@ class Input$NewsPageWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -41568,6 +47379,13 @@ class Input$NewsPageWhereInput {
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] = l$SiteId == null
@@ -41748,6 +47566,9 @@ class Input$NewsPageWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -41896,6 +47717,10 @@ class Input$NewsPageWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -42206,6 +48031,15 @@ class Input$NewsPageWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -42382,6 +48216,7 @@ class Input$NewsPageWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -42423,6 +48258,7 @@ class Input$NewsPageWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -42489,6 +48325,7 @@ abstract class CopyWith$Input$NewsPageWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -42530,6 +48367,7 @@ abstract class CopyWith$Input$NewsPageWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -42601,6 +48439,7 @@ class _CopyWithImpl$Input$NewsPageWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -42676,6 +48515,8 @@ class _CopyWithImpl$Input$NewsPageWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -42921,6 +48762,14 @@ class _CopyWithImpl$Input$NewsPageWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -43077,6 +48926,7 @@ class _CopyWithStubImpl$Input$NewsPageWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -43173,6 +49023,9 @@ class _CopyWithStubImpl$Input$NewsPageWhereInput<TRes>
       CopyWith$Input$DateFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
@@ -43384,6 +49237,7 @@ class Input$PageListBlockOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? SortOrder,
     Enum$OrderBy? StartPublish,
@@ -43424,6 +49278,7 @@ class Input$PageListBlockOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (SortOrder != null) r'SortOrder': SortOrder,
         if (StartPublish != null) r'StartPublish': StartPublish,
@@ -43591,6 +49446,12 @@ class Input$PageListBlockOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -43719,6 +49580,8 @@ class Input$PageListBlockOrderByInput {
   Enum$OrderBy? get Saved => (_$data['Saved'] as Enum$OrderBy?);
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
 
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
@@ -43860,6 +49723,11 @@ class Input$PageListBlockOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -44146,6 +50014,15 @@ class Input$PageListBlockOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -44280,6 +50157,7 @@ class Input$PageListBlockOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$SortOrder = SortOrder;
     final l$StartPublish = StartPublish;
@@ -44321,6 +50199,7 @@ class Input$PageListBlockOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('SortOrder') ? l$SortOrder : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
@@ -44371,6 +50250,7 @@ abstract class CopyWith$Input$PageListBlockOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? SortOrder,
     Enum$OrderBy? StartPublish,
@@ -44432,6 +50312,7 @@ class _CopyWithImpl$Input$PageListBlockOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? SortOrder = _undefined,
     Object? StartPublish = _undefined,
@@ -44491,6 +50372,8 @@ class _CopyWithImpl$Input$PageListBlockOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (SortOrder != _undefined) 'SortOrder': (SortOrder as Enum$OrderBy?),
         if (StartPublish != _undefined)
@@ -44611,6 +50494,7 @@ class _CopyWithStubImpl$Input$PageListBlockOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? SortOrder,
     Enum$OrderBy? StartPublish,
@@ -44677,6 +50561,7 @@ class Input$PageListBlockWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$IntFilterInput? SortOrder,
     Input$DateFilterInput? StartPublish,
@@ -44718,6 +50603,7 @@ class Input$PageListBlockWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (SortOrder != null) r'SortOrder': SortOrder,
         if (StartPublish != null) r'StartPublish': StartPublish,
@@ -44901,6 +50787,13 @@ class Input$PageListBlockWhereInput {
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] = l$SiteId == null
@@ -45073,6 +50966,9 @@ class Input$PageListBlockWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -45209,6 +51105,10 @@ class Input$PageListBlockWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -45489,6 +51389,15 @@ class Input$PageListBlockWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -45662,6 +51571,7 @@ class Input$PageListBlockWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$SortOrder = SortOrder;
     final l$StartPublish = StartPublish;
@@ -45704,6 +51614,7 @@ class Input$PageListBlockWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('SortOrder') ? l$SortOrder : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
@@ -45767,6 +51678,7 @@ abstract class CopyWith$Input$PageListBlockWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$IntFilterInput? SortOrder,
     Input$DateFilterInput? StartPublish,
@@ -45805,6 +51717,7 @@ abstract class CopyWith$Input$PageListBlockWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$IntFilterInput<TRes> get SortOrder;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
@@ -45873,6 +51786,7 @@ class _CopyWithImpl$Input$PageListBlockWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? SortOrder = _undefined,
     Object? StartPublish = _undefined,
@@ -45939,6 +51853,8 @@ class _CopyWithImpl$Input$PageListBlockWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (SortOrder != _undefined)
@@ -46156,6 +52072,14 @@ class _CopyWithImpl$Input$PageListBlockWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -46309,6 +52233,7 @@ class _CopyWithStubImpl$Input$PageListBlockWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$IntFilterInput? SortOrder,
     Input$DateFilterInput? StartPublish,
@@ -46397,6 +52322,9 @@ class _CopyWithStubImpl$Input$PageListBlockWhereInput<TRes>
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
@@ -46463,6 +52391,7 @@ class Input$ProductPageOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -46506,6 +52435,7 @@ class Input$ProductPageOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -46696,6 +52626,12 @@ class Input$ProductPageOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -46841,6 +52777,8 @@ class Input$ProductPageOrderByInput {
   Enum$OrderBy? get Saved => (_$data['Saved'] as Enum$OrderBy?);
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
 
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
@@ -46999,6 +52937,11 @@ class Input$ProductPageOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -47321,6 +53264,15 @@ class Input$ProductPageOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -47467,6 +53419,7 @@ class Input$ProductPageOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -47510,6 +53463,7 @@ class Input$ProductPageOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -47566,6 +53520,7 @@ abstract class CopyWith$Input$ProductPageOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -47635,6 +53590,7 @@ class _CopyWithImpl$Input$ProductPageOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -47704,6 +53660,8 @@ class _CopyWithImpl$Input$ProductPageOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -47851,6 +53809,7 @@ class _CopyWithStubImpl$Input$ProductPageOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -47929,6 +53888,7 @@ class Input$ProductPageWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -47973,6 +53933,7 @@ class Input$ProductPageWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -48180,6 +54141,13 @@ class Input$ProductPageWhereInput {
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] = l$SiteId == null
@@ -48371,6 +54339,9 @@ class Input$ProductPageWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -48522,6 +54493,10 @@ class Input$ProductPageWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -48836,6 +54811,15 @@ class Input$ProductPageWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -49021,6 +55005,7 @@ class Input$ProductPageWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -49065,6 +55050,7 @@ class Input$ProductPageWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -49134,6 +55120,7 @@ abstract class CopyWith$Input$ProductPageWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -49177,6 +55164,7 @@ abstract class CopyWith$Input$ProductPageWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -49249,6 +55237,7 @@ class _CopyWithImpl$Input$ProductPageWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -49326,6 +55315,8 @@ class _CopyWithImpl$Input$ProductPageWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -49576,6 +55567,14 @@ class _CopyWithImpl$Input$ProductPageWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -49740,6 +55739,7 @@ class _CopyWithStubImpl$Input$ProductPageWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -49838,6 +55838,9 @@ class _CopyWithStubImpl$Input$ProductPageWhereInput<TRes>
       CopyWith$Input$DateFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
@@ -50047,6 +56050,7 @@ class Input$SearchPageOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -50087,6 +56091,7 @@ class Input$SearchPageOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -50262,6 +56267,12 @@ class Input$SearchPageOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -50395,6 +56406,8 @@ class Input$SearchPageOrderByInput {
   Enum$OrderBy? get Saved => (_$data['Saved'] as Enum$OrderBy?);
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
 
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
@@ -50541,6 +56554,11 @@ class Input$SearchPageOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -50839,6 +56857,15 @@ class Input$SearchPageOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -50974,6 +57001,7 @@ class Input$SearchPageOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -51014,6 +57042,7 @@ class Input$SearchPageOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -51065,6 +57094,7 @@ abstract class CopyWith$Input$SearchPageOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -51129,6 +57159,7 @@ class _CopyWithImpl$Input$SearchPageOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -51193,6 +57224,8 @@ class _CopyWithImpl$Input$SearchPageOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -51326,6 +57359,7 @@ class _CopyWithStubImpl$Input$SearchPageOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -51397,6 +57431,7 @@ class Input$SearchPageWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -51438,6 +57473,7 @@ class Input$SearchPageWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -51629,6 +57665,13 @@ class Input$SearchPageWhereInput {
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] = l$SiteId == null
@@ -51806,6 +57849,9 @@ class Input$SearchPageWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -51946,6 +57992,10 @@ class Input$SearchPageWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -52238,6 +58288,15 @@ class Input$SearchPageWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -52412,6 +58471,7 @@ class Input$SearchPageWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -52453,6 +58513,7 @@ class Input$SearchPageWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -52517,6 +58578,7 @@ abstract class CopyWith$Input$SearchPageWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -52557,6 +58619,7 @@ abstract class CopyWith$Input$SearchPageWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -52626,6 +58689,7 @@ class _CopyWithImpl$Input$SearchPageWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -52697,6 +58761,8 @@ class _CopyWithImpl$Input$SearchPageWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -52926,6 +58992,14 @@ class _CopyWithImpl$Input$SearchPageWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -53080,6 +59154,7 @@ class _CopyWithStubImpl$Input$SearchPageWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -53172,6 +59247,9 @@ class _CopyWithStubImpl$Input$SearchPageWhereInput<TRes>
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
@@ -53185,6 +59263,3939 @@ class _CopyWithStubImpl$Input$SearchPageWhereInput<TRes>
       CopyWith$Input$DateFilterInput.stub(_res);
 
   CopyWith$Input$SearchableStringFilterInput<TRes> get TeaserText =>
+      CopyWith$Input$SearchableStringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get Url =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  $_and(_fn) => _res;
+
+  CopyWith$Input$StringFilterInput<TRes> get $_concreteType =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get $_fulltext =>
+      CopyWith$Input$SearchableStringFilterInput.stub(_res);
+
+  CopyWith$Input$DateFilterInput<TRes> get $_modified =>
+      CopyWith$Input$DateFilterInput.stub(_res);
+
+  $_not(_fn) => _res;
+
+  $_or(_fn) => _res;
+
+  CopyWith$Input$IntFilterInput<TRes> get $_sortOrder =>
+      CopyWith$Input$IntFilterInput.stub(_res);
+}
+
+class Input$SearchResultsPageOrderByInput {
+  factory Input$SearchResultsPageOrderByInput({
+    Enum$OrderBy? Ancestors,
+    Input$CategoryModelOrderByInput? Category,
+    Enum$OrderBy? Changed,
+    Input$ContentAreaItemModelSearchOrderByInput? ContentArea,
+    Input$ContentModelReferenceOrderByInput? ContentLink,
+    Enum$OrderBy? ContentType,
+    Enum$OrderBy? Created,
+    Enum$OrderBy? DisableIndexing,
+    Input$ContentLanguageModelOrderByInput? ExistingLanguages,
+    Enum$OrderBy? HideSiteFooter,
+    Enum$OrderBy? HideSiteHeader,
+    Enum$OrderBy? IsCommonDraft,
+    Input$ContentLanguageModelOrderByInput? Language,
+    Input$ContentLanguageModelOrderByInput? MasterLanguage,
+    Enum$OrderBy? MetaDescription,
+    Enum$OrderBy? MetaKeywords,
+    Enum$OrderBy? MetaTitle,
+    Enum$OrderBy? Name,
+    Enum$OrderBy? NextLinkAccessibilityText,
+    Enum$OrderBy? NextLinkText,
+    Enum$OrderBy? NoResultsText,
+    Input$ContentModelReferenceOrderByInput? PageImage,
+    Enum$OrderBy? PagingText,
+    Input$ContentModelReferenceOrderByInput? ParentLink,
+    Enum$OrderBy? PreviousLinkAccessibilityText,
+    Enum$OrderBy? PreviousLinkText,
+    Enum$OrderBy? RelativePath,
+    Enum$OrderBy? ResultsCountDisplay,
+    Enum$OrderBy? RouteSegment,
+    Enum$OrderBy? Saved,
+    Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
+    Enum$OrderBy? SiteId,
+    Enum$OrderBy? StartPublish,
+    Enum$OrderBy? Status,
+    Enum$OrderBy? StopPublish,
+    Enum$OrderBy? TeaserText,
+    Enum$OrderBy? UpdateSearchCtaAccessibilityText,
+    Enum$OrderBy? UpdateSearchCtaText,
+    Enum$OrderBy? Url,
+    Enum$OrderBy? $_concreteType,
+    double? $_minimumScore,
+    Enum$OrderBy? $_modified,
+    Enum$Ranking? $_ranking,
+    double? $_semanticWeight,
+    Enum$OrderBy? $_sortOrder,
+  }) =>
+      Input$SearchResultsPageOrderByInput._({
+        if (Ancestors != null) r'Ancestors': Ancestors,
+        if (Category != null) r'Category': Category,
+        if (Changed != null) r'Changed': Changed,
+        if (ContentArea != null) r'ContentArea': ContentArea,
+        if (ContentLink != null) r'ContentLink': ContentLink,
+        if (ContentType != null) r'ContentType': ContentType,
+        if (Created != null) r'Created': Created,
+        if (DisableIndexing != null) r'DisableIndexing': DisableIndexing,
+        if (ExistingLanguages != null) r'ExistingLanguages': ExistingLanguages,
+        if (HideSiteFooter != null) r'HideSiteFooter': HideSiteFooter,
+        if (HideSiteHeader != null) r'HideSiteHeader': HideSiteHeader,
+        if (IsCommonDraft != null) r'IsCommonDraft': IsCommonDraft,
+        if (Language != null) r'Language': Language,
+        if (MasterLanguage != null) r'MasterLanguage': MasterLanguage,
+        if (MetaDescription != null) r'MetaDescription': MetaDescription,
+        if (MetaKeywords != null) r'MetaKeywords': MetaKeywords,
+        if (MetaTitle != null) r'MetaTitle': MetaTitle,
+        if (Name != null) r'Name': Name,
+        if (NextLinkAccessibilityText != null)
+          r'NextLinkAccessibilityText': NextLinkAccessibilityText,
+        if (NextLinkText != null) r'NextLinkText': NextLinkText,
+        if (NoResultsText != null) r'NoResultsText': NoResultsText,
+        if (PageImage != null) r'PageImage': PageImage,
+        if (PagingText != null) r'PagingText': PagingText,
+        if (ParentLink != null) r'ParentLink': ParentLink,
+        if (PreviousLinkAccessibilityText != null)
+          r'PreviousLinkAccessibilityText': PreviousLinkAccessibilityText,
+        if (PreviousLinkText != null) r'PreviousLinkText': PreviousLinkText,
+        if (RelativePath != null) r'RelativePath': RelativePath,
+        if (ResultsCountDisplay != null)
+          r'ResultsCountDisplay': ResultsCountDisplay,
+        if (RouteSegment != null) r'RouteSegment': RouteSegment,
+        if (Saved != null) r'Saved': Saved,
+        if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
+        if (SiteId != null) r'SiteId': SiteId,
+        if (StartPublish != null) r'StartPublish': StartPublish,
+        if (Status != null) r'Status': Status,
+        if (StopPublish != null) r'StopPublish': StopPublish,
+        if (TeaserText != null) r'TeaserText': TeaserText,
+        if (UpdateSearchCtaAccessibilityText != null)
+          r'UpdateSearchCtaAccessibilityText': UpdateSearchCtaAccessibilityText,
+        if (UpdateSearchCtaText != null)
+          r'UpdateSearchCtaText': UpdateSearchCtaText,
+        if (Url != null) r'Url': Url,
+        if ($_concreteType != null) r'_concreteType': $_concreteType,
+        if ($_minimumScore != null) r'_minimumScore': $_minimumScore,
+        if ($_modified != null) r'_modified': $_modified,
+        if ($_ranking != null) r'_ranking': $_ranking,
+        if ($_semanticWeight != null) r'_semanticWeight': $_semanticWeight,
+        if ($_sortOrder != null) r'_sortOrder': $_sortOrder,
+      });
+
+  Input$SearchResultsPageOrderByInput._(this._$data);
+
+  factory Input$SearchResultsPageOrderByInput.fromJson(
+      Map<String, dynamic> data) {
+    final result$data = <String, dynamic>{};
+    if (data.containsKey('Ancestors')) {
+      final l$Ancestors = data['Ancestors'];
+      result$data['Ancestors'] = l$Ancestors == null
+          ? null
+          : fromJson$Enum$OrderBy((l$Ancestors as String));
+    }
+    if (data.containsKey('Category')) {
+      final l$Category = data['Category'];
+      result$data['Category'] = l$Category == null
+          ? null
+          : Input$CategoryModelOrderByInput.fromJson(
+              (l$Category as Map<String, dynamic>));
+    }
+    if (data.containsKey('Changed')) {
+      final l$Changed = data['Changed'];
+      result$data['Changed'] = l$Changed == null
+          ? null
+          : fromJson$Enum$OrderBy((l$Changed as String));
+    }
+    if (data.containsKey('ContentArea')) {
+      final l$ContentArea = data['ContentArea'];
+      result$data['ContentArea'] = l$ContentArea == null
+          ? null
+          : Input$ContentAreaItemModelSearchOrderByInput.fromJson(
+              (l$ContentArea as Map<String, dynamic>));
+    }
+    if (data.containsKey('ContentLink')) {
+      final l$ContentLink = data['ContentLink'];
+      result$data['ContentLink'] = l$ContentLink == null
+          ? null
+          : Input$ContentModelReferenceOrderByInput.fromJson(
+              (l$ContentLink as Map<String, dynamic>));
+    }
+    if (data.containsKey('ContentType')) {
+      final l$ContentType = data['ContentType'];
+      result$data['ContentType'] = l$ContentType == null
+          ? null
+          : fromJson$Enum$OrderBy((l$ContentType as String));
+    }
+    if (data.containsKey('Created')) {
+      final l$Created = data['Created'];
+      result$data['Created'] = l$Created == null
+          ? null
+          : fromJson$Enum$OrderBy((l$Created as String));
+    }
+    if (data.containsKey('DisableIndexing')) {
+      final l$DisableIndexing = data['DisableIndexing'];
+      result$data['DisableIndexing'] = l$DisableIndexing == null
+          ? null
+          : fromJson$Enum$OrderBy((l$DisableIndexing as String));
+    }
+    if (data.containsKey('ExistingLanguages')) {
+      final l$ExistingLanguages = data['ExistingLanguages'];
+      result$data['ExistingLanguages'] = l$ExistingLanguages == null
+          ? null
+          : Input$ContentLanguageModelOrderByInput.fromJson(
+              (l$ExistingLanguages as Map<String, dynamic>));
+    }
+    if (data.containsKey('HideSiteFooter')) {
+      final l$HideSiteFooter = data['HideSiteFooter'];
+      result$data['HideSiteFooter'] = l$HideSiteFooter == null
+          ? null
+          : fromJson$Enum$OrderBy((l$HideSiteFooter as String));
+    }
+    if (data.containsKey('HideSiteHeader')) {
+      final l$HideSiteHeader = data['HideSiteHeader'];
+      result$data['HideSiteHeader'] = l$HideSiteHeader == null
+          ? null
+          : fromJson$Enum$OrderBy((l$HideSiteHeader as String));
+    }
+    if (data.containsKey('IsCommonDraft')) {
+      final l$IsCommonDraft = data['IsCommonDraft'];
+      result$data['IsCommonDraft'] = l$IsCommonDraft == null
+          ? null
+          : fromJson$Enum$OrderBy((l$IsCommonDraft as String));
+    }
+    if (data.containsKey('Language')) {
+      final l$Language = data['Language'];
+      result$data['Language'] = l$Language == null
+          ? null
+          : Input$ContentLanguageModelOrderByInput.fromJson(
+              (l$Language as Map<String, dynamic>));
+    }
+    if (data.containsKey('MasterLanguage')) {
+      final l$MasterLanguage = data['MasterLanguage'];
+      result$data['MasterLanguage'] = l$MasterLanguage == null
+          ? null
+          : Input$ContentLanguageModelOrderByInput.fromJson(
+              (l$MasterLanguage as Map<String, dynamic>));
+    }
+    if (data.containsKey('MetaDescription')) {
+      final l$MetaDescription = data['MetaDescription'];
+      result$data['MetaDescription'] = l$MetaDescription == null
+          ? null
+          : fromJson$Enum$OrderBy((l$MetaDescription as String));
+    }
+    if (data.containsKey('MetaKeywords')) {
+      final l$MetaKeywords = data['MetaKeywords'];
+      result$data['MetaKeywords'] = l$MetaKeywords == null
+          ? null
+          : fromJson$Enum$OrderBy((l$MetaKeywords as String));
+    }
+    if (data.containsKey('MetaTitle')) {
+      final l$MetaTitle = data['MetaTitle'];
+      result$data['MetaTitle'] = l$MetaTitle == null
+          ? null
+          : fromJson$Enum$OrderBy((l$MetaTitle as String));
+    }
+    if (data.containsKey('Name')) {
+      final l$Name = data['Name'];
+      result$data['Name'] =
+          l$Name == null ? null : fromJson$Enum$OrderBy((l$Name as String));
+    }
+    if (data.containsKey('NextLinkAccessibilityText')) {
+      final l$NextLinkAccessibilityText = data['NextLinkAccessibilityText'];
+      result$data['NextLinkAccessibilityText'] =
+          l$NextLinkAccessibilityText == null
+              ? null
+              : fromJson$Enum$OrderBy((l$NextLinkAccessibilityText as String));
+    }
+    if (data.containsKey('NextLinkText')) {
+      final l$NextLinkText = data['NextLinkText'];
+      result$data['NextLinkText'] = l$NextLinkText == null
+          ? null
+          : fromJson$Enum$OrderBy((l$NextLinkText as String));
+    }
+    if (data.containsKey('NoResultsText')) {
+      final l$NoResultsText = data['NoResultsText'];
+      result$data['NoResultsText'] = l$NoResultsText == null
+          ? null
+          : fromJson$Enum$OrderBy((l$NoResultsText as String));
+    }
+    if (data.containsKey('PageImage')) {
+      final l$PageImage = data['PageImage'];
+      result$data['PageImage'] = l$PageImage == null
+          ? null
+          : Input$ContentModelReferenceOrderByInput.fromJson(
+              (l$PageImage as Map<String, dynamic>));
+    }
+    if (data.containsKey('PagingText')) {
+      final l$PagingText = data['PagingText'];
+      result$data['PagingText'] = l$PagingText == null
+          ? null
+          : fromJson$Enum$OrderBy((l$PagingText as String));
+    }
+    if (data.containsKey('ParentLink')) {
+      final l$ParentLink = data['ParentLink'];
+      result$data['ParentLink'] = l$ParentLink == null
+          ? null
+          : Input$ContentModelReferenceOrderByInput.fromJson(
+              (l$ParentLink as Map<String, dynamic>));
+    }
+    if (data.containsKey('PreviousLinkAccessibilityText')) {
+      final l$PreviousLinkAccessibilityText =
+          data['PreviousLinkAccessibilityText'];
+      result$data['PreviousLinkAccessibilityText'] =
+          l$PreviousLinkAccessibilityText == null
+              ? null
+              : fromJson$Enum$OrderBy(
+                  (l$PreviousLinkAccessibilityText as String));
+    }
+    if (data.containsKey('PreviousLinkText')) {
+      final l$PreviousLinkText = data['PreviousLinkText'];
+      result$data['PreviousLinkText'] = l$PreviousLinkText == null
+          ? null
+          : fromJson$Enum$OrderBy((l$PreviousLinkText as String));
+    }
+    if (data.containsKey('RelativePath')) {
+      final l$RelativePath = data['RelativePath'];
+      result$data['RelativePath'] = l$RelativePath == null
+          ? null
+          : fromJson$Enum$OrderBy((l$RelativePath as String));
+    }
+    if (data.containsKey('ResultsCountDisplay')) {
+      final l$ResultsCountDisplay = data['ResultsCountDisplay'];
+      result$data['ResultsCountDisplay'] = l$ResultsCountDisplay == null
+          ? null
+          : fromJson$Enum$OrderBy((l$ResultsCountDisplay as String));
+    }
+    if (data.containsKey('RouteSegment')) {
+      final l$RouteSegment = data['RouteSegment'];
+      result$data['RouteSegment'] = l$RouteSegment == null
+          ? null
+          : fromJson$Enum$OrderBy((l$RouteSegment as String));
+    }
+    if (data.containsKey('Saved')) {
+      final l$Saved = data['Saved'];
+      result$data['Saved'] =
+          l$Saved == null ? null : fromJson$Enum$OrderBy((l$Saved as String));
+    }
+    if (data.containsKey('Shortcut')) {
+      final l$Shortcut = data['Shortcut'];
+      result$data['Shortcut'] = l$Shortcut == null
+          ? null
+          : fromJson$Enum$OrderBy((l$Shortcut as String));
+    }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
+    if (data.containsKey('SiteId')) {
+      final l$SiteId = data['SiteId'];
+      result$data['SiteId'] =
+          l$SiteId == null ? null : fromJson$Enum$OrderBy((l$SiteId as String));
+    }
+    if (data.containsKey('StartPublish')) {
+      final l$StartPublish = data['StartPublish'];
+      result$data['StartPublish'] = l$StartPublish == null
+          ? null
+          : fromJson$Enum$OrderBy((l$StartPublish as String));
+    }
+    if (data.containsKey('Status')) {
+      final l$Status = data['Status'];
+      result$data['Status'] =
+          l$Status == null ? null : fromJson$Enum$OrderBy((l$Status as String));
+    }
+    if (data.containsKey('StopPublish')) {
+      final l$StopPublish = data['StopPublish'];
+      result$data['StopPublish'] = l$StopPublish == null
+          ? null
+          : fromJson$Enum$OrderBy((l$StopPublish as String));
+    }
+    if (data.containsKey('TeaserText')) {
+      final l$TeaserText = data['TeaserText'];
+      result$data['TeaserText'] = l$TeaserText == null
+          ? null
+          : fromJson$Enum$OrderBy((l$TeaserText as String));
+    }
+    if (data.containsKey('UpdateSearchCtaAccessibilityText')) {
+      final l$UpdateSearchCtaAccessibilityText =
+          data['UpdateSearchCtaAccessibilityText'];
+      result$data['UpdateSearchCtaAccessibilityText'] =
+          l$UpdateSearchCtaAccessibilityText == null
+              ? null
+              : fromJson$Enum$OrderBy(
+                  (l$UpdateSearchCtaAccessibilityText as String));
+    }
+    if (data.containsKey('UpdateSearchCtaText')) {
+      final l$UpdateSearchCtaText = data['UpdateSearchCtaText'];
+      result$data['UpdateSearchCtaText'] = l$UpdateSearchCtaText == null
+          ? null
+          : fromJson$Enum$OrderBy((l$UpdateSearchCtaText as String));
+    }
+    if (data.containsKey('Url')) {
+      final l$Url = data['Url'];
+      result$data['Url'] =
+          l$Url == null ? null : fromJson$Enum$OrderBy((l$Url as String));
+    }
+    if (data.containsKey('_concreteType')) {
+      final l$$_concreteType = data['_concreteType'];
+      result$data['_concreteType'] = l$$_concreteType == null
+          ? null
+          : fromJson$Enum$OrderBy((l$$_concreteType as String));
+    }
+    if (data.containsKey('_minimumScore')) {
+      final l$$_minimumScore = data['_minimumScore'];
+      result$data['_minimumScore'] = (l$$_minimumScore as num?)?.toDouble();
+    }
+    if (data.containsKey('_modified')) {
+      final l$$_modified = data['_modified'];
+      result$data['_modified'] = l$$_modified == null
+          ? null
+          : fromJson$Enum$OrderBy((l$$_modified as String));
+    }
+    if (data.containsKey('_ranking')) {
+      final l$$_ranking = data['_ranking'];
+      result$data['_ranking'] = l$$_ranking == null
+          ? null
+          : fromJson$Enum$Ranking((l$$_ranking as String));
+    }
+    if (data.containsKey('_semanticWeight')) {
+      final l$$_semanticWeight = data['_semanticWeight'];
+      result$data['_semanticWeight'] = (l$$_semanticWeight as num?)?.toDouble();
+    }
+    if (data.containsKey('_sortOrder')) {
+      final l$$_sortOrder = data['_sortOrder'];
+      result$data['_sortOrder'] = l$$_sortOrder == null
+          ? null
+          : fromJson$Enum$OrderBy((l$$_sortOrder as String));
+    }
+    return Input$SearchResultsPageOrderByInput._(result$data);
+  }
+
+  Map<String, dynamic> _$data;
+
+  Enum$OrderBy? get Ancestors => (_$data['Ancestors'] as Enum$OrderBy?);
+
+  Input$CategoryModelOrderByInput? get Category =>
+      (_$data['Category'] as Input$CategoryModelOrderByInput?);
+
+  Enum$OrderBy? get Changed => (_$data['Changed'] as Enum$OrderBy?);
+
+  Input$ContentAreaItemModelSearchOrderByInput? get ContentArea =>
+      (_$data['ContentArea'] as Input$ContentAreaItemModelSearchOrderByInput?);
+
+  Input$ContentModelReferenceOrderByInput? get ContentLink =>
+      (_$data['ContentLink'] as Input$ContentModelReferenceOrderByInput?);
+
+  Enum$OrderBy? get ContentType => (_$data['ContentType'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get Created => (_$data['Created'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get DisableIndexing =>
+      (_$data['DisableIndexing'] as Enum$OrderBy?);
+
+  Input$ContentLanguageModelOrderByInput? get ExistingLanguages =>
+      (_$data['ExistingLanguages'] as Input$ContentLanguageModelOrderByInput?);
+
+  Enum$OrderBy? get HideSiteFooter =>
+      (_$data['HideSiteFooter'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get HideSiteHeader =>
+      (_$data['HideSiteHeader'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get IsCommonDraft => (_$data['IsCommonDraft'] as Enum$OrderBy?);
+
+  Input$ContentLanguageModelOrderByInput? get Language =>
+      (_$data['Language'] as Input$ContentLanguageModelOrderByInput?);
+
+  Input$ContentLanguageModelOrderByInput? get MasterLanguage =>
+      (_$data['MasterLanguage'] as Input$ContentLanguageModelOrderByInput?);
+
+  Enum$OrderBy? get MetaDescription =>
+      (_$data['MetaDescription'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get MetaKeywords => (_$data['MetaKeywords'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get MetaTitle => (_$data['MetaTitle'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get Name => (_$data['Name'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get NextLinkAccessibilityText =>
+      (_$data['NextLinkAccessibilityText'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get NextLinkText => (_$data['NextLinkText'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get NoResultsText => (_$data['NoResultsText'] as Enum$OrderBy?);
+
+  Input$ContentModelReferenceOrderByInput? get PageImage =>
+      (_$data['PageImage'] as Input$ContentModelReferenceOrderByInput?);
+
+  Enum$OrderBy? get PagingText => (_$data['PagingText'] as Enum$OrderBy?);
+
+  Input$ContentModelReferenceOrderByInput? get ParentLink =>
+      (_$data['ParentLink'] as Input$ContentModelReferenceOrderByInput?);
+
+  Enum$OrderBy? get PreviousLinkAccessibilityText =>
+      (_$data['PreviousLinkAccessibilityText'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get PreviousLinkText =>
+      (_$data['PreviousLinkText'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get RelativePath => (_$data['RelativePath'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get ResultsCountDisplay =>
+      (_$data['ResultsCountDisplay'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get RouteSegment => (_$data['RouteSegment'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get Saved => (_$data['Saved'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get StartPublish => (_$data['StartPublish'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get Status => (_$data['Status'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get StopPublish => (_$data['StopPublish'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get TeaserText => (_$data['TeaserText'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get UpdateSearchCtaAccessibilityText =>
+      (_$data['UpdateSearchCtaAccessibilityText'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get UpdateSearchCtaText =>
+      (_$data['UpdateSearchCtaText'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get Url => (_$data['Url'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get $_concreteType =>
+      (_$data['_concreteType'] as Enum$OrderBy?);
+
+  double? get $_minimumScore => (_$data['_minimumScore'] as double?);
+
+  Enum$OrderBy? get $_modified => (_$data['_modified'] as Enum$OrderBy?);
+
+  Enum$Ranking? get $_ranking => (_$data['_ranking'] as Enum$Ranking?);
+
+  double? get $_semanticWeight => (_$data['_semanticWeight'] as double?);
+
+  Enum$OrderBy? get $_sortOrder => (_$data['_sortOrder'] as Enum$OrderBy?);
+
+  Map<String, dynamic> toJson() {
+    final result$data = <String, dynamic>{};
+    if (_$data.containsKey('Ancestors')) {
+      final l$Ancestors = Ancestors;
+      result$data['Ancestors'] =
+          l$Ancestors == null ? null : toJson$Enum$OrderBy(l$Ancestors);
+    }
+    if (_$data.containsKey('Category')) {
+      final l$Category = Category;
+      result$data['Category'] = l$Category?.toJson();
+    }
+    if (_$data.containsKey('Changed')) {
+      final l$Changed = Changed;
+      result$data['Changed'] =
+          l$Changed == null ? null : toJson$Enum$OrderBy(l$Changed);
+    }
+    if (_$data.containsKey('ContentArea')) {
+      final l$ContentArea = ContentArea;
+      result$data['ContentArea'] = l$ContentArea?.toJson();
+    }
+    if (_$data.containsKey('ContentLink')) {
+      final l$ContentLink = ContentLink;
+      result$data['ContentLink'] = l$ContentLink?.toJson();
+    }
+    if (_$data.containsKey('ContentType')) {
+      final l$ContentType = ContentType;
+      result$data['ContentType'] =
+          l$ContentType == null ? null : toJson$Enum$OrderBy(l$ContentType);
+    }
+    if (_$data.containsKey('Created')) {
+      final l$Created = Created;
+      result$data['Created'] =
+          l$Created == null ? null : toJson$Enum$OrderBy(l$Created);
+    }
+    if (_$data.containsKey('DisableIndexing')) {
+      final l$DisableIndexing = DisableIndexing;
+      result$data['DisableIndexing'] = l$DisableIndexing == null
+          ? null
+          : toJson$Enum$OrderBy(l$DisableIndexing);
+    }
+    if (_$data.containsKey('ExistingLanguages')) {
+      final l$ExistingLanguages = ExistingLanguages;
+      result$data['ExistingLanguages'] = l$ExistingLanguages?.toJson();
+    }
+    if (_$data.containsKey('HideSiteFooter')) {
+      final l$HideSiteFooter = HideSiteFooter;
+      result$data['HideSiteFooter'] = l$HideSiteFooter == null
+          ? null
+          : toJson$Enum$OrderBy(l$HideSiteFooter);
+    }
+    if (_$data.containsKey('HideSiteHeader')) {
+      final l$HideSiteHeader = HideSiteHeader;
+      result$data['HideSiteHeader'] = l$HideSiteHeader == null
+          ? null
+          : toJson$Enum$OrderBy(l$HideSiteHeader);
+    }
+    if (_$data.containsKey('IsCommonDraft')) {
+      final l$IsCommonDraft = IsCommonDraft;
+      result$data['IsCommonDraft'] =
+          l$IsCommonDraft == null ? null : toJson$Enum$OrderBy(l$IsCommonDraft);
+    }
+    if (_$data.containsKey('Language')) {
+      final l$Language = Language;
+      result$data['Language'] = l$Language?.toJson();
+    }
+    if (_$data.containsKey('MasterLanguage')) {
+      final l$MasterLanguage = MasterLanguage;
+      result$data['MasterLanguage'] = l$MasterLanguage?.toJson();
+    }
+    if (_$data.containsKey('MetaDescription')) {
+      final l$MetaDescription = MetaDescription;
+      result$data['MetaDescription'] = l$MetaDescription == null
+          ? null
+          : toJson$Enum$OrderBy(l$MetaDescription);
+    }
+    if (_$data.containsKey('MetaKeywords')) {
+      final l$MetaKeywords = MetaKeywords;
+      result$data['MetaKeywords'] =
+          l$MetaKeywords == null ? null : toJson$Enum$OrderBy(l$MetaKeywords);
+    }
+    if (_$data.containsKey('MetaTitle')) {
+      final l$MetaTitle = MetaTitle;
+      result$data['MetaTitle'] =
+          l$MetaTitle == null ? null : toJson$Enum$OrderBy(l$MetaTitle);
+    }
+    if (_$data.containsKey('Name')) {
+      final l$Name = Name;
+      result$data['Name'] = l$Name == null ? null : toJson$Enum$OrderBy(l$Name);
+    }
+    if (_$data.containsKey('NextLinkAccessibilityText')) {
+      final l$NextLinkAccessibilityText = NextLinkAccessibilityText;
+      result$data['NextLinkAccessibilityText'] =
+          l$NextLinkAccessibilityText == null
+              ? null
+              : toJson$Enum$OrderBy(l$NextLinkAccessibilityText);
+    }
+    if (_$data.containsKey('NextLinkText')) {
+      final l$NextLinkText = NextLinkText;
+      result$data['NextLinkText'] =
+          l$NextLinkText == null ? null : toJson$Enum$OrderBy(l$NextLinkText);
+    }
+    if (_$data.containsKey('NoResultsText')) {
+      final l$NoResultsText = NoResultsText;
+      result$data['NoResultsText'] =
+          l$NoResultsText == null ? null : toJson$Enum$OrderBy(l$NoResultsText);
+    }
+    if (_$data.containsKey('PageImage')) {
+      final l$PageImage = PageImage;
+      result$data['PageImage'] = l$PageImage?.toJson();
+    }
+    if (_$data.containsKey('PagingText')) {
+      final l$PagingText = PagingText;
+      result$data['PagingText'] =
+          l$PagingText == null ? null : toJson$Enum$OrderBy(l$PagingText);
+    }
+    if (_$data.containsKey('ParentLink')) {
+      final l$ParentLink = ParentLink;
+      result$data['ParentLink'] = l$ParentLink?.toJson();
+    }
+    if (_$data.containsKey('PreviousLinkAccessibilityText')) {
+      final l$PreviousLinkAccessibilityText = PreviousLinkAccessibilityText;
+      result$data['PreviousLinkAccessibilityText'] =
+          l$PreviousLinkAccessibilityText == null
+              ? null
+              : toJson$Enum$OrderBy(l$PreviousLinkAccessibilityText);
+    }
+    if (_$data.containsKey('PreviousLinkText')) {
+      final l$PreviousLinkText = PreviousLinkText;
+      result$data['PreviousLinkText'] = l$PreviousLinkText == null
+          ? null
+          : toJson$Enum$OrderBy(l$PreviousLinkText);
+    }
+    if (_$data.containsKey('RelativePath')) {
+      final l$RelativePath = RelativePath;
+      result$data['RelativePath'] =
+          l$RelativePath == null ? null : toJson$Enum$OrderBy(l$RelativePath);
+    }
+    if (_$data.containsKey('ResultsCountDisplay')) {
+      final l$ResultsCountDisplay = ResultsCountDisplay;
+      result$data['ResultsCountDisplay'] = l$ResultsCountDisplay == null
+          ? null
+          : toJson$Enum$OrderBy(l$ResultsCountDisplay);
+    }
+    if (_$data.containsKey('RouteSegment')) {
+      final l$RouteSegment = RouteSegment;
+      result$data['RouteSegment'] =
+          l$RouteSegment == null ? null : toJson$Enum$OrderBy(l$RouteSegment);
+    }
+    if (_$data.containsKey('Saved')) {
+      final l$Saved = Saved;
+      result$data['Saved'] =
+          l$Saved == null ? null : toJson$Enum$OrderBy(l$Saved);
+    }
+    if (_$data.containsKey('Shortcut')) {
+      final l$Shortcut = Shortcut;
+      result$data['Shortcut'] =
+          l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
+    }
+    if (_$data.containsKey('SiteId')) {
+      final l$SiteId = SiteId;
+      result$data['SiteId'] =
+          l$SiteId == null ? null : toJson$Enum$OrderBy(l$SiteId);
+    }
+    if (_$data.containsKey('StartPublish')) {
+      final l$StartPublish = StartPublish;
+      result$data['StartPublish'] =
+          l$StartPublish == null ? null : toJson$Enum$OrderBy(l$StartPublish);
+    }
+    if (_$data.containsKey('Status')) {
+      final l$Status = Status;
+      result$data['Status'] =
+          l$Status == null ? null : toJson$Enum$OrderBy(l$Status);
+    }
+    if (_$data.containsKey('StopPublish')) {
+      final l$StopPublish = StopPublish;
+      result$data['StopPublish'] =
+          l$StopPublish == null ? null : toJson$Enum$OrderBy(l$StopPublish);
+    }
+    if (_$data.containsKey('TeaserText')) {
+      final l$TeaserText = TeaserText;
+      result$data['TeaserText'] =
+          l$TeaserText == null ? null : toJson$Enum$OrderBy(l$TeaserText);
+    }
+    if (_$data.containsKey('UpdateSearchCtaAccessibilityText')) {
+      final l$UpdateSearchCtaAccessibilityText =
+          UpdateSearchCtaAccessibilityText;
+      result$data['UpdateSearchCtaAccessibilityText'] =
+          l$UpdateSearchCtaAccessibilityText == null
+              ? null
+              : toJson$Enum$OrderBy(l$UpdateSearchCtaAccessibilityText);
+    }
+    if (_$data.containsKey('UpdateSearchCtaText')) {
+      final l$UpdateSearchCtaText = UpdateSearchCtaText;
+      result$data['UpdateSearchCtaText'] = l$UpdateSearchCtaText == null
+          ? null
+          : toJson$Enum$OrderBy(l$UpdateSearchCtaText);
+    }
+    if (_$data.containsKey('Url')) {
+      final l$Url = Url;
+      result$data['Url'] = l$Url == null ? null : toJson$Enum$OrderBy(l$Url);
+    }
+    if (_$data.containsKey('_concreteType')) {
+      final l$$_concreteType = $_concreteType;
+      result$data['_concreteType'] = l$$_concreteType == null
+          ? null
+          : toJson$Enum$OrderBy(l$$_concreteType);
+    }
+    if (_$data.containsKey('_minimumScore')) {
+      final l$$_minimumScore = $_minimumScore;
+      result$data['_minimumScore'] = l$$_minimumScore;
+    }
+    if (_$data.containsKey('_modified')) {
+      final l$$_modified = $_modified;
+      result$data['_modified'] =
+          l$$_modified == null ? null : toJson$Enum$OrderBy(l$$_modified);
+    }
+    if (_$data.containsKey('_ranking')) {
+      final l$$_ranking = $_ranking;
+      result$data['_ranking'] =
+          l$$_ranking == null ? null : toJson$Enum$Ranking(l$$_ranking);
+    }
+    if (_$data.containsKey('_semanticWeight')) {
+      final l$$_semanticWeight = $_semanticWeight;
+      result$data['_semanticWeight'] = l$$_semanticWeight;
+    }
+    if (_$data.containsKey('_sortOrder')) {
+      final l$$_sortOrder = $_sortOrder;
+      result$data['_sortOrder'] =
+          l$$_sortOrder == null ? null : toJson$Enum$OrderBy(l$$_sortOrder);
+    }
+    return result$data;
+  }
+
+  CopyWith$Input$SearchResultsPageOrderByInput<
+          Input$SearchResultsPageOrderByInput>
+      get copyWith => CopyWith$Input$SearchResultsPageOrderByInput(
+            this,
+            (i) => i,
+          );
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (other is! Input$SearchResultsPageOrderByInput ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$Ancestors = Ancestors;
+    final lOther$Ancestors = other.Ancestors;
+    if (_$data.containsKey('Ancestors') !=
+        other._$data.containsKey('Ancestors')) {
+      return false;
+    }
+    if (l$Ancestors != lOther$Ancestors) {
+      return false;
+    }
+    final l$Category = Category;
+    final lOther$Category = other.Category;
+    if (_$data.containsKey('Category') !=
+        other._$data.containsKey('Category')) {
+      return false;
+    }
+    if (l$Category != lOther$Category) {
+      return false;
+    }
+    final l$Changed = Changed;
+    final lOther$Changed = other.Changed;
+    if (_$data.containsKey('Changed') != other._$data.containsKey('Changed')) {
+      return false;
+    }
+    if (l$Changed != lOther$Changed) {
+      return false;
+    }
+    final l$ContentArea = ContentArea;
+    final lOther$ContentArea = other.ContentArea;
+    if (_$data.containsKey('ContentArea') !=
+        other._$data.containsKey('ContentArea')) {
+      return false;
+    }
+    if (l$ContentArea != lOther$ContentArea) {
+      return false;
+    }
+    final l$ContentLink = ContentLink;
+    final lOther$ContentLink = other.ContentLink;
+    if (_$data.containsKey('ContentLink') !=
+        other._$data.containsKey('ContentLink')) {
+      return false;
+    }
+    if (l$ContentLink != lOther$ContentLink) {
+      return false;
+    }
+    final l$ContentType = ContentType;
+    final lOther$ContentType = other.ContentType;
+    if (_$data.containsKey('ContentType') !=
+        other._$data.containsKey('ContentType')) {
+      return false;
+    }
+    if (l$ContentType != lOther$ContentType) {
+      return false;
+    }
+    final l$Created = Created;
+    final lOther$Created = other.Created;
+    if (_$data.containsKey('Created') != other._$data.containsKey('Created')) {
+      return false;
+    }
+    if (l$Created != lOther$Created) {
+      return false;
+    }
+    final l$DisableIndexing = DisableIndexing;
+    final lOther$DisableIndexing = other.DisableIndexing;
+    if (_$data.containsKey('DisableIndexing') !=
+        other._$data.containsKey('DisableIndexing')) {
+      return false;
+    }
+    if (l$DisableIndexing != lOther$DisableIndexing) {
+      return false;
+    }
+    final l$ExistingLanguages = ExistingLanguages;
+    final lOther$ExistingLanguages = other.ExistingLanguages;
+    if (_$data.containsKey('ExistingLanguages') !=
+        other._$data.containsKey('ExistingLanguages')) {
+      return false;
+    }
+    if (l$ExistingLanguages != lOther$ExistingLanguages) {
+      return false;
+    }
+    final l$HideSiteFooter = HideSiteFooter;
+    final lOther$HideSiteFooter = other.HideSiteFooter;
+    if (_$data.containsKey('HideSiteFooter') !=
+        other._$data.containsKey('HideSiteFooter')) {
+      return false;
+    }
+    if (l$HideSiteFooter != lOther$HideSiteFooter) {
+      return false;
+    }
+    final l$HideSiteHeader = HideSiteHeader;
+    final lOther$HideSiteHeader = other.HideSiteHeader;
+    if (_$data.containsKey('HideSiteHeader') !=
+        other._$data.containsKey('HideSiteHeader')) {
+      return false;
+    }
+    if (l$HideSiteHeader != lOther$HideSiteHeader) {
+      return false;
+    }
+    final l$IsCommonDraft = IsCommonDraft;
+    final lOther$IsCommonDraft = other.IsCommonDraft;
+    if (_$data.containsKey('IsCommonDraft') !=
+        other._$data.containsKey('IsCommonDraft')) {
+      return false;
+    }
+    if (l$IsCommonDraft != lOther$IsCommonDraft) {
+      return false;
+    }
+    final l$Language = Language;
+    final lOther$Language = other.Language;
+    if (_$data.containsKey('Language') !=
+        other._$data.containsKey('Language')) {
+      return false;
+    }
+    if (l$Language != lOther$Language) {
+      return false;
+    }
+    final l$MasterLanguage = MasterLanguage;
+    final lOther$MasterLanguage = other.MasterLanguage;
+    if (_$data.containsKey('MasterLanguage') !=
+        other._$data.containsKey('MasterLanguage')) {
+      return false;
+    }
+    if (l$MasterLanguage != lOther$MasterLanguage) {
+      return false;
+    }
+    final l$MetaDescription = MetaDescription;
+    final lOther$MetaDescription = other.MetaDescription;
+    if (_$data.containsKey('MetaDescription') !=
+        other._$data.containsKey('MetaDescription')) {
+      return false;
+    }
+    if (l$MetaDescription != lOther$MetaDescription) {
+      return false;
+    }
+    final l$MetaKeywords = MetaKeywords;
+    final lOther$MetaKeywords = other.MetaKeywords;
+    if (_$data.containsKey('MetaKeywords') !=
+        other._$data.containsKey('MetaKeywords')) {
+      return false;
+    }
+    if (l$MetaKeywords != lOther$MetaKeywords) {
+      return false;
+    }
+    final l$MetaTitle = MetaTitle;
+    final lOther$MetaTitle = other.MetaTitle;
+    if (_$data.containsKey('MetaTitle') !=
+        other._$data.containsKey('MetaTitle')) {
+      return false;
+    }
+    if (l$MetaTitle != lOther$MetaTitle) {
+      return false;
+    }
+    final l$Name = Name;
+    final lOther$Name = other.Name;
+    if (_$data.containsKey('Name') != other._$data.containsKey('Name')) {
+      return false;
+    }
+    if (l$Name != lOther$Name) {
+      return false;
+    }
+    final l$NextLinkAccessibilityText = NextLinkAccessibilityText;
+    final lOther$NextLinkAccessibilityText = other.NextLinkAccessibilityText;
+    if (_$data.containsKey('NextLinkAccessibilityText') !=
+        other._$data.containsKey('NextLinkAccessibilityText')) {
+      return false;
+    }
+    if (l$NextLinkAccessibilityText != lOther$NextLinkAccessibilityText) {
+      return false;
+    }
+    final l$NextLinkText = NextLinkText;
+    final lOther$NextLinkText = other.NextLinkText;
+    if (_$data.containsKey('NextLinkText') !=
+        other._$data.containsKey('NextLinkText')) {
+      return false;
+    }
+    if (l$NextLinkText != lOther$NextLinkText) {
+      return false;
+    }
+    final l$NoResultsText = NoResultsText;
+    final lOther$NoResultsText = other.NoResultsText;
+    if (_$data.containsKey('NoResultsText') !=
+        other._$data.containsKey('NoResultsText')) {
+      return false;
+    }
+    if (l$NoResultsText != lOther$NoResultsText) {
+      return false;
+    }
+    final l$PageImage = PageImage;
+    final lOther$PageImage = other.PageImage;
+    if (_$data.containsKey('PageImage') !=
+        other._$data.containsKey('PageImage')) {
+      return false;
+    }
+    if (l$PageImage != lOther$PageImage) {
+      return false;
+    }
+    final l$PagingText = PagingText;
+    final lOther$PagingText = other.PagingText;
+    if (_$data.containsKey('PagingText') !=
+        other._$data.containsKey('PagingText')) {
+      return false;
+    }
+    if (l$PagingText != lOther$PagingText) {
+      return false;
+    }
+    final l$ParentLink = ParentLink;
+    final lOther$ParentLink = other.ParentLink;
+    if (_$data.containsKey('ParentLink') !=
+        other._$data.containsKey('ParentLink')) {
+      return false;
+    }
+    if (l$ParentLink != lOther$ParentLink) {
+      return false;
+    }
+    final l$PreviousLinkAccessibilityText = PreviousLinkAccessibilityText;
+    final lOther$PreviousLinkAccessibilityText =
+        other.PreviousLinkAccessibilityText;
+    if (_$data.containsKey('PreviousLinkAccessibilityText') !=
+        other._$data.containsKey('PreviousLinkAccessibilityText')) {
+      return false;
+    }
+    if (l$PreviousLinkAccessibilityText !=
+        lOther$PreviousLinkAccessibilityText) {
+      return false;
+    }
+    final l$PreviousLinkText = PreviousLinkText;
+    final lOther$PreviousLinkText = other.PreviousLinkText;
+    if (_$data.containsKey('PreviousLinkText') !=
+        other._$data.containsKey('PreviousLinkText')) {
+      return false;
+    }
+    if (l$PreviousLinkText != lOther$PreviousLinkText) {
+      return false;
+    }
+    final l$RelativePath = RelativePath;
+    final lOther$RelativePath = other.RelativePath;
+    if (_$data.containsKey('RelativePath') !=
+        other._$data.containsKey('RelativePath')) {
+      return false;
+    }
+    if (l$RelativePath != lOther$RelativePath) {
+      return false;
+    }
+    final l$ResultsCountDisplay = ResultsCountDisplay;
+    final lOther$ResultsCountDisplay = other.ResultsCountDisplay;
+    if (_$data.containsKey('ResultsCountDisplay') !=
+        other._$data.containsKey('ResultsCountDisplay')) {
+      return false;
+    }
+    if (l$ResultsCountDisplay != lOther$ResultsCountDisplay) {
+      return false;
+    }
+    final l$RouteSegment = RouteSegment;
+    final lOther$RouteSegment = other.RouteSegment;
+    if (_$data.containsKey('RouteSegment') !=
+        other._$data.containsKey('RouteSegment')) {
+      return false;
+    }
+    if (l$RouteSegment != lOther$RouteSegment) {
+      return false;
+    }
+    final l$Saved = Saved;
+    final lOther$Saved = other.Saved;
+    if (_$data.containsKey('Saved') != other._$data.containsKey('Saved')) {
+      return false;
+    }
+    if (l$Saved != lOther$Saved) {
+      return false;
+    }
+    final l$Shortcut = Shortcut;
+    final lOther$Shortcut = other.Shortcut;
+    if (_$data.containsKey('Shortcut') !=
+        other._$data.containsKey('Shortcut')) {
+      return false;
+    }
+    if (l$Shortcut != lOther$Shortcut) {
+      return false;
+    }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
+    final l$SiteId = SiteId;
+    final lOther$SiteId = other.SiteId;
+    if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
+      return false;
+    }
+    if (l$SiteId != lOther$SiteId) {
+      return false;
+    }
+    final l$StartPublish = StartPublish;
+    final lOther$StartPublish = other.StartPublish;
+    if (_$data.containsKey('StartPublish') !=
+        other._$data.containsKey('StartPublish')) {
+      return false;
+    }
+    if (l$StartPublish != lOther$StartPublish) {
+      return false;
+    }
+    final l$Status = Status;
+    final lOther$Status = other.Status;
+    if (_$data.containsKey('Status') != other._$data.containsKey('Status')) {
+      return false;
+    }
+    if (l$Status != lOther$Status) {
+      return false;
+    }
+    final l$StopPublish = StopPublish;
+    final lOther$StopPublish = other.StopPublish;
+    if (_$data.containsKey('StopPublish') !=
+        other._$data.containsKey('StopPublish')) {
+      return false;
+    }
+    if (l$StopPublish != lOther$StopPublish) {
+      return false;
+    }
+    final l$TeaserText = TeaserText;
+    final lOther$TeaserText = other.TeaserText;
+    if (_$data.containsKey('TeaserText') !=
+        other._$data.containsKey('TeaserText')) {
+      return false;
+    }
+    if (l$TeaserText != lOther$TeaserText) {
+      return false;
+    }
+    final l$UpdateSearchCtaAccessibilityText = UpdateSearchCtaAccessibilityText;
+    final lOther$UpdateSearchCtaAccessibilityText =
+        other.UpdateSearchCtaAccessibilityText;
+    if (_$data.containsKey('UpdateSearchCtaAccessibilityText') !=
+        other._$data.containsKey('UpdateSearchCtaAccessibilityText')) {
+      return false;
+    }
+    if (l$UpdateSearchCtaAccessibilityText !=
+        lOther$UpdateSearchCtaAccessibilityText) {
+      return false;
+    }
+    final l$UpdateSearchCtaText = UpdateSearchCtaText;
+    final lOther$UpdateSearchCtaText = other.UpdateSearchCtaText;
+    if (_$data.containsKey('UpdateSearchCtaText') !=
+        other._$data.containsKey('UpdateSearchCtaText')) {
+      return false;
+    }
+    if (l$UpdateSearchCtaText != lOther$UpdateSearchCtaText) {
+      return false;
+    }
+    final l$Url = Url;
+    final lOther$Url = other.Url;
+    if (_$data.containsKey('Url') != other._$data.containsKey('Url')) {
+      return false;
+    }
+    if (l$Url != lOther$Url) {
+      return false;
+    }
+    final l$$_concreteType = $_concreteType;
+    final lOther$$_concreteType = other.$_concreteType;
+    if (_$data.containsKey('_concreteType') !=
+        other._$data.containsKey('_concreteType')) {
+      return false;
+    }
+    if (l$$_concreteType != lOther$$_concreteType) {
+      return false;
+    }
+    final l$$_minimumScore = $_minimumScore;
+    final lOther$$_minimumScore = other.$_minimumScore;
+    if (_$data.containsKey('_minimumScore') !=
+        other._$data.containsKey('_minimumScore')) {
+      return false;
+    }
+    if (l$$_minimumScore != lOther$$_minimumScore) {
+      return false;
+    }
+    final l$$_modified = $_modified;
+    final lOther$$_modified = other.$_modified;
+    if (_$data.containsKey('_modified') !=
+        other._$data.containsKey('_modified')) {
+      return false;
+    }
+    if (l$$_modified != lOther$$_modified) {
+      return false;
+    }
+    final l$$_ranking = $_ranking;
+    final lOther$$_ranking = other.$_ranking;
+    if (_$data.containsKey('_ranking') !=
+        other._$data.containsKey('_ranking')) {
+      return false;
+    }
+    if (l$$_ranking != lOther$$_ranking) {
+      return false;
+    }
+    final l$$_semanticWeight = $_semanticWeight;
+    final lOther$$_semanticWeight = other.$_semanticWeight;
+    if (_$data.containsKey('_semanticWeight') !=
+        other._$data.containsKey('_semanticWeight')) {
+      return false;
+    }
+    if (l$$_semanticWeight != lOther$$_semanticWeight) {
+      return false;
+    }
+    final l$$_sortOrder = $_sortOrder;
+    final lOther$$_sortOrder = other.$_sortOrder;
+    if (_$data.containsKey('_sortOrder') !=
+        other._$data.containsKey('_sortOrder')) {
+      return false;
+    }
+    if (l$$_sortOrder != lOther$$_sortOrder) {
+      return false;
+    }
+    return true;
+  }
+
+  @override
+  int get hashCode {
+    final l$Ancestors = Ancestors;
+    final l$Category = Category;
+    final l$Changed = Changed;
+    final l$ContentArea = ContentArea;
+    final l$ContentLink = ContentLink;
+    final l$ContentType = ContentType;
+    final l$Created = Created;
+    final l$DisableIndexing = DisableIndexing;
+    final l$ExistingLanguages = ExistingLanguages;
+    final l$HideSiteFooter = HideSiteFooter;
+    final l$HideSiteHeader = HideSiteHeader;
+    final l$IsCommonDraft = IsCommonDraft;
+    final l$Language = Language;
+    final l$MasterLanguage = MasterLanguage;
+    final l$MetaDescription = MetaDescription;
+    final l$MetaKeywords = MetaKeywords;
+    final l$MetaTitle = MetaTitle;
+    final l$Name = Name;
+    final l$NextLinkAccessibilityText = NextLinkAccessibilityText;
+    final l$NextLinkText = NextLinkText;
+    final l$NoResultsText = NoResultsText;
+    final l$PageImage = PageImage;
+    final l$PagingText = PagingText;
+    final l$ParentLink = ParentLink;
+    final l$PreviousLinkAccessibilityText = PreviousLinkAccessibilityText;
+    final l$PreviousLinkText = PreviousLinkText;
+    final l$RelativePath = RelativePath;
+    final l$ResultsCountDisplay = ResultsCountDisplay;
+    final l$RouteSegment = RouteSegment;
+    final l$Saved = Saved;
+    final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
+    final l$SiteId = SiteId;
+    final l$StartPublish = StartPublish;
+    final l$Status = Status;
+    final l$StopPublish = StopPublish;
+    final l$TeaserText = TeaserText;
+    final l$UpdateSearchCtaAccessibilityText = UpdateSearchCtaAccessibilityText;
+    final l$UpdateSearchCtaText = UpdateSearchCtaText;
+    final l$Url = Url;
+    final l$$_concreteType = $_concreteType;
+    final l$$_minimumScore = $_minimumScore;
+    final l$$_modified = $_modified;
+    final l$$_ranking = $_ranking;
+    final l$$_semanticWeight = $_semanticWeight;
+    final l$$_sortOrder = $_sortOrder;
+    return Object.hashAll([
+      _$data.containsKey('Ancestors') ? l$Ancestors : const {},
+      _$data.containsKey('Category') ? l$Category : const {},
+      _$data.containsKey('Changed') ? l$Changed : const {},
+      _$data.containsKey('ContentArea') ? l$ContentArea : const {},
+      _$data.containsKey('ContentLink') ? l$ContentLink : const {},
+      _$data.containsKey('ContentType') ? l$ContentType : const {},
+      _$data.containsKey('Created') ? l$Created : const {},
+      _$data.containsKey('DisableIndexing') ? l$DisableIndexing : const {},
+      _$data.containsKey('ExistingLanguages') ? l$ExistingLanguages : const {},
+      _$data.containsKey('HideSiteFooter') ? l$HideSiteFooter : const {},
+      _$data.containsKey('HideSiteHeader') ? l$HideSiteHeader : const {},
+      _$data.containsKey('IsCommonDraft') ? l$IsCommonDraft : const {},
+      _$data.containsKey('Language') ? l$Language : const {},
+      _$data.containsKey('MasterLanguage') ? l$MasterLanguage : const {},
+      _$data.containsKey('MetaDescription') ? l$MetaDescription : const {},
+      _$data.containsKey('MetaKeywords') ? l$MetaKeywords : const {},
+      _$data.containsKey('MetaTitle') ? l$MetaTitle : const {},
+      _$data.containsKey('Name') ? l$Name : const {},
+      _$data.containsKey('NextLinkAccessibilityText')
+          ? l$NextLinkAccessibilityText
+          : const {},
+      _$data.containsKey('NextLinkText') ? l$NextLinkText : const {},
+      _$data.containsKey('NoResultsText') ? l$NoResultsText : const {},
+      _$data.containsKey('PageImage') ? l$PageImage : const {},
+      _$data.containsKey('PagingText') ? l$PagingText : const {},
+      _$data.containsKey('ParentLink') ? l$ParentLink : const {},
+      _$data.containsKey('PreviousLinkAccessibilityText')
+          ? l$PreviousLinkAccessibilityText
+          : const {},
+      _$data.containsKey('PreviousLinkText') ? l$PreviousLinkText : const {},
+      _$data.containsKey('RelativePath') ? l$RelativePath : const {},
+      _$data.containsKey('ResultsCountDisplay')
+          ? l$ResultsCountDisplay
+          : const {},
+      _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
+      _$data.containsKey('Saved') ? l$Saved : const {},
+      _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
+      _$data.containsKey('SiteId') ? l$SiteId : const {},
+      _$data.containsKey('StartPublish') ? l$StartPublish : const {},
+      _$data.containsKey('Status') ? l$Status : const {},
+      _$data.containsKey('StopPublish') ? l$StopPublish : const {},
+      _$data.containsKey('TeaserText') ? l$TeaserText : const {},
+      _$data.containsKey('UpdateSearchCtaAccessibilityText')
+          ? l$UpdateSearchCtaAccessibilityText
+          : const {},
+      _$data.containsKey('UpdateSearchCtaText')
+          ? l$UpdateSearchCtaText
+          : const {},
+      _$data.containsKey('Url') ? l$Url : const {},
+      _$data.containsKey('_concreteType') ? l$$_concreteType : const {},
+      _$data.containsKey('_minimumScore') ? l$$_minimumScore : const {},
+      _$data.containsKey('_modified') ? l$$_modified : const {},
+      _$data.containsKey('_ranking') ? l$$_ranking : const {},
+      _$data.containsKey('_semanticWeight') ? l$$_semanticWeight : const {},
+      _$data.containsKey('_sortOrder') ? l$$_sortOrder : const {},
+    ]);
+  }
+}
+
+abstract class CopyWith$Input$SearchResultsPageOrderByInput<TRes> {
+  factory CopyWith$Input$SearchResultsPageOrderByInput(
+    Input$SearchResultsPageOrderByInput instance,
+    TRes Function(Input$SearchResultsPageOrderByInput) then,
+  ) = _CopyWithImpl$Input$SearchResultsPageOrderByInput;
+
+  factory CopyWith$Input$SearchResultsPageOrderByInput.stub(TRes res) =
+      _CopyWithStubImpl$Input$SearchResultsPageOrderByInput;
+
+  TRes call({
+    Enum$OrderBy? Ancestors,
+    Input$CategoryModelOrderByInput? Category,
+    Enum$OrderBy? Changed,
+    Input$ContentAreaItemModelSearchOrderByInput? ContentArea,
+    Input$ContentModelReferenceOrderByInput? ContentLink,
+    Enum$OrderBy? ContentType,
+    Enum$OrderBy? Created,
+    Enum$OrderBy? DisableIndexing,
+    Input$ContentLanguageModelOrderByInput? ExistingLanguages,
+    Enum$OrderBy? HideSiteFooter,
+    Enum$OrderBy? HideSiteHeader,
+    Enum$OrderBy? IsCommonDraft,
+    Input$ContentLanguageModelOrderByInput? Language,
+    Input$ContentLanguageModelOrderByInput? MasterLanguage,
+    Enum$OrderBy? MetaDescription,
+    Enum$OrderBy? MetaKeywords,
+    Enum$OrderBy? MetaTitle,
+    Enum$OrderBy? Name,
+    Enum$OrderBy? NextLinkAccessibilityText,
+    Enum$OrderBy? NextLinkText,
+    Enum$OrderBy? NoResultsText,
+    Input$ContentModelReferenceOrderByInput? PageImage,
+    Enum$OrderBy? PagingText,
+    Input$ContentModelReferenceOrderByInput? ParentLink,
+    Enum$OrderBy? PreviousLinkAccessibilityText,
+    Enum$OrderBy? PreviousLinkText,
+    Enum$OrderBy? RelativePath,
+    Enum$OrderBy? ResultsCountDisplay,
+    Enum$OrderBy? RouteSegment,
+    Enum$OrderBy? Saved,
+    Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
+    Enum$OrderBy? SiteId,
+    Enum$OrderBy? StartPublish,
+    Enum$OrderBy? Status,
+    Enum$OrderBy? StopPublish,
+    Enum$OrderBy? TeaserText,
+    Enum$OrderBy? UpdateSearchCtaAccessibilityText,
+    Enum$OrderBy? UpdateSearchCtaText,
+    Enum$OrderBy? Url,
+    Enum$OrderBy? $_concreteType,
+    double? $_minimumScore,
+    Enum$OrderBy? $_modified,
+    Enum$Ranking? $_ranking,
+    double? $_semanticWeight,
+    Enum$OrderBy? $_sortOrder,
+  });
+  CopyWith$Input$CategoryModelOrderByInput<TRes> get Category;
+  CopyWith$Input$ContentAreaItemModelSearchOrderByInput<TRes> get ContentArea;
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get ContentLink;
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get ExistingLanguages;
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get Language;
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get MasterLanguage;
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get PageImage;
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get ParentLink;
+}
+
+class _CopyWithImpl$Input$SearchResultsPageOrderByInput<TRes>
+    implements CopyWith$Input$SearchResultsPageOrderByInput<TRes> {
+  _CopyWithImpl$Input$SearchResultsPageOrderByInput(
+    this._instance,
+    this._then,
+  );
+
+  final Input$SearchResultsPageOrderByInput _instance;
+
+  final TRes Function(Input$SearchResultsPageOrderByInput) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? Ancestors = _undefined,
+    Object? Category = _undefined,
+    Object? Changed = _undefined,
+    Object? ContentArea = _undefined,
+    Object? ContentLink = _undefined,
+    Object? ContentType = _undefined,
+    Object? Created = _undefined,
+    Object? DisableIndexing = _undefined,
+    Object? ExistingLanguages = _undefined,
+    Object? HideSiteFooter = _undefined,
+    Object? HideSiteHeader = _undefined,
+    Object? IsCommonDraft = _undefined,
+    Object? Language = _undefined,
+    Object? MasterLanguage = _undefined,
+    Object? MetaDescription = _undefined,
+    Object? MetaKeywords = _undefined,
+    Object? MetaTitle = _undefined,
+    Object? Name = _undefined,
+    Object? NextLinkAccessibilityText = _undefined,
+    Object? NextLinkText = _undefined,
+    Object? NoResultsText = _undefined,
+    Object? PageImage = _undefined,
+    Object? PagingText = _undefined,
+    Object? ParentLink = _undefined,
+    Object? PreviousLinkAccessibilityText = _undefined,
+    Object? PreviousLinkText = _undefined,
+    Object? RelativePath = _undefined,
+    Object? ResultsCountDisplay = _undefined,
+    Object? RouteSegment = _undefined,
+    Object? Saved = _undefined,
+    Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
+    Object? SiteId = _undefined,
+    Object? StartPublish = _undefined,
+    Object? Status = _undefined,
+    Object? StopPublish = _undefined,
+    Object? TeaserText = _undefined,
+    Object? UpdateSearchCtaAccessibilityText = _undefined,
+    Object? UpdateSearchCtaText = _undefined,
+    Object? Url = _undefined,
+    Object? $_concreteType = _undefined,
+    Object? $_minimumScore = _undefined,
+    Object? $_modified = _undefined,
+    Object? $_ranking = _undefined,
+    Object? $_semanticWeight = _undefined,
+    Object? $_sortOrder = _undefined,
+  }) =>
+      _then(Input$SearchResultsPageOrderByInput._({
+        ..._instance._$data,
+        if (Ancestors != _undefined) 'Ancestors': (Ancestors as Enum$OrderBy?),
+        if (Category != _undefined)
+          'Category': (Category as Input$CategoryModelOrderByInput?),
+        if (Changed != _undefined) 'Changed': (Changed as Enum$OrderBy?),
+        if (ContentArea != _undefined)
+          'ContentArea':
+              (ContentArea as Input$ContentAreaItemModelSearchOrderByInput?),
+        if (ContentLink != _undefined)
+          'ContentLink':
+              (ContentLink as Input$ContentModelReferenceOrderByInput?),
+        if (ContentType != _undefined)
+          'ContentType': (ContentType as Enum$OrderBy?),
+        if (Created != _undefined) 'Created': (Created as Enum$OrderBy?),
+        if (DisableIndexing != _undefined)
+          'DisableIndexing': (DisableIndexing as Enum$OrderBy?),
+        if (ExistingLanguages != _undefined)
+          'ExistingLanguages':
+              (ExistingLanguages as Input$ContentLanguageModelOrderByInput?),
+        if (HideSiteFooter != _undefined)
+          'HideSiteFooter': (HideSiteFooter as Enum$OrderBy?),
+        if (HideSiteHeader != _undefined)
+          'HideSiteHeader': (HideSiteHeader as Enum$OrderBy?),
+        if (IsCommonDraft != _undefined)
+          'IsCommonDraft': (IsCommonDraft as Enum$OrderBy?),
+        if (Language != _undefined)
+          'Language': (Language as Input$ContentLanguageModelOrderByInput?),
+        if (MasterLanguage != _undefined)
+          'MasterLanguage':
+              (MasterLanguage as Input$ContentLanguageModelOrderByInput?),
+        if (MetaDescription != _undefined)
+          'MetaDescription': (MetaDescription as Enum$OrderBy?),
+        if (MetaKeywords != _undefined)
+          'MetaKeywords': (MetaKeywords as Enum$OrderBy?),
+        if (MetaTitle != _undefined) 'MetaTitle': (MetaTitle as Enum$OrderBy?),
+        if (Name != _undefined) 'Name': (Name as Enum$OrderBy?),
+        if (NextLinkAccessibilityText != _undefined)
+          'NextLinkAccessibilityText':
+              (NextLinkAccessibilityText as Enum$OrderBy?),
+        if (NextLinkText != _undefined)
+          'NextLinkText': (NextLinkText as Enum$OrderBy?),
+        if (NoResultsText != _undefined)
+          'NoResultsText': (NoResultsText as Enum$OrderBy?),
+        if (PageImage != _undefined)
+          'PageImage': (PageImage as Input$ContentModelReferenceOrderByInput?),
+        if (PagingText != _undefined)
+          'PagingText': (PagingText as Enum$OrderBy?),
+        if (ParentLink != _undefined)
+          'ParentLink':
+              (ParentLink as Input$ContentModelReferenceOrderByInput?),
+        if (PreviousLinkAccessibilityText != _undefined)
+          'PreviousLinkAccessibilityText':
+              (PreviousLinkAccessibilityText as Enum$OrderBy?),
+        if (PreviousLinkText != _undefined)
+          'PreviousLinkText': (PreviousLinkText as Enum$OrderBy?),
+        if (RelativePath != _undefined)
+          'RelativePath': (RelativePath as Enum$OrderBy?),
+        if (ResultsCountDisplay != _undefined)
+          'ResultsCountDisplay': (ResultsCountDisplay as Enum$OrderBy?),
+        if (RouteSegment != _undefined)
+          'RouteSegment': (RouteSegment as Enum$OrderBy?),
+        if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
+        if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
+        if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
+        if (StartPublish != _undefined)
+          'StartPublish': (StartPublish as Enum$OrderBy?),
+        if (Status != _undefined) 'Status': (Status as Enum$OrderBy?),
+        if (StopPublish != _undefined)
+          'StopPublish': (StopPublish as Enum$OrderBy?),
+        if (TeaserText != _undefined)
+          'TeaserText': (TeaserText as Enum$OrderBy?),
+        if (UpdateSearchCtaAccessibilityText != _undefined)
+          'UpdateSearchCtaAccessibilityText':
+              (UpdateSearchCtaAccessibilityText as Enum$OrderBy?),
+        if (UpdateSearchCtaText != _undefined)
+          'UpdateSearchCtaText': (UpdateSearchCtaText as Enum$OrderBy?),
+        if (Url != _undefined) 'Url': (Url as Enum$OrderBy?),
+        if ($_concreteType != _undefined)
+          '_concreteType': ($_concreteType as Enum$OrderBy?),
+        if ($_minimumScore != _undefined)
+          '_minimumScore': ($_minimumScore as double?),
+        if ($_modified != _undefined)
+          '_modified': ($_modified as Enum$OrderBy?),
+        if ($_ranking != _undefined) '_ranking': ($_ranking as Enum$Ranking?),
+        if ($_semanticWeight != _undefined)
+          '_semanticWeight': ($_semanticWeight as double?),
+        if ($_sortOrder != _undefined)
+          '_sortOrder': ($_sortOrder as Enum$OrderBy?),
+      }));
+
+  CopyWith$Input$CategoryModelOrderByInput<TRes> get Category {
+    final local$Category = _instance.Category;
+    return local$Category == null
+        ? CopyWith$Input$CategoryModelOrderByInput.stub(_then(_instance))
+        : CopyWith$Input$CategoryModelOrderByInput(
+            local$Category, (e) => call(Category: e));
+  }
+
+  CopyWith$Input$ContentAreaItemModelSearchOrderByInput<TRes> get ContentArea {
+    final local$ContentArea = _instance.ContentArea;
+    return local$ContentArea == null
+        ? CopyWith$Input$ContentAreaItemModelSearchOrderByInput.stub(
+            _then(_instance))
+        : CopyWith$Input$ContentAreaItemModelSearchOrderByInput(
+            local$ContentArea, (e) => call(ContentArea: e));
+  }
+
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get ContentLink {
+    final local$ContentLink = _instance.ContentLink;
+    return local$ContentLink == null
+        ? CopyWith$Input$ContentModelReferenceOrderByInput.stub(
+            _then(_instance))
+        : CopyWith$Input$ContentModelReferenceOrderByInput(
+            local$ContentLink, (e) => call(ContentLink: e));
+  }
+
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get ExistingLanguages {
+    final local$ExistingLanguages = _instance.ExistingLanguages;
+    return local$ExistingLanguages == null
+        ? CopyWith$Input$ContentLanguageModelOrderByInput.stub(_then(_instance))
+        : CopyWith$Input$ContentLanguageModelOrderByInput(
+            local$ExistingLanguages, (e) => call(ExistingLanguages: e));
+  }
+
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get Language {
+    final local$Language = _instance.Language;
+    return local$Language == null
+        ? CopyWith$Input$ContentLanguageModelOrderByInput.stub(_then(_instance))
+        : CopyWith$Input$ContentLanguageModelOrderByInput(
+            local$Language, (e) => call(Language: e));
+  }
+
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get MasterLanguage {
+    final local$MasterLanguage = _instance.MasterLanguage;
+    return local$MasterLanguage == null
+        ? CopyWith$Input$ContentLanguageModelOrderByInput.stub(_then(_instance))
+        : CopyWith$Input$ContentLanguageModelOrderByInput(
+            local$MasterLanguage, (e) => call(MasterLanguage: e));
+  }
+
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get PageImage {
+    final local$PageImage = _instance.PageImage;
+    return local$PageImage == null
+        ? CopyWith$Input$ContentModelReferenceOrderByInput.stub(
+            _then(_instance))
+        : CopyWith$Input$ContentModelReferenceOrderByInput(
+            local$PageImage, (e) => call(PageImage: e));
+  }
+
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get ParentLink {
+    final local$ParentLink = _instance.ParentLink;
+    return local$ParentLink == null
+        ? CopyWith$Input$ContentModelReferenceOrderByInput.stub(
+            _then(_instance))
+        : CopyWith$Input$ContentModelReferenceOrderByInput(
+            local$ParentLink, (e) => call(ParentLink: e));
+  }
+}
+
+class _CopyWithStubImpl$Input$SearchResultsPageOrderByInput<TRes>
+    implements CopyWith$Input$SearchResultsPageOrderByInput<TRes> {
+  _CopyWithStubImpl$Input$SearchResultsPageOrderByInput(this._res);
+
+  TRes _res;
+
+  call({
+    Enum$OrderBy? Ancestors,
+    Input$CategoryModelOrderByInput? Category,
+    Enum$OrderBy? Changed,
+    Input$ContentAreaItemModelSearchOrderByInput? ContentArea,
+    Input$ContentModelReferenceOrderByInput? ContentLink,
+    Enum$OrderBy? ContentType,
+    Enum$OrderBy? Created,
+    Enum$OrderBy? DisableIndexing,
+    Input$ContentLanguageModelOrderByInput? ExistingLanguages,
+    Enum$OrderBy? HideSiteFooter,
+    Enum$OrderBy? HideSiteHeader,
+    Enum$OrderBy? IsCommonDraft,
+    Input$ContentLanguageModelOrderByInput? Language,
+    Input$ContentLanguageModelOrderByInput? MasterLanguage,
+    Enum$OrderBy? MetaDescription,
+    Enum$OrderBy? MetaKeywords,
+    Enum$OrderBy? MetaTitle,
+    Enum$OrderBy? Name,
+    Enum$OrderBy? NextLinkAccessibilityText,
+    Enum$OrderBy? NextLinkText,
+    Enum$OrderBy? NoResultsText,
+    Input$ContentModelReferenceOrderByInput? PageImage,
+    Enum$OrderBy? PagingText,
+    Input$ContentModelReferenceOrderByInput? ParentLink,
+    Enum$OrderBy? PreviousLinkAccessibilityText,
+    Enum$OrderBy? PreviousLinkText,
+    Enum$OrderBy? RelativePath,
+    Enum$OrderBy? ResultsCountDisplay,
+    Enum$OrderBy? RouteSegment,
+    Enum$OrderBy? Saved,
+    Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
+    Enum$OrderBy? SiteId,
+    Enum$OrderBy? StartPublish,
+    Enum$OrderBy? Status,
+    Enum$OrderBy? StopPublish,
+    Enum$OrderBy? TeaserText,
+    Enum$OrderBy? UpdateSearchCtaAccessibilityText,
+    Enum$OrderBy? UpdateSearchCtaText,
+    Enum$OrderBy? Url,
+    Enum$OrderBy? $_concreteType,
+    double? $_minimumScore,
+    Enum$OrderBy? $_modified,
+    Enum$Ranking? $_ranking,
+    double? $_semanticWeight,
+    Enum$OrderBy? $_sortOrder,
+  }) =>
+      _res;
+
+  CopyWith$Input$CategoryModelOrderByInput<TRes> get Category =>
+      CopyWith$Input$CategoryModelOrderByInput.stub(_res);
+
+  CopyWith$Input$ContentAreaItemModelSearchOrderByInput<TRes> get ContentArea =>
+      CopyWith$Input$ContentAreaItemModelSearchOrderByInput.stub(_res);
+
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get ContentLink =>
+      CopyWith$Input$ContentModelReferenceOrderByInput.stub(_res);
+
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get ExistingLanguages =>
+      CopyWith$Input$ContentLanguageModelOrderByInput.stub(_res);
+
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get Language =>
+      CopyWith$Input$ContentLanguageModelOrderByInput.stub(_res);
+
+  CopyWith$Input$ContentLanguageModelOrderByInput<TRes> get MasterLanguage =>
+      CopyWith$Input$ContentLanguageModelOrderByInput.stub(_res);
+
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get PageImage =>
+      CopyWith$Input$ContentModelReferenceOrderByInput.stub(_res);
+
+  CopyWith$Input$ContentModelReferenceOrderByInput<TRes> get ParentLink =>
+      CopyWith$Input$ContentModelReferenceOrderByInput.stub(_res);
+}
+
+class Input$SearchResultsPageWhereInput {
+  factory Input$SearchResultsPageWhereInput({
+    Input$StringFilterInput? Ancestors,
+    Input$CategoryModelWhereInput? Category,
+    Input$DateFilterInput? Changed,
+    Input$ContentAreaItemModelSearchWhereInput? ContentArea,
+    Input$ContentModelReferenceWhereInput? ContentLink,
+    Input$StringFilterInput? ContentType,
+    Input$DateFilterInput? Created,
+    Input$BoolFilterInput? DisableIndexing,
+    Input$ContentLanguageModelWhereInput? ExistingLanguages,
+    Input$BoolFilterInput? HideSiteFooter,
+    Input$BoolFilterInput? HideSiteHeader,
+    Input$BoolFilterInput? IsCommonDraft,
+    Input$ContentLanguageModelWhereInput? Language,
+    Input$ContentLanguageModelWhereInput? MasterLanguage,
+    Input$SearchableStringFilterInput? MetaDescription,
+    Input$StringFilterInput? MetaKeywords,
+    Input$SearchableStringFilterInput? MetaTitle,
+    Input$SearchableStringFilterInput? Name,
+    Input$SearchableStringFilterInput? NextLinkAccessibilityText,
+    Input$SearchableStringFilterInput? NextLinkText,
+    Input$SearchableStringFilterInput? NoResultsText,
+    Input$ContentModelReferenceWhereInput? PageImage,
+    Input$SearchableStringFilterInput? PagingText,
+    Input$ContentModelReferenceWhereInput? ParentLink,
+    Input$SearchableStringFilterInput? PreviousLinkAccessibilityText,
+    Input$SearchableStringFilterInput? PreviousLinkText,
+    Input$StringFilterInput? RelativePath,
+    Input$SearchableStringFilterInput? ResultsCountDisplay,
+    Input$StringFilterInput? RouteSegment,
+    Input$DateFilterInput? Saved,
+    Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
+    Input$StringFilterInput? SiteId,
+    Input$DateFilterInput? StartPublish,
+    Input$StringFilterInput? Status,
+    Input$DateFilterInput? StopPublish,
+    Input$SearchableStringFilterInput? TeaserText,
+    Input$SearchableStringFilterInput? UpdateSearchCtaAccessibilityText,
+    Input$SearchableStringFilterInput? UpdateSearchCtaText,
+    Input$StringFilterInput? Url,
+    List<Input$SearchResultsPageWhereInput?>? $_and,
+    Input$StringFilterInput? $_concreteType,
+    Input$SearchableStringFilterInput? $_fulltext,
+    Input$DateFilterInput? $_modified,
+    List<Input$SearchResultsPageWhereInput?>? $_not,
+    List<Input$SearchResultsPageWhereInput?>? $_or,
+    Input$IntFilterInput? $_sortOrder,
+  }) =>
+      Input$SearchResultsPageWhereInput._({
+        if (Ancestors != null) r'Ancestors': Ancestors,
+        if (Category != null) r'Category': Category,
+        if (Changed != null) r'Changed': Changed,
+        if (ContentArea != null) r'ContentArea': ContentArea,
+        if (ContentLink != null) r'ContentLink': ContentLink,
+        if (ContentType != null) r'ContentType': ContentType,
+        if (Created != null) r'Created': Created,
+        if (DisableIndexing != null) r'DisableIndexing': DisableIndexing,
+        if (ExistingLanguages != null) r'ExistingLanguages': ExistingLanguages,
+        if (HideSiteFooter != null) r'HideSiteFooter': HideSiteFooter,
+        if (HideSiteHeader != null) r'HideSiteHeader': HideSiteHeader,
+        if (IsCommonDraft != null) r'IsCommonDraft': IsCommonDraft,
+        if (Language != null) r'Language': Language,
+        if (MasterLanguage != null) r'MasterLanguage': MasterLanguage,
+        if (MetaDescription != null) r'MetaDescription': MetaDescription,
+        if (MetaKeywords != null) r'MetaKeywords': MetaKeywords,
+        if (MetaTitle != null) r'MetaTitle': MetaTitle,
+        if (Name != null) r'Name': Name,
+        if (NextLinkAccessibilityText != null)
+          r'NextLinkAccessibilityText': NextLinkAccessibilityText,
+        if (NextLinkText != null) r'NextLinkText': NextLinkText,
+        if (NoResultsText != null) r'NoResultsText': NoResultsText,
+        if (PageImage != null) r'PageImage': PageImage,
+        if (PagingText != null) r'PagingText': PagingText,
+        if (ParentLink != null) r'ParentLink': ParentLink,
+        if (PreviousLinkAccessibilityText != null)
+          r'PreviousLinkAccessibilityText': PreviousLinkAccessibilityText,
+        if (PreviousLinkText != null) r'PreviousLinkText': PreviousLinkText,
+        if (RelativePath != null) r'RelativePath': RelativePath,
+        if (ResultsCountDisplay != null)
+          r'ResultsCountDisplay': ResultsCountDisplay,
+        if (RouteSegment != null) r'RouteSegment': RouteSegment,
+        if (Saved != null) r'Saved': Saved,
+        if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
+        if (SiteId != null) r'SiteId': SiteId,
+        if (StartPublish != null) r'StartPublish': StartPublish,
+        if (Status != null) r'Status': Status,
+        if (StopPublish != null) r'StopPublish': StopPublish,
+        if (TeaserText != null) r'TeaserText': TeaserText,
+        if (UpdateSearchCtaAccessibilityText != null)
+          r'UpdateSearchCtaAccessibilityText': UpdateSearchCtaAccessibilityText,
+        if (UpdateSearchCtaText != null)
+          r'UpdateSearchCtaText': UpdateSearchCtaText,
+        if (Url != null) r'Url': Url,
+        if ($_and != null) r'_and': $_and,
+        if ($_concreteType != null) r'_concreteType': $_concreteType,
+        if ($_fulltext != null) r'_fulltext': $_fulltext,
+        if ($_modified != null) r'_modified': $_modified,
+        if ($_not != null) r'_not': $_not,
+        if ($_or != null) r'_or': $_or,
+        if ($_sortOrder != null) r'_sortOrder': $_sortOrder,
+      });
+
+  Input$SearchResultsPageWhereInput._(this._$data);
+
+  factory Input$SearchResultsPageWhereInput.fromJson(
+      Map<String, dynamic> data) {
+    final result$data = <String, dynamic>{};
+    if (data.containsKey('Ancestors')) {
+      final l$Ancestors = data['Ancestors'];
+      result$data['Ancestors'] = l$Ancestors == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$Ancestors as Map<String, dynamic>));
+    }
+    if (data.containsKey('Category')) {
+      final l$Category = data['Category'];
+      result$data['Category'] = l$Category == null
+          ? null
+          : Input$CategoryModelWhereInput.fromJson(
+              (l$Category as Map<String, dynamic>));
+    }
+    if (data.containsKey('Changed')) {
+      final l$Changed = data['Changed'];
+      result$data['Changed'] = l$Changed == null
+          ? null
+          : Input$DateFilterInput.fromJson((l$Changed as Map<String, dynamic>));
+    }
+    if (data.containsKey('ContentArea')) {
+      final l$ContentArea = data['ContentArea'];
+      result$data['ContentArea'] = l$ContentArea == null
+          ? null
+          : Input$ContentAreaItemModelSearchWhereInput.fromJson(
+              (l$ContentArea as Map<String, dynamic>));
+    }
+    if (data.containsKey('ContentLink')) {
+      final l$ContentLink = data['ContentLink'];
+      result$data['ContentLink'] = l$ContentLink == null
+          ? null
+          : Input$ContentModelReferenceWhereInput.fromJson(
+              (l$ContentLink as Map<String, dynamic>));
+    }
+    if (data.containsKey('ContentType')) {
+      final l$ContentType = data['ContentType'];
+      result$data['ContentType'] = l$ContentType == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$ContentType as Map<String, dynamic>));
+    }
+    if (data.containsKey('Created')) {
+      final l$Created = data['Created'];
+      result$data['Created'] = l$Created == null
+          ? null
+          : Input$DateFilterInput.fromJson((l$Created as Map<String, dynamic>));
+    }
+    if (data.containsKey('DisableIndexing')) {
+      final l$DisableIndexing = data['DisableIndexing'];
+      result$data['DisableIndexing'] = l$DisableIndexing == null
+          ? null
+          : Input$BoolFilterInput.fromJson(
+              (l$DisableIndexing as Map<String, dynamic>));
+    }
+    if (data.containsKey('ExistingLanguages')) {
+      final l$ExistingLanguages = data['ExistingLanguages'];
+      result$data['ExistingLanguages'] = l$ExistingLanguages == null
+          ? null
+          : Input$ContentLanguageModelWhereInput.fromJson(
+              (l$ExistingLanguages as Map<String, dynamic>));
+    }
+    if (data.containsKey('HideSiteFooter')) {
+      final l$HideSiteFooter = data['HideSiteFooter'];
+      result$data['HideSiteFooter'] = l$HideSiteFooter == null
+          ? null
+          : Input$BoolFilterInput.fromJson(
+              (l$HideSiteFooter as Map<String, dynamic>));
+    }
+    if (data.containsKey('HideSiteHeader')) {
+      final l$HideSiteHeader = data['HideSiteHeader'];
+      result$data['HideSiteHeader'] = l$HideSiteHeader == null
+          ? null
+          : Input$BoolFilterInput.fromJson(
+              (l$HideSiteHeader as Map<String, dynamic>));
+    }
+    if (data.containsKey('IsCommonDraft')) {
+      final l$IsCommonDraft = data['IsCommonDraft'];
+      result$data['IsCommonDraft'] = l$IsCommonDraft == null
+          ? null
+          : Input$BoolFilterInput.fromJson(
+              (l$IsCommonDraft as Map<String, dynamic>));
+    }
+    if (data.containsKey('Language')) {
+      final l$Language = data['Language'];
+      result$data['Language'] = l$Language == null
+          ? null
+          : Input$ContentLanguageModelWhereInput.fromJson(
+              (l$Language as Map<String, dynamic>));
+    }
+    if (data.containsKey('MasterLanguage')) {
+      final l$MasterLanguage = data['MasterLanguage'];
+      result$data['MasterLanguage'] = l$MasterLanguage == null
+          ? null
+          : Input$ContentLanguageModelWhereInput.fromJson(
+              (l$MasterLanguage as Map<String, dynamic>));
+    }
+    if (data.containsKey('MetaDescription')) {
+      final l$MetaDescription = data['MetaDescription'];
+      result$data['MetaDescription'] = l$MetaDescription == null
+          ? null
+          : Input$SearchableStringFilterInput.fromJson(
+              (l$MetaDescription as Map<String, dynamic>));
+    }
+    if (data.containsKey('MetaKeywords')) {
+      final l$MetaKeywords = data['MetaKeywords'];
+      result$data['MetaKeywords'] = l$MetaKeywords == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$MetaKeywords as Map<String, dynamic>));
+    }
+    if (data.containsKey('MetaTitle')) {
+      final l$MetaTitle = data['MetaTitle'];
+      result$data['MetaTitle'] = l$MetaTitle == null
+          ? null
+          : Input$SearchableStringFilterInput.fromJson(
+              (l$MetaTitle as Map<String, dynamic>));
+    }
+    if (data.containsKey('Name')) {
+      final l$Name = data['Name'];
+      result$data['Name'] = l$Name == null
+          ? null
+          : Input$SearchableStringFilterInput.fromJson(
+              (l$Name as Map<String, dynamic>));
+    }
+    if (data.containsKey('NextLinkAccessibilityText')) {
+      final l$NextLinkAccessibilityText = data['NextLinkAccessibilityText'];
+      result$data['NextLinkAccessibilityText'] =
+          l$NextLinkAccessibilityText == null
+              ? null
+              : Input$SearchableStringFilterInput.fromJson(
+                  (l$NextLinkAccessibilityText as Map<String, dynamic>));
+    }
+    if (data.containsKey('NextLinkText')) {
+      final l$NextLinkText = data['NextLinkText'];
+      result$data['NextLinkText'] = l$NextLinkText == null
+          ? null
+          : Input$SearchableStringFilterInput.fromJson(
+              (l$NextLinkText as Map<String, dynamic>));
+    }
+    if (data.containsKey('NoResultsText')) {
+      final l$NoResultsText = data['NoResultsText'];
+      result$data['NoResultsText'] = l$NoResultsText == null
+          ? null
+          : Input$SearchableStringFilterInput.fromJson(
+              (l$NoResultsText as Map<String, dynamic>));
+    }
+    if (data.containsKey('PageImage')) {
+      final l$PageImage = data['PageImage'];
+      result$data['PageImage'] = l$PageImage == null
+          ? null
+          : Input$ContentModelReferenceWhereInput.fromJson(
+              (l$PageImage as Map<String, dynamic>));
+    }
+    if (data.containsKey('PagingText')) {
+      final l$PagingText = data['PagingText'];
+      result$data['PagingText'] = l$PagingText == null
+          ? null
+          : Input$SearchableStringFilterInput.fromJson(
+              (l$PagingText as Map<String, dynamic>));
+    }
+    if (data.containsKey('ParentLink')) {
+      final l$ParentLink = data['ParentLink'];
+      result$data['ParentLink'] = l$ParentLink == null
+          ? null
+          : Input$ContentModelReferenceWhereInput.fromJson(
+              (l$ParentLink as Map<String, dynamic>));
+    }
+    if (data.containsKey('PreviousLinkAccessibilityText')) {
+      final l$PreviousLinkAccessibilityText =
+          data['PreviousLinkAccessibilityText'];
+      result$data['PreviousLinkAccessibilityText'] =
+          l$PreviousLinkAccessibilityText == null
+              ? null
+              : Input$SearchableStringFilterInput.fromJson(
+                  (l$PreviousLinkAccessibilityText as Map<String, dynamic>));
+    }
+    if (data.containsKey('PreviousLinkText')) {
+      final l$PreviousLinkText = data['PreviousLinkText'];
+      result$data['PreviousLinkText'] = l$PreviousLinkText == null
+          ? null
+          : Input$SearchableStringFilterInput.fromJson(
+              (l$PreviousLinkText as Map<String, dynamic>));
+    }
+    if (data.containsKey('RelativePath')) {
+      final l$RelativePath = data['RelativePath'];
+      result$data['RelativePath'] = l$RelativePath == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$RelativePath as Map<String, dynamic>));
+    }
+    if (data.containsKey('ResultsCountDisplay')) {
+      final l$ResultsCountDisplay = data['ResultsCountDisplay'];
+      result$data['ResultsCountDisplay'] = l$ResultsCountDisplay == null
+          ? null
+          : Input$SearchableStringFilterInput.fromJson(
+              (l$ResultsCountDisplay as Map<String, dynamic>));
+    }
+    if (data.containsKey('RouteSegment')) {
+      final l$RouteSegment = data['RouteSegment'];
+      result$data['RouteSegment'] = l$RouteSegment == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$RouteSegment as Map<String, dynamic>));
+    }
+    if (data.containsKey('Saved')) {
+      final l$Saved = data['Saved'];
+      result$data['Saved'] = l$Saved == null
+          ? null
+          : Input$DateFilterInput.fromJson((l$Saved as Map<String, dynamic>));
+    }
+    if (data.containsKey('Shortcut')) {
+      final l$Shortcut = data['Shortcut'];
+      result$data['Shortcut'] = l$Shortcut == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$Shortcut as Map<String, dynamic>));
+    }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
+    }
+    if (data.containsKey('SiteId')) {
+      final l$SiteId = data['SiteId'];
+      result$data['SiteId'] = l$SiteId == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SiteId as Map<String, dynamic>));
+    }
+    if (data.containsKey('StartPublish')) {
+      final l$StartPublish = data['StartPublish'];
+      result$data['StartPublish'] = l$StartPublish == null
+          ? null
+          : Input$DateFilterInput.fromJson(
+              (l$StartPublish as Map<String, dynamic>));
+    }
+    if (data.containsKey('Status')) {
+      final l$Status = data['Status'];
+      result$data['Status'] = l$Status == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$Status as Map<String, dynamic>));
+    }
+    if (data.containsKey('StopPublish')) {
+      final l$StopPublish = data['StopPublish'];
+      result$data['StopPublish'] = l$StopPublish == null
+          ? null
+          : Input$DateFilterInput.fromJson(
+              (l$StopPublish as Map<String, dynamic>));
+    }
+    if (data.containsKey('TeaserText')) {
+      final l$TeaserText = data['TeaserText'];
+      result$data['TeaserText'] = l$TeaserText == null
+          ? null
+          : Input$SearchableStringFilterInput.fromJson(
+              (l$TeaserText as Map<String, dynamic>));
+    }
+    if (data.containsKey('UpdateSearchCtaAccessibilityText')) {
+      final l$UpdateSearchCtaAccessibilityText =
+          data['UpdateSearchCtaAccessibilityText'];
+      result$data['UpdateSearchCtaAccessibilityText'] =
+          l$UpdateSearchCtaAccessibilityText == null
+              ? null
+              : Input$SearchableStringFilterInput.fromJson(
+                  (l$UpdateSearchCtaAccessibilityText as Map<String, dynamic>));
+    }
+    if (data.containsKey('UpdateSearchCtaText')) {
+      final l$UpdateSearchCtaText = data['UpdateSearchCtaText'];
+      result$data['UpdateSearchCtaText'] = l$UpdateSearchCtaText == null
+          ? null
+          : Input$SearchableStringFilterInput.fromJson(
+              (l$UpdateSearchCtaText as Map<String, dynamic>));
+    }
+    if (data.containsKey('Url')) {
+      final l$Url = data['Url'];
+      result$data['Url'] = l$Url == null
+          ? null
+          : Input$StringFilterInput.fromJson((l$Url as Map<String, dynamic>));
+    }
+    if (data.containsKey('_and')) {
+      final l$$_and = data['_and'];
+      result$data['_and'] = (l$$_and as List<dynamic>?)
+          ?.map((e) => e == null
+              ? null
+              : Input$SearchResultsPageWhereInput.fromJson(
+                  (e as Map<String, dynamic>)))
+          .toList();
+    }
+    if (data.containsKey('_concreteType')) {
+      final l$$_concreteType = data['_concreteType'];
+      result$data['_concreteType'] = l$$_concreteType == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$$_concreteType as Map<String, dynamic>));
+    }
+    if (data.containsKey('_fulltext')) {
+      final l$$_fulltext = data['_fulltext'];
+      result$data['_fulltext'] = l$$_fulltext == null
+          ? null
+          : Input$SearchableStringFilterInput.fromJson(
+              (l$$_fulltext as Map<String, dynamic>));
+    }
+    if (data.containsKey('_modified')) {
+      final l$$_modified = data['_modified'];
+      result$data['_modified'] = l$$_modified == null
+          ? null
+          : Input$DateFilterInput.fromJson(
+              (l$$_modified as Map<String, dynamic>));
+    }
+    if (data.containsKey('_not')) {
+      final l$$_not = data['_not'];
+      result$data['_not'] = (l$$_not as List<dynamic>?)
+          ?.map((e) => e == null
+              ? null
+              : Input$SearchResultsPageWhereInput.fromJson(
+                  (e as Map<String, dynamic>)))
+          .toList();
+    }
+    if (data.containsKey('_or')) {
+      final l$$_or = data['_or'];
+      result$data['_or'] = (l$$_or as List<dynamic>?)
+          ?.map((e) => e == null
+              ? null
+              : Input$SearchResultsPageWhereInput.fromJson(
+                  (e as Map<String, dynamic>)))
+          .toList();
+    }
+    if (data.containsKey('_sortOrder')) {
+      final l$$_sortOrder = data['_sortOrder'];
+      result$data['_sortOrder'] = l$$_sortOrder == null
+          ? null
+          : Input$IntFilterInput.fromJson(
+              (l$$_sortOrder as Map<String, dynamic>));
+    }
+    return Input$SearchResultsPageWhereInput._(result$data);
+  }
+
+  Map<String, dynamic> _$data;
+
+  Input$StringFilterInput? get Ancestors =>
+      (_$data['Ancestors'] as Input$StringFilterInput?);
+
+  Input$CategoryModelWhereInput? get Category =>
+      (_$data['Category'] as Input$CategoryModelWhereInput?);
+
+  Input$DateFilterInput? get Changed =>
+      (_$data['Changed'] as Input$DateFilterInput?);
+
+  Input$ContentAreaItemModelSearchWhereInput? get ContentArea =>
+      (_$data['ContentArea'] as Input$ContentAreaItemModelSearchWhereInput?);
+
+  Input$ContentModelReferenceWhereInput? get ContentLink =>
+      (_$data['ContentLink'] as Input$ContentModelReferenceWhereInput?);
+
+  Input$StringFilterInput? get ContentType =>
+      (_$data['ContentType'] as Input$StringFilterInput?);
+
+  Input$DateFilterInput? get Created =>
+      (_$data['Created'] as Input$DateFilterInput?);
+
+  Input$BoolFilterInput? get DisableIndexing =>
+      (_$data['DisableIndexing'] as Input$BoolFilterInput?);
+
+  Input$ContentLanguageModelWhereInput? get ExistingLanguages =>
+      (_$data['ExistingLanguages'] as Input$ContentLanguageModelWhereInput?);
+
+  Input$BoolFilterInput? get HideSiteFooter =>
+      (_$data['HideSiteFooter'] as Input$BoolFilterInput?);
+
+  Input$BoolFilterInput? get HideSiteHeader =>
+      (_$data['HideSiteHeader'] as Input$BoolFilterInput?);
+
+  Input$BoolFilterInput? get IsCommonDraft =>
+      (_$data['IsCommonDraft'] as Input$BoolFilterInput?);
+
+  Input$ContentLanguageModelWhereInput? get Language =>
+      (_$data['Language'] as Input$ContentLanguageModelWhereInput?);
+
+  Input$ContentLanguageModelWhereInput? get MasterLanguage =>
+      (_$data['MasterLanguage'] as Input$ContentLanguageModelWhereInput?);
+
+  Input$SearchableStringFilterInput? get MetaDescription =>
+      (_$data['MetaDescription'] as Input$SearchableStringFilterInput?);
+
+  Input$StringFilterInput? get MetaKeywords =>
+      (_$data['MetaKeywords'] as Input$StringFilterInput?);
+
+  Input$SearchableStringFilterInput? get MetaTitle =>
+      (_$data['MetaTitle'] as Input$SearchableStringFilterInput?);
+
+  Input$SearchableStringFilterInput? get Name =>
+      (_$data['Name'] as Input$SearchableStringFilterInput?);
+
+  Input$SearchableStringFilterInput? get NextLinkAccessibilityText =>
+      (_$data['NextLinkAccessibilityText']
+          as Input$SearchableStringFilterInput?);
+
+  Input$SearchableStringFilterInput? get NextLinkText =>
+      (_$data['NextLinkText'] as Input$SearchableStringFilterInput?);
+
+  Input$SearchableStringFilterInput? get NoResultsText =>
+      (_$data['NoResultsText'] as Input$SearchableStringFilterInput?);
+
+  Input$ContentModelReferenceWhereInput? get PageImage =>
+      (_$data['PageImage'] as Input$ContentModelReferenceWhereInput?);
+
+  Input$SearchableStringFilterInput? get PagingText =>
+      (_$data['PagingText'] as Input$SearchableStringFilterInput?);
+
+  Input$ContentModelReferenceWhereInput? get ParentLink =>
+      (_$data['ParentLink'] as Input$ContentModelReferenceWhereInput?);
+
+  Input$SearchableStringFilterInput? get PreviousLinkAccessibilityText =>
+      (_$data['PreviousLinkAccessibilityText']
+          as Input$SearchableStringFilterInput?);
+
+  Input$SearchableStringFilterInput? get PreviousLinkText =>
+      (_$data['PreviousLinkText'] as Input$SearchableStringFilterInput?);
+
+  Input$StringFilterInput? get RelativePath =>
+      (_$data['RelativePath'] as Input$StringFilterInput?);
+
+  Input$SearchableStringFilterInput? get ResultsCountDisplay =>
+      (_$data['ResultsCountDisplay'] as Input$SearchableStringFilterInput?);
+
+  Input$StringFilterInput? get RouteSegment =>
+      (_$data['RouteSegment'] as Input$StringFilterInput?);
+
+  Input$DateFilterInput? get Saved =>
+      (_$data['Saved'] as Input$DateFilterInput?);
+
+  Input$StringFilterInput? get Shortcut =>
+      (_$data['Shortcut'] as Input$StringFilterInput?);
+
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
+  Input$StringFilterInput? get SiteId =>
+      (_$data['SiteId'] as Input$StringFilterInput?);
+
+  Input$DateFilterInput? get StartPublish =>
+      (_$data['StartPublish'] as Input$DateFilterInput?);
+
+  Input$StringFilterInput? get Status =>
+      (_$data['Status'] as Input$StringFilterInput?);
+
+  Input$DateFilterInput? get StopPublish =>
+      (_$data['StopPublish'] as Input$DateFilterInput?);
+
+  Input$SearchableStringFilterInput? get TeaserText =>
+      (_$data['TeaserText'] as Input$SearchableStringFilterInput?);
+
+  Input$SearchableStringFilterInput? get UpdateSearchCtaAccessibilityText =>
+      (_$data['UpdateSearchCtaAccessibilityText']
+          as Input$SearchableStringFilterInput?);
+
+  Input$SearchableStringFilterInput? get UpdateSearchCtaText =>
+      (_$data['UpdateSearchCtaText'] as Input$SearchableStringFilterInput?);
+
+  Input$StringFilterInput? get Url =>
+      (_$data['Url'] as Input$StringFilterInput?);
+
+  List<Input$SearchResultsPageWhereInput?>? get $_and =>
+      (_$data['_and'] as List<Input$SearchResultsPageWhereInput?>?);
+
+  Input$StringFilterInput? get $_concreteType =>
+      (_$data['_concreteType'] as Input$StringFilterInput?);
+
+  Input$SearchableStringFilterInput? get $_fulltext =>
+      (_$data['_fulltext'] as Input$SearchableStringFilterInput?);
+
+  Input$DateFilterInput? get $_modified =>
+      (_$data['_modified'] as Input$DateFilterInput?);
+
+  List<Input$SearchResultsPageWhereInput?>? get $_not =>
+      (_$data['_not'] as List<Input$SearchResultsPageWhereInput?>?);
+
+  List<Input$SearchResultsPageWhereInput?>? get $_or =>
+      (_$data['_or'] as List<Input$SearchResultsPageWhereInput?>?);
+
+  Input$IntFilterInput? get $_sortOrder =>
+      (_$data['_sortOrder'] as Input$IntFilterInput?);
+
+  Map<String, dynamic> toJson() {
+    final result$data = <String, dynamic>{};
+    if (_$data.containsKey('Ancestors')) {
+      final l$Ancestors = Ancestors;
+      result$data['Ancestors'] = l$Ancestors?.toJson();
+    }
+    if (_$data.containsKey('Category')) {
+      final l$Category = Category;
+      result$data['Category'] = l$Category?.toJson();
+    }
+    if (_$data.containsKey('Changed')) {
+      final l$Changed = Changed;
+      result$data['Changed'] = l$Changed?.toJson();
+    }
+    if (_$data.containsKey('ContentArea')) {
+      final l$ContentArea = ContentArea;
+      result$data['ContentArea'] = l$ContentArea?.toJson();
+    }
+    if (_$data.containsKey('ContentLink')) {
+      final l$ContentLink = ContentLink;
+      result$data['ContentLink'] = l$ContentLink?.toJson();
+    }
+    if (_$data.containsKey('ContentType')) {
+      final l$ContentType = ContentType;
+      result$data['ContentType'] = l$ContentType?.toJson();
+    }
+    if (_$data.containsKey('Created')) {
+      final l$Created = Created;
+      result$data['Created'] = l$Created?.toJson();
+    }
+    if (_$data.containsKey('DisableIndexing')) {
+      final l$DisableIndexing = DisableIndexing;
+      result$data['DisableIndexing'] = l$DisableIndexing?.toJson();
+    }
+    if (_$data.containsKey('ExistingLanguages')) {
+      final l$ExistingLanguages = ExistingLanguages;
+      result$data['ExistingLanguages'] = l$ExistingLanguages?.toJson();
+    }
+    if (_$data.containsKey('HideSiteFooter')) {
+      final l$HideSiteFooter = HideSiteFooter;
+      result$data['HideSiteFooter'] = l$HideSiteFooter?.toJson();
+    }
+    if (_$data.containsKey('HideSiteHeader')) {
+      final l$HideSiteHeader = HideSiteHeader;
+      result$data['HideSiteHeader'] = l$HideSiteHeader?.toJson();
+    }
+    if (_$data.containsKey('IsCommonDraft')) {
+      final l$IsCommonDraft = IsCommonDraft;
+      result$data['IsCommonDraft'] = l$IsCommonDraft?.toJson();
+    }
+    if (_$data.containsKey('Language')) {
+      final l$Language = Language;
+      result$data['Language'] = l$Language?.toJson();
+    }
+    if (_$data.containsKey('MasterLanguage')) {
+      final l$MasterLanguage = MasterLanguage;
+      result$data['MasterLanguage'] = l$MasterLanguage?.toJson();
+    }
+    if (_$data.containsKey('MetaDescription')) {
+      final l$MetaDescription = MetaDescription;
+      result$data['MetaDescription'] = l$MetaDescription?.toJson();
+    }
+    if (_$data.containsKey('MetaKeywords')) {
+      final l$MetaKeywords = MetaKeywords;
+      result$data['MetaKeywords'] = l$MetaKeywords?.toJson();
+    }
+    if (_$data.containsKey('MetaTitle')) {
+      final l$MetaTitle = MetaTitle;
+      result$data['MetaTitle'] = l$MetaTitle?.toJson();
+    }
+    if (_$data.containsKey('Name')) {
+      final l$Name = Name;
+      result$data['Name'] = l$Name?.toJson();
+    }
+    if (_$data.containsKey('NextLinkAccessibilityText')) {
+      final l$NextLinkAccessibilityText = NextLinkAccessibilityText;
+      result$data['NextLinkAccessibilityText'] =
+          l$NextLinkAccessibilityText?.toJson();
+    }
+    if (_$data.containsKey('NextLinkText')) {
+      final l$NextLinkText = NextLinkText;
+      result$data['NextLinkText'] = l$NextLinkText?.toJson();
+    }
+    if (_$data.containsKey('NoResultsText')) {
+      final l$NoResultsText = NoResultsText;
+      result$data['NoResultsText'] = l$NoResultsText?.toJson();
+    }
+    if (_$data.containsKey('PageImage')) {
+      final l$PageImage = PageImage;
+      result$data['PageImage'] = l$PageImage?.toJson();
+    }
+    if (_$data.containsKey('PagingText')) {
+      final l$PagingText = PagingText;
+      result$data['PagingText'] = l$PagingText?.toJson();
+    }
+    if (_$data.containsKey('ParentLink')) {
+      final l$ParentLink = ParentLink;
+      result$data['ParentLink'] = l$ParentLink?.toJson();
+    }
+    if (_$data.containsKey('PreviousLinkAccessibilityText')) {
+      final l$PreviousLinkAccessibilityText = PreviousLinkAccessibilityText;
+      result$data['PreviousLinkAccessibilityText'] =
+          l$PreviousLinkAccessibilityText?.toJson();
+    }
+    if (_$data.containsKey('PreviousLinkText')) {
+      final l$PreviousLinkText = PreviousLinkText;
+      result$data['PreviousLinkText'] = l$PreviousLinkText?.toJson();
+    }
+    if (_$data.containsKey('RelativePath')) {
+      final l$RelativePath = RelativePath;
+      result$data['RelativePath'] = l$RelativePath?.toJson();
+    }
+    if (_$data.containsKey('ResultsCountDisplay')) {
+      final l$ResultsCountDisplay = ResultsCountDisplay;
+      result$data['ResultsCountDisplay'] = l$ResultsCountDisplay?.toJson();
+    }
+    if (_$data.containsKey('RouteSegment')) {
+      final l$RouteSegment = RouteSegment;
+      result$data['RouteSegment'] = l$RouteSegment?.toJson();
+    }
+    if (_$data.containsKey('Saved')) {
+      final l$Saved = Saved;
+      result$data['Saved'] = l$Saved?.toJson();
+    }
+    if (_$data.containsKey('Shortcut')) {
+      final l$Shortcut = Shortcut;
+      result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
+    }
+    if (_$data.containsKey('SiteId')) {
+      final l$SiteId = SiteId;
+      result$data['SiteId'] = l$SiteId?.toJson();
+    }
+    if (_$data.containsKey('StartPublish')) {
+      final l$StartPublish = StartPublish;
+      result$data['StartPublish'] = l$StartPublish?.toJson();
+    }
+    if (_$data.containsKey('Status')) {
+      final l$Status = Status;
+      result$data['Status'] = l$Status?.toJson();
+    }
+    if (_$data.containsKey('StopPublish')) {
+      final l$StopPublish = StopPublish;
+      result$data['StopPublish'] = l$StopPublish?.toJson();
+    }
+    if (_$data.containsKey('TeaserText')) {
+      final l$TeaserText = TeaserText;
+      result$data['TeaserText'] = l$TeaserText?.toJson();
+    }
+    if (_$data.containsKey('UpdateSearchCtaAccessibilityText')) {
+      final l$UpdateSearchCtaAccessibilityText =
+          UpdateSearchCtaAccessibilityText;
+      result$data['UpdateSearchCtaAccessibilityText'] =
+          l$UpdateSearchCtaAccessibilityText?.toJson();
+    }
+    if (_$data.containsKey('UpdateSearchCtaText')) {
+      final l$UpdateSearchCtaText = UpdateSearchCtaText;
+      result$data['UpdateSearchCtaText'] = l$UpdateSearchCtaText?.toJson();
+    }
+    if (_$data.containsKey('Url')) {
+      final l$Url = Url;
+      result$data['Url'] = l$Url?.toJson();
+    }
+    if (_$data.containsKey('_and')) {
+      final l$$_and = $_and;
+      result$data['_and'] = l$$_and?.map((e) => e?.toJson()).toList();
+    }
+    if (_$data.containsKey('_concreteType')) {
+      final l$$_concreteType = $_concreteType;
+      result$data['_concreteType'] = l$$_concreteType?.toJson();
+    }
+    if (_$data.containsKey('_fulltext')) {
+      final l$$_fulltext = $_fulltext;
+      result$data['_fulltext'] = l$$_fulltext?.toJson();
+    }
+    if (_$data.containsKey('_modified')) {
+      final l$$_modified = $_modified;
+      result$data['_modified'] = l$$_modified?.toJson();
+    }
+    if (_$data.containsKey('_not')) {
+      final l$$_not = $_not;
+      result$data['_not'] = l$$_not?.map((e) => e?.toJson()).toList();
+    }
+    if (_$data.containsKey('_or')) {
+      final l$$_or = $_or;
+      result$data['_or'] = l$$_or?.map((e) => e?.toJson()).toList();
+    }
+    if (_$data.containsKey('_sortOrder')) {
+      final l$$_sortOrder = $_sortOrder;
+      result$data['_sortOrder'] = l$$_sortOrder?.toJson();
+    }
+    return result$data;
+  }
+
+  CopyWith$Input$SearchResultsPageWhereInput<Input$SearchResultsPageWhereInput>
+      get copyWith => CopyWith$Input$SearchResultsPageWhereInput(
+            this,
+            (i) => i,
+          );
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+    if (other is! Input$SearchResultsPageWhereInput ||
+        runtimeType != other.runtimeType) {
+      return false;
+    }
+    final l$Ancestors = Ancestors;
+    final lOther$Ancestors = other.Ancestors;
+    if (_$data.containsKey('Ancestors') !=
+        other._$data.containsKey('Ancestors')) {
+      return false;
+    }
+    if (l$Ancestors != lOther$Ancestors) {
+      return false;
+    }
+    final l$Category = Category;
+    final lOther$Category = other.Category;
+    if (_$data.containsKey('Category') !=
+        other._$data.containsKey('Category')) {
+      return false;
+    }
+    if (l$Category != lOther$Category) {
+      return false;
+    }
+    final l$Changed = Changed;
+    final lOther$Changed = other.Changed;
+    if (_$data.containsKey('Changed') != other._$data.containsKey('Changed')) {
+      return false;
+    }
+    if (l$Changed != lOther$Changed) {
+      return false;
+    }
+    final l$ContentArea = ContentArea;
+    final lOther$ContentArea = other.ContentArea;
+    if (_$data.containsKey('ContentArea') !=
+        other._$data.containsKey('ContentArea')) {
+      return false;
+    }
+    if (l$ContentArea != lOther$ContentArea) {
+      return false;
+    }
+    final l$ContentLink = ContentLink;
+    final lOther$ContentLink = other.ContentLink;
+    if (_$data.containsKey('ContentLink') !=
+        other._$data.containsKey('ContentLink')) {
+      return false;
+    }
+    if (l$ContentLink != lOther$ContentLink) {
+      return false;
+    }
+    final l$ContentType = ContentType;
+    final lOther$ContentType = other.ContentType;
+    if (_$data.containsKey('ContentType') !=
+        other._$data.containsKey('ContentType')) {
+      return false;
+    }
+    if (l$ContentType != lOther$ContentType) {
+      return false;
+    }
+    final l$Created = Created;
+    final lOther$Created = other.Created;
+    if (_$data.containsKey('Created') != other._$data.containsKey('Created')) {
+      return false;
+    }
+    if (l$Created != lOther$Created) {
+      return false;
+    }
+    final l$DisableIndexing = DisableIndexing;
+    final lOther$DisableIndexing = other.DisableIndexing;
+    if (_$data.containsKey('DisableIndexing') !=
+        other._$data.containsKey('DisableIndexing')) {
+      return false;
+    }
+    if (l$DisableIndexing != lOther$DisableIndexing) {
+      return false;
+    }
+    final l$ExistingLanguages = ExistingLanguages;
+    final lOther$ExistingLanguages = other.ExistingLanguages;
+    if (_$data.containsKey('ExistingLanguages') !=
+        other._$data.containsKey('ExistingLanguages')) {
+      return false;
+    }
+    if (l$ExistingLanguages != lOther$ExistingLanguages) {
+      return false;
+    }
+    final l$HideSiteFooter = HideSiteFooter;
+    final lOther$HideSiteFooter = other.HideSiteFooter;
+    if (_$data.containsKey('HideSiteFooter') !=
+        other._$data.containsKey('HideSiteFooter')) {
+      return false;
+    }
+    if (l$HideSiteFooter != lOther$HideSiteFooter) {
+      return false;
+    }
+    final l$HideSiteHeader = HideSiteHeader;
+    final lOther$HideSiteHeader = other.HideSiteHeader;
+    if (_$data.containsKey('HideSiteHeader') !=
+        other._$data.containsKey('HideSiteHeader')) {
+      return false;
+    }
+    if (l$HideSiteHeader != lOther$HideSiteHeader) {
+      return false;
+    }
+    final l$IsCommonDraft = IsCommonDraft;
+    final lOther$IsCommonDraft = other.IsCommonDraft;
+    if (_$data.containsKey('IsCommonDraft') !=
+        other._$data.containsKey('IsCommonDraft')) {
+      return false;
+    }
+    if (l$IsCommonDraft != lOther$IsCommonDraft) {
+      return false;
+    }
+    final l$Language = Language;
+    final lOther$Language = other.Language;
+    if (_$data.containsKey('Language') !=
+        other._$data.containsKey('Language')) {
+      return false;
+    }
+    if (l$Language != lOther$Language) {
+      return false;
+    }
+    final l$MasterLanguage = MasterLanguage;
+    final lOther$MasterLanguage = other.MasterLanguage;
+    if (_$data.containsKey('MasterLanguage') !=
+        other._$data.containsKey('MasterLanguage')) {
+      return false;
+    }
+    if (l$MasterLanguage != lOther$MasterLanguage) {
+      return false;
+    }
+    final l$MetaDescription = MetaDescription;
+    final lOther$MetaDescription = other.MetaDescription;
+    if (_$data.containsKey('MetaDescription') !=
+        other._$data.containsKey('MetaDescription')) {
+      return false;
+    }
+    if (l$MetaDescription != lOther$MetaDescription) {
+      return false;
+    }
+    final l$MetaKeywords = MetaKeywords;
+    final lOther$MetaKeywords = other.MetaKeywords;
+    if (_$data.containsKey('MetaKeywords') !=
+        other._$data.containsKey('MetaKeywords')) {
+      return false;
+    }
+    if (l$MetaKeywords != lOther$MetaKeywords) {
+      return false;
+    }
+    final l$MetaTitle = MetaTitle;
+    final lOther$MetaTitle = other.MetaTitle;
+    if (_$data.containsKey('MetaTitle') !=
+        other._$data.containsKey('MetaTitle')) {
+      return false;
+    }
+    if (l$MetaTitle != lOther$MetaTitle) {
+      return false;
+    }
+    final l$Name = Name;
+    final lOther$Name = other.Name;
+    if (_$data.containsKey('Name') != other._$data.containsKey('Name')) {
+      return false;
+    }
+    if (l$Name != lOther$Name) {
+      return false;
+    }
+    final l$NextLinkAccessibilityText = NextLinkAccessibilityText;
+    final lOther$NextLinkAccessibilityText = other.NextLinkAccessibilityText;
+    if (_$data.containsKey('NextLinkAccessibilityText') !=
+        other._$data.containsKey('NextLinkAccessibilityText')) {
+      return false;
+    }
+    if (l$NextLinkAccessibilityText != lOther$NextLinkAccessibilityText) {
+      return false;
+    }
+    final l$NextLinkText = NextLinkText;
+    final lOther$NextLinkText = other.NextLinkText;
+    if (_$data.containsKey('NextLinkText') !=
+        other._$data.containsKey('NextLinkText')) {
+      return false;
+    }
+    if (l$NextLinkText != lOther$NextLinkText) {
+      return false;
+    }
+    final l$NoResultsText = NoResultsText;
+    final lOther$NoResultsText = other.NoResultsText;
+    if (_$data.containsKey('NoResultsText') !=
+        other._$data.containsKey('NoResultsText')) {
+      return false;
+    }
+    if (l$NoResultsText != lOther$NoResultsText) {
+      return false;
+    }
+    final l$PageImage = PageImage;
+    final lOther$PageImage = other.PageImage;
+    if (_$data.containsKey('PageImage') !=
+        other._$data.containsKey('PageImage')) {
+      return false;
+    }
+    if (l$PageImage != lOther$PageImage) {
+      return false;
+    }
+    final l$PagingText = PagingText;
+    final lOther$PagingText = other.PagingText;
+    if (_$data.containsKey('PagingText') !=
+        other._$data.containsKey('PagingText')) {
+      return false;
+    }
+    if (l$PagingText != lOther$PagingText) {
+      return false;
+    }
+    final l$ParentLink = ParentLink;
+    final lOther$ParentLink = other.ParentLink;
+    if (_$data.containsKey('ParentLink') !=
+        other._$data.containsKey('ParentLink')) {
+      return false;
+    }
+    if (l$ParentLink != lOther$ParentLink) {
+      return false;
+    }
+    final l$PreviousLinkAccessibilityText = PreviousLinkAccessibilityText;
+    final lOther$PreviousLinkAccessibilityText =
+        other.PreviousLinkAccessibilityText;
+    if (_$data.containsKey('PreviousLinkAccessibilityText') !=
+        other._$data.containsKey('PreviousLinkAccessibilityText')) {
+      return false;
+    }
+    if (l$PreviousLinkAccessibilityText !=
+        lOther$PreviousLinkAccessibilityText) {
+      return false;
+    }
+    final l$PreviousLinkText = PreviousLinkText;
+    final lOther$PreviousLinkText = other.PreviousLinkText;
+    if (_$data.containsKey('PreviousLinkText') !=
+        other._$data.containsKey('PreviousLinkText')) {
+      return false;
+    }
+    if (l$PreviousLinkText != lOther$PreviousLinkText) {
+      return false;
+    }
+    final l$RelativePath = RelativePath;
+    final lOther$RelativePath = other.RelativePath;
+    if (_$data.containsKey('RelativePath') !=
+        other._$data.containsKey('RelativePath')) {
+      return false;
+    }
+    if (l$RelativePath != lOther$RelativePath) {
+      return false;
+    }
+    final l$ResultsCountDisplay = ResultsCountDisplay;
+    final lOther$ResultsCountDisplay = other.ResultsCountDisplay;
+    if (_$data.containsKey('ResultsCountDisplay') !=
+        other._$data.containsKey('ResultsCountDisplay')) {
+      return false;
+    }
+    if (l$ResultsCountDisplay != lOther$ResultsCountDisplay) {
+      return false;
+    }
+    final l$RouteSegment = RouteSegment;
+    final lOther$RouteSegment = other.RouteSegment;
+    if (_$data.containsKey('RouteSegment') !=
+        other._$data.containsKey('RouteSegment')) {
+      return false;
+    }
+    if (l$RouteSegment != lOther$RouteSegment) {
+      return false;
+    }
+    final l$Saved = Saved;
+    final lOther$Saved = other.Saved;
+    if (_$data.containsKey('Saved') != other._$data.containsKey('Saved')) {
+      return false;
+    }
+    if (l$Saved != lOther$Saved) {
+      return false;
+    }
+    final l$Shortcut = Shortcut;
+    final lOther$Shortcut = other.Shortcut;
+    if (_$data.containsKey('Shortcut') !=
+        other._$data.containsKey('Shortcut')) {
+      return false;
+    }
+    if (l$Shortcut != lOther$Shortcut) {
+      return false;
+    }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
+    final l$SiteId = SiteId;
+    final lOther$SiteId = other.SiteId;
+    if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
+      return false;
+    }
+    if (l$SiteId != lOther$SiteId) {
+      return false;
+    }
+    final l$StartPublish = StartPublish;
+    final lOther$StartPublish = other.StartPublish;
+    if (_$data.containsKey('StartPublish') !=
+        other._$data.containsKey('StartPublish')) {
+      return false;
+    }
+    if (l$StartPublish != lOther$StartPublish) {
+      return false;
+    }
+    final l$Status = Status;
+    final lOther$Status = other.Status;
+    if (_$data.containsKey('Status') != other._$data.containsKey('Status')) {
+      return false;
+    }
+    if (l$Status != lOther$Status) {
+      return false;
+    }
+    final l$StopPublish = StopPublish;
+    final lOther$StopPublish = other.StopPublish;
+    if (_$data.containsKey('StopPublish') !=
+        other._$data.containsKey('StopPublish')) {
+      return false;
+    }
+    if (l$StopPublish != lOther$StopPublish) {
+      return false;
+    }
+    final l$TeaserText = TeaserText;
+    final lOther$TeaserText = other.TeaserText;
+    if (_$data.containsKey('TeaserText') !=
+        other._$data.containsKey('TeaserText')) {
+      return false;
+    }
+    if (l$TeaserText != lOther$TeaserText) {
+      return false;
+    }
+    final l$UpdateSearchCtaAccessibilityText = UpdateSearchCtaAccessibilityText;
+    final lOther$UpdateSearchCtaAccessibilityText =
+        other.UpdateSearchCtaAccessibilityText;
+    if (_$data.containsKey('UpdateSearchCtaAccessibilityText') !=
+        other._$data.containsKey('UpdateSearchCtaAccessibilityText')) {
+      return false;
+    }
+    if (l$UpdateSearchCtaAccessibilityText !=
+        lOther$UpdateSearchCtaAccessibilityText) {
+      return false;
+    }
+    final l$UpdateSearchCtaText = UpdateSearchCtaText;
+    final lOther$UpdateSearchCtaText = other.UpdateSearchCtaText;
+    if (_$data.containsKey('UpdateSearchCtaText') !=
+        other._$data.containsKey('UpdateSearchCtaText')) {
+      return false;
+    }
+    if (l$UpdateSearchCtaText != lOther$UpdateSearchCtaText) {
+      return false;
+    }
+    final l$Url = Url;
+    final lOther$Url = other.Url;
+    if (_$data.containsKey('Url') != other._$data.containsKey('Url')) {
+      return false;
+    }
+    if (l$Url != lOther$Url) {
+      return false;
+    }
+    final l$$_and = $_and;
+    final lOther$$_and = other.$_and;
+    if (_$data.containsKey('_and') != other._$data.containsKey('_and')) {
+      return false;
+    }
+    if (l$$_and != null && lOther$$_and != null) {
+      if (l$$_and.length != lOther$$_and.length) {
+        return false;
+      }
+      for (int i = 0; i < l$$_and.length; i++) {
+        final l$$_and$entry = l$$_and[i];
+        final lOther$$_and$entry = lOther$$_and[i];
+        if (l$$_and$entry != lOther$$_and$entry) {
+          return false;
+        }
+      }
+    } else if (l$$_and != lOther$$_and) {
+      return false;
+    }
+    final l$$_concreteType = $_concreteType;
+    final lOther$$_concreteType = other.$_concreteType;
+    if (_$data.containsKey('_concreteType') !=
+        other._$data.containsKey('_concreteType')) {
+      return false;
+    }
+    if (l$$_concreteType != lOther$$_concreteType) {
+      return false;
+    }
+    final l$$_fulltext = $_fulltext;
+    final lOther$$_fulltext = other.$_fulltext;
+    if (_$data.containsKey('_fulltext') !=
+        other._$data.containsKey('_fulltext')) {
+      return false;
+    }
+    if (l$$_fulltext != lOther$$_fulltext) {
+      return false;
+    }
+    final l$$_modified = $_modified;
+    final lOther$$_modified = other.$_modified;
+    if (_$data.containsKey('_modified') !=
+        other._$data.containsKey('_modified')) {
+      return false;
+    }
+    if (l$$_modified != lOther$$_modified) {
+      return false;
+    }
+    final l$$_not = $_not;
+    final lOther$$_not = other.$_not;
+    if (_$data.containsKey('_not') != other._$data.containsKey('_not')) {
+      return false;
+    }
+    if (l$$_not != null && lOther$$_not != null) {
+      if (l$$_not.length != lOther$$_not.length) {
+        return false;
+      }
+      for (int i = 0; i < l$$_not.length; i++) {
+        final l$$_not$entry = l$$_not[i];
+        final lOther$$_not$entry = lOther$$_not[i];
+        if (l$$_not$entry != lOther$$_not$entry) {
+          return false;
+        }
+      }
+    } else if (l$$_not != lOther$$_not) {
+      return false;
+    }
+    final l$$_or = $_or;
+    final lOther$$_or = other.$_or;
+    if (_$data.containsKey('_or') != other._$data.containsKey('_or')) {
+      return false;
+    }
+    if (l$$_or != null && lOther$$_or != null) {
+      if (l$$_or.length != lOther$$_or.length) {
+        return false;
+      }
+      for (int i = 0; i < l$$_or.length; i++) {
+        final l$$_or$entry = l$$_or[i];
+        final lOther$$_or$entry = lOther$$_or[i];
+        if (l$$_or$entry != lOther$$_or$entry) {
+          return false;
+        }
+      }
+    } else if (l$$_or != lOther$$_or) {
+      return false;
+    }
+    final l$$_sortOrder = $_sortOrder;
+    final lOther$$_sortOrder = other.$_sortOrder;
+    if (_$data.containsKey('_sortOrder') !=
+        other._$data.containsKey('_sortOrder')) {
+      return false;
+    }
+    if (l$$_sortOrder != lOther$$_sortOrder) {
+      return false;
+    }
+    return true;
+  }
+
+  @override
+  int get hashCode {
+    final l$Ancestors = Ancestors;
+    final l$Category = Category;
+    final l$Changed = Changed;
+    final l$ContentArea = ContentArea;
+    final l$ContentLink = ContentLink;
+    final l$ContentType = ContentType;
+    final l$Created = Created;
+    final l$DisableIndexing = DisableIndexing;
+    final l$ExistingLanguages = ExistingLanguages;
+    final l$HideSiteFooter = HideSiteFooter;
+    final l$HideSiteHeader = HideSiteHeader;
+    final l$IsCommonDraft = IsCommonDraft;
+    final l$Language = Language;
+    final l$MasterLanguage = MasterLanguage;
+    final l$MetaDescription = MetaDescription;
+    final l$MetaKeywords = MetaKeywords;
+    final l$MetaTitle = MetaTitle;
+    final l$Name = Name;
+    final l$NextLinkAccessibilityText = NextLinkAccessibilityText;
+    final l$NextLinkText = NextLinkText;
+    final l$NoResultsText = NoResultsText;
+    final l$PageImage = PageImage;
+    final l$PagingText = PagingText;
+    final l$ParentLink = ParentLink;
+    final l$PreviousLinkAccessibilityText = PreviousLinkAccessibilityText;
+    final l$PreviousLinkText = PreviousLinkText;
+    final l$RelativePath = RelativePath;
+    final l$ResultsCountDisplay = ResultsCountDisplay;
+    final l$RouteSegment = RouteSegment;
+    final l$Saved = Saved;
+    final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
+    final l$SiteId = SiteId;
+    final l$StartPublish = StartPublish;
+    final l$Status = Status;
+    final l$StopPublish = StopPublish;
+    final l$TeaserText = TeaserText;
+    final l$UpdateSearchCtaAccessibilityText = UpdateSearchCtaAccessibilityText;
+    final l$UpdateSearchCtaText = UpdateSearchCtaText;
+    final l$Url = Url;
+    final l$$_and = $_and;
+    final l$$_concreteType = $_concreteType;
+    final l$$_fulltext = $_fulltext;
+    final l$$_modified = $_modified;
+    final l$$_not = $_not;
+    final l$$_or = $_or;
+    final l$$_sortOrder = $_sortOrder;
+    return Object.hashAll([
+      _$data.containsKey('Ancestors') ? l$Ancestors : const {},
+      _$data.containsKey('Category') ? l$Category : const {},
+      _$data.containsKey('Changed') ? l$Changed : const {},
+      _$data.containsKey('ContentArea') ? l$ContentArea : const {},
+      _$data.containsKey('ContentLink') ? l$ContentLink : const {},
+      _$data.containsKey('ContentType') ? l$ContentType : const {},
+      _$data.containsKey('Created') ? l$Created : const {},
+      _$data.containsKey('DisableIndexing') ? l$DisableIndexing : const {},
+      _$data.containsKey('ExistingLanguages') ? l$ExistingLanguages : const {},
+      _$data.containsKey('HideSiteFooter') ? l$HideSiteFooter : const {},
+      _$data.containsKey('HideSiteHeader') ? l$HideSiteHeader : const {},
+      _$data.containsKey('IsCommonDraft') ? l$IsCommonDraft : const {},
+      _$data.containsKey('Language') ? l$Language : const {},
+      _$data.containsKey('MasterLanguage') ? l$MasterLanguage : const {},
+      _$data.containsKey('MetaDescription') ? l$MetaDescription : const {},
+      _$data.containsKey('MetaKeywords') ? l$MetaKeywords : const {},
+      _$data.containsKey('MetaTitle') ? l$MetaTitle : const {},
+      _$data.containsKey('Name') ? l$Name : const {},
+      _$data.containsKey('NextLinkAccessibilityText')
+          ? l$NextLinkAccessibilityText
+          : const {},
+      _$data.containsKey('NextLinkText') ? l$NextLinkText : const {},
+      _$data.containsKey('NoResultsText') ? l$NoResultsText : const {},
+      _$data.containsKey('PageImage') ? l$PageImage : const {},
+      _$data.containsKey('PagingText') ? l$PagingText : const {},
+      _$data.containsKey('ParentLink') ? l$ParentLink : const {},
+      _$data.containsKey('PreviousLinkAccessibilityText')
+          ? l$PreviousLinkAccessibilityText
+          : const {},
+      _$data.containsKey('PreviousLinkText') ? l$PreviousLinkText : const {},
+      _$data.containsKey('RelativePath') ? l$RelativePath : const {},
+      _$data.containsKey('ResultsCountDisplay')
+          ? l$ResultsCountDisplay
+          : const {},
+      _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
+      _$data.containsKey('Saved') ? l$Saved : const {},
+      _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
+      _$data.containsKey('SiteId') ? l$SiteId : const {},
+      _$data.containsKey('StartPublish') ? l$StartPublish : const {},
+      _$data.containsKey('Status') ? l$Status : const {},
+      _$data.containsKey('StopPublish') ? l$StopPublish : const {},
+      _$data.containsKey('TeaserText') ? l$TeaserText : const {},
+      _$data.containsKey('UpdateSearchCtaAccessibilityText')
+          ? l$UpdateSearchCtaAccessibilityText
+          : const {},
+      _$data.containsKey('UpdateSearchCtaText')
+          ? l$UpdateSearchCtaText
+          : const {},
+      _$data.containsKey('Url') ? l$Url : const {},
+      _$data.containsKey('_and')
+          ? l$$_and == null
+              ? null
+              : Object.hashAll(l$$_and.map((v) => v))
+          : const {},
+      _$data.containsKey('_concreteType') ? l$$_concreteType : const {},
+      _$data.containsKey('_fulltext') ? l$$_fulltext : const {},
+      _$data.containsKey('_modified') ? l$$_modified : const {},
+      _$data.containsKey('_not')
+          ? l$$_not == null
+              ? null
+              : Object.hashAll(l$$_not.map((v) => v))
+          : const {},
+      _$data.containsKey('_or')
+          ? l$$_or == null
+              ? null
+              : Object.hashAll(l$$_or.map((v) => v))
+          : const {},
+      _$data.containsKey('_sortOrder') ? l$$_sortOrder : const {},
+    ]);
+  }
+}
+
+abstract class CopyWith$Input$SearchResultsPageWhereInput<TRes> {
+  factory CopyWith$Input$SearchResultsPageWhereInput(
+    Input$SearchResultsPageWhereInput instance,
+    TRes Function(Input$SearchResultsPageWhereInput) then,
+  ) = _CopyWithImpl$Input$SearchResultsPageWhereInput;
+
+  factory CopyWith$Input$SearchResultsPageWhereInput.stub(TRes res) =
+      _CopyWithStubImpl$Input$SearchResultsPageWhereInput;
+
+  TRes call({
+    Input$StringFilterInput? Ancestors,
+    Input$CategoryModelWhereInput? Category,
+    Input$DateFilterInput? Changed,
+    Input$ContentAreaItemModelSearchWhereInput? ContentArea,
+    Input$ContentModelReferenceWhereInput? ContentLink,
+    Input$StringFilterInput? ContentType,
+    Input$DateFilterInput? Created,
+    Input$BoolFilterInput? DisableIndexing,
+    Input$ContentLanguageModelWhereInput? ExistingLanguages,
+    Input$BoolFilterInput? HideSiteFooter,
+    Input$BoolFilterInput? HideSiteHeader,
+    Input$BoolFilterInput? IsCommonDraft,
+    Input$ContentLanguageModelWhereInput? Language,
+    Input$ContentLanguageModelWhereInput? MasterLanguage,
+    Input$SearchableStringFilterInput? MetaDescription,
+    Input$StringFilterInput? MetaKeywords,
+    Input$SearchableStringFilterInput? MetaTitle,
+    Input$SearchableStringFilterInput? Name,
+    Input$SearchableStringFilterInput? NextLinkAccessibilityText,
+    Input$SearchableStringFilterInput? NextLinkText,
+    Input$SearchableStringFilterInput? NoResultsText,
+    Input$ContentModelReferenceWhereInput? PageImage,
+    Input$SearchableStringFilterInput? PagingText,
+    Input$ContentModelReferenceWhereInput? ParentLink,
+    Input$SearchableStringFilterInput? PreviousLinkAccessibilityText,
+    Input$SearchableStringFilterInput? PreviousLinkText,
+    Input$StringFilterInput? RelativePath,
+    Input$SearchableStringFilterInput? ResultsCountDisplay,
+    Input$StringFilterInput? RouteSegment,
+    Input$DateFilterInput? Saved,
+    Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
+    Input$StringFilterInput? SiteId,
+    Input$DateFilterInput? StartPublish,
+    Input$StringFilterInput? Status,
+    Input$DateFilterInput? StopPublish,
+    Input$SearchableStringFilterInput? TeaserText,
+    Input$SearchableStringFilterInput? UpdateSearchCtaAccessibilityText,
+    Input$SearchableStringFilterInput? UpdateSearchCtaText,
+    Input$StringFilterInput? Url,
+    List<Input$SearchResultsPageWhereInput?>? $_and,
+    Input$StringFilterInput? $_concreteType,
+    Input$SearchableStringFilterInput? $_fulltext,
+    Input$DateFilterInput? $_modified,
+    List<Input$SearchResultsPageWhereInput?>? $_not,
+    List<Input$SearchResultsPageWhereInput?>? $_or,
+    Input$IntFilterInput? $_sortOrder,
+  });
+  CopyWith$Input$StringFilterInput<TRes> get Ancestors;
+  CopyWith$Input$CategoryModelWhereInput<TRes> get Category;
+  CopyWith$Input$DateFilterInput<TRes> get Changed;
+  CopyWith$Input$ContentAreaItemModelSearchWhereInput<TRes> get ContentArea;
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get ContentLink;
+  CopyWith$Input$StringFilterInput<TRes> get ContentType;
+  CopyWith$Input$DateFilterInput<TRes> get Created;
+  CopyWith$Input$BoolFilterInput<TRes> get DisableIndexing;
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get ExistingLanguages;
+  CopyWith$Input$BoolFilterInput<TRes> get HideSiteFooter;
+  CopyWith$Input$BoolFilterInput<TRes> get HideSiteHeader;
+  CopyWith$Input$BoolFilterInput<TRes> get IsCommonDraft;
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get Language;
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get MasterLanguage;
+  CopyWith$Input$SearchableStringFilterInput<TRes> get MetaDescription;
+  CopyWith$Input$StringFilterInput<TRes> get MetaKeywords;
+  CopyWith$Input$SearchableStringFilterInput<TRes> get MetaTitle;
+  CopyWith$Input$SearchableStringFilterInput<TRes> get Name;
+  CopyWith$Input$SearchableStringFilterInput<TRes>
+      get NextLinkAccessibilityText;
+  CopyWith$Input$SearchableStringFilterInput<TRes> get NextLinkText;
+  CopyWith$Input$SearchableStringFilterInput<TRes> get NoResultsText;
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get PageImage;
+  CopyWith$Input$SearchableStringFilterInput<TRes> get PagingText;
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get ParentLink;
+  CopyWith$Input$SearchableStringFilterInput<TRes>
+      get PreviousLinkAccessibilityText;
+  CopyWith$Input$SearchableStringFilterInput<TRes> get PreviousLinkText;
+  CopyWith$Input$StringFilterInput<TRes> get RelativePath;
+  CopyWith$Input$SearchableStringFilterInput<TRes> get ResultsCountDisplay;
+  CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
+  CopyWith$Input$DateFilterInput<TRes> get Saved;
+  CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
+  CopyWith$Input$StringFilterInput<TRes> get SiteId;
+  CopyWith$Input$DateFilterInput<TRes> get StartPublish;
+  CopyWith$Input$StringFilterInput<TRes> get Status;
+  CopyWith$Input$DateFilterInput<TRes> get StopPublish;
+  CopyWith$Input$SearchableStringFilterInput<TRes> get TeaserText;
+  CopyWith$Input$SearchableStringFilterInput<TRes>
+      get UpdateSearchCtaAccessibilityText;
+  CopyWith$Input$SearchableStringFilterInput<TRes> get UpdateSearchCtaText;
+  CopyWith$Input$StringFilterInput<TRes> get Url;
+  TRes $_and(
+      Iterable<Input$SearchResultsPageWhereInput?>? Function(
+              Iterable<
+                  CopyWith$Input$SearchResultsPageWhereInput<
+                      Input$SearchResultsPageWhereInput>?>?)
+          _fn);
+  CopyWith$Input$StringFilterInput<TRes> get $_concreteType;
+  CopyWith$Input$SearchableStringFilterInput<TRes> get $_fulltext;
+  CopyWith$Input$DateFilterInput<TRes> get $_modified;
+  TRes $_not(
+      Iterable<Input$SearchResultsPageWhereInput?>? Function(
+              Iterable<
+                  CopyWith$Input$SearchResultsPageWhereInput<
+                      Input$SearchResultsPageWhereInput>?>?)
+          _fn);
+  TRes $_or(
+      Iterable<Input$SearchResultsPageWhereInput?>? Function(
+              Iterable<
+                  CopyWith$Input$SearchResultsPageWhereInput<
+                      Input$SearchResultsPageWhereInput>?>?)
+          _fn);
+  CopyWith$Input$IntFilterInput<TRes> get $_sortOrder;
+}
+
+class _CopyWithImpl$Input$SearchResultsPageWhereInput<TRes>
+    implements CopyWith$Input$SearchResultsPageWhereInput<TRes> {
+  _CopyWithImpl$Input$SearchResultsPageWhereInput(
+    this._instance,
+    this._then,
+  );
+
+  final Input$SearchResultsPageWhereInput _instance;
+
+  final TRes Function(Input$SearchResultsPageWhereInput) _then;
+
+  static const _undefined = <dynamic, dynamic>{};
+
+  TRes call({
+    Object? Ancestors = _undefined,
+    Object? Category = _undefined,
+    Object? Changed = _undefined,
+    Object? ContentArea = _undefined,
+    Object? ContentLink = _undefined,
+    Object? ContentType = _undefined,
+    Object? Created = _undefined,
+    Object? DisableIndexing = _undefined,
+    Object? ExistingLanguages = _undefined,
+    Object? HideSiteFooter = _undefined,
+    Object? HideSiteHeader = _undefined,
+    Object? IsCommonDraft = _undefined,
+    Object? Language = _undefined,
+    Object? MasterLanguage = _undefined,
+    Object? MetaDescription = _undefined,
+    Object? MetaKeywords = _undefined,
+    Object? MetaTitle = _undefined,
+    Object? Name = _undefined,
+    Object? NextLinkAccessibilityText = _undefined,
+    Object? NextLinkText = _undefined,
+    Object? NoResultsText = _undefined,
+    Object? PageImage = _undefined,
+    Object? PagingText = _undefined,
+    Object? ParentLink = _undefined,
+    Object? PreviousLinkAccessibilityText = _undefined,
+    Object? PreviousLinkText = _undefined,
+    Object? RelativePath = _undefined,
+    Object? ResultsCountDisplay = _undefined,
+    Object? RouteSegment = _undefined,
+    Object? Saved = _undefined,
+    Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
+    Object? SiteId = _undefined,
+    Object? StartPublish = _undefined,
+    Object? Status = _undefined,
+    Object? StopPublish = _undefined,
+    Object? TeaserText = _undefined,
+    Object? UpdateSearchCtaAccessibilityText = _undefined,
+    Object? UpdateSearchCtaText = _undefined,
+    Object? Url = _undefined,
+    Object? $_and = _undefined,
+    Object? $_concreteType = _undefined,
+    Object? $_fulltext = _undefined,
+    Object? $_modified = _undefined,
+    Object? $_not = _undefined,
+    Object? $_or = _undefined,
+    Object? $_sortOrder = _undefined,
+  }) =>
+      _then(Input$SearchResultsPageWhereInput._({
+        ..._instance._$data,
+        if (Ancestors != _undefined)
+          'Ancestors': (Ancestors as Input$StringFilterInput?),
+        if (Category != _undefined)
+          'Category': (Category as Input$CategoryModelWhereInput?),
+        if (Changed != _undefined)
+          'Changed': (Changed as Input$DateFilterInput?),
+        if (ContentArea != _undefined)
+          'ContentArea':
+              (ContentArea as Input$ContentAreaItemModelSearchWhereInput?),
+        if (ContentLink != _undefined)
+          'ContentLink':
+              (ContentLink as Input$ContentModelReferenceWhereInput?),
+        if (ContentType != _undefined)
+          'ContentType': (ContentType as Input$StringFilterInput?),
+        if (Created != _undefined)
+          'Created': (Created as Input$DateFilterInput?),
+        if (DisableIndexing != _undefined)
+          'DisableIndexing': (DisableIndexing as Input$BoolFilterInput?),
+        if (ExistingLanguages != _undefined)
+          'ExistingLanguages':
+              (ExistingLanguages as Input$ContentLanguageModelWhereInput?),
+        if (HideSiteFooter != _undefined)
+          'HideSiteFooter': (HideSiteFooter as Input$BoolFilterInput?),
+        if (HideSiteHeader != _undefined)
+          'HideSiteHeader': (HideSiteHeader as Input$BoolFilterInput?),
+        if (IsCommonDraft != _undefined)
+          'IsCommonDraft': (IsCommonDraft as Input$BoolFilterInput?),
+        if (Language != _undefined)
+          'Language': (Language as Input$ContentLanguageModelWhereInput?),
+        if (MasterLanguage != _undefined)
+          'MasterLanguage':
+              (MasterLanguage as Input$ContentLanguageModelWhereInput?),
+        if (MetaDescription != _undefined)
+          'MetaDescription':
+              (MetaDescription as Input$SearchableStringFilterInput?),
+        if (MetaKeywords != _undefined)
+          'MetaKeywords': (MetaKeywords as Input$StringFilterInput?),
+        if (MetaTitle != _undefined)
+          'MetaTitle': (MetaTitle as Input$SearchableStringFilterInput?),
+        if (Name != _undefined)
+          'Name': (Name as Input$SearchableStringFilterInput?),
+        if (NextLinkAccessibilityText != _undefined)
+          'NextLinkAccessibilityText':
+              (NextLinkAccessibilityText as Input$SearchableStringFilterInput?),
+        if (NextLinkText != _undefined)
+          'NextLinkText': (NextLinkText as Input$SearchableStringFilterInput?),
+        if (NoResultsText != _undefined)
+          'NoResultsText':
+              (NoResultsText as Input$SearchableStringFilterInput?),
+        if (PageImage != _undefined)
+          'PageImage': (PageImage as Input$ContentModelReferenceWhereInput?),
+        if (PagingText != _undefined)
+          'PagingText': (PagingText as Input$SearchableStringFilterInput?),
+        if (ParentLink != _undefined)
+          'ParentLink': (ParentLink as Input$ContentModelReferenceWhereInput?),
+        if (PreviousLinkAccessibilityText != _undefined)
+          'PreviousLinkAccessibilityText': (PreviousLinkAccessibilityText
+              as Input$SearchableStringFilterInput?),
+        if (PreviousLinkText != _undefined)
+          'PreviousLinkText':
+              (PreviousLinkText as Input$SearchableStringFilterInput?),
+        if (RelativePath != _undefined)
+          'RelativePath': (RelativePath as Input$StringFilterInput?),
+        if (ResultsCountDisplay != _undefined)
+          'ResultsCountDisplay':
+              (ResultsCountDisplay as Input$SearchableStringFilterInput?),
+        if (RouteSegment != _undefined)
+          'RouteSegment': (RouteSegment as Input$StringFilterInput?),
+        if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
+        if (Shortcut != _undefined)
+          'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
+        if (SiteId != _undefined)
+          'SiteId': (SiteId as Input$StringFilterInput?),
+        if (StartPublish != _undefined)
+          'StartPublish': (StartPublish as Input$DateFilterInput?),
+        if (Status != _undefined)
+          'Status': (Status as Input$StringFilterInput?),
+        if (StopPublish != _undefined)
+          'StopPublish': (StopPublish as Input$DateFilterInput?),
+        if (TeaserText != _undefined)
+          'TeaserText': (TeaserText as Input$SearchableStringFilterInput?),
+        if (UpdateSearchCtaAccessibilityText != _undefined)
+          'UpdateSearchCtaAccessibilityText': (UpdateSearchCtaAccessibilityText
+              as Input$SearchableStringFilterInput?),
+        if (UpdateSearchCtaText != _undefined)
+          'UpdateSearchCtaText':
+              (UpdateSearchCtaText as Input$SearchableStringFilterInput?),
+        if (Url != _undefined) 'Url': (Url as Input$StringFilterInput?),
+        if ($_and != _undefined)
+          '_and': ($_and as List<Input$SearchResultsPageWhereInput?>?),
+        if ($_concreteType != _undefined)
+          '_concreteType': ($_concreteType as Input$StringFilterInput?),
+        if ($_fulltext != _undefined)
+          '_fulltext': ($_fulltext as Input$SearchableStringFilterInput?),
+        if ($_modified != _undefined)
+          '_modified': ($_modified as Input$DateFilterInput?),
+        if ($_not != _undefined)
+          '_not': ($_not as List<Input$SearchResultsPageWhereInput?>?),
+        if ($_or != _undefined)
+          '_or': ($_or as List<Input$SearchResultsPageWhereInput?>?),
+        if ($_sortOrder != _undefined)
+          '_sortOrder': ($_sortOrder as Input$IntFilterInput?),
+      }));
+
+  CopyWith$Input$StringFilterInput<TRes> get Ancestors {
+    final local$Ancestors = _instance.Ancestors;
+    return local$Ancestors == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$Ancestors, (e) => call(Ancestors: e));
+  }
+
+  CopyWith$Input$CategoryModelWhereInput<TRes> get Category {
+    final local$Category = _instance.Category;
+    return local$Category == null
+        ? CopyWith$Input$CategoryModelWhereInput.stub(_then(_instance))
+        : CopyWith$Input$CategoryModelWhereInput(
+            local$Category, (e) => call(Category: e));
+  }
+
+  CopyWith$Input$DateFilterInput<TRes> get Changed {
+    final local$Changed = _instance.Changed;
+    return local$Changed == null
+        ? CopyWith$Input$DateFilterInput.stub(_then(_instance))
+        : CopyWith$Input$DateFilterInput(
+            local$Changed, (e) => call(Changed: e));
+  }
+
+  CopyWith$Input$ContentAreaItemModelSearchWhereInput<TRes> get ContentArea {
+    final local$ContentArea = _instance.ContentArea;
+    return local$ContentArea == null
+        ? CopyWith$Input$ContentAreaItemModelSearchWhereInput.stub(
+            _then(_instance))
+        : CopyWith$Input$ContentAreaItemModelSearchWhereInput(
+            local$ContentArea, (e) => call(ContentArea: e));
+  }
+
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get ContentLink {
+    final local$ContentLink = _instance.ContentLink;
+    return local$ContentLink == null
+        ? CopyWith$Input$ContentModelReferenceWhereInput.stub(_then(_instance))
+        : CopyWith$Input$ContentModelReferenceWhereInput(
+            local$ContentLink, (e) => call(ContentLink: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get ContentType {
+    final local$ContentType = _instance.ContentType;
+    return local$ContentType == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$ContentType, (e) => call(ContentType: e));
+  }
+
+  CopyWith$Input$DateFilterInput<TRes> get Created {
+    final local$Created = _instance.Created;
+    return local$Created == null
+        ? CopyWith$Input$DateFilterInput.stub(_then(_instance))
+        : CopyWith$Input$DateFilterInput(
+            local$Created, (e) => call(Created: e));
+  }
+
+  CopyWith$Input$BoolFilterInput<TRes> get DisableIndexing {
+    final local$DisableIndexing = _instance.DisableIndexing;
+    return local$DisableIndexing == null
+        ? CopyWith$Input$BoolFilterInput.stub(_then(_instance))
+        : CopyWith$Input$BoolFilterInput(
+            local$DisableIndexing, (e) => call(DisableIndexing: e));
+  }
+
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get ExistingLanguages {
+    final local$ExistingLanguages = _instance.ExistingLanguages;
+    return local$ExistingLanguages == null
+        ? CopyWith$Input$ContentLanguageModelWhereInput.stub(_then(_instance))
+        : CopyWith$Input$ContentLanguageModelWhereInput(
+            local$ExistingLanguages, (e) => call(ExistingLanguages: e));
+  }
+
+  CopyWith$Input$BoolFilterInput<TRes> get HideSiteFooter {
+    final local$HideSiteFooter = _instance.HideSiteFooter;
+    return local$HideSiteFooter == null
+        ? CopyWith$Input$BoolFilterInput.stub(_then(_instance))
+        : CopyWith$Input$BoolFilterInput(
+            local$HideSiteFooter, (e) => call(HideSiteFooter: e));
+  }
+
+  CopyWith$Input$BoolFilterInput<TRes> get HideSiteHeader {
+    final local$HideSiteHeader = _instance.HideSiteHeader;
+    return local$HideSiteHeader == null
+        ? CopyWith$Input$BoolFilterInput.stub(_then(_instance))
+        : CopyWith$Input$BoolFilterInput(
+            local$HideSiteHeader, (e) => call(HideSiteHeader: e));
+  }
+
+  CopyWith$Input$BoolFilterInput<TRes> get IsCommonDraft {
+    final local$IsCommonDraft = _instance.IsCommonDraft;
+    return local$IsCommonDraft == null
+        ? CopyWith$Input$BoolFilterInput.stub(_then(_instance))
+        : CopyWith$Input$BoolFilterInput(
+            local$IsCommonDraft, (e) => call(IsCommonDraft: e));
+  }
+
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get Language {
+    final local$Language = _instance.Language;
+    return local$Language == null
+        ? CopyWith$Input$ContentLanguageModelWhereInput.stub(_then(_instance))
+        : CopyWith$Input$ContentLanguageModelWhereInput(
+            local$Language, (e) => call(Language: e));
+  }
+
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get MasterLanguage {
+    final local$MasterLanguage = _instance.MasterLanguage;
+    return local$MasterLanguage == null
+        ? CopyWith$Input$ContentLanguageModelWhereInput.stub(_then(_instance))
+        : CopyWith$Input$ContentLanguageModelWhereInput(
+            local$MasterLanguage, (e) => call(MasterLanguage: e));
+  }
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get MetaDescription {
+    final local$MetaDescription = _instance.MetaDescription;
+    return local$MetaDescription == null
+        ? CopyWith$Input$SearchableStringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$SearchableStringFilterInput(
+            local$MetaDescription, (e) => call(MetaDescription: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get MetaKeywords {
+    final local$MetaKeywords = _instance.MetaKeywords;
+    return local$MetaKeywords == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$MetaKeywords, (e) => call(MetaKeywords: e));
+  }
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get MetaTitle {
+    final local$MetaTitle = _instance.MetaTitle;
+    return local$MetaTitle == null
+        ? CopyWith$Input$SearchableStringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$SearchableStringFilterInput(
+            local$MetaTitle, (e) => call(MetaTitle: e));
+  }
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get Name {
+    final local$Name = _instance.Name;
+    return local$Name == null
+        ? CopyWith$Input$SearchableStringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$SearchableStringFilterInput(
+            local$Name, (e) => call(Name: e));
+  }
+
+  CopyWith$Input$SearchableStringFilterInput<TRes>
+      get NextLinkAccessibilityText {
+    final local$NextLinkAccessibilityText = _instance.NextLinkAccessibilityText;
+    return local$NextLinkAccessibilityText == null
+        ? CopyWith$Input$SearchableStringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$SearchableStringFilterInput(
+            local$NextLinkAccessibilityText,
+            (e) => call(NextLinkAccessibilityText: e));
+  }
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get NextLinkText {
+    final local$NextLinkText = _instance.NextLinkText;
+    return local$NextLinkText == null
+        ? CopyWith$Input$SearchableStringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$SearchableStringFilterInput(
+            local$NextLinkText, (e) => call(NextLinkText: e));
+  }
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get NoResultsText {
+    final local$NoResultsText = _instance.NoResultsText;
+    return local$NoResultsText == null
+        ? CopyWith$Input$SearchableStringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$SearchableStringFilterInput(
+            local$NoResultsText, (e) => call(NoResultsText: e));
+  }
+
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get PageImage {
+    final local$PageImage = _instance.PageImage;
+    return local$PageImage == null
+        ? CopyWith$Input$ContentModelReferenceWhereInput.stub(_then(_instance))
+        : CopyWith$Input$ContentModelReferenceWhereInput(
+            local$PageImage, (e) => call(PageImage: e));
+  }
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get PagingText {
+    final local$PagingText = _instance.PagingText;
+    return local$PagingText == null
+        ? CopyWith$Input$SearchableStringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$SearchableStringFilterInput(
+            local$PagingText, (e) => call(PagingText: e));
+  }
+
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get ParentLink {
+    final local$ParentLink = _instance.ParentLink;
+    return local$ParentLink == null
+        ? CopyWith$Input$ContentModelReferenceWhereInput.stub(_then(_instance))
+        : CopyWith$Input$ContentModelReferenceWhereInput(
+            local$ParentLink, (e) => call(ParentLink: e));
+  }
+
+  CopyWith$Input$SearchableStringFilterInput<TRes>
+      get PreviousLinkAccessibilityText {
+    final local$PreviousLinkAccessibilityText =
+        _instance.PreviousLinkAccessibilityText;
+    return local$PreviousLinkAccessibilityText == null
+        ? CopyWith$Input$SearchableStringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$SearchableStringFilterInput(
+            local$PreviousLinkAccessibilityText,
+            (e) => call(PreviousLinkAccessibilityText: e));
+  }
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get PreviousLinkText {
+    final local$PreviousLinkText = _instance.PreviousLinkText;
+    return local$PreviousLinkText == null
+        ? CopyWith$Input$SearchableStringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$SearchableStringFilterInput(
+            local$PreviousLinkText, (e) => call(PreviousLinkText: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get RelativePath {
+    final local$RelativePath = _instance.RelativePath;
+    return local$RelativePath == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$RelativePath, (e) => call(RelativePath: e));
+  }
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get ResultsCountDisplay {
+    final local$ResultsCountDisplay = _instance.ResultsCountDisplay;
+    return local$ResultsCountDisplay == null
+        ? CopyWith$Input$SearchableStringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$SearchableStringFilterInput(
+            local$ResultsCountDisplay, (e) => call(ResultsCountDisplay: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get RouteSegment {
+    final local$RouteSegment = _instance.RouteSegment;
+    return local$RouteSegment == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$RouteSegment, (e) => call(RouteSegment: e));
+  }
+
+  CopyWith$Input$DateFilterInput<TRes> get Saved {
+    final local$Saved = _instance.Saved;
+    return local$Saved == null
+        ? CopyWith$Input$DateFilterInput.stub(_then(_instance))
+        : CopyWith$Input$DateFilterInput(local$Saved, (e) => call(Saved: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get Shortcut {
+    final local$Shortcut = _instance.Shortcut;
+    return local$Shortcut == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$Shortcut, (e) => call(Shortcut: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get SiteId {
+    final local$SiteId = _instance.SiteId;
+    return local$SiteId == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SiteId, (e) => call(SiteId: e));
+  }
+
+  CopyWith$Input$DateFilterInput<TRes> get StartPublish {
+    final local$StartPublish = _instance.StartPublish;
+    return local$StartPublish == null
+        ? CopyWith$Input$DateFilterInput.stub(_then(_instance))
+        : CopyWith$Input$DateFilterInput(
+            local$StartPublish, (e) => call(StartPublish: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get Status {
+    final local$Status = _instance.Status;
+    return local$Status == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$Status, (e) => call(Status: e));
+  }
+
+  CopyWith$Input$DateFilterInput<TRes> get StopPublish {
+    final local$StopPublish = _instance.StopPublish;
+    return local$StopPublish == null
+        ? CopyWith$Input$DateFilterInput.stub(_then(_instance))
+        : CopyWith$Input$DateFilterInput(
+            local$StopPublish, (e) => call(StopPublish: e));
+  }
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get TeaserText {
+    final local$TeaserText = _instance.TeaserText;
+    return local$TeaserText == null
+        ? CopyWith$Input$SearchableStringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$SearchableStringFilterInput(
+            local$TeaserText, (e) => call(TeaserText: e));
+  }
+
+  CopyWith$Input$SearchableStringFilterInput<TRes>
+      get UpdateSearchCtaAccessibilityText {
+    final local$UpdateSearchCtaAccessibilityText =
+        _instance.UpdateSearchCtaAccessibilityText;
+    return local$UpdateSearchCtaAccessibilityText == null
+        ? CopyWith$Input$SearchableStringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$SearchableStringFilterInput(
+            local$UpdateSearchCtaAccessibilityText,
+            (e) => call(UpdateSearchCtaAccessibilityText: e));
+  }
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get UpdateSearchCtaText {
+    final local$UpdateSearchCtaText = _instance.UpdateSearchCtaText;
+    return local$UpdateSearchCtaText == null
+        ? CopyWith$Input$SearchableStringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$SearchableStringFilterInput(
+            local$UpdateSearchCtaText, (e) => call(UpdateSearchCtaText: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get Url {
+    final local$Url = _instance.Url;
+    return local$Url == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(local$Url, (e) => call(Url: e));
+  }
+
+  TRes $_and(
+          Iterable<Input$SearchResultsPageWhereInput?>? Function(
+                  Iterable<
+                      CopyWith$Input$SearchResultsPageWhereInput<
+                          Input$SearchResultsPageWhereInput>?>?)
+              _fn) =>
+      call(
+          $_and: _fn(_instance.$_and?.map((e) => e == null
+              ? null
+              : CopyWith$Input$SearchResultsPageWhereInput(
+                  e,
+                  (i) => i,
+                )))?.toList());
+
+  CopyWith$Input$StringFilterInput<TRes> get $_concreteType {
+    final local$$_concreteType = _instance.$_concreteType;
+    return local$$_concreteType == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$$_concreteType, (e) => call($_concreteType: e));
+  }
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get $_fulltext {
+    final local$$_fulltext = _instance.$_fulltext;
+    return local$$_fulltext == null
+        ? CopyWith$Input$SearchableStringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$SearchableStringFilterInput(
+            local$$_fulltext, (e) => call($_fulltext: e));
+  }
+
+  CopyWith$Input$DateFilterInput<TRes> get $_modified {
+    final local$$_modified = _instance.$_modified;
+    return local$$_modified == null
+        ? CopyWith$Input$DateFilterInput.stub(_then(_instance))
+        : CopyWith$Input$DateFilterInput(
+            local$$_modified, (e) => call($_modified: e));
+  }
+
+  TRes $_not(
+          Iterable<Input$SearchResultsPageWhereInput?>? Function(
+                  Iterable<
+                      CopyWith$Input$SearchResultsPageWhereInput<
+                          Input$SearchResultsPageWhereInput>?>?)
+              _fn) =>
+      call(
+          $_not: _fn(_instance.$_not?.map((e) => e == null
+              ? null
+              : CopyWith$Input$SearchResultsPageWhereInput(
+                  e,
+                  (i) => i,
+                )))?.toList());
+
+  TRes $_or(
+          Iterable<Input$SearchResultsPageWhereInput?>? Function(
+                  Iterable<
+                      CopyWith$Input$SearchResultsPageWhereInput<
+                          Input$SearchResultsPageWhereInput>?>?)
+              _fn) =>
+      call(
+          $_or: _fn(_instance.$_or?.map((e) => e == null
+              ? null
+              : CopyWith$Input$SearchResultsPageWhereInput(
+                  e,
+                  (i) => i,
+                )))?.toList());
+
+  CopyWith$Input$IntFilterInput<TRes> get $_sortOrder {
+    final local$$_sortOrder = _instance.$_sortOrder;
+    return local$$_sortOrder == null
+        ? CopyWith$Input$IntFilterInput.stub(_then(_instance))
+        : CopyWith$Input$IntFilterInput(
+            local$$_sortOrder, (e) => call($_sortOrder: e));
+  }
+}
+
+class _CopyWithStubImpl$Input$SearchResultsPageWhereInput<TRes>
+    implements CopyWith$Input$SearchResultsPageWhereInput<TRes> {
+  _CopyWithStubImpl$Input$SearchResultsPageWhereInput(this._res);
+
+  TRes _res;
+
+  call({
+    Input$StringFilterInput? Ancestors,
+    Input$CategoryModelWhereInput? Category,
+    Input$DateFilterInput? Changed,
+    Input$ContentAreaItemModelSearchWhereInput? ContentArea,
+    Input$ContentModelReferenceWhereInput? ContentLink,
+    Input$StringFilterInput? ContentType,
+    Input$DateFilterInput? Created,
+    Input$BoolFilterInput? DisableIndexing,
+    Input$ContentLanguageModelWhereInput? ExistingLanguages,
+    Input$BoolFilterInput? HideSiteFooter,
+    Input$BoolFilterInput? HideSiteHeader,
+    Input$BoolFilterInput? IsCommonDraft,
+    Input$ContentLanguageModelWhereInput? Language,
+    Input$ContentLanguageModelWhereInput? MasterLanguage,
+    Input$SearchableStringFilterInput? MetaDescription,
+    Input$StringFilterInput? MetaKeywords,
+    Input$SearchableStringFilterInput? MetaTitle,
+    Input$SearchableStringFilterInput? Name,
+    Input$SearchableStringFilterInput? NextLinkAccessibilityText,
+    Input$SearchableStringFilterInput? NextLinkText,
+    Input$SearchableStringFilterInput? NoResultsText,
+    Input$ContentModelReferenceWhereInput? PageImage,
+    Input$SearchableStringFilterInput? PagingText,
+    Input$ContentModelReferenceWhereInput? ParentLink,
+    Input$SearchableStringFilterInput? PreviousLinkAccessibilityText,
+    Input$SearchableStringFilterInput? PreviousLinkText,
+    Input$StringFilterInput? RelativePath,
+    Input$SearchableStringFilterInput? ResultsCountDisplay,
+    Input$StringFilterInput? RouteSegment,
+    Input$DateFilterInput? Saved,
+    Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
+    Input$StringFilterInput? SiteId,
+    Input$DateFilterInput? StartPublish,
+    Input$StringFilterInput? Status,
+    Input$DateFilterInput? StopPublish,
+    Input$SearchableStringFilterInput? TeaserText,
+    Input$SearchableStringFilterInput? UpdateSearchCtaAccessibilityText,
+    Input$SearchableStringFilterInput? UpdateSearchCtaText,
+    Input$StringFilterInput? Url,
+    List<Input$SearchResultsPageWhereInput?>? $_and,
+    Input$StringFilterInput? $_concreteType,
+    Input$SearchableStringFilterInput? $_fulltext,
+    Input$DateFilterInput? $_modified,
+    List<Input$SearchResultsPageWhereInput?>? $_not,
+    List<Input$SearchResultsPageWhereInput?>? $_or,
+    Input$IntFilterInput? $_sortOrder,
+  }) =>
+      _res;
+
+  CopyWith$Input$StringFilterInput<TRes> get Ancestors =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$CategoryModelWhereInput<TRes> get Category =>
+      CopyWith$Input$CategoryModelWhereInput.stub(_res);
+
+  CopyWith$Input$DateFilterInput<TRes> get Changed =>
+      CopyWith$Input$DateFilterInput.stub(_res);
+
+  CopyWith$Input$ContentAreaItemModelSearchWhereInput<TRes> get ContentArea =>
+      CopyWith$Input$ContentAreaItemModelSearchWhereInput.stub(_res);
+
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get ContentLink =>
+      CopyWith$Input$ContentModelReferenceWhereInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get ContentType =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$DateFilterInput<TRes> get Created =>
+      CopyWith$Input$DateFilterInput.stub(_res);
+
+  CopyWith$Input$BoolFilterInput<TRes> get DisableIndexing =>
+      CopyWith$Input$BoolFilterInput.stub(_res);
+
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get ExistingLanguages =>
+      CopyWith$Input$ContentLanguageModelWhereInput.stub(_res);
+
+  CopyWith$Input$BoolFilterInput<TRes> get HideSiteFooter =>
+      CopyWith$Input$BoolFilterInput.stub(_res);
+
+  CopyWith$Input$BoolFilterInput<TRes> get HideSiteHeader =>
+      CopyWith$Input$BoolFilterInput.stub(_res);
+
+  CopyWith$Input$BoolFilterInput<TRes> get IsCommonDraft =>
+      CopyWith$Input$BoolFilterInput.stub(_res);
+
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get Language =>
+      CopyWith$Input$ContentLanguageModelWhereInput.stub(_res);
+
+  CopyWith$Input$ContentLanguageModelWhereInput<TRes> get MasterLanguage =>
+      CopyWith$Input$ContentLanguageModelWhereInput.stub(_res);
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get MetaDescription =>
+      CopyWith$Input$SearchableStringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get MetaKeywords =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get MetaTitle =>
+      CopyWith$Input$SearchableStringFilterInput.stub(_res);
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get Name =>
+      CopyWith$Input$SearchableStringFilterInput.stub(_res);
+
+  CopyWith$Input$SearchableStringFilterInput<TRes>
+      get NextLinkAccessibilityText =>
+          CopyWith$Input$SearchableStringFilterInput.stub(_res);
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get NextLinkText =>
+      CopyWith$Input$SearchableStringFilterInput.stub(_res);
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get NoResultsText =>
+      CopyWith$Input$SearchableStringFilterInput.stub(_res);
+
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get PageImage =>
+      CopyWith$Input$ContentModelReferenceWhereInput.stub(_res);
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get PagingText =>
+      CopyWith$Input$SearchableStringFilterInput.stub(_res);
+
+  CopyWith$Input$ContentModelReferenceWhereInput<TRes> get ParentLink =>
+      CopyWith$Input$ContentModelReferenceWhereInput.stub(_res);
+
+  CopyWith$Input$SearchableStringFilterInput<TRes>
+      get PreviousLinkAccessibilityText =>
+          CopyWith$Input$SearchableStringFilterInput.stub(_res);
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get PreviousLinkText =>
+      CopyWith$Input$SearchableStringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get RelativePath =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get ResultsCountDisplay =>
+      CopyWith$Input$SearchableStringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get RouteSegment =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$DateFilterInput<TRes> get Saved =>
+      CopyWith$Input$DateFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get SiteId =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$DateFilterInput<TRes> get StartPublish =>
+      CopyWith$Input$DateFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get Status =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$DateFilterInput<TRes> get StopPublish =>
+      CopyWith$Input$DateFilterInput.stub(_res);
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get TeaserText =>
+      CopyWith$Input$SearchableStringFilterInput.stub(_res);
+
+  CopyWith$Input$SearchableStringFilterInput<TRes>
+      get UpdateSearchCtaAccessibilityText =>
+          CopyWith$Input$SearchableStringFilterInput.stub(_res);
+
+  CopyWith$Input$SearchableStringFilterInput<TRes> get UpdateSearchCtaText =>
       CopyWith$Input$SearchableStringFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get Url =>
@@ -55538,6 +65549,7 @@ class Input$SiteLogotypeBlockOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -55568,6 +65580,7 @@ class Input$SiteLogotypeBlockOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -55687,6 +65700,12 @@ class Input$SiteLogotypeBlockOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -55794,6 +65813,8 @@ class Input$SiteLogotypeBlockOrderByInput {
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
 
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
+
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
   Enum$OrderBy? get StartPublish => (_$data['StartPublish'] as Enum$OrderBy?);
@@ -55893,6 +65914,11 @@ class Input$SiteLogotypeBlockOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -56111,6 +66137,15 @@ class Input$SiteLogotypeBlockOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -56236,6 +66271,7 @@ class Input$SiteLogotypeBlockOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -56265,6 +66301,7 @@ class Input$SiteLogotypeBlockOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -56307,6 +66344,7 @@ abstract class CopyWith$Input$SiteLogotypeBlockOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -56358,6 +66396,7 @@ class _CopyWithImpl$Input$SiteLogotypeBlockOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -56403,6 +66442,8 @@ class _CopyWithImpl$Input$SiteLogotypeBlockOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -56498,6 +66539,7 @@ class _CopyWithStubImpl$Input$SiteLogotypeBlockOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -56550,6 +66592,7 @@ class Input$SiteLogotypeBlockWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -56581,6 +66624,7 @@ class Input$SiteLogotypeBlockWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -56709,6 +66753,13 @@ class Input$SiteLogotypeBlockWhereInput {
           ? null
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
+    }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
     }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
@@ -56859,6 +66910,9 @@ class Input$SiteLogotypeBlockWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -56963,6 +67017,10 @@ class Input$SiteLogotypeBlockWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -57174,6 +67232,15 @@ class Input$SiteLogotypeBlockWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -57338,6 +67405,7 @@ class Input$SiteLogotypeBlockWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -57368,6 +67436,7 @@ class Input$SiteLogotypeBlockWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -57423,6 +67492,7 @@ abstract class CopyWith$Input$SiteLogotypeBlockWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -57453,6 +67523,7 @@ abstract class CopyWith$Input$SiteLogotypeBlockWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -57513,6 +67584,7 @@ class _CopyWithImpl$Input$SiteLogotypeBlockWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -57563,6 +67635,8 @@ class _CopyWithImpl$Input$SiteLogotypeBlockWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -57717,6 +67791,14 @@ class _CopyWithImpl$Input$SiteLogotypeBlockWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -57862,6 +67944,7 @@ class _CopyWithStubImpl$Input$SiteLogotypeBlockWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -57924,6 +68007,9 @@ class _CopyWithStubImpl$Input$SiteLogotypeBlockWhereInput<TRes>
       CopyWith$Input$DateFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
@@ -57989,6 +68075,7 @@ class Input$SitePageDataOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -58027,6 +68114,7 @@ class Input$SitePageDataOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -58195,6 +68283,12 @@ class Input$SitePageDataOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -58324,6 +68418,8 @@ class Input$SitePageDataOrderByInput {
   Enum$OrderBy? get Saved => (_$data['Saved'] as Enum$OrderBy?);
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
 
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
@@ -58466,6 +68562,11 @@ class Input$SitePageDataOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -58755,6 +68856,15 @@ class Input$SitePageDataOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -58889,6 +68999,7 @@ class Input$SitePageDataOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -58926,6 +69037,7 @@ class Input$SitePageDataOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -58976,6 +69088,7 @@ abstract class CopyWith$Input$SitePageDataOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -59037,6 +69150,7 @@ class _CopyWithImpl$Input$SitePageDataOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -59098,6 +69212,8 @@ class _CopyWithImpl$Input$SitePageDataOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -59220,6 +69336,7 @@ class _CopyWithStubImpl$Input$SitePageDataOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -59286,6 +69403,7 @@ class Input$SitePageDataWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -59325,6 +69443,7 @@ class Input$SitePageDataWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -59509,6 +69628,13 @@ class Input$SitePageDataWhereInput {
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] = l$SiteId == null
@@ -59682,6 +69808,9 @@ class Input$SitePageDataWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -59818,6 +69947,10 @@ class Input$SitePageDataWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -60101,6 +70234,15 @@ class Input$SitePageDataWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -60274,6 +70416,7 @@ class Input$SitePageDataWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -60312,6 +70455,7 @@ class Input$SitePageDataWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -60375,6 +70519,7 @@ abstract class CopyWith$Input$SitePageDataWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -60413,6 +70558,7 @@ abstract class CopyWith$Input$SitePageDataWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -60481,6 +70627,7 @@ class _CopyWithImpl$Input$SitePageDataWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -60549,6 +70696,8 @@ class _CopyWithImpl$Input$SitePageDataWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -60768,6 +70917,14 @@ class _CopyWithImpl$Input$SitePageDataWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -60921,6 +71078,7 @@ class _CopyWithStubImpl$Input$SitePageDataWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -61009,6 +71167,9 @@ class _CopyWithStubImpl$Input$SitePageDataWhereInput<TRes>
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
@@ -61074,6 +71235,7 @@ class Input$StandardPageOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -61114,6 +71276,7 @@ class Input$StandardPageOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -61295,6 +71458,12 @@ class Input$StandardPageOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -61430,6 +71599,8 @@ class Input$StandardPageOrderByInput {
   Enum$OrderBy? get Saved => (_$data['Saved'] as Enum$OrderBy?);
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
 
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
@@ -61581,6 +71752,11 @@ class Input$StandardPageOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -61888,6 +72064,15 @@ class Input$StandardPageOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -62024,6 +72209,7 @@ class Input$StandardPageOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -62063,6 +72249,7 @@ class Input$StandardPageOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -62115,6 +72302,7 @@ abstract class CopyWith$Input$StandardPageOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -62180,6 +72368,7 @@ class _CopyWithImpl$Input$StandardPageOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -62245,6 +72434,8 @@ class _CopyWithImpl$Input$StandardPageOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -62379,6 +72570,7 @@ class _CopyWithStubImpl$Input$StandardPageOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -62451,6 +72643,7 @@ class Input$StandardPageWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -62492,6 +72685,7 @@ class Input$StandardPageWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -62690,6 +72884,13 @@ class Input$StandardPageWhereInput {
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] = l$SiteId == null
@@ -62870,6 +73071,9 @@ class Input$StandardPageWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -63014,6 +73218,10 @@ class Input$StandardPageWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -63315,6 +73523,15 @@ class Input$StandardPageWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -63490,6 +73707,7 @@ class Input$StandardPageWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -63530,6 +73748,7 @@ class Input$StandardPageWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -63595,6 +73814,7 @@ abstract class CopyWith$Input$StandardPageWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -63635,6 +73855,7 @@ abstract class CopyWith$Input$StandardPageWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -63705,6 +73926,7 @@ class _CopyWithImpl$Input$StandardPageWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -63778,6 +74000,8 @@ class _CopyWithImpl$Input$StandardPageWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -64015,6 +74239,14 @@ class _CopyWithImpl$Input$StandardPageWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -64170,6 +74402,7 @@ class _CopyWithStubImpl$Input$StandardPageWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -64265,6 +74498,9 @@ class _CopyWithStubImpl$Input$StandardPageWhereInput<TRes>
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
@@ -64335,7 +74571,9 @@ class Input$StartPageOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Input$ContentModelReferenceOrderByInput? SearchPageLink,
+    Enum$OrderBy? SemanticSearch_Description,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Input$StartPageSiteLogotypeBlockOrderByInput? SiteLogotype,
     Enum$OrderBy? StartPublish,
@@ -64385,7 +74623,10 @@ class Input$StartPageOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (SearchPageLink != null) r'SearchPageLink': SearchPageLink,
+        if (SemanticSearch_Description != null)
+          r'SemanticSearch_Description': SemanticSearch_Description,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (SiteLogotype != null) r'SiteLogotype': SiteLogotype,
         if (StartPublish != null) r'StartPublish': StartPublish,
@@ -64606,11 +74847,24 @@ class Input$StartPageOrderByInput {
           : Input$ContentModelReferenceOrderByInput.fromJson(
               (l$SearchPageLink as Map<String, dynamic>));
     }
+    if (data.containsKey('SemanticSearch_Description')) {
+      final l$SemanticSearch_Description = data['SemanticSearch_Description'];
+      result$data['SemanticSearch_Description'] =
+          l$SemanticSearch_Description == null
+              ? null
+              : fromJson$Enum$OrderBy((l$SemanticSearch_Description as String));
+    }
     if (data.containsKey('Shortcut')) {
       final l$Shortcut = data['Shortcut'];
       result$data['Shortcut'] = l$Shortcut == null
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
+    }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
     }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
@@ -64774,7 +75028,12 @@ class Input$StartPageOrderByInput {
   Input$ContentModelReferenceOrderByInput? get SearchPageLink =>
       (_$data['SearchPageLink'] as Input$ContentModelReferenceOrderByInput?);
 
+  Enum$OrderBy? get SemanticSearch_Description =>
+      (_$data['SemanticSearch_Description'] as Enum$OrderBy?);
+
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
 
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
@@ -64949,10 +75208,22 @@ class Input$StartPageOrderByInput {
       final l$SearchPageLink = SearchPageLink;
       result$data['SearchPageLink'] = l$SearchPageLink?.toJson();
     }
+    if (_$data.containsKey('SemanticSearch_Description')) {
+      final l$SemanticSearch_Description = SemanticSearch_Description;
+      result$data['SemanticSearch_Description'] =
+          l$SemanticSearch_Description == null
+              ? null
+              : toJson$Enum$OrderBy(l$SemanticSearch_Description);
+    }
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -65310,6 +75581,15 @@ class Input$StartPageOrderByInput {
     if (l$SearchPageLink != lOther$SearchPageLink) {
       return false;
     }
+    final l$SemanticSearch_Description = SemanticSearch_Description;
+    final lOther$SemanticSearch_Description = other.SemanticSearch_Description;
+    if (_$data.containsKey('SemanticSearch_Description') !=
+        other._$data.containsKey('SemanticSearch_Description')) {
+      return false;
+    }
+    if (l$SemanticSearch_Description != lOther$SemanticSearch_Description) {
+      return false;
+    }
     final l$Shortcut = Shortcut;
     final lOther$Shortcut = other.Shortcut;
     if (_$data.containsKey('Shortcut') !=
@@ -65317,6 +75597,15 @@ class Input$StartPageOrderByInput {
       return false;
     }
     if (l$Shortcut != lOther$Shortcut) {
+      return false;
+    }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
       return false;
     }
     final l$SiteId = SiteId;
@@ -65469,7 +75758,9 @@ class Input$StartPageOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$SearchPageLink = SearchPageLink;
+    final l$SemanticSearch_Description = SemanticSearch_Description;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$SiteLogotype = SiteLogotype;
     final l$StartPublish = StartPublish;
@@ -65521,7 +75812,11 @@ class Input$StartPageOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('SearchPageLink') ? l$SearchPageLink : const {},
+      _$data.containsKey('SemanticSearch_Description')
+          ? l$SemanticSearch_Description
+          : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('SiteLogotype') ? l$SiteLogotype : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
@@ -65580,7 +75875,9 @@ abstract class CopyWith$Input$StartPageOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Input$ContentModelReferenceOrderByInput? SearchPageLink,
+    Enum$OrderBy? SemanticSearch_Description,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Input$StartPageSiteLogotypeBlockOrderByInput? SiteLogotype,
     Enum$OrderBy? StartPublish,
@@ -65660,7 +75957,9 @@ class _CopyWithImpl$Input$StartPageOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? SearchPageLink = _undefined,
+    Object? SemanticSearch_Description = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? SiteLogotype = _undefined,
     Object? StartPublish = _undefined,
@@ -65745,7 +76044,12 @@ class _CopyWithImpl$Input$StartPageOrderByInput<TRes>
         if (SearchPageLink != _undefined)
           'SearchPageLink':
               (SearchPageLink as Input$ContentModelReferenceOrderByInput?),
+        if (SemanticSearch_Description != _undefined)
+          'SemanticSearch_Description':
+              (SemanticSearch_Description as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (SiteLogotype != _undefined)
           'SiteLogotype':
@@ -65960,7 +76264,9 @@ class _CopyWithStubImpl$Input$StartPageOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Input$ContentModelReferenceOrderByInput? SearchPageLink,
+    Enum$OrderBy? SemanticSearch_Description,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Input$StartPageSiteLogotypeBlockOrderByInput? SiteLogotype,
     Enum$OrderBy? StartPublish,
@@ -66386,7 +76692,9 @@ class Input$StartPageWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$ContentModelReferenceWhereInput? SearchPageLink,
+    Input$SearchableStringFilterInput? SemanticSearch_Description,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$StartPageSiteLogotypeBlockWhereInput? SiteLogotype,
     Input$DateFilterInput? StartPublish,
@@ -66437,7 +76745,10 @@ class Input$StartPageWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (SearchPageLink != null) r'SearchPageLink': SearchPageLink,
+        if (SemanticSearch_Description != null)
+          r'SemanticSearch_Description': SemanticSearch_Description,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (SiteLogotype != null) r'SiteLogotype': SiteLogotype,
         if (StartPublish != null) r'StartPublish': StartPublish,
@@ -66673,12 +76984,27 @@ class Input$StartPageWhereInput {
           : Input$ContentModelReferenceWhereInput.fromJson(
               (l$SearchPageLink as Map<String, dynamic>));
     }
+    if (data.containsKey('SemanticSearch_Description')) {
+      final l$SemanticSearch_Description = data['SemanticSearch_Description'];
+      result$data['SemanticSearch_Description'] =
+          l$SemanticSearch_Description == null
+              ? null
+              : Input$SearchableStringFilterInput.fromJson(
+                  (l$SemanticSearch_Description as Map<String, dynamic>));
+    }
     if (data.containsKey('Shortcut')) {
       final l$Shortcut = data['Shortcut'];
       result$data['Shortcut'] = l$Shortcut == null
           ? null
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
+    }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
     }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
@@ -66879,8 +77205,15 @@ class Input$StartPageWhereInput {
   Input$ContentModelReferenceWhereInput? get SearchPageLink =>
       (_$data['SearchPageLink'] as Input$ContentModelReferenceWhereInput?);
 
+  Input$SearchableStringFilterInput? get SemanticSearch_Description =>
+      (_$data['SemanticSearch_Description']
+          as Input$SearchableStringFilterInput?);
+
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
+
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
 
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
@@ -67051,9 +77384,18 @@ class Input$StartPageWhereInput {
       final l$SearchPageLink = SearchPageLink;
       result$data['SearchPageLink'] = l$SearchPageLink?.toJson();
     }
+    if (_$data.containsKey('SemanticSearch_Description')) {
+      final l$SemanticSearch_Description = SemanticSearch_Description;
+      result$data['SemanticSearch_Description'] =
+          l$SemanticSearch_Description?.toJson();
+    }
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -67405,6 +77747,15 @@ class Input$StartPageWhereInput {
     if (l$SearchPageLink != lOther$SearchPageLink) {
       return false;
     }
+    final l$SemanticSearch_Description = SemanticSearch_Description;
+    final lOther$SemanticSearch_Description = other.SemanticSearch_Description;
+    if (_$data.containsKey('SemanticSearch_Description') !=
+        other._$data.containsKey('SemanticSearch_Description')) {
+      return false;
+    }
+    if (l$SemanticSearch_Description != lOther$SemanticSearch_Description) {
+      return false;
+    }
     final l$Shortcut = Shortcut;
     final lOther$Shortcut = other.Shortcut;
     if (_$data.containsKey('Shortcut') !=
@@ -67412,6 +77763,15 @@ class Input$StartPageWhereInput {
       return false;
     }
     if (l$Shortcut != lOther$Shortcut) {
+      return false;
+    }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
       return false;
     }
     final l$SiteId = SiteId;
@@ -67603,7 +77963,9 @@ class Input$StartPageWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$SearchPageLink = SearchPageLink;
+    final l$SemanticSearch_Description = SemanticSearch_Description;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$SiteLogotype = SiteLogotype;
     final l$StartPublish = StartPublish;
@@ -67656,7 +78018,11 @@ class Input$StartPageWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('SearchPageLink') ? l$SearchPageLink : const {},
+      _$data.containsKey('SemanticSearch_Description')
+          ? l$SemanticSearch_Description
+          : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('SiteLogotype') ? l$SiteLogotype : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
@@ -67728,7 +78094,9 @@ abstract class CopyWith$Input$StartPageWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$ContentModelReferenceWhereInput? SearchPageLink,
+    Input$SearchableStringFilterInput? SemanticSearch_Description,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$StartPageSiteLogotypeBlockWhereInput? SiteLogotype,
     Input$DateFilterInput? StartPublish,
@@ -67775,7 +78143,10 @@ abstract class CopyWith$Input$StartPageWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$ContentModelReferenceWhereInput<TRes> get SearchPageLink;
+  CopyWith$Input$SearchableStringFilterInput<TRes>
+      get SemanticSearch_Description;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$StartPageSiteLogotypeBlockWhereInput<TRes> get SiteLogotype;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
@@ -67852,7 +78223,9 @@ class _CopyWithImpl$Input$StartPageWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? SearchPageLink = _undefined,
+    Object? SemanticSearch_Description = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? SiteLogotype = _undefined,
     Object? StartPublish = _undefined,
@@ -67943,8 +78316,13 @@ class _CopyWithImpl$Input$StartPageWhereInput<TRes>
         if (SearchPageLink != _undefined)
           'SearchPageLink':
               (SearchPageLink as Input$ContentModelReferenceWhereInput?),
+        if (SemanticSearch_Description != _undefined)
+          'SemanticSearch_Description': (SemanticSearch_Description
+              as Input$SearchableStringFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (SiteLogotype != _undefined)
@@ -68227,12 +78605,31 @@ class _CopyWithImpl$Input$StartPageWhereInput<TRes>
             local$SearchPageLink, (e) => call(SearchPageLink: e));
   }
 
+  CopyWith$Input$SearchableStringFilterInput<TRes>
+      get SemanticSearch_Description {
+    final local$SemanticSearch_Description =
+        _instance.SemanticSearch_Description;
+    return local$SemanticSearch_Description == null
+        ? CopyWith$Input$SearchableStringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$SearchableStringFilterInput(
+            local$SemanticSearch_Description,
+            (e) => call(SemanticSearch_Description: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get Shortcut {
     final local$Shortcut = _instance.Shortcut;
     return local$Shortcut == null
         ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
         : CopyWith$Input$StringFilterInput(
             local$Shortcut, (e) => call(Shortcut: e));
+  }
+
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
   }
 
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
@@ -68404,7 +78801,9 @@ class _CopyWithStubImpl$Input$StartPageWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$ContentModelReferenceWhereInput? SearchPageLink,
+    Input$SearchableStringFilterInput? SemanticSearch_Description,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$StartPageSiteLogotypeBlockWhereInput? SiteLogotype,
     Input$DateFilterInput? StartPublish,
@@ -68516,7 +78915,14 @@ class _CopyWithStubImpl$Input$StartPageWhereInput<TRes>
   CopyWith$Input$ContentModelReferenceWhereInput<TRes> get SearchPageLink =>
       CopyWith$Input$ContentModelReferenceWhereInput.stub(_res);
 
+  CopyWith$Input$SearchableStringFilterInput<TRes>
+      get SemanticSearch_Description =>
+          CopyWith$Input$SearchableStringFilterInput.stub(_res);
+
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
@@ -69011,6 +79417,7 @@ class Input$TeaserBlockOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -69044,6 +79451,7 @@ class Input$TeaserBlockOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -69182,6 +79590,12 @@ class Input$TeaserBlockOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -69297,6 +79711,8 @@ class Input$TeaserBlockOrderByInput {
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
 
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
+
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
   Enum$OrderBy? get StartPublish => (_$data['StartPublish'] as Enum$OrderBy?);
@@ -69409,6 +79825,11 @@ class Input$TeaserBlockOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -69649,6 +80070,15 @@ class Input$TeaserBlockOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -69777,6 +80207,7 @@ class Input$TeaserBlockOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -69809,6 +80240,7 @@ class Input$TeaserBlockOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -69854,6 +80286,7 @@ abstract class CopyWith$Input$TeaserBlockOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -69910,6 +80343,7 @@ class _CopyWithImpl$Input$TeaserBlockOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -69960,6 +80394,8 @@ class _CopyWithImpl$Input$TeaserBlockOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -70076,6 +80512,7 @@ class _CopyWithStubImpl$Input$TeaserBlockOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -70137,6 +80574,7 @@ class Input$TeaserBlockWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -70171,6 +80609,7 @@ class Input$TeaserBlockWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -70319,6 +80758,13 @@ class Input$TeaserBlockWhereInput {
           ? null
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
+    }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
     }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
@@ -70478,6 +80924,9 @@ class Input$TeaserBlockWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -70594,6 +81043,10 @@ class Input$TeaserBlockWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -70829,6 +81282,15 @@ class Input$TeaserBlockWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -70996,6 +81458,7 @@ class Input$TeaserBlockWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -71029,6 +81492,7 @@ class Input$TeaserBlockWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -71087,6 +81551,7 @@ abstract class CopyWith$Input$TeaserBlockWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -71120,6 +81585,7 @@ abstract class CopyWith$Input$TeaserBlockWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -71183,6 +81649,7 @@ class _CopyWithImpl$Input$TeaserBlockWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -71239,6 +81706,8 @@ class _CopyWithImpl$Input$TeaserBlockWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -71417,6 +81886,14 @@ class _CopyWithImpl$Input$TeaserBlockWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -71565,6 +82042,7 @@ class _CopyWithStubImpl$Input$TeaserBlockWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -71638,6 +82116,9 @@ class _CopyWithStubImpl$Input$TeaserBlockWhereInput<TRes>
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
@@ -71695,6 +82176,7 @@ class Input$VectorImageFileOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -71727,6 +82209,7 @@ class Input$VectorImageFileOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -71858,6 +82341,12 @@ class Input$VectorImageFileOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -71971,6 +82460,8 @@ class Input$VectorImageFileOrderByInput {
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
 
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
+
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
   Enum$OrderBy? get StartPublish => (_$data['StartPublish'] as Enum$OrderBy?);
@@ -72081,6 +82572,11 @@ class Input$VectorImageFileOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -72314,6 +82810,15 @@ class Input$VectorImageFileOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -72442,6 +82947,7 @@ class Input$VectorImageFileOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -72473,6 +82979,7 @@ class Input$VectorImageFileOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -72517,6 +83024,7 @@ abstract class CopyWith$Input$VectorImageFileOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -72571,6 +83079,7 @@ class _CopyWithImpl$Input$VectorImageFileOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -72618,6 +83127,8 @@ class _CopyWithImpl$Input$VectorImageFileOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -72724,6 +83235,7 @@ class _CopyWithStubImpl$Input$VectorImageFileOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -72781,6 +83293,7 @@ class Input$VectorImageFileWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -72814,6 +83327,7 @@ class Input$VectorImageFileWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -72955,6 +83469,13 @@ class Input$VectorImageFileWhereInput {
           ? null
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
+    }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
     }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
@@ -73111,6 +83632,9 @@ class Input$VectorImageFileWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -73223,6 +83747,10 @@ class Input$VectorImageFileWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -73451,6 +83979,15 @@ class Input$VectorImageFileWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -73618,6 +84155,7 @@ class Input$VectorImageFileWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -73650,6 +84188,7 @@ class Input$VectorImageFileWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -73707,6 +84246,7 @@ abstract class CopyWith$Input$VectorImageFileWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -73739,6 +84279,7 @@ abstract class CopyWith$Input$VectorImageFileWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -73801,6 +84342,7 @@ class _CopyWithImpl$Input$VectorImageFileWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -73855,6 +84397,8 @@ class _CopyWithImpl$Input$VectorImageFileWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -74025,6 +84569,14 @@ class _CopyWithImpl$Input$VectorImageFileWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -74172,6 +84724,7 @@ class _CopyWithStubImpl$Input$VectorImageFileWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -74242,6 +84795,9 @@ class _CopyWithStubImpl$Input$VectorImageFileWhereInput<TRes>
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
@@ -74301,6 +84857,7 @@ class Input$VideoFileOrderByInput {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -74335,6 +84892,7 @@ class Input$VideoFileOrderByInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -74478,6 +85036,12 @@ class Input$VideoFileOrderByInput {
           ? null
           : fromJson$Enum$OrderBy((l$Shortcut as String));
     }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : fromJson$Enum$OrderBy((l$SimpleAddress as String));
+    }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
       result$data['SiteId'] =
@@ -74595,6 +85159,8 @@ class Input$VideoFileOrderByInput {
   Enum$OrderBy? get Saved => (_$data['Saved'] as Enum$OrderBy?);
 
   Enum$OrderBy? get Shortcut => (_$data['Shortcut'] as Enum$OrderBy?);
+
+  Enum$OrderBy? get SimpleAddress => (_$data['SimpleAddress'] as Enum$OrderBy?);
 
   Enum$OrderBy? get SiteId => (_$data['SiteId'] as Enum$OrderBy?);
 
@@ -74715,6 +85281,11 @@ class Input$VideoFileOrderByInput {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] =
           l$Shortcut == null ? null : toJson$Enum$OrderBy(l$Shortcut);
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] =
+          l$SimpleAddress == null ? null : toJson$Enum$OrderBy(l$SimpleAddress);
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -74966,6 +85537,15 @@ class Input$VideoFileOrderByInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -75096,6 +85676,7 @@ class Input$VideoFileOrderByInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -75129,6 +85710,7 @@ class Input$VideoFileOrderByInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -75175,6 +85757,7 @@ abstract class CopyWith$Input$VideoFileOrderByInput<TRes> {
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -75232,6 +85815,7 @@ class _CopyWithImpl$Input$VideoFileOrderByInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -75283,6 +85867,8 @@ class _CopyWithImpl$Input$VideoFileOrderByInput<TRes>
           'RouteSegment': (RouteSegment as Enum$OrderBy?),
         if (Saved != _undefined) 'Saved': (Saved as Enum$OrderBy?),
         if (Shortcut != _undefined) 'Shortcut': (Shortcut as Enum$OrderBy?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Enum$OrderBy?),
         if (SiteId != _undefined) 'SiteId': (SiteId as Enum$OrderBy?),
         if (StartPublish != _undefined)
           'StartPublish': (StartPublish as Enum$OrderBy?),
@@ -75400,6 +85986,7 @@ class _CopyWithStubImpl$Input$VideoFileOrderByInput<TRes>
     Enum$OrderBy? RouteSegment,
     Enum$OrderBy? Saved,
     Enum$OrderBy? Shortcut,
+    Enum$OrderBy? SimpleAddress,
     Enum$OrderBy? SiteId,
     Enum$OrderBy? StartPublish,
     Enum$OrderBy? Status,
@@ -75462,6 +86049,7 @@ class Input$VideoFileWhereInput {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -75497,6 +86085,7 @@ class Input$VideoFileWhereInput {
         if (RouteSegment != null) r'RouteSegment': RouteSegment,
         if (Saved != null) r'Saved': Saved,
         if (Shortcut != null) r'Shortcut': Shortcut,
+        if (SimpleAddress != null) r'SimpleAddress': SimpleAddress,
         if (SiteId != null) r'SiteId': SiteId,
         if (StartPublish != null) r'StartPublish': StartPublish,
         if (Status != null) r'Status': Status,
@@ -75652,6 +86241,13 @@ class Input$VideoFileWhereInput {
           ? null
           : Input$StringFilterInput.fromJson(
               (l$Shortcut as Map<String, dynamic>));
+    }
+    if (data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = data['SimpleAddress'];
+      result$data['SimpleAddress'] = l$SimpleAddress == null
+          ? null
+          : Input$StringFilterInput.fromJson(
+              (l$SimpleAddress as Map<String, dynamic>));
     }
     if (data.containsKey('SiteId')) {
       final l$SiteId = data['SiteId'];
@@ -75811,6 +86407,9 @@ class Input$VideoFileWhereInput {
   Input$StringFilterInput? get Shortcut =>
       (_$data['Shortcut'] as Input$StringFilterInput?);
 
+  Input$StringFilterInput? get SimpleAddress =>
+      (_$data['SimpleAddress'] as Input$StringFilterInput?);
+
   Input$StringFilterInput? get SiteId =>
       (_$data['SiteId'] as Input$StringFilterInput?);
 
@@ -75931,6 +86530,10 @@ class Input$VideoFileWhereInput {
     if (_$data.containsKey('Shortcut')) {
       final l$Shortcut = Shortcut;
       result$data['Shortcut'] = l$Shortcut?.toJson();
+    }
+    if (_$data.containsKey('SimpleAddress')) {
+      final l$SimpleAddress = SimpleAddress;
+      result$data['SimpleAddress'] = l$SimpleAddress?.toJson();
     }
     if (_$data.containsKey('SiteId')) {
       final l$SiteId = SiteId;
@@ -76177,6 +86780,15 @@ class Input$VideoFileWhereInput {
     if (l$Shortcut != lOther$Shortcut) {
       return false;
     }
+    final l$SimpleAddress = SimpleAddress;
+    final lOther$SimpleAddress = other.SimpleAddress;
+    if (_$data.containsKey('SimpleAddress') !=
+        other._$data.containsKey('SimpleAddress')) {
+      return false;
+    }
+    if (l$SimpleAddress != lOther$SimpleAddress) {
+      return false;
+    }
     final l$SiteId = SiteId;
     final lOther$SiteId = other.SiteId;
     if (_$data.containsKey('SiteId') != other._$data.containsKey('SiteId')) {
@@ -76346,6 +86958,7 @@ class Input$VideoFileWhereInput {
     final l$RouteSegment = RouteSegment;
     final l$Saved = Saved;
     final l$Shortcut = Shortcut;
+    final l$SimpleAddress = SimpleAddress;
     final l$SiteId = SiteId;
     final l$StartPublish = StartPublish;
     final l$Status = Status;
@@ -76380,6 +86993,7 @@ class Input$VideoFileWhereInput {
       _$data.containsKey('RouteSegment') ? l$RouteSegment : const {},
       _$data.containsKey('Saved') ? l$Saved : const {},
       _$data.containsKey('Shortcut') ? l$Shortcut : const {},
+      _$data.containsKey('SimpleAddress') ? l$SimpleAddress : const {},
       _$data.containsKey('SiteId') ? l$SiteId : const {},
       _$data.containsKey('StartPublish') ? l$StartPublish : const {},
       _$data.containsKey('Status') ? l$Status : const {},
@@ -76439,6 +87053,7 @@ abstract class CopyWith$Input$VideoFileWhereInput<TRes> {
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -76473,6 +87088,7 @@ abstract class CopyWith$Input$VideoFileWhereInput<TRes> {
   CopyWith$Input$StringFilterInput<TRes> get RouteSegment;
   CopyWith$Input$DateFilterInput<TRes> get Saved;
   CopyWith$Input$StringFilterInput<TRes> get Shortcut;
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress;
   CopyWith$Input$StringFilterInput<TRes> get SiteId;
   CopyWith$Input$DateFilterInput<TRes> get StartPublish;
   CopyWith$Input$StringFilterInput<TRes> get Status;
@@ -76537,6 +87153,7 @@ class _CopyWithImpl$Input$VideoFileWhereInput<TRes>
     Object? RouteSegment = _undefined,
     Object? Saved = _undefined,
     Object? Shortcut = _undefined,
+    Object? SimpleAddress = _undefined,
     Object? SiteId = _undefined,
     Object? StartPublish = _undefined,
     Object? Status = _undefined,
@@ -76596,6 +87213,8 @@ class _CopyWithImpl$Input$VideoFileWhereInput<TRes>
         if (Saved != _undefined) 'Saved': (Saved as Input$DateFilterInput?),
         if (Shortcut != _undefined)
           'Shortcut': (Shortcut as Input$StringFilterInput?),
+        if (SimpleAddress != _undefined)
+          'SimpleAddress': (SimpleAddress as Input$StringFilterInput?),
         if (SiteId != _undefined)
           'SiteId': (SiteId as Input$StringFilterInput?),
         if (StartPublish != _undefined)
@@ -76782,6 +87401,14 @@ class _CopyWithImpl$Input$VideoFileWhereInput<TRes>
             local$Shortcut, (e) => call(Shortcut: e));
   }
 
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress {
+    final local$SimpleAddress = _instance.SimpleAddress;
+    return local$SimpleAddress == null
+        ? CopyWith$Input$StringFilterInput.stub(_then(_instance))
+        : CopyWith$Input$StringFilterInput(
+            local$SimpleAddress, (e) => call(SimpleAddress: e));
+  }
+
   CopyWith$Input$StringFilterInput<TRes> get SiteId {
     final local$SiteId = _instance.SiteId;
     return local$SiteId == null
@@ -76931,6 +87558,7 @@ class _CopyWithStubImpl$Input$VideoFileWhereInput<TRes>
     Input$StringFilterInput? RouteSegment,
     Input$DateFilterInput? Saved,
     Input$StringFilterInput? Shortcut,
+    Input$StringFilterInput? SimpleAddress,
     Input$StringFilterInput? SiteId,
     Input$DateFilterInput? StartPublish,
     Input$StringFilterInput? Status,
@@ -77005,6 +87633,9 @@ class _CopyWithStubImpl$Input$VideoFileWhereInput<TRes>
       CopyWith$Input$DateFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get Shortcut =>
+      CopyWith$Input$StringFilterInput.stub(_res);
+
+  CopyWith$Input$StringFilterInput<TRes> get SimpleAddress =>
       CopyWith$Input$StringFilterInput.stub(_res);
 
   CopyWith$Input$StringFilterInput<TRes> get SiteId =>
@@ -77134,6 +87765,7 @@ enum Enum$LinkTypes {
   ANCESTORS,
   CHILDREN,
   DEFAULT,
+  MYCUSTOMLINK,
   $unknown;
 
   factory Enum$LinkTypes.fromJson(String value) =>
@@ -77150,6 +87782,8 @@ String toJson$Enum$LinkTypes(Enum$LinkTypes e) {
       return r'CHILDREN';
     case Enum$LinkTypes.DEFAULT:
       return r'DEFAULT';
+    case Enum$LinkTypes.MYCUSTOMLINK:
+      return r'MYCUSTOMLINK';
     case Enum$LinkTypes.$unknown:
       return r'$unknown';
   }
@@ -77163,6 +87797,8 @@ Enum$LinkTypes fromJson$Enum$LinkTypes(String value) {
       return Enum$LinkTypes.CHILDREN;
     case r'DEFAULT':
       return Enum$LinkTypes.DEFAULT;
+    case r'MYCUSTOMLINK':
+      return Enum$LinkTypes.MYCUSTOMLINK;
     default:
       return Enum$LinkTypes.$unknown;
   }
@@ -77605,6 +88241,7 @@ Enum$__DirectiveLocation fromJson$Enum$__DirectiveLocation(String value) {
 const possibleTypesMap = <String, Set<String>>{
   'IContent': {
     'ArticlePage',
+    'BreadcrumbBlock',
     'ButtonBlock',
     'ContactBlock',
     'ContactPage',
@@ -77612,6 +88249,7 @@ const possibleTypesMap = <String, Set<String>>{
     'Content',
     'EditorialBlock',
     'GenericMedia',
+    'ISemanticSearchable',
     'ImageFile',
     'JumbotronBlock',
     'LandingPage',
@@ -77619,6 +88257,7 @@ const possibleTypesMap = <String, Set<String>>{
     'PageListBlock',
     'ProductPage',
     'SearchPage',
+    'SearchResultsPage',
     'SiteLogotypeBlock',
     'SitePageData',
     'StandardPage',
@@ -77629,6 +88268,7 @@ const possibleTypesMap = <String, Set<String>>{
   },
   'IData': {
     'ArticlePage',
+    'BreadcrumbBlock',
     'ButtonBlock',
     'City',
     'ContactBlock',
@@ -77638,6 +88278,7 @@ const possibleTypesMap = <String, Set<String>>{
     'Data',
     'EditorialBlock',
     'GenericMedia',
+    'ISemanticSearchable',
     'ImageFile',
     'JumbotronBlock',
     'LandingPage',
@@ -77645,6 +88286,7 @@ const possibleTypesMap = <String, Set<String>>{
     'PageListBlock',
     'ProductPage',
     'SearchPage',
+    'SearchResultsPage',
     'SiteDefinition',
     'SiteLogotypeBlock',
     'SitePageData',
@@ -77662,6 +88304,7 @@ const possibleTypesMap = <String, Set<String>>{
     'NewsPage',
     'ProductPage',
     'SearchPage',
+    'SearchResultsPage',
     'SitePageData',
     'StandardPage',
     'StartPage',

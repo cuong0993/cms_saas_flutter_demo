@@ -53,6 +53,7 @@ interface IContent implements IData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -105,6 +106,7 @@ interface ISitePageData implements IContent & IData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -149,6 +151,7 @@ type ArticlePage implements IContent & IData & ISitePageData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -180,6 +183,7 @@ type ArticlePageAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Url(limit: Int! = 10, value: String!): [String]
@@ -213,6 +217,7 @@ type ArticlePageFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -227,6 +232,7 @@ type ArticlePageOutput {
   autocomplete: ArticlePageAutocomplete
   cursor: String
   facets: ArticlePageFacet
+  item: ArticlePage
   items: [ArticlePage]
   total(all: Boolean): Int
 }
@@ -244,6 +250,102 @@ type BlobModelAutocomplete {
 type BlobModelFacet {
   Id(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Url(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+}
+
+"Breadcrumb navigation component"
+type BreadcrumbBlock implements IContent & IData {
+  Ancestors: [String]
+  Category: [CategoryModel]
+  Changed: Date
+  ContentLink: ContentModelReference
+  ContentType: [String]
+  Created: Date
+  ExistingLanguages: [ContentLanguageModel]
+  IsCommonDraft: Bool
+  "Should the breadcrumb navigation be visible?"
+  IsVisible: Bool
+  Language: ContentLanguageModel
+  MasterLanguage: ContentLanguageModel
+  Name(highlight: HighlightOptions): String
+  ParentLink: ContentModelReference
+  RelativePath: String
+  RouteSegment: String
+  Saved: Date
+  Shortcut: String
+  "Should the current page be visible on the breadcrumb navigation?"
+  ShowSelf: Bool
+  SimpleAddress: String
+  SiteId: String
+  StartPublish: Date
+  Status: String
+  StopPublish: Date
+  Url: String
+  _children: QueryRef @deprecated(reason : "Use `_link` field instead")
+  _concreteType: String
+  _deleted: Bool
+  _fulltext(highlight: HighlightOptions): [String]
+  _id: String
+  _link(type: LinkTypes): QueryRef
+  _modified: Date
+  _score: Float
+  _sortOrder: Int
+}
+
+type BreadcrumbBlockAutocomplete {
+  Ancestors(limit: Int! = 10, value: String!): [String]
+  Category: CategoryModelAutocomplete
+  ContentLink: ContentModelReferenceAutocomplete
+  ContentType(limit: Int! = 10, value: String!): [String]
+  ExistingLanguages: ContentLanguageModelAutocomplete
+  Language: ContentLanguageModelAutocomplete
+  MasterLanguage: ContentLanguageModelAutocomplete
+  ParentLink: ContentModelReferenceAutocomplete
+  RelativePath(limit: Int! = 10, value: String!): [String]
+  RouteSegment(limit: Int! = 10, value: String!): [String]
+  Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
+  SiteId(limit: Int! = 10, value: String!): [String]
+  Status(limit: Int! = 10, value: String!): [String]
+  Url(limit: Int! = 10, value: String!): [String]
+  _concreteType(limit: Int! = 10, value: String!): [String]
+}
+
+type BreadcrumbBlockFacet {
+  Ancestors(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Category: CategoryModelFacet
+  Changed(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  ContentLink: ContentModelReferenceFacet
+  ContentType(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Created(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  ExistingLanguages: ContentLanguageModelFacet
+  IsCommonDraft(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  IsVisible(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Language: ContentLanguageModelFacet
+  MasterLanguage: ContentLanguageModelFacet
+  Name(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  ParentLink: ContentModelReferenceFacet
+  RelativePath(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  ShowSelf(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  StopPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  Url(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  _concreteType(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  _sortOrder(filters: [String!], limit: Int, orderBy: OrderBy, orderType: OrderByFacetType, ranges: [RangeFacetsInput]): [NumberFacet]
+}
+
+type BreadcrumbBlockOutput {
+  autocomplete: BreadcrumbBlockAutocomplete
+  cursor: String
+  facets: BreadcrumbBlockFacet
+  item: BreadcrumbBlock
+  items: [BreadcrumbBlock]
+  total(all: Boolean): Int
 }
 
 type ButtonBlock implements IContent & IData {
@@ -265,6 +367,7 @@ type ButtonBlock implements IContent & IData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -294,6 +397,7 @@ type ButtonBlockAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Url(limit: Int! = 10, value: String!): [String]
@@ -319,6 +423,7 @@ type ButtonBlockFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -332,6 +437,7 @@ type ButtonBlockOutput {
   autocomplete: ButtonBlockAutocomplete
   cursor: String
   facets: ButtonBlockFacet
+  item: ButtonBlock
   items: [ButtonBlock]
   total(all: Boolean): Int
 }
@@ -375,6 +481,7 @@ type CityFacet {
 type CityOutput {
   cursor: String
   facets: CityFacet
+  item: City
   items: [City]
   total(all: Boolean): Int
 }
@@ -401,6 +508,7 @@ type ContactBlock implements IContent & IData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -432,6 +540,7 @@ type ContactBlockAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Url(limit: Int! = 10, value: String!): [String]
@@ -460,6 +569,7 @@ type ContactBlockFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -473,6 +583,7 @@ type ContactBlockOutput {
   autocomplete: ContactBlockAutocomplete
   cursor: String
   facets: ContactBlockFacet
+  item: ContactBlock
   items: [ContactBlock]
   total(all: Boolean): Int
 }
@@ -505,6 +616,7 @@ type ContactPage implements IContent & IData & ISitePageData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -537,6 +649,7 @@ type ContactPageAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Url(limit: Int! = 10, value: String!): [String]
@@ -571,6 +684,7 @@ type ContactPageFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -585,6 +699,7 @@ type ContactPageOutput {
   autocomplete: ContactPageAutocomplete
   cursor: String
   facets: ContactPageFacet
+  item: ContactPage
   items: [ContactPage]
   total(all: Boolean): Int
 }
@@ -614,6 +729,7 @@ type ContainerPage implements IContent & IData & ISitePageData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -645,6 +761,7 @@ type ContainerPageAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Url(limit: Int! = 10, value: String!): [String]
@@ -676,6 +793,7 @@ type ContainerPageFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -690,6 +808,7 @@ type ContainerPageOutput {
   autocomplete: ContainerPageAutocomplete
   cursor: String
   facets: ContainerPageFacet
+  item: ContainerPage
   items: [ContainerPage]
   total(all: Boolean): Int
 }
@@ -710,6 +829,7 @@ type Content implements IContent & IData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -751,6 +871,7 @@ type ContentAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Url(limit: Int! = 10, value: String!): [String]
@@ -773,6 +894,7 @@ type ContentFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -861,6 +983,7 @@ type ContentOutput {
   autocomplete: ContentAutocomplete
   cursor: String
   facets: ContentFacet
+  item: IContent
   items: [IContent]
   total(all: Boolean): Int
 }
@@ -904,6 +1027,7 @@ type Data implements IData {
 
 type DataOutput {
   cursor: String
+  item: IData
   items: [IData]
   total(all: Boolean): Int
 }
@@ -931,6 +1055,7 @@ type EditorialBlock implements IContent & IData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -959,6 +1084,7 @@ type EditorialBlockAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Url(limit: Int! = 10, value: String!): [String]
@@ -983,6 +1109,7 @@ type EditorialBlockFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -996,6 +1123,7 @@ type EditorialBlockOutput {
   autocomplete: EditorialBlockAutocomplete
   cursor: String
   facets: EditorialBlockFacet
+  item: EditorialBlock
   items: [EditorialBlock]
   total(all: Boolean): Int
 }
@@ -1020,6 +1148,7 @@ type GenericMedia implements IContent & IData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -1050,6 +1179,7 @@ type GenericMediaAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Thumbnail: BlobModelAutocomplete
@@ -1077,6 +1207,7 @@ type GenericMediaFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -1091,6 +1222,7 @@ type GenericMediaOutput {
   autocomplete: GenericMediaAutocomplete
   cursor: String
   facets: GenericMediaFacet
+  item: GenericMedia
   items: [GenericMedia]
   total(all: Boolean): Int
 }
@@ -1113,6 +1245,93 @@ type HostDefinitionModelFacet {
   Type(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
 }
 
+"ISemanticSearchable"
+type ISemanticSearchable implements IContent & IData {
+  Ancestors: [String]
+  Changed: Date
+  ContentLink: ContentModelReference
+  ContentType: [String]
+  Created: Date
+  ExistingLanguages: [ContentLanguageModel]
+  IsCommonDraft: Bool
+  Language: ContentLanguageModel
+  MasterLanguage: ContentLanguageModel
+  Name(highlight: HighlightOptions): String
+  ParentLink: ContentModelReference
+  RelativePath: String
+  RouteSegment: String
+  Saved: Date
+  Shortcut: String
+  SimpleAddress: String
+  SiteId: String
+  StartPublish: Date
+  Status: String
+  StopPublish: Date
+  Url: String
+  _children: QueryRef @deprecated(reason : "Use `_link` field instead")
+  _concreteType: String
+  _deleted: Bool
+  _fulltext(highlight: HighlightOptions): [String]
+  _id: String
+  _link(type: LinkTypes): QueryRef
+  _modified: Date
+  _score: Float
+  _sortOrder: Int
+}
+
+type ISemanticSearchableAutocomplete {
+  Ancestors(limit: Int! = 10, value: String!): [String]
+  ContentLink: ContentModelReferenceAutocomplete
+  ContentType(limit: Int! = 10, value: String!): [String]
+  ExistingLanguages: ContentLanguageModelAutocomplete
+  Language: ContentLanguageModelAutocomplete
+  MasterLanguage: ContentLanguageModelAutocomplete
+  ParentLink: ContentModelReferenceAutocomplete
+  RelativePath(limit: Int! = 10, value: String!): [String]
+  RouteSegment(limit: Int! = 10, value: String!): [String]
+  Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
+  SiteId(limit: Int! = 10, value: String!): [String]
+  Status(limit: Int! = 10, value: String!): [String]
+  Url(limit: Int! = 10, value: String!): [String]
+  _concreteType(limit: Int! = 10, value: String!): [String]
+}
+
+type ISemanticSearchableFacet {
+  Ancestors(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Changed(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  ContentLink: ContentModelReferenceFacet
+  ContentType(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Created(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  ExistingLanguages: ContentLanguageModelFacet
+  IsCommonDraft(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Language: ContentLanguageModelFacet
+  MasterLanguage: ContentLanguageModelFacet
+  Name(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  ParentLink: ContentModelReferenceFacet
+  RelativePath(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  StopPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  Url(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  _concreteType(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  _sortOrder(filters: [String!], limit: Int, orderBy: OrderBy, orderType: OrderByFacetType, ranges: [RangeFacetsInput]): [NumberFacet]
+}
+
+type ISemanticSearchableOutput {
+  autocomplete: ISemanticSearchableAutocomplete
+  cursor: String
+  facets: ISemanticSearchableFacet
+  item: ISemanticSearchable
+  items: [ISemanticSearchable]
+  total(all: Boolean): Int
+}
+
 type ImageFile implements IContent & IData {
   Ancestors: [String]
   Category: [CategoryModel]
@@ -1133,6 +1352,7 @@ type ImageFile implements IContent & IData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -1163,6 +1383,7 @@ type ImageFileAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Thumbnail: BlobModelAutocomplete
@@ -1190,6 +1411,7 @@ type ImageFileFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -1204,6 +1426,7 @@ type ImageFileOutput {
   autocomplete: ImageFileAutocomplete
   cursor: String
   facets: ImageFileFacet
+  item: ImageFile
   items: [ImageFile]
   total(all: Boolean): Int
 }
@@ -1238,6 +1461,7 @@ type JumbotronBlock implements IContent & IData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -1269,6 +1493,7 @@ type JumbotronBlockAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Url(limit: Int! = 10, value: String!): [String]
@@ -1297,6 +1522,7 @@ type JumbotronBlockFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -1311,6 +1537,7 @@ type JumbotronBlockOutput {
   autocomplete: JumbotronBlockAutocomplete
   cursor: String
   facets: JumbotronBlockFacet
+  item: JumbotronBlock
   items: [JumbotronBlock]
   total(all: Boolean): Int
 }
@@ -1341,6 +1568,7 @@ type LandingPage implements IContent & IData & ISitePageData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -1372,6 +1600,7 @@ type LandingPageAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Url(limit: Int! = 10, value: String!): [String]
@@ -1404,6 +1633,7 @@ type LandingPageFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -1418,6 +1648,7 @@ type LandingPageOutput {
   autocomplete: LandingPageAutocomplete
   cursor: String
   facets: LandingPageFacet
+  item: LandingPage
   items: [LandingPage]
   total(all: Boolean): Int
 }
@@ -1474,6 +1705,7 @@ type NewsPage implements IContent & IData & ISitePageData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -1506,6 +1738,7 @@ type NewsPageAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Url(limit: Int! = 10, value: String!): [String]
@@ -1540,6 +1773,7 @@ type NewsPageFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -1554,6 +1788,7 @@ type NewsPageOutput {
   autocomplete: NewsPageAutocomplete
   cursor: String
   facets: NewsPageFacet
+  item: NewsPage
   items: [NewsPage]
   total(all: Boolean): Int
 }
@@ -1618,6 +1853,7 @@ type PageListBlock implements IContent & IData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   SortOrder: Int
   StartPublish: Date
@@ -1650,6 +1886,7 @@ type PageListBlockAutocomplete {
   Root: ContentModelReferenceAutocomplete
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Url(limit: Int! = 10, value: String!): [String]
@@ -1681,6 +1918,7 @@ type PageListBlockFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SortOrder(filters: [String!], limit: Int, orderBy: OrderBy, orderType: OrderByFacetType, ranges: [RangeFacetsInput]): [NumberFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
@@ -1695,6 +1933,7 @@ type PageListBlockOutput {
   autocomplete: PageListBlockAutocomplete
   cursor: String
   facets: PageListBlockFacet
+  item: PageListBlock
   items: [PageListBlock]
   total(all: Boolean): Int
 }
@@ -1727,6 +1966,7 @@ type ProductPage implements IContent & IData & ISitePageData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -1759,6 +1999,7 @@ type ProductPageAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   UniqueSellingPoints(limit: Int! = 10, value: String!): [String]
@@ -1794,6 +2035,7 @@ type ProductPageFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -1809,12 +2051,14 @@ type ProductPageOutput {
   autocomplete: ProductPageAutocomplete
   cursor: String
   facets: ProductPageFacet
+  item: ProductPage
   items: [ProductPage]
   total(all: Boolean): Int
 }
 
 type Query {
   ArticlePage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ArticlePageOrderByInput, skip: Int! = 0, where: ArticlePageWhereInput): ArticlePageOutput
+  BreadcrumbBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: BreadcrumbBlockOrderByInput, skip: Int! = 0, where: BreadcrumbBlockWhereInput): BreadcrumbBlockOutput
   ButtonBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ButtonBlockOrderByInput, skip: Int! = 0, where: ButtonBlockWhereInput): ButtonBlockOutput
   City(cursor: String, ids: [String], limit: Int! = 20, locale: [ext_Locales], orderBy: CityOrderByInput, skip: Int! = 0, where: CityWhereInput): CityOutput
   ContactBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ContactBlockOrderByInput, skip: Int! = 0, where: ContactBlockWhereInput): ContactBlockOutput
@@ -1824,6 +2068,7 @@ type Query {
   Data(cursor: String, ids: [String], limit: Int! = 20, locale: [system_Locales], orderBy: DataOrderByInput, skip: Int! = 0, where: DataWhereInput): DataOutput
   EditorialBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: EditorialBlockOrderByInput, skip: Int! = 0, where: EditorialBlockWhereInput): EditorialBlockOutput
   GenericMedia(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: GenericMediaOrderByInput, skip: Int! = 0, where: GenericMediaWhereInput): GenericMediaOutput
+  ISemanticSearchable(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ISemanticSearchableOrderByInput, skip: Int! = 0, where: ISemanticSearchableWhereInput): ISemanticSearchableOutput
   ImageFile(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ImageFileOrderByInput, skip: Int! = 0, where: ImageFileWhereInput): ImageFileOutput
   JumbotronBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: JumbotronBlockOrderByInput, skip: Int! = 0, where: JumbotronBlockWhereInput): JumbotronBlockOutput
   LandingPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: LandingPageOrderByInput, skip: Int! = 0, where: LandingPageWhereInput): LandingPageOutput
@@ -1831,6 +2076,7 @@ type Query {
   PageListBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: PageListBlockOrderByInput, skip: Int! = 0, where: PageListBlockWhereInput): PageListBlockOutput
   ProductPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ProductPageOrderByInput, skip: Int! = 0, where: ProductPageWhereInput): ProductPageOutput
   SearchPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SearchPageOrderByInput, skip: Int! = 0, where: SearchPageWhereInput): SearchPageOutput
+  SearchResultsPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SearchResultsPageOrderByInput, skip: Int! = 0, where: SearchResultsPageWhereInput): SearchResultsPageOutput
   SiteDefinition(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SiteDefinitionOrderByInput, skip: Int! = 0, where: SiteDefinitionWhereInput): SiteDefinitionOutput
   SiteLogotypeBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SiteLogotypeBlockOrderByInput, skip: Int! = 0, where: SiteLogotypeBlockWhereInput): SiteLogotypeBlockOutput
   SitePageData(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SitePageDataOrderByInput, skip: Int! = 0, where: SitePageDataWhereInput): SitePageDataOutput
@@ -1843,6 +2089,7 @@ type Query {
 
 type QueryRef {
   ArticlePage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ArticlePageOrderByInput, skip: Int! = 0, where: ArticlePageWhereInput): ArticlePageOutput
+  BreadcrumbBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: BreadcrumbBlockOrderByInput, skip: Int! = 0, where: BreadcrumbBlockWhereInput): BreadcrumbBlockOutput
   ButtonBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ButtonBlockOrderByInput, skip: Int! = 0, where: ButtonBlockWhereInput): ButtonBlockOutput
   City(cursor: String, ids: [String], limit: Int! = 20, locale: [ext_Locales], orderBy: CityOrderByInput, skip: Int! = 0, where: CityWhereInput): CityOutput
   ContactBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ContactBlockOrderByInput, skip: Int! = 0, where: ContactBlockWhereInput): ContactBlockOutput
@@ -1852,6 +2099,7 @@ type QueryRef {
   Data(cursor: String, ids: [String], limit: Int! = 20, locale: [system_Locales], orderBy: DataOrderByInput, skip: Int! = 0, where: DataWhereInput): DataOutput
   EditorialBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: EditorialBlockOrderByInput, skip: Int! = 0, where: EditorialBlockWhereInput): EditorialBlockOutput
   GenericMedia(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: GenericMediaOrderByInput, skip: Int! = 0, where: GenericMediaWhereInput): GenericMediaOutput
+  ISemanticSearchable(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ISemanticSearchableOrderByInput, skip: Int! = 0, where: ISemanticSearchableWhereInput): ISemanticSearchableOutput
   ImageFile(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ImageFileOrderByInput, skip: Int! = 0, where: ImageFileWhereInput): ImageFileOutput
   JumbotronBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: JumbotronBlockOrderByInput, skip: Int! = 0, where: JumbotronBlockWhereInput): JumbotronBlockOutput
   LandingPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: LandingPageOrderByInput, skip: Int! = 0, where: LandingPageWhereInput): LandingPageOutput
@@ -1859,6 +2107,7 @@ type QueryRef {
   PageListBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: PageListBlockOrderByInput, skip: Int! = 0, where: PageListBlockWhereInput): PageListBlockOutput
   ProductPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ProductPageOrderByInput, skip: Int! = 0, where: ProductPageWhereInput): ProductPageOutput
   SearchPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SearchPageOrderByInput, skip: Int! = 0, where: SearchPageWhereInput): SearchPageOutput
+  SearchResultsPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SearchResultsPageOrderByInput, skip: Int! = 0, where: SearchResultsPageWhereInput): SearchResultsPageOutput
   SiteDefinition(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SiteDefinitionOrderByInput, skip: Int! = 0, where: SiteDefinitionWhereInput): SiteDefinitionOutput
   SiteLogotypeBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SiteLogotypeBlockOrderByInput, skip: Int! = 0, where: SiteLogotypeBlockWhereInput): SiteLogotypeBlockOutput
   SitePageData(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SitePageDataOrderByInput, skip: Int! = 0, where: SitePageDataWhereInput): SitePageDataOutput
@@ -1895,6 +2144,7 @@ type SearchPage implements IContent & IData & ISitePageData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -1926,6 +2176,7 @@ type SearchPageAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Url(limit: Int! = 10, value: String!): [String]
@@ -1958,6 +2209,7 @@ type SearchPageFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -1972,7 +2224,145 @@ type SearchPageOutput {
   autocomplete: SearchPageAutocomplete
   cursor: String
   facets: SearchPageFacet
+  item: SearchPage
   items: [SearchPage]
+  total(all: Boolean): Int
+}
+
+"A page to display search results"
+type SearchResultsPage implements IContent & IData & ISitePageData {
+  Ancestors: [String]
+  Category: [CategoryModel]
+  Changed: Date
+  ContentArea(highlight: HighlightOptions): [ContentAreaItemModelSearch]
+  ContentLink: ContentModelReference
+  ContentType: [String]
+  Created: Date
+  DisableIndexing: Bool
+  ExistingLanguages: [ContentLanguageModel]
+  HideSiteFooter: Bool
+  HideSiteHeader: Bool
+  IsCommonDraft: Bool
+  Language: ContentLanguageModel
+  MasterLanguage: ContentLanguageModel
+  MetaDescription(highlight: HighlightOptions): String
+  MetaKeywords: [String]
+  MetaTitle(highlight: HighlightOptions): String
+  Name(highlight: HighlightOptions): String
+  "Accessibility text for the button to go to the next page of search results."
+  NextLinkAccessibilityText(highlight: HighlightOptions): String
+  "Text for the button to go to the next page of search results."
+  NextLinkText(highlight: HighlightOptions): String
+  "No Results Text for the Search Page"
+  NoResultsText(highlight: HighlightOptions): String
+  PageImage: ContentModelReference
+  "Text that displays the current page. Use the token {CurrentPage} to show the number of the current page. {PageCount} to show the total page count."
+  PagingText(highlight: HighlightOptions): String
+  ParentLink: ContentModelReference
+  "Accessibility text for the button to go to the previous page of search results."
+  PreviousLinkAccessibilityText(highlight: HighlightOptions): String
+  "Text for the button to go to the previous page of search results."
+  PreviousLinkText(highlight: HighlightOptions): String
+  RelativePath: String
+  "Use the following tokens: {HitCount} will be replaced with current page count. {TotalCount} will be replaced with total count of results. {SearchTerm} will be replaced with the current search term."
+  ResultsCountDisplay(highlight: HighlightOptions): String
+  RouteSegment: String
+  Saved: Date
+  Shortcut: String
+  SimpleAddress: String
+  SiteId: String
+  StartPublish: Date
+  Status: String
+  StopPublish: Date
+  TeaserText(highlight: HighlightOptions): String
+  "Accessibility text for button to perform a new search"
+  UpdateSearchCtaAccessibilityText(highlight: HighlightOptions): String
+  "Text for button to perform a new search"
+  UpdateSearchCtaText(highlight: HighlightOptions): String
+  Url: String
+  _children: QueryRef @deprecated(reason : "Use `_link` field instead")
+  _concreteType: String
+  _deleted: Bool
+  _fulltext(highlight: HighlightOptions): [String]
+  _id: String
+  _link(type: LinkTypes): QueryRef
+  _modified: Date
+  _score: Float
+  _sortOrder: Int
+}
+
+type SearchResultsPageAutocomplete {
+  Ancestors(limit: Int! = 10, value: String!): [String]
+  Category: CategoryModelAutocomplete
+  ContentLink: ContentModelReferenceAutocomplete
+  ContentType(limit: Int! = 10, value: String!): [String]
+  ExistingLanguages: ContentLanguageModelAutocomplete
+  Language: ContentLanguageModelAutocomplete
+  MasterLanguage: ContentLanguageModelAutocomplete
+  MetaKeywords(limit: Int! = 10, value: String!): [String]
+  PageImage: ContentModelReferenceAutocomplete
+  ParentLink: ContentModelReferenceAutocomplete
+  RelativePath(limit: Int! = 10, value: String!): [String]
+  RouteSegment(limit: Int! = 10, value: String!): [String]
+  Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
+  SiteId(limit: Int! = 10, value: String!): [String]
+  Status(limit: Int! = 10, value: String!): [String]
+  Url(limit: Int! = 10, value: String!): [String]
+  _concreteType(limit: Int! = 10, value: String!): [String]
+}
+
+type SearchResultsPageFacet {
+  Ancestors(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Category: CategoryModelFacet
+  Changed(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  ContentArea: ContentAreaItemModelSearchFacet
+  ContentLink: ContentModelReferenceFacet
+  ContentType(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Created(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  DisableIndexing(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  ExistingLanguages: ContentLanguageModelFacet
+  HideSiteFooter(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  HideSiteHeader(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  IsCommonDraft(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Language: ContentLanguageModelFacet
+  MasterLanguage: ContentLanguageModelFacet
+  MetaDescription(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  MetaKeywords(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  MetaTitle(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Name(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  NextLinkAccessibilityText(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  NextLinkText(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  NoResultsText(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  PageImage: ContentModelReferenceFacet
+  PagingText(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  ParentLink: ContentModelReferenceFacet
+  PreviousLinkAccessibilityText(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  PreviousLinkText(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  RelativePath(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  ResultsCountDisplay(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  StopPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
+  TeaserText(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  UpdateSearchCtaAccessibilityText(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  UpdateSearchCtaText(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  Url(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  _concreteType(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  _sortOrder(filters: [String!], limit: Int, orderBy: OrderBy, orderType: OrderByFacetType, ranges: [RangeFacetsInput]): [NumberFacet]
+}
+
+type SearchResultsPageOutput {
+  autocomplete: SearchResultsPageAutocomplete
+  cursor: String
+  facets: SearchResultsPageFacet
+  item: SearchResultsPage
+  items: [SearchResultsPage]
   total(all: Boolean): Int
 }
 
@@ -2045,6 +2435,7 @@ type SiteDefinitionOutput {
   autocomplete: SiteDefinitionAutocomplete
   cursor: String
   facets: SiteDefinitionFacet
+  item: SiteDefinition
   items: [SiteDefinition]
   total(all: Boolean): Int
 }
@@ -2066,6 +2457,7 @@ type SiteLogotypeBlock implements IContent & IData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -2095,6 +2487,7 @@ type SiteLogotypeBlockAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Url(limit: Int! = 10, value: String!): [String]
@@ -2118,6 +2511,7 @@ type SiteLogotypeBlockFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -2132,6 +2526,7 @@ type SiteLogotypeBlockOutput {
   autocomplete: SiteLogotypeBlockAutocomplete
   cursor: String
   facets: SiteLogotypeBlockFacet
+  item: SiteLogotypeBlock
   items: [SiteLogotypeBlock]
   total(all: Boolean): Int
 }
@@ -2162,6 +2557,7 @@ type SitePageData implements IContent & IData & ISitePageData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -2193,6 +2589,7 @@ type SitePageDataAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Url(limit: Int! = 10, value: String!): [String]
@@ -2224,6 +2621,7 @@ type SitePageDataFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -2238,6 +2636,7 @@ type SitePageDataOutput {
   autocomplete: SitePageDataAutocomplete
   cursor: String
   facets: SitePageDataFacet
+  item: ISitePageData
   items: [ISitePageData]
   total(all: Boolean): Int
 }
@@ -2269,6 +2668,7 @@ type StandardPage implements IContent & IData & ISitePageData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -2300,6 +2700,7 @@ type StandardPageAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Url(limit: Int! = 10, value: String!): [String]
@@ -2333,6 +2734,7 @@ type StandardPageFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -2347,6 +2749,7 @@ type StandardPageOutput {
   autocomplete: StandardPageAutocomplete
   cursor: String
   facets: StandardPageFacet
+  item: StandardPage
   items: [StandardPage]
   total(all: Boolean): Int
 }
@@ -2383,7 +2786,9 @@ type StartPage implements IContent & IData & ISitePageData {
   RouteSegment: String
   Saved: Date
   SearchPageLink: ContentModelReference
+  SemanticSearch_Description(highlight: HighlightOptions): String
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   SiteLogotype: StartPageSiteLogotypeBlock
   StartPublish: Date
@@ -2423,6 +2828,7 @@ type StartPageAutocomplete {
   RouteSegment(limit: Int! = 10, value: String!): [String]
   SearchPageLink: ContentModelReferenceAutocomplete
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   SiteLogotype: StartPageSiteLogotypeBlockAutocomplete
   Status(limit: Int! = 10, value: String!): [String]
@@ -2462,7 +2868,9 @@ type StartPageFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   SearchPageLink: ContentModelReferenceFacet
+  SemanticSearch_Description(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteLogotype: StartPageSiteLogotypeBlockFacet
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
@@ -2478,6 +2886,7 @@ type StartPageOutput {
   autocomplete: StartPageAutocomplete
   cursor: String
   facets: StartPageFacet
+  item: StartPage
   items: [StartPage]
   total(all: Boolean): Int
 }
@@ -2521,6 +2930,7 @@ type TeaserBlock implements IContent & IData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -2552,6 +2962,7 @@ type TeaserBlockAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Url(limit: Int! = 10, value: String!): [String]
@@ -2578,6 +2989,7 @@ type TeaserBlockFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -2592,6 +3004,7 @@ type TeaserBlockOutput {
   autocomplete: TeaserBlockAutocomplete
   cursor: String
   facets: TeaserBlockFacet
+  item: TeaserBlock
   items: [TeaserBlock]
   total(all: Boolean): Int
 }
@@ -2615,6 +3028,7 @@ type VectorImageFile implements IContent & IData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -2645,6 +3059,7 @@ type VectorImageFileAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Thumbnail: BlobModelAutocomplete
@@ -2671,6 +3086,7 @@ type VectorImageFileFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -2685,6 +3101,7 @@ type VectorImageFileOutput {
   autocomplete: VectorImageFileAutocomplete
   cursor: String
   facets: VectorImageFileFacet
+  item: VectorImageFile
   items: [VectorImageFile]
   total(all: Boolean): Int
 }
@@ -2710,6 +3127,7 @@ type VideoFile implements IContent & IData {
   RouteSegment: String
   Saved: Date
   Shortcut: String
+  SimpleAddress: String
   SiteId: String
   StartPublish: Date
   Status: String
@@ -2741,6 +3159,7 @@ type VideoFileAutocomplete {
   RelativePath(limit: Int! = 10, value: String!): [String]
   RouteSegment(limit: Int! = 10, value: String!): [String]
   Shortcut(limit: Int! = 10, value: String!): [String]
+  SimpleAddress(limit: Int! = 10, value: String!): [String]
   SiteId(limit: Int! = 10, value: String!): [String]
   Status(limit: Int! = 10, value: String!): [String]
   Thumbnail: BlobModelAutocomplete
@@ -2769,6 +3188,7 @@ type VideoFileFacet {
   RouteSegment(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   Saved(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Shortcut(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
+  SimpleAddress(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   SiteId(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
   StartPublish(unit: DateFacetUnit = DAY, value: Int = 1): [DateFacet]
   Status(filters: [String!], limit: Int! = 10, orderBy: OrderBy = DESC, orderType: OrderByFacetType = COUNT): [StringFacet]
@@ -2783,6 +3203,7 @@ type VideoFileOutput {
   autocomplete: VideoFileAutocomplete
   cursor: String
   facets: VideoFileFacet
+  item: VideoFile
   items: [VideoFile]
   total(all: Boolean): Int
 }
@@ -2834,6 +3255,14 @@ enum LinkTypes {
   | *to*        |        | `ParentLink.GuidValue`   |
   """
   DEFAULT
+  """
+  
+  | *Direction* | &nbsp; | *Field*     |
+  | ----------: | ------ | :---------- |
+  | *from*      |        | `ContentLink.Id` |
+  | *to*        |        | `ProductCategory.Id`   |
+  """
+  MYCUSTOMLINK
 }
 
 enum Locales {
@@ -2909,6 +3338,7 @@ input ArticlePageOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -2951,6 +3381,7 @@ input ArticlePageWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput
@@ -2987,6 +3418,74 @@ input BoolFilterInput {
   notEq: Boolean
 }
 
+input BreadcrumbBlockOrderByInput {
+  Ancestors: OrderBy
+  Category: CategoryModelOrderByInput
+  Changed: OrderBy
+  ContentLink: ContentModelReferenceOrderByInput
+  ContentType: OrderBy
+  Created: OrderBy
+  ExistingLanguages: ContentLanguageModelOrderByInput
+  IsCommonDraft: OrderBy
+  IsVisible: OrderBy
+  Language: ContentLanguageModelOrderByInput
+  MasterLanguage: ContentLanguageModelOrderByInput
+  Name: OrderBy
+  ParentLink: ContentModelReferenceOrderByInput
+  RelativePath: OrderBy
+  RouteSegment: OrderBy
+  Saved: OrderBy
+  Shortcut: OrderBy
+  ShowSelf: OrderBy
+  SimpleAddress: OrderBy
+  SiteId: OrderBy
+  StartPublish: OrderBy
+  Status: OrderBy
+  StopPublish: OrderBy
+  Url: OrderBy
+  _concreteType: OrderBy
+  _minimumScore: Float
+  _modified: OrderBy
+  _ranking: Ranking
+  "The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled."
+  _semanticWeight: Float
+  _sortOrder: OrderBy
+}
+
+input BreadcrumbBlockWhereInput {
+  Ancestors: StringFilterInput
+  Category: CategoryModelWhereInput
+  Changed: DateFilterInput
+  ContentLink: ContentModelReferenceWhereInput
+  ContentType: StringFilterInput
+  Created: DateFilterInput
+  ExistingLanguages: ContentLanguageModelWhereInput
+  IsCommonDraft: BoolFilterInput
+  IsVisible: BoolFilterInput
+  Language: ContentLanguageModelWhereInput
+  MasterLanguage: ContentLanguageModelWhereInput
+  Name: SearchableStringFilterInput
+  ParentLink: ContentModelReferenceWhereInput
+  RelativePath: StringFilterInput
+  RouteSegment: StringFilterInput
+  Saved: DateFilterInput
+  Shortcut: StringFilterInput
+  ShowSelf: BoolFilterInput
+  SimpleAddress: StringFilterInput
+  SiteId: StringFilterInput
+  StartPublish: DateFilterInput
+  Status: StringFilterInput
+  StopPublish: DateFilterInput
+  Url: StringFilterInput
+  _and: [BreadcrumbBlockWhereInput]
+  _concreteType: StringFilterInput
+  _fulltext: SearchableStringFilterInput
+  _modified: DateFilterInput
+  _not: [BreadcrumbBlockWhereInput]
+  _or: [BreadcrumbBlockWhereInput]
+  _sortOrder: IntFilterInput
+}
+
 input ButtonBlockOrderByInput {
   Ancestors: OrderBy
   ButtonLink: OrderBy
@@ -3006,6 +3505,7 @@ input ButtonBlockOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -3039,6 +3539,7 @@ input ButtonBlockWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput
@@ -3109,6 +3610,7 @@ input ContactBlockOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -3145,6 +3647,7 @@ input ContactBlockWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput
@@ -3187,6 +3690,7 @@ input ContactPageOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -3230,6 +3734,7 @@ input ContactPageWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput
@@ -3270,6 +3775,7 @@ input ContainerPageOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -3310,6 +3816,7 @@ input ContainerPageWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput
@@ -3415,6 +3922,7 @@ input ContentOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -3463,6 +3971,7 @@ input ContentWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput
@@ -3539,6 +4048,7 @@ input EditorialBlockOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -3571,6 +4081,7 @@ input EditorialBlockWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput
@@ -3605,6 +4116,7 @@ input GenericMediaOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -3640,6 +4152,7 @@ input GenericMediaWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput
@@ -3674,6 +4187,68 @@ input HostDefinitionModelWhereInput {
   Type: StringFilterInput
 }
 
+input ISemanticSearchableOrderByInput {
+  Ancestors: OrderBy
+  Changed: OrderBy
+  ContentLink: ContentModelReferenceOrderByInput
+  ContentType: OrderBy
+  Created: OrderBy
+  ExistingLanguages: ContentLanguageModelOrderByInput
+  IsCommonDraft: OrderBy
+  Language: ContentLanguageModelOrderByInput
+  MasterLanguage: ContentLanguageModelOrderByInput
+  Name: OrderBy
+  ParentLink: ContentModelReferenceOrderByInput
+  RelativePath: OrderBy
+  RouteSegment: OrderBy
+  Saved: OrderBy
+  Shortcut: OrderBy
+  SimpleAddress: OrderBy
+  SiteId: OrderBy
+  StartPublish: OrderBy
+  Status: OrderBy
+  StopPublish: OrderBy
+  Url: OrderBy
+  _concreteType: OrderBy
+  _minimumScore: Float
+  _modified: OrderBy
+  _ranking: Ranking
+  "The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled."
+  _semanticWeight: Float
+  _sortOrder: OrderBy
+}
+
+input ISemanticSearchableWhereInput {
+  Ancestors: StringFilterInput
+  Changed: DateFilterInput
+  ContentLink: ContentModelReferenceWhereInput
+  ContentType: StringFilterInput
+  Created: DateFilterInput
+  ExistingLanguages: ContentLanguageModelWhereInput
+  IsCommonDraft: BoolFilterInput
+  Language: ContentLanguageModelWhereInput
+  MasterLanguage: ContentLanguageModelWhereInput
+  Name: SearchableStringFilterInput
+  ParentLink: ContentModelReferenceWhereInput
+  RelativePath: StringFilterInput
+  RouteSegment: StringFilterInput
+  Saved: DateFilterInput
+  Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
+  SiteId: StringFilterInput
+  StartPublish: DateFilterInput
+  Status: StringFilterInput
+  StopPublish: DateFilterInput
+  Url: StringFilterInput
+  _and: [ISemanticSearchableWhereInput]
+  _concreteType: StringFilterInput
+  _fulltext: SearchableStringFilterInput
+  _modified: DateFilterInput
+  _not: [ISemanticSearchableWhereInput]
+  _or: [ISemanticSearchableWhereInput]
+  _sortOrder: IntFilterInput
+}
+
 input ImageFileOrderByInput {
   Ancestors: OrderBy
   Category: CategoryModelOrderByInput
@@ -3694,6 +4269,7 @@ input ImageFileOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -3729,6 +4305,7 @@ input ImageFileWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput
@@ -3799,6 +4376,7 @@ input JumbotronBlockOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -3836,6 +4414,7 @@ input JumbotronBlockWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput
@@ -3877,6 +4456,7 @@ input LandingPageOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -3918,6 +4498,7 @@ input LandingPageWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput
@@ -3982,6 +4563,7 @@ input NewsPageOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -4049,6 +4631,7 @@ input NewsPageWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput
@@ -4095,6 +4678,7 @@ input PageListBlockOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   SortOrder: OrderBy
   StartPublish: OrderBy
@@ -4135,6 +4719,7 @@ input PageListBlockWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   SortOrder: IntFilterInput
   StartPublish: DateFilterInput
@@ -4178,6 +4763,7 @@ input ProductPageOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -4222,6 +4808,7 @@ input ProductPageWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput
@@ -4269,6 +4856,7 @@ input SearchPageOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -4310,6 +4898,7 @@ input SearchPageWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput
@@ -4322,6 +4911,106 @@ input SearchPageWhereInput {
   _modified: DateFilterInput
   _not: [SearchPageWhereInput]
   _or: [SearchPageWhereInput]
+  _sortOrder: IntFilterInput
+}
+
+input SearchResultsPageOrderByInput {
+  Ancestors: OrderBy
+  Category: CategoryModelOrderByInput
+  Changed: OrderBy
+  ContentArea: ContentAreaItemModelSearchOrderByInput
+  ContentLink: ContentModelReferenceOrderByInput
+  ContentType: OrderBy
+  Created: OrderBy
+  DisableIndexing: OrderBy
+  ExistingLanguages: ContentLanguageModelOrderByInput
+  HideSiteFooter: OrderBy
+  HideSiteHeader: OrderBy
+  IsCommonDraft: OrderBy
+  Language: ContentLanguageModelOrderByInput
+  MasterLanguage: ContentLanguageModelOrderByInput
+  MetaDescription: OrderBy
+  MetaKeywords: OrderBy
+  MetaTitle: OrderBy
+  Name: OrderBy
+  NextLinkAccessibilityText: OrderBy
+  NextLinkText: OrderBy
+  NoResultsText: OrderBy
+  PageImage: ContentModelReferenceOrderByInput
+  PagingText: OrderBy
+  ParentLink: ContentModelReferenceOrderByInput
+  PreviousLinkAccessibilityText: OrderBy
+  PreviousLinkText: OrderBy
+  RelativePath: OrderBy
+  ResultsCountDisplay: OrderBy
+  RouteSegment: OrderBy
+  Saved: OrderBy
+  Shortcut: OrderBy
+  SimpleAddress: OrderBy
+  SiteId: OrderBy
+  StartPublish: OrderBy
+  Status: OrderBy
+  StopPublish: OrderBy
+  TeaserText: OrderBy
+  UpdateSearchCtaAccessibilityText: OrderBy
+  UpdateSearchCtaText: OrderBy
+  Url: OrderBy
+  _concreteType: OrderBy
+  _minimumScore: Float
+  _modified: OrderBy
+  _ranking: Ranking
+  "The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled."
+  _semanticWeight: Float
+  _sortOrder: OrderBy
+}
+
+input SearchResultsPageWhereInput {
+  Ancestors: StringFilterInput
+  Category: CategoryModelWhereInput
+  Changed: DateFilterInput
+  ContentArea: ContentAreaItemModelSearchWhereInput
+  ContentLink: ContentModelReferenceWhereInput
+  ContentType: StringFilterInput
+  Created: DateFilterInput
+  DisableIndexing: BoolFilterInput
+  ExistingLanguages: ContentLanguageModelWhereInput
+  HideSiteFooter: BoolFilterInput
+  HideSiteHeader: BoolFilterInput
+  IsCommonDraft: BoolFilterInput
+  Language: ContentLanguageModelWhereInput
+  MasterLanguage: ContentLanguageModelWhereInput
+  MetaDescription: SearchableStringFilterInput
+  MetaKeywords: StringFilterInput
+  MetaTitle: SearchableStringFilterInput
+  Name: SearchableStringFilterInput
+  NextLinkAccessibilityText: SearchableStringFilterInput
+  NextLinkText: SearchableStringFilterInput
+  NoResultsText: SearchableStringFilterInput
+  PageImage: ContentModelReferenceWhereInput
+  PagingText: SearchableStringFilterInput
+  ParentLink: ContentModelReferenceWhereInput
+  PreviousLinkAccessibilityText: SearchableStringFilterInput
+  PreviousLinkText: SearchableStringFilterInput
+  RelativePath: StringFilterInput
+  ResultsCountDisplay: SearchableStringFilterInput
+  RouteSegment: StringFilterInput
+  Saved: DateFilterInput
+  Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
+  SiteId: StringFilterInput
+  StartPublish: DateFilterInput
+  Status: StringFilterInput
+  StopPublish: DateFilterInput
+  TeaserText: SearchableStringFilterInput
+  UpdateSearchCtaAccessibilityText: SearchableStringFilterInput
+  UpdateSearchCtaText: SearchableStringFilterInput
+  Url: StringFilterInput
+  _and: [SearchResultsPageWhereInput]
+  _concreteType: StringFilterInput
+  _fulltext: SearchableStringFilterInput
+  _modified: DateFilterInput
+  _not: [SearchResultsPageWhereInput]
+  _or: [SearchResultsPageWhereInput]
   _sortOrder: IntFilterInput
 }
 
@@ -4419,6 +5108,7 @@ input SiteLogotypeBlockOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -4451,6 +5141,7 @@ input SiteLogotypeBlockWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput
@@ -4491,6 +5182,7 @@ input SitePageDataOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -4531,6 +5223,7 @@ input SitePageDataWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput
@@ -4573,6 +5266,7 @@ input StandardPageOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -4615,6 +5309,7 @@ input StandardPageWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput
@@ -4662,7 +5357,9 @@ input StartPageOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   SearchPageLink: ContentModelReferenceOrderByInput
+  SemanticSearch_Description: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   SiteLogotype: StartPageSiteLogotypeBlockOrderByInput
   StartPublish: OrderBy
@@ -4721,7 +5418,9 @@ input StartPageWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   SearchPageLink: ContentModelReferenceWhereInput
+  SemanticSearch_Description: SearchableStringFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   SiteLogotype: StartPageSiteLogotypeBlockWhereInput
   StartPublish: DateFilterInput
@@ -4783,6 +5482,7 @@ input TeaserBlockOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -4818,6 +5518,7 @@ input TeaserBlockWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput
@@ -4852,6 +5553,7 @@ input VectorImageFileOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -4886,6 +5588,7 @@ input VectorImageFileWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput
@@ -4922,6 +5625,7 @@ input VideoFileOrderByInput {
   RouteSegment: OrderBy
   Saved: OrderBy
   Shortcut: OrderBy
+  SimpleAddress: OrderBy
   SiteId: OrderBy
   StartPublish: OrderBy
   Status: OrderBy
@@ -4958,6 +5662,7 @@ input VideoFileWhereInput {
   RouteSegment: StringFilterInput
   Saved: DateFilterInput
   Shortcut: StringFilterInput
+  SimpleAddress: StringFilterInput
   SiteId: StringFilterInput
   StartPublish: DateFilterInput
   Status: StringFilterInput

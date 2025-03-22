@@ -1,9 +1,10 @@
 #!/usr/bin/env kotlin
 @file:Repository("https://repo.maven.apache.org/maven2")
+@file:DependsOn("com.fasterxml.jackson.core:jackson-core:2.18.3")
 @file:DependsOn("com.graphql-java:graphql-java:22.3")
-@file:DependsOn("io.ktor:ktor-client-content-negotiation-jvm:3.0.3")
-@file:DependsOn("io.ktor:ktor-client-java-jvm:3.0.3")
-@file:DependsOn("io.ktor:ktor-serialization-jackson-jvm:3.0.3")
+@file:DependsOn("io.ktor:ktor-client-content-negotiation-jvm:3.1.1")
+@file:DependsOn("io.ktor:ktor-client-java-jvm:3.1.1")
+@file:DependsOn("io.ktor:ktor-serialization-jackson-jvm:3.1.1")
 
 import graphql.introspection.IntrospectionResultToSchema
 import graphql.schema.idl.SchemaPrinter
