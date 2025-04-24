@@ -10,9 +10,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: SearchPage(),
-    );
+    return MaterialApp(home: SearchPage());
   }
 }
 
@@ -33,13 +31,13 @@ class _SearchPageState extends State<SearchPage> {
       link: AuthLink(
         getToken: () async =>
             'epi-single eBrGunULiC5TziTCtiOLEmov2LijBf30obh0KmhcBlyTktGZ',
-      ).concat(HttpLink(
-        'https://cg.optimizely.com/content/v2',
-      )),
+      ).concat(HttpLink('https://cg.optimizely.com/content/v2')),
     );
     final response = await client.query$getProductPages(
-        Options$Query$getProductPages(
-            variables: Variables$Query$getProductPages(name: query)));
+      Options$Query$getProductPages(
+        variables: Variables$Query$getProductPages(name: query),
+      ),
+    );
     final items = response.parsedData?.ProductPage?.items;
     if (items != null && items.isNotEmpty) {
       setState(() {
@@ -53,9 +51,7 @@ class _SearchPageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Optimizely Alloy products'),
-      ),
+      appBar: AppBar(title: Text('Optimizely Alloy products')),
       body: Column(
         children: <Widget>[
           Padding(
@@ -78,7 +74,9 @@ class _SearchPageState extends State<SearchPage> {
               itemCount: _results.length,
               itemBuilder: (context, index) {
                 return ListTile(
-                  title: Text("(${_results[index]!.PageImage!.Url!}) ${_results[index]!.Name!}"),
+                  title: Text(
+                    "(${_results[index]!.PageImage!.Url!}) ${_results[index]!.Name!}",
+                  ),
                   subtitle: Text(_results[index]!.MetaDescription!),
                 );
               },
