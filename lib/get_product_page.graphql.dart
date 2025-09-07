@@ -4,9 +4,7 @@ import 'package:graphql/client.dart' as graphql;
 
 class Variables$Query$getProductPages {
   factory Variables$Query$getProductPages({required String name}) =>
-      Variables$Query$getProductPages._({
-        r'name': name,
-      });
+      Variables$Query$getProductPages._({r'name': name});
 
   Variables$Query$getProductPages._(this._$data);
 
@@ -29,10 +27,7 @@ class Variables$Query$getProductPages {
   }
 
   CopyWith$Variables$Query$getProductPages<Variables$Query$getProductPages>
-      get copyWith => CopyWith$Variables$Query$getProductPages(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Variables$Query$getProductPages(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -72,10 +67,7 @@ abstract class CopyWith$Variables$Query$getProductPages<TRes> {
 
 class _CopyWithImpl$Variables$Query$getProductPages<TRes>
     implements CopyWith$Variables$Query$getProductPages<TRes> {
-  _CopyWithImpl$Variables$Query$getProductPages(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$getProductPages(this._instance, this._then);
 
   final Variables$Query$getProductPages _instance;
 
@@ -83,11 +75,12 @@ class _CopyWithImpl$Variables$Query$getProductPages<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? name = _undefined}) =>
-      _then(Variables$Query$getProductPages._({
-        ..._instance._$data,
-        if (name != _undefined && name != null) 'name': (name as String),
-      }));
+  TRes call({Object? name = _undefined}) => _then(
+    Variables$Query$getProductPages._({
+      ..._instance._$data,
+      if (name != _undefined && name != null) 'name': (name as String),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$getProductPages<TRes>
@@ -100,10 +93,7 @@ class _CopyWithStubImpl$Variables$Query$getProductPages<TRes>
 }
 
 class Query$getProductPages {
-  Query$getProductPages({
-    this.ProductPage,
-    this.$__typename = 'Query',
-  });
+  Query$getProductPages({this.ProductPage, this.$__typename = 'Query'});
 
   factory Query$getProductPages.fromJson(Map<String, dynamic> json) {
     final l$ProductPage = json['ProductPage'];
@@ -112,7 +102,8 @@ class Query$getProductPages {
       ProductPage: l$ProductPage == null
           ? null
           : Query$getProductPages$ProductPage.fromJson(
-              (l$ProductPage as Map<String, dynamic>)),
+              (l$ProductPage as Map<String, dynamic>),
+            ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -134,10 +125,7 @@ class Query$getProductPages {
   int get hashCode {
     final l$ProductPage = ProductPage;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$ProductPage,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$ProductPage, l$$__typename]);
   }
 
   @override
@@ -164,10 +152,7 @@ class Query$getProductPages {
 
 extension UtilityExtension$Query$getProductPages on Query$getProductPages {
   CopyWith$Query$getProductPages<Query$getProductPages> get copyWith =>
-      CopyWith$Query$getProductPages(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$getProductPages(this, (i) => i);
 }
 
 abstract class CopyWith$Query$getProductPages<TRes> {
@@ -188,10 +173,7 @@ abstract class CopyWith$Query$getProductPages<TRes> {
 
 class _CopyWithImpl$Query$getProductPages<TRes>
     implements CopyWith$Query$getProductPages<TRes> {
-  _CopyWithImpl$Query$getProductPages(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$getProductPages(this._instance, this._then);
 
   final Query$getProductPages _instance;
 
@@ -202,22 +184,25 @@ class _CopyWithImpl$Query$getProductPages<TRes>
   TRes call({
     Object? ProductPage = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$getProductPages(
-        ProductPage: ProductPage == _undefined
-            ? _instance.ProductPage
-            : (ProductPage as Query$getProductPages$ProductPage?),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$getProductPages(
+      ProductPage: ProductPage == _undefined
+          ? _instance.ProductPage
+          : (ProductPage as Query$getProductPages$ProductPage?),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Query$getProductPages$ProductPage<TRes> get ProductPage {
     final local$ProductPage = _instance.ProductPage;
     return local$ProductPage == null
         ? CopyWith$Query$getProductPages$ProductPage.stub(_then(_instance))
         : CopyWith$Query$getProductPages$ProductPage(
-            local$ProductPage, (e) => call(ProductPage: e));
+            local$ProductPage,
+            (e) => call(ProductPage: e),
+          );
   }
 }
 
@@ -227,125 +212,140 @@ class _CopyWithStubImpl$Query$getProductPages<TRes>
 
   TRes _res;
 
-  call({
-    Query$getProductPages$ProductPage? ProductPage,
-    String? $__typename,
-  }) =>
+  call({Query$getProductPages$ProductPage? ProductPage, String? $__typename}) =>
       _res;
 
   CopyWith$Query$getProductPages$ProductPage<TRes> get ProductPage =>
       CopyWith$Query$getProductPages$ProductPage.stub(_res);
 }
 
-const documentNodeQuerygetProductPages = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'getProductPages'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'name')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: true,
+const documentNodeQuerygetProductPages = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'getProductPages'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'name')),
+          type: NamedTypeNode(name: NameNode(value: 'String'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      )
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'ProductPage'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'where'),
-            value: ObjectValueNode(fields: [
-              ObjectFieldNode(
-                name: NameNode(value: 'Name'),
-                value: ObjectValueNode(fields: [
-                  ObjectFieldNode(
-                    name: NameNode(value: 'contains'),
-                    value: VariableNode(name: NameNode(value: 'name')),
-                  )
-                ]),
-              )
-            ]),
-          )
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'items'),
+            name: NameNode(value: 'ProductPage'),
             alias: null,
-            arguments: [],
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'where'),
+                value: ObjectValueNode(
+                  fields: [
+                    ObjectFieldNode(
+                      name: NameNode(value: 'Name'),
+                      value: ObjectValueNode(
+                        fields: [
+                          ObjectFieldNode(
+                            name: NameNode(value: 'contains'),
+                            value: VariableNode(name: NameNode(value: 'name')),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
             directives: [],
-            selectionSet: SelectionSetNode(selections: [
-              FieldNode(
-                name: NameNode(value: 'MetaDescription'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-              FieldNode(
-                name: NameNode(value: 'MetaKeywords'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-              FieldNode(
-                name: NameNode(value: 'Name'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-              FieldNode(
-                name: NameNode(value: 'MetaTitle'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-              FieldNode(
-                name: NameNode(value: 'TeaserText'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-              FieldNode(
-                name: NameNode(value: 'PageImage'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: SelectionSetNode(selections: [
-                  FieldNode(
-                    name: NameNode(value: 'Url'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null,
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'items'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: SelectionSetNode(
+                    selections: [
+                      FieldNode(
+                        name: NameNode(value: 'MetaDescription'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: 'MetaKeywords'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: 'Name'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: 'MetaTitle'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: 'TeaserText'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: 'PageImage'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: SelectionSetNode(
+                          selections: [
+                            FieldNode(
+                              name: NameNode(value: 'Url'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: null,
+                            ),
+                            FieldNode(
+                              name: NameNode(value: '__typename'),
+                              alias: null,
+                              arguments: [],
+                              directives: [],
+                              selectionSet: null,
+                            ),
+                          ],
+                        ),
+                      ),
+                      FieldNode(
+                        name: NameNode(value: '__typename'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                    ],
                   ),
-                  FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null,
-                  ),
-                ]),
-              ),
-              FieldNode(
-                name: NameNode(value: '__typename'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-            ]),
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -354,25 +354,16 @@ const documentNodeQuerygetProductPages = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
-Query$getProductPages _parserFn$Query$getProductPages(
-        Map<String, dynamic> data) =>
-    Query$getProductPages.fromJson(data);
-typedef OnQueryComplete$Query$getProductPages = FutureOr<void> Function(
-  Map<String, dynamic>?,
-  Query$getProductPages?,
+    ),
+  ],
 );
+Query$getProductPages _parserFn$Query$getProductPages(
+  Map<String, dynamic> data,
+) => Query$getProductPages.fromJson(data);
+typedef OnQueryComplete$Query$getProductPages =
+    FutureOr<void> Function(Map<String, dynamic>?, Query$getProductPages?);
 
 class Options$Query$getProductPages
     extends graphql.QueryOptions<Query$getProductPages> {
@@ -388,36 +379,36 @@ class Options$Query$getProductPages
     graphql.Context? context,
     OnQueryComplete$Query$getProductPages? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null ? null : _parserFn$Query$getProductPages(data),
-                  ),
-          onError: onError,
-          document: documentNodeQuerygetProductPages,
-          parserFn: _parserFn$Query$getProductPages,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$getProductPages(data),
+               ),
+         onError: onError,
+         document: documentNodeQuerygetProductPages,
+         parserFn: _parserFn$Query$getProductPages,
+       );
 
   final OnQueryComplete$Query$getProductPages? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$getProductPages
@@ -436,20 +427,20 @@ class WatchOptions$Query$getProductPages
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQuerygetProductPages,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$getProductPages,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQuerygetProductPages,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$getProductPages,
+       );
 }
 
 class FetchMoreOptions$Query$getProductPages extends graphql.FetchMoreOptions {
@@ -457,41 +448,40 @@ class FetchMoreOptions$Query$getProductPages extends graphql.FetchMoreOptions {
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$getProductPages variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQuerygetProductPages,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQuerygetProductPages,
+       );
 }
 
 extension ClientExtension$Query$getProductPages on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$getProductPages>> query$getProductPages(
-          Options$Query$getProductPages options) async =>
-      await this.query(options);
+    Options$Query$getProductPages options,
+  ) async => await this.query(options);
   graphql.ObservableQuery<Query$getProductPages> watchQuery$getProductPages(
-          WatchOptions$Query$getProductPages options) =>
-      this.watchQuery(options);
+    WatchOptions$Query$getProductPages options,
+  ) => this.watchQuery(options);
   void writeQuery$getProductPages({
     required Query$getProductPages data,
     required Variables$Query$getProductPages variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation:
-              graphql.Operation(document: documentNodeQuerygetProductPages),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(document: documentNodeQuerygetProductPages),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
   Query$getProductPages? readQuery$getProductPages({
     required Variables$Query$getProductPages variables,
     bool optimistic = true,
   }) {
     final result = this.readQuery(
       graphql.Request(
-        operation:
-            graphql.Operation(document: documentNodeQuerygetProductPages),
+        operation: graphql.Operation(
+          document: documentNodeQuerygetProductPages,
+        ),
         variables: variables.toJson(),
       ),
       optimistic: optimistic,
@@ -507,15 +497,19 @@ class Query$getProductPages$ProductPage {
   });
 
   factory Query$getProductPages$ProductPage.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$items = json['items'];
     final l$$__typename = json['__typename'];
     return Query$getProductPages$ProductPage(
       items: (l$items as List<dynamic>?)
-          ?.map((e) => e == null
-              ? null
-              : Query$getProductPages$ProductPage$items.fromJson(
-                  (e as Map<String, dynamic>)))
+          ?.map(
+            (e) => e == null
+                ? null
+                : Query$getProductPages$ProductPage$items.fromJson(
+                    (e as Map<String, dynamic>),
+                  ),
+          )
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -581,10 +575,7 @@ class Query$getProductPages$ProductPage {
 extension UtilityExtension$Query$getProductPages$ProductPage
     on Query$getProductPages$ProductPage {
   CopyWith$Query$getProductPages$ProductPage<Query$getProductPages$ProductPage>
-      get copyWith => CopyWith$Query$getProductPages$ProductPage(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Query$getProductPages$ProductPage(this, (i) => i);
 }
 
 abstract class CopyWith$Query$getProductPages$ProductPage<TRes> {
@@ -601,19 +592,20 @@ abstract class CopyWith$Query$getProductPages$ProductPage<TRes> {
     String? $__typename,
   });
   TRes items(
-      Iterable<Query$getProductPages$ProductPage$items?>? Function(
-              Iterable<
-                  CopyWith$Query$getProductPages$ProductPage$items<
-                      Query$getProductPages$ProductPage$items>?>?)
-          _fn);
+    Iterable<Query$getProductPages$ProductPage$items?>? Function(
+      Iterable<
+        CopyWith$Query$getProductPages$ProductPage$items<
+          Query$getProductPages$ProductPage$items
+        >?
+      >?,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Query$getProductPages$ProductPage<TRes>
     implements CopyWith$Query$getProductPages$ProductPage<TRes> {
-  _CopyWithImpl$Query$getProductPages$ProductPage(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$getProductPages$ProductPage(this._instance, this._then);
 
   final Query$getProductPages$ProductPage _instance;
 
@@ -621,32 +613,36 @@ class _CopyWithImpl$Query$getProductPages$ProductPage<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? items = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$getProductPages$ProductPage(
-        items: items == _undefined
-            ? _instance.items
-            : (items as List<Query$getProductPages$ProductPage$items?>?),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? items = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$getProductPages$ProductPage(
+          items: items == _undefined
+              ? _instance.items
+              : (items as List<Query$getProductPages$ProductPage$items?>?),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   TRes items(
-          Iterable<Query$getProductPages$ProductPage$items?>? Function(
-                  Iterable<
-                      CopyWith$Query$getProductPages$ProductPage$items<
-                          Query$getProductPages$ProductPage$items>?>?)
-              _fn) =>
-      call(
-          items: _fn(_instance.items?.map((e) => e == null
-              ? null
-              : CopyWith$Query$getProductPages$ProductPage$items(
-                  e,
-                  (i) => i,
-                )))?.toList());
+    Iterable<Query$getProductPages$ProductPage$items?>? Function(
+      Iterable<
+        CopyWith$Query$getProductPages$ProductPage$items<
+          Query$getProductPages$ProductPage$items
+        >?
+      >?,
+    )
+    _fn,
+  ) => call(
+    items: _fn(
+      _instance.items?.map(
+        (e) => e == null
+            ? null
+            : CopyWith$Query$getProductPages$ProductPage$items(e, (i) => i),
+      ),
+    )?.toList(),
+  );
 }
 
 class _CopyWithStubImpl$Query$getProductPages$ProductPage<TRes>
@@ -658,8 +654,7 @@ class _CopyWithStubImpl$Query$getProductPages$ProductPage<TRes>
   call({
     List<Query$getProductPages$ProductPage$items?>? items,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   items(_fn) => _res;
 }
@@ -676,7 +671,8 @@ class Query$getProductPages$ProductPage$items {
   });
 
   factory Query$getProductPages$ProductPage$items.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$MetaDescription = json['MetaDescription'];
     final l$MetaKeywords = json['MetaKeywords'];
     final l$Name = json['Name'];
@@ -695,7 +691,8 @@ class Query$getProductPages$ProductPage$items {
       PageImage: l$PageImage == null
           ? null
           : Query$getProductPages$ProductPage$items$PageImage.fromJson(
-              (l$PageImage as Map<String, dynamic>)),
+              (l$PageImage as Map<String, dynamic>),
+            ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -817,11 +814,10 @@ class Query$getProductPages$ProductPage$items {
 extension UtilityExtension$Query$getProductPages$ProductPage$items
     on Query$getProductPages$ProductPage$items {
   CopyWith$Query$getProductPages$ProductPage$items<
-          Query$getProductPages$ProductPage$items>
-      get copyWith => CopyWith$Query$getProductPages$ProductPage$items(
-            this,
-            (i) => i,
-          );
+    Query$getProductPages$ProductPage$items
+  >
+  get copyWith =>
+      CopyWith$Query$getProductPages$ProductPage$items(this, (i) => i);
 }
 
 abstract class CopyWith$Query$getProductPages$ProductPage$items<TRes> {
@@ -843,7 +839,7 @@ abstract class CopyWith$Query$getProductPages$ProductPage$items<TRes> {
     String? $__typename,
   });
   CopyWith$Query$getProductPages$ProductPage$items$PageImage<TRes>
-      get PageImage;
+  get PageImage;
 }
 
 class _CopyWithImpl$Query$getProductPages$ProductPage$items<TRes>
@@ -867,37 +863,41 @@ class _CopyWithImpl$Query$getProductPages$ProductPage$items<TRes>
     Object? TeaserText = _undefined,
     Object? PageImage = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$getProductPages$ProductPage$items(
-        MetaDescription: MetaDescription == _undefined
-            ? _instance.MetaDescription
-            : (MetaDescription as String?),
-        MetaKeywords: MetaKeywords == _undefined
-            ? _instance.MetaKeywords
-            : (MetaKeywords as List<String?>?),
-        Name: Name == _undefined ? _instance.Name : (Name as String?),
-        MetaTitle: MetaTitle == _undefined
-            ? _instance.MetaTitle
-            : (MetaTitle as String?),
-        TeaserText: TeaserText == _undefined
-            ? _instance.TeaserText
-            : (TeaserText as String?),
-        PageImage: PageImage == _undefined
-            ? _instance.PageImage
-            : (PageImage as Query$getProductPages$ProductPage$items$PageImage?),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$getProductPages$ProductPage$items(
+      MetaDescription: MetaDescription == _undefined
+          ? _instance.MetaDescription
+          : (MetaDescription as String?),
+      MetaKeywords: MetaKeywords == _undefined
+          ? _instance.MetaKeywords
+          : (MetaKeywords as List<String?>?),
+      Name: Name == _undefined ? _instance.Name : (Name as String?),
+      MetaTitle: MetaTitle == _undefined
+          ? _instance.MetaTitle
+          : (MetaTitle as String?),
+      TeaserText: TeaserText == _undefined
+          ? _instance.TeaserText
+          : (TeaserText as String?),
+      PageImage: PageImage == _undefined
+          ? _instance.PageImage
+          : (PageImage as Query$getProductPages$ProductPage$items$PageImage?),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Query$getProductPages$ProductPage$items$PageImage<TRes>
-      get PageImage {
+  get PageImage {
     final local$PageImage = _instance.PageImage;
     return local$PageImage == null
         ? CopyWith$Query$getProductPages$ProductPage$items$PageImage.stub(
-            _then(_instance))
+            _then(_instance),
+          )
         : CopyWith$Query$getProductPages$ProductPage$items$PageImage(
-            local$PageImage, (e) => call(PageImage: e));
+            local$PageImage,
+            (e) => call(PageImage: e),
+          );
   }
 }
 
@@ -915,12 +915,11 @@ class _CopyWithStubImpl$Query$getProductPages$ProductPage$items<TRes>
     String? TeaserText,
     Query$getProductPages$ProductPage$items$PageImage? PageImage,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Query$getProductPages$ProductPage$items$PageImage<TRes>
-      get PageImage =>
-          CopyWith$Query$getProductPages$ProductPage$items$PageImage.stub(_res);
+  get PageImage =>
+      CopyWith$Query$getProductPages$ProductPage$items$PageImage.stub(_res);
 }
 
 class Query$getProductPages$ProductPage$items$PageImage {
@@ -930,7 +929,8 @@ class Query$getProductPages$ProductPage$items$PageImage {
   });
 
   factory Query$getProductPages$ProductPage$items$PageImage.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$Url = json['Url'];
     final l$$__typename = json['__typename'];
     return Query$getProductPages$ProductPage$items$PageImage(
@@ -956,10 +956,7 @@ class Query$getProductPages$ProductPage$items$PageImage {
   int get hashCode {
     final l$Url = Url;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$Url,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$Url, l$$__typename]);
   }
 
   @override
@@ -988,29 +985,27 @@ class Query$getProductPages$ProductPage$items$PageImage {
 extension UtilityExtension$Query$getProductPages$ProductPage$items$PageImage
     on Query$getProductPages$ProductPage$items$PageImage {
   CopyWith$Query$getProductPages$ProductPage$items$PageImage<
-          Query$getProductPages$ProductPage$items$PageImage>
-      get copyWith =>
-          CopyWith$Query$getProductPages$ProductPage$items$PageImage(
-            this,
-            (i) => i,
-          );
+    Query$getProductPages$ProductPage$items$PageImage
+  >
+  get copyWith => CopyWith$Query$getProductPages$ProductPage$items$PageImage(
+    this,
+    (i) => i,
+  );
 }
 
 abstract class CopyWith$Query$getProductPages$ProductPage$items$PageImage<
-    TRes> {
+  TRes
+> {
   factory CopyWith$Query$getProductPages$ProductPage$items$PageImage(
     Query$getProductPages$ProductPage$items$PageImage instance,
     TRes Function(Query$getProductPages$ProductPage$items$PageImage) then,
   ) = _CopyWithImpl$Query$getProductPages$ProductPage$items$PageImage;
 
   factory CopyWith$Query$getProductPages$ProductPage$items$PageImage.stub(
-          TRes res) =
-      _CopyWithStubImpl$Query$getProductPages$ProductPage$items$PageImage;
+    TRes res,
+  ) = _CopyWithStubImpl$Query$getProductPages$ProductPage$items$PageImage;
 
-  TRes call({
-    String? Url,
-    String? $__typename,
-  });
+  TRes call({String? Url, String? $__typename});
 }
 
 class _CopyWithImpl$Query$getProductPages$ProductPage$items$PageImage<TRes>
@@ -1027,29 +1022,25 @@ class _CopyWithImpl$Query$getProductPages$ProductPage$items$PageImage<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? Url = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$getProductPages$ProductPage$items$PageImage(
-        Url: Url == _undefined ? _instance.Url : (Url as String?),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? Url = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$getProductPages$ProductPage$items$PageImage(
+          Url: Url == _undefined ? _instance.Url : (Url as String?),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 }
 
 class _CopyWithStubImpl$Query$getProductPages$ProductPage$items$PageImage<TRes>
     implements
         CopyWith$Query$getProductPages$ProductPage$items$PageImage<TRes> {
   _CopyWithStubImpl$Query$getProductPages$ProductPage$items$PageImage(
-      this._res);
+    this._res,
+  );
 
   TRes _res;
 
-  call({
-    String? Url,
-    String? $__typename,
-  }) =>
-      _res;
+  call({String? Url, String? $__typename}) => _res;
 }

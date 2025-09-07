@@ -79,6 +79,7 @@ interface IContent implements IData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 interface IData {
@@ -89,6 +90,7 @@ interface IData {
   _link(type: LinkTypes): QueryRef
   _modified: Date
   _score: Float
+  _track: String
 }
 
 "SitePageData"
@@ -133,6 +135,7 @@ interface ISitePageData implements IContent & IData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type ArticlePage implements IContent & IData & ISitePageData {
@@ -178,6 +181,7 @@ type ArticlePage implements IContent & IData & ISitePageData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type ArticlePageAutocomplete {
@@ -300,6 +304,7 @@ type BreadcrumbBlock implements IContent & IData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type BreadcrumbBlockAutocomplete {
@@ -393,6 +398,7 @@ type ButtonBlock implements IContent & IData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type ButtonBlockAutocomplete {
@@ -481,6 +487,7 @@ type City implements IData {
   _link(type: LinkTypes): QueryRef
   _modified: Date
   _score: Float
+  _track: String
 }
 
 type CityFacet {
@@ -534,6 +541,7 @@ type ContactBlock implements IContent & IData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type ContactBlockAutocomplete {
@@ -643,6 +651,7 @@ type ContactPage implements IContent & IData & ISitePageData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type ContactPageAutocomplete {
@@ -756,6 +765,7 @@ type ContainerPage implements IContent & IData & ISitePageData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type ContainerPageAutocomplete {
@@ -855,6 +865,7 @@ type Content implements IContent & IData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type ContentAreaItemModelSearch {
@@ -1034,6 +1045,7 @@ type Data implements IData {
   _link(type: LinkTypes): QueryRef
   _modified: Date
   _score: Float
+  _track: String
 }
 
 type DataOutput {
@@ -1081,6 +1093,7 @@ type EditorialBlock implements IContent & IData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type EditorialBlockAutocomplete {
@@ -1175,6 +1188,7 @@ type GenericMedia implements IContent & IData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type GenericMediaAutocomplete {
@@ -1288,6 +1302,7 @@ type ISemanticSearchable implements IContent & IData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type ISemanticSearchableAutocomplete {
@@ -1379,6 +1394,7 @@ type ImageFile implements IContent & IData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type ImageFileAutocomplete {
@@ -1488,6 +1504,7 @@ type JumbotronBlock implements IContent & IData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type JumbotronBlockAutocomplete {
@@ -1595,6 +1612,7 @@ type LandingPage implements IContent & IData & ISitePageData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type LandingPageAutocomplete {
@@ -1732,6 +1750,7 @@ type NewsPage implements IContent & IData & ISitePageData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type NewsPageAutocomplete {
@@ -1880,6 +1899,7 @@ type PageListBlock implements IContent & IData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type PageListBlockAutocomplete {
@@ -1994,6 +2014,7 @@ type ProductPage implements IContent & IData & ISitePageData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type ProductPageAutocomplete {
@@ -2068,65 +2089,65 @@ type ProductPageOutput {
 }
 
 type Query {
-  ArticlePage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ArticlePageOrderByInput, skip: Int! = 0, where: ArticlePageWhereInput): ArticlePageOutput
-  BreadcrumbBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: BreadcrumbBlockOrderByInput, skip: Int! = 0, where: BreadcrumbBlockWhereInput): BreadcrumbBlockOutput
-  ButtonBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ButtonBlockOrderByInput, skip: Int! = 0, where: ButtonBlockWhereInput): ButtonBlockOutput
-  City(cursor: String, ids: [String], limit: Int! = 20, locale: [ext_Locales], orderBy: CityOrderByInput, skip: Int! = 0, where: CityWhereInput): CityOutput
-  ContactBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ContactBlockOrderByInput, skip: Int! = 0, where: ContactBlockWhereInput): ContactBlockOutput
-  ContactPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ContactPageOrderByInput, skip: Int! = 0, where: ContactPageWhereInput): ContactPageOutput
-  ContainerPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ContainerPageOrderByInput, skip: Int! = 0, where: ContainerPageWhereInput): ContainerPageOutput
-  Content(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ContentOrderByInput, skip: Int! = 0, where: ContentWhereInput): ContentOutput
-  Data(cursor: String, ids: [String], limit: Int! = 20, locale: [system_Locales], orderBy: DataOrderByInput, skip: Int! = 0, where: DataWhereInput): DataOutput
-  EditorialBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: EditorialBlockOrderByInput, skip: Int! = 0, where: EditorialBlockWhereInput): EditorialBlockOutput
-  GenericMedia(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: GenericMediaOrderByInput, skip: Int! = 0, where: GenericMediaWhereInput): GenericMediaOutput
-  ISemanticSearchable(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ISemanticSearchableOrderByInput, skip: Int! = 0, where: ISemanticSearchableWhereInput): ISemanticSearchableOutput
-  ImageFile(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ImageFileOrderByInput, skip: Int! = 0, where: ImageFileWhereInput): ImageFileOutput
-  JumbotronBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: JumbotronBlockOrderByInput, skip: Int! = 0, where: JumbotronBlockWhereInput): JumbotronBlockOutput
-  LandingPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: LandingPageOrderByInput, skip: Int! = 0, where: LandingPageWhereInput): LandingPageOutput
-  NewsPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: NewsPageOrderByInput, skip: Int! = 0, where: NewsPageWhereInput): NewsPageOutput
-  PageListBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: PageListBlockOrderByInput, skip: Int! = 0, where: PageListBlockWhereInput): PageListBlockOutput
-  ProductPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ProductPageOrderByInput, skip: Int! = 0, where: ProductPageWhereInput): ProductPageOutput
-  SearchPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SearchPageOrderByInput, skip: Int! = 0, where: SearchPageWhereInput): SearchPageOutput
-  SearchResultsPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SearchResultsPageOrderByInput, skip: Int! = 0, where: SearchResultsPageWhereInput): SearchResultsPageOutput
-  SiteDefinition(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SiteDefinitionOrderByInput, skip: Int! = 0, where: SiteDefinitionWhereInput): SiteDefinitionOutput
-  SiteLogotypeBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SiteLogotypeBlockOrderByInput, skip: Int! = 0, where: SiteLogotypeBlockWhereInput): SiteLogotypeBlockOutput
-  SitePageData(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SitePageDataOrderByInput, skip: Int! = 0, where: SitePageDataWhereInput): SitePageDataOutput
-  StandardPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: StandardPageOrderByInput, skip: Int! = 0, where: StandardPageWhereInput): StandardPageOutput
-  StartPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: StartPageOrderByInput, skip: Int! = 0, where: StartPageWhereInput): StartPageOutput
-  TeaserBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: TeaserBlockOrderByInput, skip: Int! = 0, where: TeaserBlockWhereInput): TeaserBlockOutput
-  VectorImageFile(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: VectorImageFileOrderByInput, skip: Int! = 0, where: VectorImageFileWhereInput): VectorImageFileOutput
-  VideoFile(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: VideoFileOrderByInput, skip: Int! = 0, where: VideoFileWhereInput): VideoFileOutput
+  ArticlePage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ArticlePageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: ArticlePageWhereInput): ArticlePageOutput
+  BreadcrumbBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: BreadcrumbBlockOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: BreadcrumbBlockWhereInput): BreadcrumbBlockOutput
+  ButtonBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ButtonBlockOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: ButtonBlockWhereInput): ButtonBlockOutput
+  City(cursor: String, ids: [String], limit: Int! = 20, locale: [ext_Locales], orderBy: CityOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: CityWhereInput): CityOutput
+  ContactBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ContactBlockOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: ContactBlockWhereInput): ContactBlockOutput
+  ContactPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ContactPageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: ContactPageWhereInput): ContactPageOutput
+  ContainerPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ContainerPageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: ContainerPageWhereInput): ContainerPageOutput
+  Content(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ContentOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: ContentWhereInput): ContentOutput
+  Data(cursor: String, ids: [String], limit: Int! = 20, locale: [system_Locales], orderBy: DataOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: DataWhereInput): DataOutput
+  EditorialBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: EditorialBlockOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: EditorialBlockWhereInput): EditorialBlockOutput
+  GenericMedia(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: GenericMediaOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: GenericMediaWhereInput): GenericMediaOutput
+  ISemanticSearchable(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ISemanticSearchableOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: ISemanticSearchableWhereInput): ISemanticSearchableOutput
+  ImageFile(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ImageFileOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: ImageFileWhereInput): ImageFileOutput
+  JumbotronBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: JumbotronBlockOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: JumbotronBlockWhereInput): JumbotronBlockOutput
+  LandingPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: LandingPageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: LandingPageWhereInput): LandingPageOutput
+  NewsPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: NewsPageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: NewsPageWhereInput): NewsPageOutput
+  PageListBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: PageListBlockOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: PageListBlockWhereInput): PageListBlockOutput
+  ProductPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ProductPageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: ProductPageWhereInput): ProductPageOutput
+  SearchPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SearchPageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: SearchPageWhereInput): SearchPageOutput
+  SearchResultsPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SearchResultsPageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: SearchResultsPageWhereInput): SearchResultsPageOutput
+  SiteDefinition(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SiteDefinitionOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: SiteDefinitionWhereInput): SiteDefinitionOutput
+  SiteLogotypeBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SiteLogotypeBlockOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: SiteLogotypeBlockWhereInput): SiteLogotypeBlockOutput
+  SitePageData(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SitePageDataOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: SitePageDataWhereInput): SitePageDataOutput
+  StandardPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: StandardPageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: StandardPageWhereInput): StandardPageOutput
+  StartPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: StartPageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: StartPageWhereInput): StartPageOutput
+  TeaserBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: TeaserBlockOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: TeaserBlockWhereInput): TeaserBlockOutput
+  VectorImageFile(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: VectorImageFileOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: VectorImageFileWhereInput): VectorImageFileOutput
+  VideoFile(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: VideoFileOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: VideoFileWhereInput): VideoFileOutput
 }
 
 type QueryRef {
-  ArticlePage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ArticlePageOrderByInput, skip: Int! = 0, where: ArticlePageWhereInput): ArticlePageOutput
-  BreadcrumbBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: BreadcrumbBlockOrderByInput, skip: Int! = 0, where: BreadcrumbBlockWhereInput): BreadcrumbBlockOutput
-  ButtonBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ButtonBlockOrderByInput, skip: Int! = 0, where: ButtonBlockWhereInput): ButtonBlockOutput
-  City(cursor: String, ids: [String], limit: Int! = 20, locale: [ext_Locales], orderBy: CityOrderByInput, skip: Int! = 0, where: CityWhereInput): CityOutput
-  ContactBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ContactBlockOrderByInput, skip: Int! = 0, where: ContactBlockWhereInput): ContactBlockOutput
-  ContactPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ContactPageOrderByInput, skip: Int! = 0, where: ContactPageWhereInput): ContactPageOutput
-  ContainerPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ContainerPageOrderByInput, skip: Int! = 0, where: ContainerPageWhereInput): ContainerPageOutput
-  Content(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ContentOrderByInput, skip: Int! = 0, where: ContentWhereInput): ContentOutput
-  Data(cursor: String, ids: [String], limit: Int! = 20, locale: [system_Locales], orderBy: DataOrderByInput, skip: Int! = 0, where: DataWhereInput): DataOutput
-  EditorialBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: EditorialBlockOrderByInput, skip: Int! = 0, where: EditorialBlockWhereInput): EditorialBlockOutput
-  GenericMedia(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: GenericMediaOrderByInput, skip: Int! = 0, where: GenericMediaWhereInput): GenericMediaOutput
-  ISemanticSearchable(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ISemanticSearchableOrderByInput, skip: Int! = 0, where: ISemanticSearchableWhereInput): ISemanticSearchableOutput
-  ImageFile(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ImageFileOrderByInput, skip: Int! = 0, where: ImageFileWhereInput): ImageFileOutput
-  JumbotronBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: JumbotronBlockOrderByInput, skip: Int! = 0, where: JumbotronBlockWhereInput): JumbotronBlockOutput
-  LandingPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: LandingPageOrderByInput, skip: Int! = 0, where: LandingPageWhereInput): LandingPageOutput
-  NewsPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: NewsPageOrderByInput, skip: Int! = 0, where: NewsPageWhereInput): NewsPageOutput
-  PageListBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: PageListBlockOrderByInput, skip: Int! = 0, where: PageListBlockWhereInput): PageListBlockOutput
-  ProductPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ProductPageOrderByInput, skip: Int! = 0, where: ProductPageWhereInput): ProductPageOutput
-  SearchPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SearchPageOrderByInput, skip: Int! = 0, where: SearchPageWhereInput): SearchPageOutput
-  SearchResultsPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SearchResultsPageOrderByInput, skip: Int! = 0, where: SearchResultsPageWhereInput): SearchResultsPageOutput
-  SiteDefinition(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SiteDefinitionOrderByInput, skip: Int! = 0, where: SiteDefinitionWhereInput): SiteDefinitionOutput
-  SiteLogotypeBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SiteLogotypeBlockOrderByInput, skip: Int! = 0, where: SiteLogotypeBlockWhereInput): SiteLogotypeBlockOutput
-  SitePageData(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SitePageDataOrderByInput, skip: Int! = 0, where: SitePageDataWhereInput): SitePageDataOutput
-  StandardPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: StandardPageOrderByInput, skip: Int! = 0, where: StandardPageWhereInput): StandardPageOutput
-  StartPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: StartPageOrderByInput, skip: Int! = 0, where: StartPageWhereInput): StartPageOutput
-  TeaserBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: TeaserBlockOrderByInput, skip: Int! = 0, where: TeaserBlockWhereInput): TeaserBlockOutput
-  VectorImageFile(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: VectorImageFileOrderByInput, skip: Int! = 0, where: VectorImageFileWhereInput): VectorImageFileOutput
-  VideoFile(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: VideoFileOrderByInput, skip: Int! = 0, where: VideoFileWhereInput): VideoFileOutput
+  ArticlePage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ArticlePageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: ArticlePageWhereInput): ArticlePageOutput
+  BreadcrumbBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: BreadcrumbBlockOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: BreadcrumbBlockWhereInput): BreadcrumbBlockOutput
+  ButtonBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ButtonBlockOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: ButtonBlockWhereInput): ButtonBlockOutput
+  City(cursor: String, ids: [String], limit: Int! = 20, locale: [ext_Locales], orderBy: CityOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: CityWhereInput): CityOutput
+  ContactBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ContactBlockOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: ContactBlockWhereInput): ContactBlockOutput
+  ContactPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ContactPageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: ContactPageWhereInput): ContactPageOutput
+  ContainerPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ContainerPageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: ContainerPageWhereInput): ContainerPageOutput
+  Content(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ContentOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: ContentWhereInput): ContentOutput
+  Data(cursor: String, ids: [String], limit: Int! = 20, locale: [system_Locales], orderBy: DataOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: DataWhereInput): DataOutput
+  EditorialBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: EditorialBlockOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: EditorialBlockWhereInput): EditorialBlockOutput
+  GenericMedia(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: GenericMediaOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: GenericMediaWhereInput): GenericMediaOutput
+  ISemanticSearchable(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ISemanticSearchableOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: ISemanticSearchableWhereInput): ISemanticSearchableOutput
+  ImageFile(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ImageFileOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: ImageFileWhereInput): ImageFileOutput
+  JumbotronBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: JumbotronBlockOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: JumbotronBlockWhereInput): JumbotronBlockOutput
+  LandingPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: LandingPageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: LandingPageWhereInput): LandingPageOutput
+  NewsPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: NewsPageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: NewsPageWhereInput): NewsPageOutput
+  PageListBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: PageListBlockOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: PageListBlockWhereInput): PageListBlockOutput
+  ProductPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: ProductPageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: ProductPageWhereInput): ProductPageOutput
+  SearchPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SearchPageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: SearchPageWhereInput): SearchPageOutput
+  SearchResultsPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SearchResultsPageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: SearchResultsPageWhereInput): SearchResultsPageOutput
+  SiteDefinition(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SiteDefinitionOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: SiteDefinitionWhereInput): SiteDefinitionOutput
+  SiteLogotypeBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SiteLogotypeBlockOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: SiteLogotypeBlockWhereInput): SiteLogotypeBlockOutput
+  SitePageData(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: SitePageDataOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: SitePageDataWhereInput): SitePageDataOutput
+  StandardPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: StandardPageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: StandardPageWhereInput): StandardPageOutput
+  StartPage(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: StartPageOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: StartPageWhereInput): StartPageOutput
+  TeaserBlock(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: TeaserBlockOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: TeaserBlockWhereInput): TeaserBlockOutput
+  VectorImageFile(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: VectorImageFileOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: VectorImageFileWhereInput): VectorImageFileOutput
+  VideoFile(cursor: String, ids: [String], limit: Int! = 20, locale: [Locales], orderBy: VideoFileOrderByInput, skip: Int! = 0, track: String, usePinned: usePinnedInput, variation: VariationInput, where: VideoFileWhereInput): VideoFileOutput
 }
 
 type SearchPage implements IContent & IData & ISitePageData {
@@ -2171,6 +2192,7 @@ type SearchPage implements IContent & IData & ISitePageData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type SearchPageAutocomplete {
@@ -2300,6 +2322,7 @@ type SearchResultsPage implements IContent & IData & ISitePageData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type SearchResultsPageAutocomplete {
@@ -2394,6 +2417,7 @@ type SiteDefinition implements IData {
   _link(type: LinkTypes): QueryRef
   _modified: Date
   _score: Float
+  _track: String
 }
 
 type SiteDefinitionAutocomplete {
@@ -2484,6 +2508,7 @@ type SiteLogotypeBlock implements IContent & IData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type SiteLogotypeBlockAutocomplete {
@@ -2584,6 +2609,7 @@ type SitePageData implements IContent & IData & ISitePageData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type SitePageDataAutocomplete {
@@ -2695,6 +2721,7 @@ type StandardPage implements IContent & IData & ISitePageData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type StandardPageAutocomplete {
@@ -2816,6 +2843,7 @@ type StartPage implements IContent & IData & ISitePageData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type StartPageAutocomplete {
@@ -2957,6 +2985,7 @@ type TeaserBlock implements IContent & IData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type TeaserBlockAutocomplete {
@@ -3055,6 +3084,7 @@ type VectorImageFile implements IContent & IData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type VectorImageFileAutocomplete {
@@ -3154,6 +3184,7 @@ type VideoFile implements IContent & IData {
   _modified: Date
   _score: Float
   _sortOrder: Int
+  _track: String
 }
 
 type VideoFileAutocomplete {
@@ -3305,6 +3336,12 @@ enum SynonymSlot {
   ONE
   "synonym slot 2"
   TWO
+}
+
+enum VariationIncludeMode {
+  ALL
+  NONE
+  SOME
 }
 
 enum ext_Locales {
@@ -5545,6 +5582,12 @@ input TeaserBlockWhereInput {
   _sortOrder: IntFilterInput
 }
 
+input VariationInput {
+  include: VariationIncludeMode
+  includeOriginal: Boolean
+  value: [String]
+}
+
 input VectorImageFileOrderByInput {
   Ancestors: OrderBy
   Category: CategoryModelOrderByInput
@@ -5687,4 +5730,9 @@ input VideoFileWhereInput {
   _not: [VideoFileWhereInput]
   _or: [VideoFileWhereInput]
   _sortOrder: IntFilterInput
+}
+
+input usePinnedInput {
+  collectionId: String
+  phrase: String
 }
